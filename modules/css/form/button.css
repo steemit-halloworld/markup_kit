@@ -1,0 +1,28 @@
+:root
+{
+  --button-padding-horizontal: var(--global-gutter);
+  --button-line-height: var(--global-control-height);
+  --button-font-size: var(--global-font-size);
+
+  --button-background-primary: var(--global-background-primary);
+  --button-foreground-color-primary: var(--global-inverse-color);
+}
+
+.kit-button
+{
+  display: inline-block;
+  padding: 0 var(--button-padding-horizontal);
+  text-align: center;
+  font-size: var(--button-font-size);
+  vertical-align: middle;
+  line-height: var(--button-line-height);
+  text-decoration: none;
+}
+
+/* Primary Buttons */
+
+.kit-button-primary
+{
+  background-color: var(--button-background-primary);
+  color: var(--button-foreground-color-primary);
+}

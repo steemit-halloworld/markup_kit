@@ -1,0 +1,39 @@
+:root
+{
+  --grid-gutter-horizontal: var(--global-gutter);
+}
+
+.kit-flex-grid
+{
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.kit-flex-grid > *
+{
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* gutter */
+
+.kit-flex-grid
+{
+  margin-left: calc(-1*var(--grid-gutter-horizontal));
+}
+
+.kit-flex-grid > *
+{
+  padding-left: var(--grid-gutter-horizontal);
+}
+

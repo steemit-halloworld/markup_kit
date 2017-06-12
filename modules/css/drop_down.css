@@ -1,0 +1,57 @@
+:root
+{
+  --drop_down_zindex: 20; /* TODO: global z-index computation */
+  --drop_down_min_width: 200px;
+  --drop_down_padding: 15px;
+  --drop_down_background: var(--global-background);
+  --drop_down_foreground: var(--global-muted-color);
+  --drop_down_hover_color: var(--global-inverse-color);
+  --drop_down_box_shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+  --drop_down_hover_background: var(--global-background-primary);
+
+
+}
+
+.kit_drop_down
+{
+  display: none; /* hide by default */
+  position: absolute;
+  z-index: var(--drop_down_zindex);
+  box-sizing: border-box;
+  min-width: var(--drop_down_min_width);
+  background: var(--drop_down_background);
+  color: var(--drop_down_foreground);
+  box-shadow: var(--drop_down_box_shadow);
+  padding: var(--drop_down_padding) 0;
+
+  @apply(--kit_drop_down_mixin);
+}
+
+.kit_drop_down .kit_drop_down_item
+{
+  padding: 0 var(--drop_down_padding);
+
+  @apply(--kit_drop_down_item_mixin);
+}
+
+.kit_drop_down .kit_drop_down_item.selected
+{
+  color: var(--drop_down_hover_color);
+  background: var(--drop_down_hover_background);
+
+}
+
+:root
+{
+  --kit_drop_down_mixin:
+  {
+
+  };
+
+  --kit_drop_down_item_mixin:
+  {
+
+  };
+}
+
+

@@ -1,0 +1,51 @@
+@import url(../variables.css);
+
+:root
+{
+  --nav-background: var(--global-muted-background);
+  --nav-item-padding-horizontal: 15px;
+  --nav-item-height: 80px;
+}
+
+.kit-nav
+{
+  background: var(--nav-background);
+}
+
+.kit-nav > .kit-pos-left,
+.kit-nav > .kit-pos-right
+{
+  position: relative !important;
+  display: flex;
+  align-items: center;
+}
+
+.kit-nav
+{
+  display: flex;
+  position: relative;
+}
+
+.kit-nav ul
+{
+  list-style: none;
+  display: flex;
+}
+
+.kit-nav ul > li
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 var(--nav-item-padding-horizontal);
+  height: var(--nav-item-height);
+
+}
+
+
+.kit-nav ul.kit-pos-right
+{
+  position: relative !important;
+  margin-left: auto;
+}

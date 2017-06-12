@@ -1,0 +1,20 @@
+[class*='kit-pos-top'],
+[class*='kit-pos-bottom'],
+[class*='kit-pos-left'],
+[class*='kit-pos-right'],
+[class*='kit-pos-center']
+{
+  position: absolute !important;
+}
+
+.kit-pos-fixed
+{
+  position: fixed !important;
+}
+
+.kit-pos-right
+{
+  top: 0;
+  bottom: 0;
+  right: 0;
+}

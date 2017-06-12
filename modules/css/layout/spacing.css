@@ -1,0 +1,22 @@
+@import url(../variables.css);
+
+:root
+{
+  --margin: var(--global-margin);
+  --padding: var(--global-gutter);
+}
+
+.kit_margin
+{
+  margin-bottom: var(--margin);
+}
+
+* + .kit_margin
+{
+  margin-top: var(--margin) !important;
+}
+
+.kit_padding
+{
+  padding: var(--padding);
+}
