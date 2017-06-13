@@ -54,6 +54,14 @@
 
   /* Z-Index */
   --global-z-index: 1000;
+
+  /* Box Shadows */
+
+  --global_box_shadow_small: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --global_box_shadow_medium: 0 5px 15px rgba(0, 0, 0, 0.08);
+  --global_box_shadow_large: 0 14px 25px rgba(0, 0, 0, 0.16);
+  --global_box_shadow_xlarge: 0 28px 50px rgba(0, 0, 0, 0.16);
+
 }
 
 
