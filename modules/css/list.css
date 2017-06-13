@@ -1,0 +1,40 @@
+:root
+{
+  --list_nested_padding_left: var(--global-gutter);
+
+  --list_item_margin_top: var(--global-margin-small);
+
+  --list_item_divider_margin_top: var(--global-margin-small);
+  --list_item_divider_border_width: var(--global-border-width);
+  --list_item_divider_border: var(--global-border-color);
+}
+
+.kit_list li::before,
+.kit_list li::after
+{ /* micro clearfix */
+  content: "";
+  display: table;
+}
+
+.kit_list ul
+{ /** nested lists **/
+  padding-left: var(--list_nested_padding_left);
+}
+
+.kit_list > li > :last-child
+{ /* remove margin from the last child */
+  margin-bottom: 0;
+}
+
+.kit_list > li:nth-child(n+2),
+.kit_list > li > ul
+{ /** list item margin */
+  margin-top: var(--list_item_margin_top);
+}
+
+.kit_list_divider > li:nth-child(n+2)
+{ /** list item divider style */
+  margin-top: var(--list_item_divider_margin_top);
+  padding-top: var(--list_item_divider_margin_top);
+  border-top: var(--list_item_divider_border_width) solid var(--list_item_divider_border);
+}
