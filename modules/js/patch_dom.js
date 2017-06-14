@@ -79,7 +79,7 @@
     {
       var old_attr = old_attributes[i];
       var new_attr = new_attributes[i];
-      var attr = old_attr || new_attr;
+      var attr = new_attr || old_attr;
       var name = attr.nodeName;
       var old_val = old_attr ? old_attr.nodeValue : undefined;
       var new_val = new_attr ? new_attr.nodeValue : undefined;
