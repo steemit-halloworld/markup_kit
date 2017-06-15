@@ -60,7 +60,7 @@
       var char_code = event.which || event.keyCode;
       var value = owner.shadow_element().value;
 
-      is_backspace = char_code == 8 && is_delimiter(value.slice(-1), owner.visual_formatter.delimiters());
+      is_backspace = char_code == 8 && is_delimiter(value.slice(-1), owner.render_formatter.delimiters());
     }
 
     function on_input (event)
@@ -178,7 +178,7 @@
       all_delimiters.push(owner.delimiter);
       for (var i in owner.block_delimiters) all_delimiters.push(owner.block_delimiters[i]);
       return all_delimiters;
-    },
+    };
 
     init_blocks();
   };
