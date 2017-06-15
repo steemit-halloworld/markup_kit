@@ -121,6 +121,14 @@
       shadow_element = root.document.createElement('input');
       shadow_element.className = owner.html_element().className;
 
+
+      var placeholder_val = owner.html_element().getAttribute("placeholder");
+      if(is_defined(placeholder_val))
+      {
+        shadow_element.setAttribute("placeholder", placeholder_val);
+      }
+
+
       shadow_element.setAttribute("onfocusout", owner.html_element().getAttribute("onfocusout"));
 
       return shadow_element;
