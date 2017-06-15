@@ -12,11 +12,17 @@
   --form-background: var(--global-muted-background);
   --form-background-focus: var(--global-background);
   --form-foreground-color-focus: var(--global-foreground-color);
+  --form_radio_size: 16px;
+  --form_radio_margin_top: -4px;
+  --form_radio_background: var(--global-muted-background);
+  --form_radio_checked_background: var(--global-background-primary);
 
   --form-border-width: var(--global-border-width);
   --form-border-color: var(--global-border-color);
   --form-border-color-focus: var(--global-background-primary);
+
   --form-select-image-url: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22#000%22%20points%3D%2212%201%209%206%2015%206%22%3E%3C%2Fpolygon%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22#000%22%20points%3D%2212%2013%209%208%2015%208%22%3E%3C%2Fpolygon%3E%0A%3C%2Fsvg%3E%0A");
+  --form_checkbox_image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22#000%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 
 .kit_form .kit_label
@@ -93,4 +99,28 @@
   background-image: var(--form-select-image-url);
   background-repeat: no-repeat;
   background-position: 100% 50%;
+}
+
+.kit_checkbox
+{
+  display: inline-block;
+  height: var(--form_radio_size);
+  width: var(--form_radio_size);
+  overflow: hidden;
+  vertical-align: middle;
+  appearance: none;
+  background-color: var(--form_radio_background);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin-top: var(--form_radio_margin_top);
+}
+
+.kit_checkbox:checked
+{
+  background-color: var(--form_radio_checked_background);
+}
+
+.kit_checkbox:checked
+{
+  background-image: var(--form_checkbox_image);
 }
