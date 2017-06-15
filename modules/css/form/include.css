@@ -28,6 +28,8 @@
 .kit_input
 {
   overflow: visible;
+  appearance: textfield;
+
 }
 
 .kit_input,
