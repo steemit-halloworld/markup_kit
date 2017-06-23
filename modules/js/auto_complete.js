@@ -39,10 +39,10 @@
   {
     var dom_node = typeof el == 'string' ? document.querySelector(el) : el;
 
-    var render_item_fn = function (item, search_term)
+    var render_item_fn = function (item, search_term, query_item_data_fn)
     {
-
-      var value = item.feminine || item.masculine || item.neutral;
+      var value = query_item_data_fn(item);
+      //var value = item.feminine || item.masculine || item.neutral;
 
       return '<div class="kit_drop_down_item autocomplete-suggestion" data-val="' + item.id + '">' + value + '</div>';
     };
@@ -168,7 +168,7 @@
     var offset_top = 0;
     var min_chars = 1;
 
-    var suggest = function (data)
+    var suggest = function (data, query_item_data_fn)
     {
 
       var input_val = dom_node.value;
@@ -184,7 +184,7 @@
 
       for (var i = 0; i < data.length; i++)
       {
-        s += render_item_fn(data[i], input_val);
+        s += render_item_fn(data[i], input_val, query_item_data_fn);
       }
 
 
