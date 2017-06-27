@@ -7,14 +7,26 @@
   position: absolute !important;
 }
 
-.kit-pos-fixed
+.kit_fixed
 {
   position: fixed !important;
 }
 
-.kit-pos-right
+.kit_right
 {
   top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.kit_bottom_left
+{
+  bottom: 0;
+  left: 0;
+}
+
+.kit_bottom_right
+{
   bottom: 0;
   right: 0;
 }

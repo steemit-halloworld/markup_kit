@@ -3,7 +3,7 @@
   --grid-gutter-horizontal: var(--global-gutter);
 }
 
-.kit-flex-grid
+.kit_grid_flex
 {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -14,7 +14,7 @@
   flex-wrap: wrap;
 }
 
-.kit-flex-grid > *
+.kit_grid_flex > *
 {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -27,12 +27,12 @@
 
 /* gutter */
 
-.kit-flex-grid
+.kit_grid_flex
 {
   margin-left: calc(-1*var(--grid-gutter-horizontal));
 }
 
-.kit-flex-grid > *
+.kit_grid_flex > *
 {
   padding-left: var(--grid-gutter-horizontal);
 }
