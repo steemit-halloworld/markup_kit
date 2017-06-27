@@ -60,6 +60,15 @@
   height: var(--nav-item-height);
 }
 
+input.kit_navbar_toggle
+{
+  appearance: none;
+  height: 30px;
+  width: 30px;
+  background-size: 30px 30px;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>") no-repeat center center;
+}
+
 @media (--medium-up)
 {
   .kit_navbar_nav\@medium-up

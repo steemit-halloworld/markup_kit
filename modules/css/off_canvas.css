@@ -64,7 +64,13 @@
   }
 }
 
+.kit_off_canvas_checkbox_trigger:checked ~ [class*='kit_off_canvas'] [class*='kit_off_canvas_bar'],
 .kit_off_canvas_open [class*='kit_off_canvas_bar']
 {
   transform: translateX(0%);
+}
+
+.kit_off_canvas_checkbox_trigger:checked ~ [class*='kit_off_canvas_content']
+{
+  border: 1px solid red;
 }
