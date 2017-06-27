@@ -1,3 +1,15 @@
+:root
+{
+  --background_muted: var(--global-muted-background);
+  --background_primary: var(--global-background-primary);
+  --background_secondary: var(--global-background-secondary);
+
+  --logo_font_size: var(--global-font-size);
+  --logo_font_family: var(--global-font-family);
+  --logo-color: var(--global-foreground-color);
+  --logo_hover_color: var(--global-foreground-color);
+}
+
 .kit_box_shadow_small
 {
   box-shadow: var(--global_box_shadow_small);
@@ -16,4 +28,35 @@
 .kit_box_shadow_xxl
 {
   box-shadow: var(--global_box_shadow_xlarge);
+}
+
+.kit_bg_muted
+{
+  background-color: var(--background_muted) !important;
+}
+
+.kit_bg_primary
+{
+  background-color: var(--background_primary) !important;
+}
+
+.kit_bg_secondary
+{
+  background-color: var(--background_secondary) !important;
+}
+
+.kit_logo
+{
+  font-size: var(--logo_font_size);
+  font-family: var(--logo_font_family);
+  color: var(--logo-color);
+  text-decoration: none;
+}
+
+.kit_logo:hover,
+.kit_logo:focus
+{
+  color: var(--logo-color);
+  outline: none;
+  text-decoration: none;
 }

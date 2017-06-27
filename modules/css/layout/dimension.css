@@ -7,6 +7,11 @@
   --kit-width-xxl: 750px;
 }
 
+.kit_width_1_1
+{
+  width: 100%;
+}
+
 .kit_child_width_1_4 > *,
 .kit_width_1_4
 {
@@ -23,6 +28,12 @@
 .kit_width_3_5
 {
   width: 60%;
+}
+
+.kit_child_width_3_4 > *,
+.kit_width_3_4
+{
+  width: 75%;
 }
 
 .kit_height_viewport
@@ -43,25 +54,35 @@
 @media (--medium)
 {
   .kit_child_width_1_1_medium,
-  .kit_child_width_medium > *
+  .kit_child_width_medium > *,
+  .kit_width_1_1_medium,
+  .kit_width_medium
   {
     width: 100%;
   }
 
-  .kit_child_width_1–2_medium > *
+  .kit_child_width_1_2_medium > *
   {
     width: 50%;
   }
 
-  .kit_child_width_1–4_medium > *
+  .kit_child_width_1_4_medium > *,
+  .kit_width_1_4_medium
   {
     width: 25%;
   }
 
-  .kit_child_width_1–5_medium > *
+  .kit_child_width_1_5_medium > *
   {
     width: 20%;
   }
+
+  .kit_child_width_3_4_medium > *,
+  .kit_width_3_4_medium
+  {
+    width: 75%;
+  }
+
 
 }
 

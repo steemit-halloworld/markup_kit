@@ -10,12 +10,32 @@
 .kit_fixed
 {
   position: fixed !important;
+  z-index: 1000 !important;
 }
 
 .kit_right
 {
   top: 0;
   bottom: 0;
+  right: 0;
+}
+
+.kit_left
+{
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.kit_top_left
+{
+  top: 0;
+  left: 0;
+}
+
+.kit_top_right
+{
+  top: 0;
   right: 0;
 }
 
@@ -30,3 +50,44 @@
   bottom: 0;
   right: 0;
 }
+
+@media (--medium)
+{
+  .kit_fixed_medium
+  {
+    position: fixed !important;
+    z-index: 1000 !important;
+  }
+
+  .kit_right_medium
+  {
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .kit_top_left_medium
+  {
+    top: 0;
+    left: 0;
+  }
+
+  .kit_top_right_medium
+  {
+    top: 0;
+    right: 0;
+  }
+
+  .kit_bottom_left_medium
+  {
+    bottom: 0;
+    left: 0;
+  }
+
+  .kit_bottom_right_medium
+  {
+    bottom: 0;
+    right: 0;
+  }
+}
+

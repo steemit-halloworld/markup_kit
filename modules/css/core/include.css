@@ -200,6 +200,7 @@ section,
 summary
 {
   display: block;
+  width: 100%; /* ???? */
 }
 
 b, strong

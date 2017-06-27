@@ -156,6 +156,11 @@ const kit = (function ()
 
 //endregion
 
+  kit.is_defined = function (val)
+  {
+    return typeof val !== 'undefined';
+  };
+
   kit.log = function (string)
   {
     console.log(string);

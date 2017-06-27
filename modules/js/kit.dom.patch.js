@@ -41,7 +41,7 @@
 
     function remove_attribute (target, name, value)
     {
-      if (name === 'className')
+      if (name === 'class')
       {
         target.removeAttribute('class');
       }
@@ -73,12 +73,12 @@
 
     function update_attribute (target, name, new_val, old_val)
     {
-      if (!new_val)
+      if (!kit.is_defined(new_val))
       {
         remove_attribute(target, name, old_val);
         return true;
       }
-      else if (!old_val || new_val != old_val)
+      else if (!kit.is_defined(old_val) || new_val != old_val)
       {
         set_attribute(target, name, new_val);
         return true;

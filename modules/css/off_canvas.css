@@ -1,0 +1,18 @@
+/*.kit_off_canvas
+{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.kit_off_canvas_bar
+{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}*/

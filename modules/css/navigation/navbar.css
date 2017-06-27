@@ -5,46 +5,51 @@
   --nav-background: var(--global-muted-background);
   --nav-item-padding-horizontal: 15px;
   --nav-item-height: 80px;
+
 }
 
-.kit-nav
+.kit_navbar
 {
   background: var(--nav-background);
 }
 
-.kit-nav > .kit-pos-left,
-.kit-nav > .kit-pos-right
+.kit_navbar > .kit_left,
+.kit_navbar > .kit_right
 {
   position: relative !important;
   display: flex;
   align-items: center;
 }
 
-.kit-nav
+.kit_navbar
 {
   display: flex;
   position: relative;
 }
 
-.kit-nav ul
+.kit_navbar ul
 {
+  margin: 0;
   list-style: none;
   display: flex;
 }
 
-.kit-nav ul > li
+.kit_navbar ul > li > ul{
+  display: block;
+}
+
+.kit_navbar ul.kit_navbar_nav > li,
+.kit_navbar .kit_logo,
+.kit_navbar .kit_navbar_toggle
 {
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 0 var(--nav-item-padding-horizontal);
   height: var(--nav-item-height);
-
 }
 
-
-.kit-nav ul.kit-pos-right
+.kit_navbar ul.kit_right
 {
   position: relative !important;
   margin-left: auto;

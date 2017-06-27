@@ -1,0 +1,12 @@
+.kit_invisible
+{
+  visibility: hidden;
+}
+
+@media (--medium)
+{
+  .kit_visible_medium
+  {
+    visibility: visible;
+  }
+}
