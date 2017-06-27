@@ -1,18 +1,18 @@
 .kit_invisible
 {
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 @media (--small-up)
 {
   .kit_visible\@small-up
   {
-    visibility: visible;
+    visibility: visible !important;
   }
 
   .kit_hidden\@small-up
   {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -20,11 +20,11 @@
 {
   .kit_visible\@medium-up
   {
-    visibility: visible;
+    visibility: visible !important;
   }
 
   .kit_hidden\@medium-up
   {
-    display: none;
+    display: none !important;
   }
 }
