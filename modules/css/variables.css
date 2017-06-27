@@ -62,6 +62,14 @@
   --global_box_shadow_large: 0 14px 25px rgba(0, 0, 0, 0.16);
   --global_box_shadow_xlarge: 0 28px 50px rgba(0, 0, 0, 0.16);
 
+  /* Breakpoints */
 }
+
+@custom-media --small (width < 640px);
+@custom-media --medium (width < 960px);
+@custom-media --large (width < 1200px);
+@custom-media --xxl (width < 1600px);
+
+
 
 
