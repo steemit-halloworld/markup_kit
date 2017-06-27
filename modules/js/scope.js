@@ -53,6 +53,8 @@
         }
       } while (dirty);
     };
+
+    return this;
   };
 
 }());
