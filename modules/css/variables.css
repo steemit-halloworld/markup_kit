@@ -67,10 +67,14 @@
 
 }
 
-@custom-media --small (width > 640px);
-@custom-media --medium (width > 960px);
-@custom-media --large (width > 1200px);
-@custom-media --xxl (width > 1600px);
+@custom-media --small-up (width > 640px);
+@custom-media --medium-up (width > 960px);
+@custom-media --large-up (width > 1200px);
+@custom-media --xxl-up (width > 1600px);
+
+@custom-media --small-down (width < 640px);
+@custom-media --medium-down (width < 960px);
+
 
 
 

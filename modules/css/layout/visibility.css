@@ -3,10 +3,28 @@
   visibility: hidden;
 }
 
-@media (--medium)
+@media (--small-up)
 {
-  .kit_visible_medium
+  .kit_visible\@small-up
   {
     visibility: visible;
+  }
+
+  .kit_hidden\@small-up
+  {
+    display: none;
+  }
+}
+
+@media (--medium-up)
+{
+  .kit_visible\@medium-up
+  {
+    visibility: visible;
+  }
+
+  .kit_hidden\@medium-up
+  {
+    display: none;
   }
 }

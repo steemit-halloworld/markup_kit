@@ -1,11 +1,11 @@
-[class*='kit-pos-top'],
-[class*='kit-pos-bottom'],
-[class*='kit-pos-left'],
-[class*='kit-pos-right'],
-[class*='kit-pos-center']
+/*[class*='kit_top'],
+[class*='kit_bottom'],
+[class*='kit_left'],
+[class*='kit_right'],
+[class*='kit_center']
 {
   position: absolute !important;
-}
+}*/
 
 .kit_fixed
 {
@@ -51,40 +51,40 @@
   right: 0;
 }
 
-@media (--medium)
+@media (--medium-up)
 {
-  .kit_fixed_medium
+  .kit_fixed\@medium-up
   {
     position: fixed !important;
     z-index: 1000 !important;
   }
 
-  .kit_right_medium
+  .kit_right\@medium-up
   {
     top: 0;
     bottom: 0;
     right: 0;
   }
 
-  .kit_top_left_medium
+  .kit_top_left\@medium-up
   {
     top: 0;
     left: 0;
   }
 
-  .kit_top_right_medium
+  .kit_top_right\@medium-up
   {
     top: 0;
     right: 0;
   }
 
-  .kit_bottom_left_medium
+  .kit_bottom_left\@medium-up
   {
     bottom: 0;
     left: 0;
   }
 
-  .kit_bottom_right_medium
+  .kit_bottom_right\@medium-up
   {
     bottom: 0;
     right: 0;

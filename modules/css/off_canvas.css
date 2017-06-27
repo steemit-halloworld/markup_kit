@@ -1,4 +1,4 @@
-/*.kit_off_canvas
+.kit_off_canvas
 {
   position: fixed;
   top: 0;
@@ -15,4 +15,56 @@
   background: #fff;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-}*/
+  transform: translateX(-100%);
+}
+
+@media (--small-down)
+{
+  .kit_off_canvas\@small-down
+  {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .kit_off_canvas_bar\@small-down
+  {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateX(-100%);
+  }
+}
+
+@media (--medium-down)
+{
+  .kit_off_canvas\@medium-down
+  {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .kit_off_canvas_bar\@medium-down
+  {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateX(-100%);
+  }
+}
+
+.kit_off_canvas_open [class*='kit_off_canvas_bar']
+{
+  transform: translateX(0%);
+}

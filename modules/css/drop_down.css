@@ -43,6 +43,33 @@
 
 }
 
+/** Dropdown Menu **/
+@media (--medium-up)
+{
+
+  .kit_drop_down_nav_item@medium-up
+  {
+    position: relative;
+  }
+
+  .kit_nav .kit_drop_down_nav_item\@medium-up > .kit_nav,
+  nav .kit_drop_down_nav_item\@medium-up > ul
+  {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 9999 !important;
+    background-color: var(--nav_dropdown_background);
+  }
+
+  .kit_drop_down_nav_item\@medium-up:hover .kit_nav,
+  .kit_drop_down_nav_item\@medium-up:hover > ul
+  {
+    visibility: visible;
+  }
+}
+
 /** available mixins */
 
 :root
