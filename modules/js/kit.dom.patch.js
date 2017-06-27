@@ -6,9 +6,9 @@
 
   const scope = new kit.global.Scope();
 
-  kit.dom.patch = function (parent_el, new_el, old_el)
+  kit.dom.patch = function (parent_el, new_el, old_el, old_el_position)
   {
-    var is_patched = patch_element(parent_el, new_el, old_el);
+    var is_patched = patch_element(parent_el, new_el, old_el, old_el_position);
     kit.log("is patched " + is_patched);
     if (is_patched)
     {
@@ -134,11 +134,13 @@
       return text.trim();
     }
 
-    function patch_element (parent_el, new_el, old_el)
+    function patch_element (parent_el, new_el, old_el, position)
     {
       var dirty_nodes = [];
 
-      var result = update_element(parent_el, new_el, old_el, 0, dirty_nodes);
+      position = position || 0;
+
+      var result = update_element(parent_el, new_el, old_el, position, dirty_nodes);
 
       for (var i in dirty_nodes)
       {
@@ -177,13 +179,11 @@
 
         for (var i = 0; i < new_child_count || i < old_child_count; i++)
         {
-
           var n_new_node = new_node.children[i];
           var n_old_node = old_node.children[i];
 
           const x = update_element(parent.children[index], n_new_node, n_old_node, i, dirty_nodes);
           result = result || x;
-
         }
 
         return result;
@@ -216,8 +216,8 @@
 
   var root = global_scope(self);
 
-  root.patch_dom = function (parent_element, new_element, old_element)
+  root.patch_dom = function (parent_element, new_element, old_element, old_element_position)
   {
-    kit.dom.patch(parent_element, new_element, old_element);
+    kit.dom.patch(parent_element, new_element, old_element, old_element_position);
   };
 }());

@@ -62,6 +62,58 @@ kit.dom = kit.native_dom = (function ()
       element.removeEventListener(type, listener, false);
     },
 
+//endregion
+
+//!@{
+//<!------------------------------------------------------------------------------------------------------------------->
+//! @name HTML Element Utilities
+//<!------------------------------------------------------------------------------------------------------------------->
+//region
+
+    position: function (html_el)
+    {
+      var i = 0;
+      while (html_el.parentNode.children[i] != html_el) i++;
+      return i;
+    },
+
+    emplace_id: function (html_el)
+    {
+      if (!html_el.id)
+      {
+        html_el.id = ++(incrementing_id);
+      }
+
+      return html_el.id;
+    },
+
+    is_detached: function (html_el)
+    {
+      if (html_el === kit.dom.root_el) return false;
+
+      while (html_el && html_el.parentNode)
+      {
+        if (html_el === document.documentElement) return false;
+        html_el = html_el.parentNode;
+      }
+
+      return true;
+    },
+
+//endregion
+
+//!@{
+//<!------------------------------------------------------------------------------------------------------------------->
+//! @name HTML Document Utilities
+//<!------------------------------------------------------------------------------------------------------------------->
+//region
+
+    is_ready: function ()
+    {
+      const dom = kit.global.document;
+      return dom.readyState === 'complete' || dom.readyState !== 'loading' && !dom.documentElement.doScroll;
+    },
+
     on_ready: function (callback_fn)
     {
       if (kit.dom.is_ready())
@@ -84,39 +136,11 @@ kit.dom = kit.native_dom = (function ()
     observe_dom: function (html_el, callback_fn)
     {
       kit.dom.on(html_el, 'DOMSubtreeModified', callback_fn);
-    },
-
+    }
 //endregion
 
-    emplace_id: function(html_el)
-    {
-      if(!html_el.id)
-      {
-        html_el.id =  ++(incrementing_id);
-      }
-
-      return html_el.id;
-    },
-
-    is_ready: function ()
-    {
-      const dom = kit.global.document;
-      return dom.readyState === 'complete' || dom.readyState !== 'loading' && !dom.documentElement.doScroll;
-    },
-
-    is_detached: function (html_el)
-    {
-      if (html_el === kit.dom.root_el) return false;
-
-      while (html_el && html_el.parentNode)
-      {
-        if (html_el === document.documentElement) return false;
-        html_el = html_el.parentNode;
-      }
-
-      return true;
-    }
   };
+
 
   Object.defineProperty(obj, 'root_el', {writable: false, value: kit.global.document.documentElement});
 
