@@ -2,46 +2,8 @@
 {
   'use strict';
 
-  var root = global_scope(self);
-
-  var component_map = {};
-
-  function purge_component_map ()
+  kit.Formatted_input = function (html_element, formatter)
   {
-    for (var key in component_map)
-    {
-      var component = component_map[key];
-
-      if (!is_detached(component.html_element())) continue;
-
-      delete component_map[key];
-      component.destroy();
-    }
-  }
-
-  function strip_delimiters (value, delimiters)
-  {
-    for (var i in delimiters)
-    {
-      var delimiter = delimiters[i];
-      value = value.replace(new RegExp('\\' + delimiter, 'g'), '');
-    }
-
-    return value;
-  }
-
-  /**
-   *
-   * Construct a new Formatted_input instance
-   *
-   * @param {HTMLElement} html_element
-   * @constructor
-   */
-  root.Formatted_input = function (html_element, formatter)
-  {
-
-    purge_component_map();
-
     var owner = this;
     var shadow_element;
     var html_element = html_element;
@@ -118,12 +80,12 @@
     {
       if (is_defined(shadow_element)) return shadow_element;
 
-      shadow_element = root.document.createElement('input');
+      shadow_element = kit.global.document.createElement('input');
       shadow_element.className = owner.html_element().className;
 
 
       var placeholder_val = owner.html_element().getAttribute("placeholder");
-      if(is_defined(placeholder_val))
+      if (is_defined(placeholder_val))
       {
         shadow_element.setAttribute("placeholder", placeholder_val);
       }
@@ -143,7 +105,7 @@
     var model_value = owner.html_element().value;
     model_value = owner.formatter.format(model_value);
     var model_object = owner.formatter.object();
-    if(is_defined(model_object))
+    if (is_defined(model_object))
     {
       var visual_value = owner.render_formatter.date_to_text(model_object);
       update_value(visual_value, model_value);
@@ -152,7 +114,7 @@
 
   };
 
-  Formatted_input.Date_formatter = function (date_pattern, delimiter, block_delimiters)
+  kit.Formatted_input.Date_formatter = function (date_pattern, delimiter, block_delimiters)
   {
     var owner = this;
 
@@ -182,6 +144,32 @@
 
     init_blocks();
   };
+
+  function strip_delimiters (value, delimiters)
+  {
+    for (var i in delimiters)
+    {
+      var delimiter = delimiters[i];
+      value = value.replace(new RegExp('\\' + delimiter, 'g'), '');
+    }
+
+    return value;
+  }
+
+  /**
+   *
+   * Construct a new Formatted_input instance
+   * @deprecated
+   * @param {HTMLElement} html_element
+   * @constructor
+   */
+  kit.global.Formatted_input = kit.Formatted_input;
+
+  /**
+   * @deprecated
+   * @type {*}
+   */
+  Formatted_input.Date_formatter = kit.Formatted_input.Date_formatter;
 
 
   function parse_block (block, pattern)
@@ -320,7 +308,6 @@
       return result;
     }
   };
-
 
 })();
 

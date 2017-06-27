@@ -19,16 +19,47 @@ const kit = (function ()
     global: {writable: false, value: Function('return this')()}
   });
 
+  const COMPONENT_SELECTOR = '[data-module]';
 
-  const COMPONENT_SELECTOR = '[kit-component]';
-
-//!@{
+  //!@{
 //<!------------------------------------------------------------------------------------------------------------------->
-//! @name Managing components
+//! @name Initialisation
 //<!------------------------------------------------------------------------------------------------------------------->
 //region
 
-  const components = {}, instances = {};
+  var initialized = false;
+
+  kit.init = function ()
+  {
+
+    if (initialized) return;
+
+    const dom_root_el = kit.global.document.documentElement;
+
+    const callback_fn = function () {
+      mount_all(kit.dom.root_el);
+    };
+
+    callback_fn();
+
+    kit.dom.patch.on_patch(callback_fn);
+
+    kit.dom.on_ready(callback_fn);
+
+    initialized = true;
+
+    return this;
+  };
+
+//endregion
+
+//!@{
+//<!------------------------------------------------------------------------------------------------------------------->
+//! @name Managing Components
+//<!------------------------------------------------------------------------------------------------------------------->
+//region
+
+  var components = {}, instances = {};
 
   /**
    * Registers a new component
@@ -48,7 +79,7 @@ const kit = (function ()
 
   function component_name (html_el)
   {
-    const attr = html_el.getAttribute('kit-component');
+    const attr = html_el.getAttribute('data-module');
     if (attr) return attr.split(' ')[0];
 
     return '';
@@ -56,11 +87,10 @@ const kit = (function ()
 
   function purge_instances ()
   {
-    for (var i = 0, len = instances.length; i < len; i++)
+    for(var key in instances)
     {
-      if (!kit.dom.is_detached(instances[i].html_el)) continue;
-
-      delete instances[i];
+      if (!kit.dom.is_detached(instances[key].html_el)) continue;
+      delete instances[key];
     }
   }
 
@@ -68,7 +98,7 @@ const kit = (function ()
 
 //!@{
 //<!------------------------------------------------------------------------------------------------------------------->
-//! @name Mounting && Un-mounting components
+//! @name Mounting && Un-mounting Components
 //<!------------------------------------------------------------------------------------------------------------------->
 //region
 
@@ -78,9 +108,15 @@ const kit = (function ()
    */
   function mount_all (html_el)
   {
-    const module_elements = kit.dom.query_all(html_el, COMPONENT_SELECTOR);
+
+    kit.log("mount_all");
+
+    var module_elements = kit.dom.query_all(html_el, COMPONENT_SELECTOR);
     for (var i = 0, len = module_elements.length; i < len; i++)
     {
+
+      kit.log("start mounting component " + i);
+
       mount(module_elements[i]);
     }
 
@@ -89,29 +125,47 @@ const kit = (function ()
 
   function mount (html_el)
   {
-    const component_name = component_name(html_el),
-    component_data = components[component_name];
+    var name = component_name(html_el);
+    var component_data = components[name];
 
-    var instance_data = instances[html_el];
-    if (typeof instance_data == 'object') return instance_data.instance;
+    purge_instances();
+
+    var instance_data = instances[kit.dom.emplace_id(html_el)];
+
+    if (typeof instance_data === 'object')
+    {
+      kit.log("already mounted " + html_el + " vs. " + instance_data.html_el);
+      return instance_data.instance;
+    }
 
     component_data.ref_counter++;
 
-    const component = component_data.creator_fn();
+    var component = component_data.creator_fn(html_el);
     instance_data = {
-      name: component_data,
+      name: name,
       instance: component,
       html_el: html_el
     };
 
-    instance_data[html_el] = instance_data;
+    kit.log("mount item " + html_el);
 
-    purge_instances();
+    instances[kit.dom.emplace_id(html_el)] = instance_data;
 
     return component;
   }
 
 //endregion
+
+  kit.log = function (string)
+  {
+    console.log(string);
+  };
+
+  kit.register("formatted_date", function (html_el)
+  {
+    return new kit.Formatted_input(html_el);
+  });
+
   return (kit.global.kit = kit.global.kit || kit);
 
 })();

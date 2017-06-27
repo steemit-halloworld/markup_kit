@@ -2,40 +2,7 @@
 {
   "use strict";
 
-  var root = global_scope(self);
-
-  var auto_complete_map = {};
-
-  function purge_auto_complete_map ()
-  {
-
-    for (var key in auto_complete_map)
-    {
-      var component = auto_complete_map[key];
-
-      if (!is_detached(component.dom_node())) continue;
-
-      console.log("destroy");
-
-      delete auto_complete_map[key];
-      component.destroy();
-    }
-  }
-  on_dom_ready(function ()
-  {
-    observe_dom(root.document.body, purge_auto_complete_map);
-  });
-
-  root.auto_complete = function (dom_el)
-  {
-    purge_auto_complete_map();
-
-    if (typeof auto_complete_map[dom_el] !== 'undefined') return auto_complete_map[dom_el];
-
-    return (auto_complete_map[dom_el] = new Auto_complete(dom_el));
-  };
-
-  var Auto_complete = function (el)
+  kit.Auto_complete = function (el)
   {
     var dom_node = typeof el == 'string' ? document.querySelector(el) : el;
 
