@@ -1,6 +1,7 @@
 # MarkupKit
 
-MarkupKit is a lightweight and modular front end framework for developing web-based interfaces.
+MarkupKit is a lightweight and modular front end framework for developing 
+web-based interfaces.
 
 ## Contributing
 
