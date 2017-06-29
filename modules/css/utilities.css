@@ -1,3 +1,6 @@
+
+@import 'variables.css';
+
 :root
 {
   --background_muted: var(--global-muted-background);

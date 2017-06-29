@@ -1,0 +1,38 @@
+/* Spacing
+ * Module to define margin or padding values to an element especially for different viewport sizes
+ *
+ * (c) Thomas Schroeter <mailto: mail@tschroeter.com> and Investigative Reporters & Editors 2017
+ * markup_kit may be freely distributed under the MIT license
+ */
+
+/*!@{
+//<!--------------------------------------------------------------------------------------------------------------------
+//! @name Variables
+//<!------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+@import 'variables.css';
+
+:root
+{
+  --margin: var(--global-margin);
+  --padding: var(--global-gutter);
+}
+
+/*endregion*/
+/*!@}*/
+
+.kit_margin
+{
+  margin-bottom: var(--margin);
+}
+
+* + .kit_margin
+{
+  margin-top: var(--margin) !important;
+}
+
+.kit_padding
+{
+  padding: var(--padding);
+}

@@ -1,3 +1,6 @@
+
+@import 'variables.css';
+
 :root
 {
   --list_nested_padding_left: var(--global-gutter);

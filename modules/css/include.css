@@ -1,11 +1,17 @@
-@import 'variables.css';
-
-@import url(core/include.css);
-@import url(layout/include.css);
-@import 'utilities.css';
-@import 'nav.css';
+@import 'core.css';
+@import 'positioning.css';
+@import 'sizing.css';
+@import 'spacing.css';
+@import 'visibility.css';
+@import 'flexbox_grid.css';
+@import 'list.css';
 @import 'off_canvas.css';
-@import url(navigation/include.css);
-@import url(container/include.css);
-@import url(form/include.css);
+@import 'card.css';
+@import 'nav.css';
+@import 'navbar.css';
+@import 'button.css';
+@import 'form.css';
 @import 'dropdown.css';
+
+/* deprecated */
+@import 'utilities.css';

@@ -1,3 +1,6 @@
+
+@import 'variables.css';
+
 :root
 {
   --grid-gutter-horizontal: var(--global-gutter);

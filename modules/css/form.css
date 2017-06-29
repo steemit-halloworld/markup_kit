@@ -1,4 +1,5 @@
-@import url(button.css);
+
+@import 'variables.css';
 
 :root
 {

@@ -4,6 +4,8 @@
 ** markup_kit may be freely distributed under the MIT license
 */
 
+@import 'variables.css';
+
 :root
 {
   --nav_default_item_color: var(--global-muted-color);

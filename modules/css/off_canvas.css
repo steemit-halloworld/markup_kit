@@ -1,5 +1,5 @@
-/* Kit Off-canvas
- * Component to create an off-canvas sidebar. The component is used to hide the
+/* Off-canvas
+ * Module to create an off-canvas sidebar. The module is used to hide the
  * navigation menu off canvas. This is especially useful for screens with small
  * viewport
  *
@@ -12,6 +12,8 @@
 //! @name Variables
 //<!------------------------------------------------------------------------------------------------------------------*/
 /*region*/
+
+@import 'variables.css';
 
 :root
 {

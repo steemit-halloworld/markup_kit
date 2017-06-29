@@ -4,6 +4,8 @@
 ** markup_kit may be freely distributed under the MIT license
 */
 
+@import 'variables.css';
+
 :root
 {
   --drop_down_zindex: 20;

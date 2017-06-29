@@ -1,9 +1,10 @@
+@import 'variables.css';
+
 :root
 {
   --button-padding-horizontal: var(--global-gutter);
   --button-line-height: var(--global-control-height);
   --button-font-size: var(--global-font-size);
-
   --button-background-primary: var(--global-background-primary);
   --button-foreground-color-primary: var(--global-inverse-color);
 }

@@ -1,3 +1,12 @@
+/* Positioning
+ * Module to place elements outside of the normal document flow.
+ *
+ * (c) Thomas Schroeter <mailto: mail@tschroeter.com> and Investigative Reporters & Editors 2017
+ * markup_kit may be freely distributed under the MIT license
+ */
+
+@import 'variables.css';
+
 /*[class*='kit_top'],
 [class*='kit_bottom'],
 [class*='kit_left'],
