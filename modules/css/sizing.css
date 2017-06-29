@@ -60,16 +60,6 @@
   width: 75%;
 }
 
-.kit_height_viewport
-{
-  min-height: 100vh;
-}
-
-.kit_height_viewport_4_5
-{
-  min-height: 80vh;
-}
-
 @media (--small-up)
 {
 
@@ -147,6 +137,24 @@
 //! @name Height Modifiers
 //<!------------------------------------------------------------------------------------------------------------------*/
 /*region*/
+
+
+.kit_height_vp
+{
+  min-height: 100vh;
+}
+
+.kit_height_vp_4_5
+{
+  min-height: 80vh;
+}
+
+.kit_height_vp_3_5
+{
+  min-height: 60vh;
+}
+
+
 
 /*endregion*/
 /*!@}*/
