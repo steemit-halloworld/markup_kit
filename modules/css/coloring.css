@@ -1,0 +1,39 @@
+/* coloring.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Coloring Module
+
+The Coloring module define the background and foreground colors of elements.
+
+*/
+@import 'variables.css';
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Variables                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+:root
+{
+  --background_default_background: var(--global-background);
+  --background_muted_background: var(--global-muted-background);
+  --background_primary_background: var(--global-background-primary);
+  --background_secondary_background: var(--global-background-secondary);
+}
+
+/*endregion*/
+
+.bg
+{ background-color: var(--background_default_background) !important; }
+
+.bg_muted
+{ background-color: var(--background_muted_background) !important; }
+
+.bg_primary,
+.bg_primary_\> > *
+{
+  background-color: var(--background_primary_background) !important;
+}
+
+.bg_secondary
+{ background-color: var(--background_secondary_background) !important; }
