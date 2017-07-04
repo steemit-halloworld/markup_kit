@@ -29,8 +29,11 @@ const kit = (function ()
 
   var initialized = false;
 
-  kit.init = function ()
+  var classname_prefix = '';
+
+  kit.init = function (classname_prefix_arg)
   {
+    if(kit.is_defined(classname_prefix_arg)) classname_prefix = classname_prefix_arg;
 
     if (initialized) return;
 
@@ -156,6 +159,20 @@ const kit = (function ()
 
 //endregion
 
+  kit.css_prefix = function ()
+  {
+    return classname_prefix;
+  };
+
+  kit.string = function (str, variables)
+  {
+    return str.replace(new RegExp("\{([^\{]+)\}", "g"), function (_unused, var_key)
+    {
+      return variables[var_key];
+    });
+
+  };
+
   kit.is_defined = function (val)
   {
     return typeof val !== 'undefined';
@@ -192,7 +209,7 @@ const kit = (function ()
   function global_scope (self)
   {
     return kit.global;
-  };
+  }
 
   root.string = function string (str, variables)
   {

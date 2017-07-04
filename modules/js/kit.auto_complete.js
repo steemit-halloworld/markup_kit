@@ -6,18 +6,17 @@
   {
     var dom_node = typeof el == 'string' ? document.querySelector(el) : el;
 
-    var render_item_fn = function (item, search_term, query_item_data_fn)
+    var render_item_fn = function (item, search_term)
     {
-      var value = query_item_data_fn(item);
-      //var value = item.feminine || item.masculine || item.neutral;
+      const class_name = kit.string("{prefix}drop_down_item", {'prefix': kit.css_prefix()});
 
-      return '<div class="kit_drop_down_item autocomplete-suggestion" data-val="' + item.id + '">' + value + '</div>';
+      return kit.string('<div class="{class_name} autocomplete-suggestion" data-val="' + item.id + '">' + item + '</div>', {'class_name': class_name});
     };
 
     function create_suggestions_container ()
     {
       var div = document.createElement("div");
-      div.className = 'auto_complete_suggestions kit_drop_down';
+      div.className = kit.string('auto_complete_suggestion {prefix}drop_down', {prefix: kit.css_prefix()});
       return div;
     }
 
@@ -38,7 +37,7 @@
       {
         if (!sel)
         {
-          next = (is_arrow_down) ? div.childNodes[0] : div.childNodes[divchildNodes.length - 1];
+          next = (is_arrow_down) ? div.childNodes[0] : div.childNodes[div.childNodes.length - 1];
           next.className += ' selected';
         }
         else
@@ -107,7 +106,9 @@
       if (is_resize) return;
 
       if (!div.maxHeight) div.maxHeight = parseInt(style(div).maxHeight);
-      if (!div.sug_height && div.querySelector('.kit_drop_down_item')!= null) div.sug_height = div.querySelector('.kit_drop_down_item').offsetHeight;
+      const selector = kit.string('.{prefix}drop_down_item', {'prefix': kit.css_prefix()});
+
+      if (!div.sug_height) div.sug_height = div.querySelector(selector).offsetHeight;
 
       if (div.sug_height)
       {
@@ -135,7 +136,7 @@
     var offset_top = 0;
     var min_chars = 1;
 
-    var suggest = function (data, query_item_data_fn)
+    var suggest = function (data)
     {
 
       var input_val = dom_node.value;
@@ -151,7 +152,7 @@
 
       for (var i = 0; i < data.length; i++)
       {
-        s += render_item_fn(data[i], input_val, query_item_data_fn);
+        s += render_item_fn(data[i], input_val);
       }
 
 
@@ -164,8 +165,7 @@
 
     function listen (new_val, old_val)
     {
-
-      if (new_val.length >= min_chars)
+      if (kit.is_defined(new_val) && new_val.length >= min_chars)
       {
         clearTimeout(timer);
 
@@ -221,11 +221,11 @@
     function constructor ()
     {
 
-      add_event(document, 'mousedown', on_mouse_down);
-      add_event(document, 'touchstart', on_mouse_down);
-      add_event(document, 'touchend', on_mouse_up);
-      add_event(document, 'mouseup', on_mouse_up);
-      add_event(document, 'keydown', on_key_down);
+      kit.dom.on(document, 'mousedown', on_mouse_down);
+      kit.dom.on(document, 'touchstart', on_mouse_down);
+      kit.dom.on(document, 'touchend', on_mouse_up);
+      kit.dom.on(document, 'mouseup', on_mouse_up);
+      kit.dom.on(document, 'keydown', on_key_down);
 
       var scope = new Scope();
       scope.watch(watch, listen);
