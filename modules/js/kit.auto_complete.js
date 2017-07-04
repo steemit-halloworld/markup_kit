@@ -107,7 +107,7 @@
       if (is_resize) return;
 
       if (!div.maxHeight) div.maxHeight = parseInt(style(div).maxHeight);
-      if (!div.sug_height) div.sug_height = div.querySelector('.kit_drop_down_item').offsetHeight;
+      if (!div.sug_height && div.querySelector('.kit_drop_down_item')!= null) div.sug_height = div.querySelector('.kit_drop_down_item').offsetHeight;
 
       if (div.sug_height)
       {
