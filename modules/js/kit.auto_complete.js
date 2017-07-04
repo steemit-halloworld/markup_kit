@@ -11,7 +11,7 @@
 //region´
 
   var ref_counter = -1;
-  var prv = {};
+  var prv = [];
 
   kit.Auto_complete = function (html_element)
   {
