@@ -1,5 +1,7 @@
 :root
 {
+  --global_box_sizing: border-box;
+
   /* Foreground Colors */
   --global-foreground-color: #666;
   --global-emphasis-color: #333;
@@ -65,7 +67,12 @@
   /* Border Radius */
   --global_border_radius: .25rem;
 
+  --global_sm_width: 640px;
+  --global_md_width: 960px;
+  --global_lg_width: 1200px;
+  --global_xl_width: 1600px;
 }
+
 
 @custom-media --small-up (width > 640px);
 @custom-media --medium-up (width > 960px);

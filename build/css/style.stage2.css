@@ -1,0 +1,1430 @@
+/* normalisation.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Normalisation Module
+
+*/
+*, *:before, *:after
+{
+  box-sizing: inherit;
+}
+html
+{
+  box-sizing: border-box;
+  /* Prevent adjustments of font size after orientation changes on Windows Phone and iOS */
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body
+{
+  margin: 0; /* remove body margin */
+}
+/* deprecated */
+:root
+{
+
+  /* Foreground Colors */
+
+  /* Background Colors */
+
+  /* Typography */
+
+  /* Borders */
+
+  /* Spacings */
+
+  /* Controls */
+
+  /* Z-Index */
+
+  /* Box Shadows */
+
+  /* Border Radius */
+}
+body
+{
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+a
+{
+  /* remove gap in links underline in iOS 8+ and Safari 8+ */
+  -webkit-text-decoration-skip: objects;
+}
+a:active, a:hover
+{
+  outline: 0;
+}
+a, .kit_link
+{
+  color: #1e87f0;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover, .kit_link:hover
+{
+  color: #0f6ecd;
+  text-decoration: underline;
+}
+/* margins */
+p, ul, dl, pre, address, fieldset, figure
+{
+  margin: 0 0 20px 0;
+  list-style-type: none;
+}
+* + p, * + ul, * + ol, * + dl, * + pre, * + address, * + fieldset, * + figure
+{ /* adjacent element margin */
+  margin-top: 20px;
+}
+/* headings */
+h1, .kit_h1, h2, .kit_h2, h3, .kit_h3, h4, .kit_h4, h5, .kit_h5, h6, .kit_h6
+{
+  margin: 0 0 20px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+  text-transform: none;
+}
+* + h1, * + .kit_h1, * + h2, * + .kit_h2, * + h3, * + .kit_h3, * + h4, * + .kit_h4, * + h5, * + .kit_h5, * + h6, * + .kit_h6
+{ /* adjacent element margin */
+  margin-top: 40px;
+}
+h1, .kit_h1
+{
+  font-size: 42px;
+  font-size: 2.625rem;
+  line-height: 1.2;
+}
+h2, .kit_h2
+{
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+h3, .kit_h3
+{
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+h4, .kit_h4
+{
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+h5, .kit_h5
+{
+  font-size: 16px;
+  line-height: 1.4;
+}
+h6, .kit_h6
+{
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+/* html5 elements */
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary
+{
+  display: block;
+  width: 100%; /* ???? */
+}
+/* float.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Float Module
+
+*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Float And Clearfix Modifiers                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+/*doc
+
+## Float And Clearfix Modifiers
+
+Floating elements are taken from the document flow and aligned to the left or right of their parent element. It is
+important to clear floats.
+
+*/
+/*region*/
+.kit_float, .kit_float.kit_left
+{
+  float: left;
+}
+.kit_float, .kit_float.kit_right
+{
+  float: right;
+}
+.kit_clf, .kit_grid, .kit_grid_item, .kit_grid > *
+{
+
+}
+.kit_clf:before, .kit_grid:before, .kit_grid_item:before, .kit_grid > *:before
+{
+  content: "";
+  display: table-cell;
+}
+.kit_clf:after, .kit_grid:after, .kit_grid_item:after, .kit_grid > *:after
+{
+  clear: both;
+  content: "";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+/*endregion*/
+/* flex.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Flex Module
+
+*/
+/* dependencies */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Variables                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+/*endregion*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Flex Component                                                                                                     */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*doc
+
+# Flex Component
+
+## Default Flex Configuration
+
+<div class="flx">
+  <div><div class="card">Item 1</div></div>
+  <div><div class="card">Item 2</div></div>
+  <div><div class="card">Item 3</div></div>
+  <div><div class="card">Item 4</div></div>
+  <div><div class="card">Item 5</div></div>
+  <div><div class="card">Item 6</div></div>
+  <div><div class="card">Item 7</div></div>
+  <div><div class="card">Item 8</div></div>
+  <div><div class="card">Item 9</div></div>
+  <div><div class="card">Item 10</div></div>
+  <div><div class="card">Item 11</div></div>
+</div>
+
+*/
+.kit_flx
+{
+  letter-spacing: -0.31em;
+  text-rendering: optimizespeed;
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  margin: 0 -30px;
+}
+.kit_flx_u, .kit_flx > *
+{
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+  display: inline-block;
+  padding: 0 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+/*endregion*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Gutter Modifiers                                                                                                   */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+/*endregion*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Wrap Modifiers                                                                                                     */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.kit_flx.kit_wrap
+{
+}
+.kit_flx.kit_nowrap
+{
+}
+/*endregion*/
+/*!@}*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Ordering Modifiers                                                                                                 */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.kit_flx > .kit_first
+{
+}
+.kit_flx > .kit_last
+{
+}
+/*endregion*/
+/* positioning.css | MIT License | https://github.com/tschroeter/markup_kit */
+/*doc
+
+# Positioning Module
+
+ Module to place elements outside of the normal document flow.
+
+*/
+/*[class*='kit_top'],
+[class*='kit_bottom'],
+[class*='kit_left'],
+[class*='kit_right'],
+[class*='kit_center']
+{
+  position: absolute !important;
+}*/
+.kit_fixed
+{
+  position: fixed !important;
+  z-index: 9999 !important;
+}
+.kit_right
+{
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.kit_left
+{
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.kit_top_left
+{
+  top: 0;
+  left: 0;
+}
+.kit_top_right
+{
+  top: 0;
+  right: 0;
+}
+.kit_bottom_left
+{
+  bottom: 0;
+  left: 0;
+}
+.kit_bottom_right
+{
+  bottom: 0;
+  right: 0;
+}
+@media (min-width: 961px)
+{
+  .kit_fixed\@medium-up
+  {
+    position: fixed !important;
+    z-index: 9999 !important;
+
+  }
+
+  .kit_right\@medium-up
+  {
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .kit_top_left\@medium-up
+  {
+    top: 0;
+    left: 0;
+  }
+
+  .kit_top_right\@medium-up
+  {
+    top: 0;
+    right: 0;
+  }
+
+  .kit_bottom_left\@medium-up
+  {
+    bottom: 0;
+    left: 0;
+  }
+
+  .kit_bottom_right\@medium-up
+  {
+    bottom: 0;
+    right: 0;
+  }
+}
+/* sizing.css | MIT License | https://github.com/tschroeter/markup_kit */
+/*doc
+
+# Sizing Module
+
+ Module to define the width or height of elements especially for different viewport sizes.
+*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Fixed Width Modifiers                                                                                              */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.kit_w_sm
+{
+  width: 640px;
+}
+.kit_w_md
+{
+  width: 960px;
+}
+.kit_w_lg
+{
+  width: 1200px;
+}
+.kit_w_xl
+{
+  width: 1600px;
+}
+/*endregion*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Width Modifiers                                                                                                    */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.kit_w100
+{ width: 100% !important; }
+.kit_child_w10 > *, .kit_w10
+{ width: 10% !important; }
+.kit_child_w20 > *, .kit_w20
+{ width: 20% !important; }
+.kit_child_w25 > *, .kit_w25
+{ width: 25% !important; }
+.kit_child_w30 > *, .kit_w30
+{ width: 30% !important; }
+.kit_child_w33 > *, .kit_w33
+{ width: 33.3333% !important; }
+.kit_child_w40 > *, .kit_w40
+{ width: 40% !important; }
+.kit_child_w50 > *, .kit_w50
+{ width: 50% !important; }
+.kit_child_w60 > *, .kit_w60
+{ width: 60% !important; }
+.kit_child_w67 > *, .kit_w67
+{ width: 67% !important; }
+.kit_child_w70 > *, .kit_w70
+{ width: 70% !important; }
+.kit_child_w75 > *, .kit_w75
+{ width: 75% !important; }
+.kit_child_w80 > *, .kit_w80
+{ width: 80% !important; }
+.kit_child_w90 > *, .kit_w90
+{ width: 90% !important; }
+.kit_child_w100, .kit_w100
+{ width: 100% !important; }
+@media (min-width: 641px)
+{
+  .kit_child_w10\@sm_up > *, .kit_w10\@sm_up
+  { 	width: 10% !important; }
+
+  .kit_child_w20\@sm_up > *, .kit_w20\@sm_up
+  { 	width: 20% !important; }
+
+  .kit_child_w25\@sm_up > *, .kit_w25\@sm_up
+  { 	width: 25% !important; }
+
+  .kit_child_w33\@sm_up > *, .kit_w33\@sm_up
+  { 	width: 33.3333% !important; }
+
+  .kit_child_w40\@sm_up > *, .kit_w40\@sm_up
+  { 	width: 40% !important; }
+
+  .kit_child_w50\@sm_up > *, .kit_w50\@sm_up
+  { 	width: 50% !important; }
+
+  .kit_child_w60\@sm_up > *, .kit_w60\@sm_up
+  { 	width: 60% !important; }
+
+  .kit_child_w67\@sm_up > *, .kit_w67\@sm_up
+  { 	width: 67% !important; }
+
+  .kit_child_w75\@sm_up > *, .kit_w75\@sm_up
+  { 	width: 75% !important; }
+
+  .kit_child_w80\@sm_up > *, .kit_w80\@sm_up
+  { 	width: 80% !important; }
+
+  .kit_child_w90\@sm_up > *, .kit_w90\@sm_up
+  { 	width: 90% !important; }
+
+  .kit_child_w100\@sm_up, .kit_w100\@sm_up
+  { 	width: 100% !important; }
+}
+@media (min-width: 961px)
+{
+  .kit_child_w10\@md_up > *, .kit_w10\@md_up
+  { 	width: 10% !important; }
+
+  .kit_child_w20\@md_up > *, .kit_w20\@md_up
+  { 	width: 20% !important; }
+
+  .kit_child_w25\@md_up > *, .kit_w25\@md_up
+  { 	width: 25% !important; }
+
+  .kit_child_w33\@md_up > *, .kit_w33\@md_up
+  { 	width: 33.3333% !important; }
+
+  .kit_child_w40\@md_up > *, .kit_w40\@md_up
+  { 	width: 40% !important; }
+
+  .kit_child_w50\@md_up > *, .kit_w50\@md_up
+  { 	width: 50% !important; }
+
+  .kit_child_w60\@md_up > *, .kit_w60\@md_up
+  { 	width: 60% !important; }
+
+  .kit_child_w67\@md_up > *, .kit_w67\@md_up
+  { 	width: 67% !important; }
+
+  .kit_child_w75\@md_up > *, .kit_w75\@md_up
+  { 	width: 75% !important; }
+
+  .kit_child_w80\@md_up > *, .kit_w80\@md_up
+  { 	width: 80% !important; }
+
+  .kit_child_w90\@md_up > *, .kit_w90\@md_up
+  { 	width: 90% !important; }
+
+  .kit_child_w100\@md_up, .kit_w100\@md_up
+  { 	width: 100% !important; }
+}
+@media (min-width: 1201px)
+{
+  .kit_child_w10\@lg_up > *, .kit_w10\@lg_up
+  { 	width: 10% !important; }
+
+  .kit_child_w20\@lg_up > *, .kit_w20\@lg_up
+  { 	width: 20% !important; }
+
+  .kit_child_w25\@lg_up > *, .kit_w25\@lg_up
+  { 	width: 25% !important; }
+
+  .kit_child_w33\@lg_up > *, .kit_w33\@lg_up
+  { 	width: 33.3333% !important; }
+
+  .kit_child_w40\@lg_up > *, .kit_w40\@lg_up
+  { 	width: 40% !important; }
+
+  .kit_child_w50\@lg_up > *, .kit_w50\@lg_up
+  { 	width: 50% !important; }
+
+  .kit_child_w60\@lg_up > *, .kit_w60\@lg_up
+  { 	width: 60% !important; }
+
+  .kit_child_w67\@lg_up > *, .kit_w67\@lg_up
+  { 	width: 67% !important; }
+
+  .kit_child_w75\@lg_up > *, .kit_w75\@lg_up
+  { 	width: 75% !important; }
+
+  .kit_child_w80\@lg_up > *, .kit_w80\@lg_up
+  { 	width: 80% !important; }
+
+  .kit_child_w90\@lg_up > *, .kit_w90\@lg_up
+  { 	width: 90% !important; }
+
+  .kit_child_w100\@lg_up, .kit_w100\@lg_up
+  { 	width: 100% !important; }
+}
+@media (min-width: 1601px)
+{
+  .kit_child_w10\@xl_up > *, .kit_w10\@xl_up
+  { 	width: 10% !important; }
+
+  .kit_child_w20\@xl_up > *, .kit_w20\@xl_up
+  { 	width: 20% !important; }
+
+  .kit_child_w25\@xl_up > *, .kit_w25\@xl_up
+  { 	width: 25% !important; }
+
+  .kit_child_w33\@xl_up > *, .kit_w33\@xl_up
+  { 	width: 33.3333% !important; }
+
+  .kit_child_w50\@xl_up > *, .kit_w50\@xl_up
+  { 	width: 50% !important; }
+
+  .kit_child_w60\@xl_up > *, .kit_w60\@xl_up
+  { 	width: 60% !important; }
+
+  .kit_child_w67\@xl_up > *, .kit_w67\@xl_up
+  { 	width: 67% !important; }
+
+  .kit_child_w75\@xl_up > *, .kit_w75\@xl_up
+  { 	width: 75% !important; }
+
+  .kit_child_w80\@xl_up > *, .kit_w80\@xl_up
+  { 	width: 80% !important; }
+
+  .kit_child_w90\@xl_up > *, .kit_w90\@xl_up
+  { 	width: 90% !important; }
+
+  .kit_child_w100\@xl_up, .kit_w100\@xl_up
+  { 	width: 100% !important; }
+}
+/*endregion*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Height Modifiers                                                                                                   */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.kit_height_vp
+{
+  min-height: 100vh;
+}
+.kit_height_vp_4_5
+{
+  min-height: 80vh;
+}
+.kit_height_vp_3_5
+{
+  min-height: 60vh;
+}
+/*endregion*/
+/* spacing.css | MIT License | https://github.com/tschroeter/markup_kit */
+/*doc
+
+# Spacing Module
+
+Module to define margin or padding values to an element especially for different viewport sizes
+
+*/
+/* dependencies */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Variables                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+/*endregion*/
+.kit_margin
+{
+  margin-bottom: 20px;
+}
+* + .kit_margin
+{
+  margin-top: 20px !important;
+}
+.kit_padding
+{
+  padding: 30px;
+}
+/* visibility.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+*/
+.kit_invisible
+{
+  visibility: hidden !important;
+}
+@media (min-width: 641px)
+{
+  .kit_visible\@small-up
+  {
+    visibility: visible !important;
+  }
+
+  .kit_hidden\@small-up
+  {
+    display: none !important;
+  }
+}
+@media (min-width: 961px)
+{
+  .kit_visible\@medium-up
+  {
+    visibility: visible !important;
+  }
+
+  .kit_hidden\@medium-up
+  {
+    display: none !important;
+  }
+}
+/* coloring.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Coloring Module
+
+The Coloring module define the background and foreground colors of elements.
+
+*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Variables                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+/*endregion*/
+.kit_bg
+{ background-color: #fff !important; }
+.kit_bg_muted
+{ background-color: #f8f8f8 !important; }
+.kit_bg_primary, .kit_bg_primary_\> > *
+{
+  background-color: #1e87f0 !important;
+}
+.kit_bg_secondary
+{ background-color: #222 !important; }
+/* page.css | MIT License | https://github.com/tschroeter/markup_kit */
+/*doc
+
+# Page module
+*/
+.kit_page {
+  /* box sizing has to be 'content-box' so max-width is always
+  the same and unaffected by padding on different viewport sizes*/
+  box-sizing: content-box;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.kit_page > *
+{
+  box-sizing: border-box;
+}
+@media (min-width: 641px)
+{
+  .kit_page
+  {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (min-width: 961px)
+{
+  .kit_page
+  {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+/* grid.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Grid Module
+
+*/
+/* dependencies */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Variables                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+:root
+{
+  /* gutter */
+}
+/*endregion*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Grid Component                                                                                                     */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*doc
+
+## Grid Component
+
+The Grid component arranges block elements into columns and works closely together with the width modifiers of the
+Sizing module to determine how much space of the the container each item will take up.
+
+### Default Grid Configuration
+
+<div class="grid">
+  <div class="w20">
+    <div class="card">20%</div>
+  </div>
+   <div class="w20">
+    <div class="card">20%</div>
+  </div>
+  <div class="w20">
+    <div class="card">20%</div>
+  </div>
+  <div class="w20">
+    <div class="card">20%</div>
+  </div>
+  <div class="w20">
+    <div class="card">20%</div>
+  </div>
+
+  <div class="w25">
+    <div class="card">25%</div>
+  </div>
+  <div class="w25">
+    <div class="card">25%</div>
+  </div>
+  <div class="w25">
+    <div class="card">25%</div>
+  </div>
+  <div class="w25">
+    <div class="card">25%</div>
+  </div>
+
+  <div class="w33">
+    <div class="card">33%</div>
+  </div>
+  <div class="w33">
+    <div class="card">33%</div>
+  </div>
+  <div class="w33">
+    <div class="card">33%</div>
+  </div>
+
+  <div class="w50">
+    <div class="card">50%</div>
+  </div>
+  <div class="w50">
+    <div class="card">50%</div>
+  </div>
+
+  <div class="w100">
+    <div class="card">100%</div>
+  </div>
+
+  <div>
+    <div class="card">auto</div>
+  </div>
+
+  <div>
+    <div class="card">auto</div>
+  </div>
+
+  <div>
+    <div class="card">auto</div>
+  </div>
+
+  <div class="fill">
+    <div class="card">fill</div>
+  </div>
+</div>
+
+*/
+/*region*/
+.kit_grid
+{
+  /* extend clearfix modifier from Float module */
+  /* default gutter */
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.kit_grid_item, .kit_grid > *
+{
+  float: left;
+  min-height: 1px;
+
+  /* fit width to content */
+  width: auto;
+  _width: 1px;
+
+  /* horizontal default gutter */
+  padding: 0 15px;
+  /* vertical default gutter */
+  margin: 0 0 15px;
+}
+.kit_grid > .kit_fill
+{
+  min-width: 50px;
+  width: 10000px;
+  *width: auto;
+  display: table-cell;
+  float: none;
+  _float: left;
+}
+/*endregion*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Gutter Modifiers                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*doc
+
+### Gutter Modifiers
+
+The Grid component comes with a default gutter, that is decreased automatically from a certain breakpoint, usually on a
+smaller desktop viewport width. To apply a different gutter, add one of the following classes.
+
+*/
+/*region*/
+.kit_grid.kit_collapse
+{
+}
+.kit_grid.kit_small
+{
+}
+.kit_grid.kit_medium
+{
+}
+.kit_grid.kit_large
+{
+}
+/*endregion*/
+/*!@}*/
+/*!@{
+/*<!--------------------------------------------------------------------------------------------------------------------
+//! @name Push And Pull
+//<!------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+/*endregion*/
+/*!@}*/
+.kit_list li::before, .kit_list li::after
+{ /* micro clearfix */
+  content: "";
+  display: table;
+}
+.kit_list ul
+{ /** nested lists **/
+  padding-left: 30px;
+}
+.kit_list > li > :last-child
+{ /* remove margin from the last child */
+  margin-bottom: 0;
+}
+.kit_list > li:nth-child(n+2), .kit_list > li > ul
+{ /** list item margin */
+  margin-top: 10px;
+}
+.kit_list_divider > li:nth-child(n+2)
+{ /** list item divider style */
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e5e5e5;
+}
+/* off_canvas.css | MIT License | https://github.com/tschroeter/markup_kit */
+/*doc
+
+# Off-canvas Module
+
+Module to create an off-canvas sidebar. The module is used to hide the navigation menu off canvas. This is especially
+useful for screens with small viewport.
+
+*/
+/* dependencies */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Variables                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+/*endregion*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Off-canvas Component                                                                                               */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*doc
+## Of-canvas Component
+
+To apply the component add the off_canvas class to a parent div container and use the sub-component classes
+*/
+/*region*/
+.kit_off_canvas
+{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+@media (max-width: 639px)
+{
+  .kit_off_canvas\@small-down
+  {
+  	position: fixed;
+  	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	z-index: 1000;
+  }
+}
+@media (max-width: 959px)
+{
+  .kit_off_canvas\@medium-down
+  {
+  	position: fixed;
+  	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	z-index: 1000;
+  }
+}
+/*endregion*/
+/*!@}*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Off-canvas Bar Sub-component                                                                                       */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.kit_off_canvas_bar
+{
+  /* set position ----------------------*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  /* -----------------------------------*/
+  background: #FFF;
+  /* -----------------------------------*/
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  /* -----------------------------------*/
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  /* -----------------------------------*/
+}
+@media (max-width: 639px)
+{
+  .kit_off_canvas_bar\@small-down
+  {
+  	position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	width: 250px;
+  	background: #FFF;
+  	overflow-y: auto;
+  	-webkit-overflow-scrolling: touch;
+  	-webkit-transform: translateX(-100%);
+          	transform: translateX(-100%);
+  }
+}
+@media (max-width: 959px)
+{
+  .kit_off_canvas_bar\@medium-down
+  {
+  	position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	width: 250px;
+  	background: #FFF;
+  	overflow-y: auto;
+  	-webkit-overflow-scrolling: touch;
+  	-webkit-transform: translateX(-100%);
+          	transform: translateX(-100%);
+  }
+}
+/*endregion*/
+.kit_off_canvas_checkbox_trigger:checked ~ [class*="kit_off_canvas"] [class*="kit_off_canvas_bar"], .kit_off_canvas_open [class*="kit_off_canvas_bar"]
+{
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+.kit_off_canvas_checkbox_trigger:checked ~ [class*="kit_off_canvas_content"]
+{
+  border: 1px solid red;
+}
+/* card.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Card Module
+
+*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Variables                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+/*endregion*/
+.kit_card
+{
+  position: relative;
+  box-sizing: border-box;
+
+  background: #f8f8f8;
+  color: #666;
+}
+/* Nav
+** http://getmarkupkit.com
+**(c) Thomas Schroeter <mailto: mail@tschroeter.com> and Investigative Reporters & Editors 2017
+** markup_kit may be freely distributed under the MIT license
+*/
+.kit_nav ul
+{
+  margin: 0;
+  padding: 0;
+}
+.kit_nav > ul, nav > ul
+{
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 0 0 15px;
+}
+.kit_nav ul > *, nav ul > *
+{
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  margin-left: 15px;
+}
+.kit_nav li > a, nav ul li > a
+{
+  display: block;
+  text-decoration: none;
+}
+.kit_nav li > a:focus, nav li > a:focus
+{
+  outline: none;
+}
+.kit_nav > li > a, nav ul li > a
+{
+  color: #999;
+  padding: 5px 5px
+}
+.kit_nav > li > a:hover, .kit_nav > li > a:focus, nav ul li > a:hover, nav ul li > a:focus
+{
+  color: #666;
+}
+.kit_nav > li.kit_active > a, nav ul li.kit_active > a
+{
+  color: #333;
+}
+/* Justification */
+.kit_nav.kit_expand ul li
+{
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  text-align: center;
+}
+/** Pills **/
+.kit_nav.kit_pills li.kit_active
+{
+  background: #1e87f0;
+  border-radius: .25rem;
+}
+.kit_nav.kit_pills li.kit_active > a
+{
+  color: #fff;
+}
+/** Vertical Navigation */
+.kit_nav_vertical
+{
+  display: block;
+}
+.kit_nav_vertical > *
+{
+  padding-left: 0;
+  margin-bottom: 5px;
+}
+@media (min-width: 961px)
+{
+  .kit_nav.kit_vertical\@medium-up
+  {
+    display: block;
+  }
+
+  .kit_nav.kit_verticalmedium-up > *
+  {
+    padding-left: 0;
+    margin-bottom: 5px;
+  }
+}
+.kit_navbar
+{
+  background: #f8f8f8;
+}
+.kit_navbar > .kit_left, .kit_navbar > .kit_right
+{
+  position: relative !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.kit_navbar
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.kit_navbar ul > li > ul
+{
+  display: block;
+}
+.kit_navbar ul.kit_right
+{
+  position: relative !important;
+  margin-left: auto;
+}
+/** NavBar Navigation */
+.kit_navbar_nav
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.kit_navbar ul.kit_navbar_nav > li, .kit_navbar .kit_logo, .kit_navbar .kit_navbar_toggle
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+  height: 80px;
+}
+input.kit_navbar_toggle
+{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 30px;
+  width: 30px;
+  background-size: 30px 30px;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>") no-repeat center center;
+          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>") no-repeat center center;
+}
+@media (min-width: 961px)
+{
+  .kit_navbar_nav\@medium-up
+  {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .kit_navbar ul.kit_navbar_nav\@medium-up > li, .kit_navbar .kit_logo, .kit_navbar .kit_navbar_toggle
+  {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 15px;
+    height: 80px;
+  }
+}
+/* button.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Button Module
+
+The Button module include predefined button styles with different semantic purposes.
+
+*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Variables                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+/*endregion*/
+.kit_button
+{
+  display: inline-block;
+  padding: 0 30px;
+  text-align: center;
+  font-size: 16px;
+  vertical-align: middle;
+  line-height: 40px;
+  text-decoration: none;
+}
+/* Primary Buttons */
+.kit_button.kit_primary
+{
+  background-color: #1e87f0;
+  color: #fff;
+}
+.kit_form .kit_label
+{
+  display: block;
+  margin-bottom: 10px;
+}
+.kit_input
+{
+  overflow: visible;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+.kit_input, .kit_select, .kit_textarea, .kit_radio, .kit_checkbox
+{
+  box-sizing: border-box;
+  margin: 0;
+  border-radius: 0;
+  font: inherit;
+}
+.kit_input:focus, .kit_select:focus, .kit_textarea:focus
+{
+  outline: none;
+}
+.kit_input, .kit_select, .kit_textarea
+{
+  /* prevent content overflow when fixed width is used */
+  max-width: 100%; /* prevent content overflow if a fixed width is used */
+  width: 100%; /* takr full width */
+  padding: 0 6px;
+  background: #f8f8f8;
+  color: #666;
+  border: 0 none; /* reset default */
+  border: 1px solid #e5e5e5;
+  -webkit_transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit_transition-property: color, background-color, border;
+  transition-property: color, background-color, border;
+  line-height: 100% !important;
+}
+.kit_input:focus, .kit_select:focus, .kit_textarea:focus
+{
+  background: #fff;
+  color: #666;
+  border-color: #1e87f0;
+}
+.kit_input, .kit_select:not([multiple]):not([size])
+{
+  height: 40px;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 40px;
+}
+.kit_select
+{
+  /** remove default style */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 20px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22#000%22%20points%3D%2212%201%209%206%2015%206%22%3E%3C%2Fpolygon%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22#000%22%20points%3D%2212%2013%209%208%2015%208%22%3E%3C%2Fpolygon%3E%0A%3C%2Fsvg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+}
+.kit_checkbox
+{
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  overflow: hidden;
+  vertical-align: middle;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #f8f8f8;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin-top: -4px;
+}
+.kit_checkbox:checked
+{
+  background-color: #1e87f0;
+}
+.kit_checkbox:checked
+{
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22#000%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+/* dropdown.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Dropdown Module
+
+*/
+.kit_drop_down
+{
+  display: none; /* hide by default */
+  position: absolute;
+  z-index: 4000;
+  box-sizing: border-box;
+  min-width: 200px;
+  background: #fff;
+  color: #999;
+  padding: 15px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+  @apply(--kit_drop_down_mixin);
+}
+.kit_drop_down .kit_drop_down_item
+{
+  padding: 0 15px;
+  @apply(--kit_drop_down_item_mixin);
+}
+.kit_drop_down .kit_drop_down_item.kit_selected, .kit_drop_down .kit_drop_down_item:hover
+{
+  color: #fff;
+  background: #1e87f0;
+}
+.kit_drop_down .kit_drop_down_item:hover
+{
+}
+/** Dropdown Menu **/
+@media (min-width: 961px)
+{
+
+  .kit_drop_down_nav_item\@medium-up
+  {
+    position: relative;
+    z-index: 4000;
+  }
+
+  .kit_nav .kit_drop_down_nav_item\@medium-up > .kit_nav, nav .kit_drop_down_nav_item\@medium-up > ul
+  {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    background-color: #f8f8f8;
+  }
+
+  .kit_drop_down_nav_item\@medium-up:hover .kit_nav, .kit_drop_down_nav_item\@medium-up:hover > ul
+  {
+    visibility: visible;
+  }
+}
+/** available mixins */
+/* deprecated */
+.kit_box_shadow_small
+{
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+}
+.kit_box_shadow_medium
+{
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+}
+.kit_box_shadow_large
+{
+  box-shadow: 0 14px 25px rgba(0, 0, 0, .16);
+}
+.kit_box_shadow_xxl
+{
+  box-shadow: 0 28px 50px rgba(0, 0, 0, .16);
+}
+.kit_bg_muted
+{
+  background-color: #f8f8f8 !important;
+}
+.kit_bg_primary
+{
+  background-color: #1e87f0 !important;
+}
+.kit_bg_secondary
+{
+  background-color: #222 !important;
+}
+.kit_logo
+{
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #666;
+  text-decoration: none;
+}
+.kit_logo:hover, .kit_logo:focus
+{
+  color: #666;
+  outline: none;
+  text-decoration: none;
+}
