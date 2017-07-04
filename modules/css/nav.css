@@ -23,13 +23,13 @@
   --nav_dropdown_background: var(--global-muted-background);
 }
 
-.kit_nav ul
+.nav ul
 {
   margin: 0;
   padding: 0;
 }
 
-.kit_nav > ul,
+.nav > ul,
 nav > ul
 {
   padding: 0;
@@ -39,50 +39,50 @@ nav > ul
   margin: 0 0 0 var(--nav_margin_horizontal);
 }
 
-.kit_nav ul > *,
+.nav ul > *,
 nav ul > *
 {
   flex: none;
   margin-left: var(--nav_margin_horizontal);
 }
 
-.kit_nav li > a,
+.nav li > a,
 nav ul li > a
 {
   display: block;
   text-decoration: none;
 }
 
-.kit_nav li > a:focus,
+.nav li > a:focus,
 nav li > a:focus
 {
   outline: none;
 }
 
-.kit_nav > li > a,
+.nav > li > a,
 nav ul li > a
 {
   color: var(--nav_default_item_color);
   padding: var(--nav_item_padding_vertical) var(--nav_item_padding_horizontal)
 }
 
-.kit_nav > li > a:hover,
-.kit_nav > li > a:focus,
+.nav > li > a:hover,
+.nav > li > a:focus,
 nav ul li > a:hover,
 nav ul li > a:focus
 {
   color: var(--nav_default_item_hover_color);
 }
 
-.kit_nav > li.kit_active > a,
-nav ul li.kit_active > a
+.nav > li.active > a,
+nav ul li.active > a
 {
   color: var(--nav_default_item_active_color);
 }
 
 /* Justification */
 
-.kit_nav.kit_expand ul li
+.nav.expand ul li
 {
   flex: 1 1 auto;
   text-align: center;
@@ -90,25 +90,25 @@ nav ul li.kit_active > a
 
 /** Pills **/
 
-.kit_nav.kit_pills li.kit_active
+.nav.pills li.active
 {
   background: var(--global-background-primary);
   border-radius: var(--nav_item_pills_border-radius);
 }
 
-.kit_nav.kit_pills li.kit_active > a
+.nav.pills li.active > a
 {
   color: var(--global-inverse-color);
 }
 
 /** Vertical Navigation */
 
-.kit_nav_vertical
+.nav_vertical
 {
   display: block;
 }
 
-.kit_nav_vertical > *
+.nav_vertical > *
 {
   padding-left: 0;
   margin-bottom: var(--nav_margin_vertical);
@@ -116,12 +116,12 @@ nav ul li.kit_active > a
 
 @media (--medium-up)
 {
-  .kit_nav.kit_vertical\@medium-up
+  .nav.vertical\@medium-up
   {
     display: block;
   }
 
-  .kit_nav.kit_vertical\medium-up > *
+  .nav.vertical\medium-up > *
   {
     padding-left: 0;
     margin-bottom: var(--nav_margin_vertical);

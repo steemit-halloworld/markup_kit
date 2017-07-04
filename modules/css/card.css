@@ -1,6 +1,30 @@
+/* card.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Card Module
+
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Variables                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
 @import 'variables.css';
 
-.kit_card
+:root
 {
+  --card_default_background: var(--global-muted-background);
+  --card_default_color: var(--global-foreground-color);
+}
 
+/*endregion*/
+
+.card
+{
+  position: relative;
+  box-sizing: border-box;
+
+  background: var(--card_default_background);
+  color: var(--card_default_color);
 }

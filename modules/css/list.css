@@ -12,30 +12,30 @@
   --list_item_divider_border: var(--global-border-color);
 }
 
-.kit_list li::before,
-.kit_list li::after
+.list li::before,
+.list li::after
 { /* micro clearfix */
   content: "";
   display: table;
 }
 
-.kit_list ul
+.list ul
 { /** nested lists **/
   padding-left: var(--list_nested_padding_left);
 }
 
-.kit_list > li > :last-child
+.list > li > :last-child
 { /* remove margin from the last child */
   margin-bottom: 0;
 }
 
-.kit_list > li:nth-child(n+2),
-.kit_list > li > ul
+.list > li:nth-child(n+2),
+.list > li > ul
 { /** list item margin */
   margin-top: var(--list_item_margin_top);
 }
 
-.kit_list_divider > li:nth-child(n+2)
+.list_divider > li:nth-child(n+2)
 { /** list item divider style */
   margin-top: var(--list_item_divider_margin_top);
   padding-top: var(--list_item_divider_margin_top);

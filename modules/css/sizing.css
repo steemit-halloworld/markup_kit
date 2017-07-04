@@ -1,160 +1,268 @@
-/* Sizing
- * Module to define the width or height of elements especially for different viewport sizes.
- *
- * (c) Thomas Schroeter <mailto: mail@tschroeter.com> and Investigative Reporters & Editors 2017
- * markup_kit may be freely distributed under the MIT license
- */
+/* sizing.css | MIT License | https://github.com/tschroeter/markup_kit */
+/*doc
 
-/*!@{
-//<!--------------------------------------------------------------------------------------------------------------------
-//! @name Variables
-//<!------------------------------------------------------------------------------------------------------------------*/
-/*region*/
+# Sizing Module
+
+ Module to define the width or height of elements especially for different viewport sizes.
+*/
 
 @import 'variables.css';
 
-:root
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Fixed Width Modifiers                                                                                              */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+.w_sm
 {
-  --kit_width_small: 150px;
-  --kit_width_medium: 300px;
-  --kit_width_large: 450px;
-  --kit_width_xl: 600px;
-  --kit-width-xxl: 750px;
+  width: var(--global_sm_width);
+}
+
+.w_md
+{
+  width: var(--global_md_width);
+}
+
+.w_lg
+{
+  width: var(--global_lg_width);
+}
+
+.w_xl
+{
+  width: var(--global_xl_width);
 }
 
 /*endregion*/
-/*!@}*/
 
-/*!@{
-//<!--------------------------------------------------------------------------------------------------------------------
-//! @name Width Modifiers
-//<!------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Width Modifiers                                                                                                    */
+/*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
 
-.kit_width_1_1
-{
-  width: 100%;
-}
+.w100
+{ width: 100% !important; }
 
-.kit_child_width_1_4 > *,
-.kit_width_1_4
-{
-  width: 25%;
-}
+.child_w10 > *, .w10
+{ width: 10% !important; }
 
-.kit_child_width_2_5 > *,
-.kit_width_2_5
-{
-  width: 40%;
-}
+.child_w20 > *, .w20
+{ width: 20% !important; }
 
-.kit_child_width_3_5 > *,
-.kit_width_3_5
-{
-  width: 60%;
-}
+.child_w25 > *, .w25
+{ width: 25% !important; }
 
-.kit_child_width_3_4 > *,
-.kit_width_3_4
-{
-  width: 75%;
-}
+.child_w30 > *, .w30
+{ width: 30% !important; }
+
+
+.child_w33 > *, .w33
+{ width: 33.3333% !important; }
+
+.child_w40 > *, .w40
+{ width: 40% !important; }
+
+.child_w50 > *, .w50
+{ width: 50% !important; }
+
+.child_w60 > *, .w60
+{ width: 60% !important; }
+
+.child_w67 > *, .w67
+{ width: 67% !important; }
+
+.child_w70 > *, .w70
+{ width: 70% !important; }
+
+
+.child_w75 > *, .w75
+{ width: 75% !important; }
+
+.child_w80 > *, .w80
+{ width: 80% !important; }
+
+.child_w90 > *, .w90
+{ width: 90% !important; }
+
+.child_w100, .w100
+{ width: 100% !important; }
 
 @media (--small-up)
 {
+  .child_w10\@sm_up > *, .w10\@sm_up
+  { @extend .w10; }
 
+  .child_w20\@sm_up > *, .w20\@sm_up
+  { @extend .w20; }
+
+  .child_w25\@sm_up > *, .w25\@sm_up
+  { @extend .w25; }
+
+  .child_w33\@sm_up > *, .w33\@sm_up
+  { @extend .w33; }
+
+  .child_w40\@sm_up > *, .w40\@sm_up
+  { @extend .w40; }
+
+  .child_w50\@sm_up > *, .w50\@sm_up
+  { @extend .w50; }
+
+  .child_w60\@sm_up > *, .w60\@sm_up
+  { @extend .w60; }
+
+  .child_w67\@sm_up > *, .w67\@sm_up
+  { @extend .w67; }
+
+  .child_w75\@sm_up > *, .w75\@sm_up
+  { @extend .w75; }
+
+  .child_w80\@sm_up > *, .w80\@sm_up
+  { @extend .w80; }
+
+  .child_w90\@sm_up > *, .w90\@sm_up
+  { @extend .w90; }
+
+  .child_w100\@sm_up, .w100\@sm_up
+  { @extend .w100; }
 }
 
 @media (--medium-up)
 {
-  .kit_child_width_1_1\@medium-up,
-  .kit_child_width\@medium-up > *,
-  .kit_width_1_1\@medium-up,
-  .kit_width\@medium-up
-  {
-    width: 100%;
-  }
+  .child_w10\@md_up > *, .w10\@md_up
+  { @extend .w10; }
 
-  .kit_child_width_1_2\@medium-up > *
-  {
-    width: 50%;
-  }
+  .child_w20\@md_up > *, .w20\@md_up
+  { @extend .w20; }
 
-  .kit_child_width_1_4\@medium-up > *,
-  .kit_width_1_4\@medium-up
-  {
-    width: 25%;
-  }
+  .child_w25\@md_up > *, .w25\@md_up
+  { @extend .w25; }
 
-  .kit_child_width_1_5\@medium-up > *
-  {
-    width: 20%;
-  }
+  .child_w33\@md_up > *, .w33\@md_up
+  { @extend .w33; }
 
-  .kit_child_width_3_4\@medium-up > *,
-  .kit_width_3_4\@medium-up
-  {
-    width: 75%;
-  }
+  .child_w40\@md_up > *, .w40\@md_up
+  { @extend .w40; }
 
+  .child_w50\@md_up > *, .w50\@md_up
+  { @extend .w50; }
+
+  .child_w60\@md_up > *, .w60\@md_up
+  { @extend .w60; }
+
+  .child_w67\@md_up > *, .w67\@md_up
+  { @extend .w67; }
+
+  .child_w75\@md_up > *, .w75\@md_up
+  { @extend .w75; }
+
+  .child_w80\@md_up > *, .w80\@md_up
+  { @extend .w80; }
+
+  .child_w90\@md_up > *, .w90\@md_up
+  { @extend .w90; }
+
+  .child_w100\@md_up, .w100\@md_up
+  { @extend .w100; }
 }
 
 @media (--large-up)
 {
-  .kit_child_width_1_1\@large-up,
-  .kit_child_width\@large-up > *
-  {
-    width: 100%;
-  }
+  .child_w10\@lg_up > *, .w10\@lg_up
+  { @extend .w10; }
 
-  .kit_child_width_1–2\@large-up > *
-  {
-    width: 50%;
-  }
+  .child_w20\@lg_up > *, .w20\@lg_up
+  { @extend .w20; }
 
-  .kit_child_width_1–4\@large-up > *
-  {
-    width: 25%;
-  }
+  .child_w25\@lg_up > *, .w25\@lg_up
+  { @extend .w25; }
 
-  .kit_child_width_1–5\@large-up > *
-  {
-    width: 20%;
-  }
+  .child_w33\@lg_up > *, .w33\@lg_up
+  { @extend .w33; }
 
+  .child_w40\@lg_up > *, .w40\@lg_up
+  { @extend .w40; }
+
+  .child_w50\@lg_up > *, .w50\@lg_up
+  { @extend .w50; }
+
+  .child_w60\@lg_up > *, .w60\@lg_up
+  { @extend .w60; }
+
+  .child_w67\@lg_up > *, .w67\@lg_up
+  { @extend .w67; }
+
+  .child_w75\@lg_up > *, .w75\@lg_up
+  { @extend .w75; }
+
+  .child_w80\@lg_up > *, .w80\@lg_up
+  { @extend .w80; }
+
+  .child_w90\@lg_up > *, .w90\@lg_up
+  { @extend .w90; }
+
+  .child_w100\@lg_up, .w100\@lg_up
+  { @extend .w100; }
 }
 
 @media (--xxl-up)
 {
+  .child_w10\@xl_up > *, .w10\@xl_up
+  { @extend .w10; }
 
+  .child_w20\@xl_up > *, .w20\@xl_up
+  { @extend .w20; }
+
+  .child_w25\@xl_up > *, .w25\@xl_up
+  { @extend .w25; }
+
+  .child_w33\@xl_up > *, .w33\@xl_up
+  { @extend .w33; }
+
+  .child_w40\@xl_up > *, .w40\@xl_up
+  { @extend .w44; }
+
+  .child_w50\@xl_up > *, .w50\@xl_up
+  { @extend .w50; }
+
+  .child_w60\@xl_up > *, .w60\@xl_up
+  { @extend .w60; }
+
+  .child_w67\@xl_up > *, .w67\@xl_up
+  { @extend .w67; }
+
+  .child_w75\@xl_up > *, .w75\@xl_up
+  { @extend .w75; }
+
+  .child_w80\@xl_up > *, .w80\@xl_up
+  { @extend .w80; }
+
+  .child_w90\@xl_up > *, .w90\@xl_up
+  { @extend .w90; }
+
+  .child_w100\@xl_up, .w100\@xl_up
+  { @extend .w100; }
 }
 
 /*endregion*/
-/*!@}*/
 
-/*!@{
-//<!--------------------------------------------------------------------------------------------------------------------
-//! @name Height Modifiers
-//<!------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Height Modifiers                                                                                                   */
+/*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
 
-
-.kit_height_vp
+.height_vp
 {
   min-height: 100vh;
 }
 
-.kit_height_vp_4_5
+.height_vp_4_5
 {
   min-height: 80vh;
 }
 
-.kit_height_vp_3_5
+.height_vp_3_5
 {
   min-height: 60vh;
 }
 
-
-
 /*endregion*/
-/*!@}*/

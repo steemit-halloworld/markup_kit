@@ -1,14 +1,15 @@
-/* Dropdown
-** http://getmarkupkit.com
-**(c) Thomas Schroeter <mailto: mail@tschroeter.com> and Investigative Reporters & Editors 2017
-** markup_kit may be freely distributed under the MIT license
-*/
+/* dropdown.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
 
+# Dropdown Module
+
+*/
 @import 'variables.css';
+@import 'normalisation.css';
 
 :root
 {
-  --drop_down_zindex: 20;
+  --drop_down_zindex: 4000;
   --drop_down_min_width: 200px;
   --drop_down_padding: 15px;
   --drop_down_background: var(--global-background);
@@ -17,7 +18,7 @@
   --drop_down_hover_background: var(--global-background-primary);
 }
 
-.kit_drop_down
+.drop_down
 {
   display: none; /* hide by default */
   position: absolute;
@@ -29,50 +30,47 @@
   padding: var(--drop_down_padding) 0;
   box-shadow: var(--global_box_shadow_medium);
   @apply(--kit_drop_down_mixin);
-
 }
 
-.kit_drop_down .kit_drop_down_item
+.drop_down .drop_down_item
 {
   padding: 0 var(--drop_down_padding);
-
   @apply(--kit_drop_down_item_mixin);
 }
 
-.kit_drop_down .kit_drop_down_item.selected,
-.kit_drop_down .kit_drop_down_item:hover
+.drop_down .drop_down_item.selected,
+.drop_down .drop_down_item:hover
 {
   color: var(--drop_down_hover_color);
   background: var(--drop_down_hover_background);
 }
 
-.kit_drop_down .kit_drop_down_item:hover
+.drop_down .drop_down_item:hover
 {
-
 }
 
 /** Dropdown Menu **/
 @media (--medium-up)
 {
 
-  .kit_drop_down_nav_item@medium-up
+  .drop_down_nav_item\@medium-up
   {
     position: relative;
+    z-index: var(--drop_down_zindex);
   }
 
-  .kit_nav .kit_drop_down_nav_item\@medium-up > .kit_nav,
-  nav .kit_drop_down_nav_item\@medium-up > ul
+  .nav .drop_down_nav_item\@medium-up > .nav,
+  nav .drop_down_nav_item\@medium-up > ul
   {
     visibility: hidden;
     position: absolute;
     left: 0;
     top: 50%;
-    z-index: 9999 !important;
     background-color: var(--nav_dropdown_background);
   }
 
-  .kit_drop_down_nav_item\@medium-up:hover .kit_nav,
-  .kit_drop_down_nav_item\@medium-up:hover > ul
+  .drop_down_nav_item\@medium-up:hover .nav,
+  .drop_down_nav_item\@medium-up:hover > ul
   {
     visibility: visible;
   }
@@ -85,7 +83,6 @@
   --kit_drop_down_mixin:
   {
   };
-
   --kit_drop_down_item_mixin:
   {
   };

@@ -1,25 +1,22 @@
-/* Visibility
- * Module to display or hide elements especially for different viewport sizes
- *
- * (c) Thomas Schroeter <mailto: mail@tschroeter.com> and Investigative Reporters & Editors 2017
- * markup_kit may be freely distributed under the MIT license
- */
+/* visibility.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
 
+*/
 @import 'variables.css';
 
-.kit_invisible
+.invisible
 {
   visibility: hidden !important;
 }
 
 @media (--small-up)
 {
-  .kit_visible\@small-up
+  .visible\@small-up
   {
     visibility: visible !important;
   }
 
-  .kit_hidden\@small-up
+  .hidden\@small-up
   {
     display: none !important;
   }
@@ -27,12 +24,12 @@
 
 @media (--medium-up)
 {
-  .kit_visible\@medium-up
+  .visible\@medium-up
   {
     visibility: visible !important;
   }
 
-  .kit_hidden\@medium-up
+  .hidden\@medium-up
   {
     display: none !important;
   }

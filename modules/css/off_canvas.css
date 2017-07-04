@@ -1,128 +1,113 @@
-/* Off-canvas
- * Module to create an off-canvas sidebar. The module is used to hide the
- * navigation menu off canvas. This is especially useful for screens with small
- * viewport
- *
- * (c) Thomas Schroeter <mailto: mail@tschroeter.com> and Investigative Reporters & Editors 2017
- * markup_kit may be freely distributed under the MIT license
- */
+/* off_canvas.css | MIT License | https://github.com/tschroeter/markup_kit */
+/*doc
 
-/*!@{
-//<!--------------------------------------------------------------------------------------------------------------------
-//! @name Variables
-//<!-------------------------------------------------------------------------------------------------------------------/
-/*region*/
+# Off-canvas Module
 
+Module to create an off-canvas sidebar. The module is used to hide the navigation menu off canvas. This is especially
+useful for screens with small viewport.
+
+*/
+/* dependencies */
 @import 'variables.css';
 
-:root
-{
-
-}
-
-/*endregion*/
-
-/*!@{
-//<!--------------------------------------------------------------------------------------------------------------------
-//! @name Off-canvas Component
-//! To apply the component add the off_canvas class to a parent div container
-//! and use the sub-component classes
-//<!-------------------------------------------------------------------------------------------------------------------/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Variables                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
 
 :root
 {
-  --kit_off_canvas:
-  {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-  }
-}
-
-.kit_off_canvas
-{
-  @apply(--kit_off_canvas);
-}
-
-@media(--small-down)
-{
-  .kit_off_canvas\@small-down
-  {
-    @apply(--kit_off_canvas);
-  }
-}
-
-@media(--medium-down)
-{
-  .kit_off_canvas\@medium-down
-  {
-    @apply(--kit_off_canvas);
-  }
 }
 
 /*endregion*/
-/*!@}*/
 
-/*!@{
-//<!--------------------------------------------------------------------------------------------------------------------
-//! @name Bar Sub Component
-//! Add this class to an child element
-//<!-------------------------------------------------------------------------------------------------------------------/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Off-canvas Component                                                                                               */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*doc
+## Of-canvas Component
+
+To apply the component add the off_canvas class to a parent div container and use the sub-component classes
+*/
 /*region*/
 
-:root
+.off_canvas
 {
-  --kit_off_canvas_bar:
-  {
-    /* set position ----------------------*/
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    /* -----------------------------------*/
-    background: #FFF;
-    /* -----------------------------------*/
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    /* -----------------------------------*/
-    transform: translateX(-100%);
-    /* -----------------------------------*/
-  }
-}
-
-.kit_off_canvas_bar
-{
-  @apply(--kit_off_canvas_bar);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 @media (--small-down)
 {
-  .kit_off_canvas_bar\@small-down
+  .off_canvas\@small-down
   {
-    @apply(--kit_off_canvas_bar);
+    @extend .off_canvas;
   }
 }
 
 @media (--medium-down)
 {
-  .kit_off_canvas_bar\@medium-down
+  .off_canvas\@medium-down
   {
-    @apply(--kit_off_canvas_bar);
+    @extend .off_canvas;
   }
 }
 
 /*endregion*/
 /*!@}*/
 
-.kit_off_canvas_checkbox_trigger:checked ~ [class*='kit_off_canvas'] [class*='kit_off_canvas_bar'],
-.kit_off_canvas_open [class*='kit_off_canvas_bar']
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Off-canvas Bar Sub-component                                                                                       */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+
+.off_canvas_bar
+{
+  /* set position ----------------------*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  /* -----------------------------------*/
+  background: #FFF;
+  /* -----------------------------------*/
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  /* -----------------------------------*/
+  transform: translateX(-100%);
+  /* -----------------------------------*/
+}
+
+@media (--small-down)
+{
+  .off_canvas_bar\@small-down
+  {
+    @extend .off_canvas_bar;
+  }
+}
+
+@media (--medium-down)
+{
+  .off_canvas_bar\@medium-down
+  {
+    @extend .off_canvas_bar;
+  }
+}
+
+/*endregion*/
+
+.off_canvas_checkbox_trigger:checked ~ [class*='off_canvas'] [class*='off_canvas_bar'],
+.off_canvas_open [class*='off_canvas_bar']
 {
   transform: translateX(0%);
 }
 
-.kit_off_canvas_checkbox_trigger:checked ~ [class*='kit_off_canvas_content']
+.off_canvas_checkbox_trigger:checked ~ [class*='off_canvas_content']
 {
   border: 1px solid red;
 }

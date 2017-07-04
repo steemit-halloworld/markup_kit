@@ -1,9 +1,7 @@
 module.exports = {
   plugins: {
-    'postcss-cssnext': {},
-    'cssnano': {
-      preset: 'default',
-      "discardComments": {"removeAll": true}
+    'postcss-prefixer': {
+      prefix: 'kit_'
     }
   }
 };

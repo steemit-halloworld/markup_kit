@@ -1,17 +1,19 @@
-/* Button
- * Module includes predefined button styles with different semantic purposes.
- *
- * (c) Thomas Schroeter <mailto: mail@tschroeter.com> and Investigative Reporters & Editors 2017
- * markup_kit may be freely distributed under the MIT license
- */
+/* button.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
 
-/*!@{
-//<!--------------------------------------------------------------------------------------------------------------------
-//! @name Variables
-//<!------------------------------------------------------------------------------------------------------------------*/
-/*region*/
+# Button Module
+
+The Button module include predefined button styles with different semantic purposes.
+
+*/
 
 @import 'variables.css';
+@import 'normalisation.css';
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Variables                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
 
 :root
 {
@@ -23,9 +25,8 @@
 }
 
 /*endregion*/
-/*!@}*/
 
-.kit-button
+.button
 {
   display: inline-block;
   padding: 0 var(--button-padding-horizontal);
@@ -38,7 +39,7 @@
 
 /* Primary Buttons */
 
-.kit-button-primary
+.button.primary
 {
   background-color: var(--button-background-primary);
   color: var(--button-foreground-color-primary);

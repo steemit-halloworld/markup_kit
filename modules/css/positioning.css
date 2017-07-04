@@ -1,9 +1,11 @@
-/* Positioning
- * Module to place elements outside of the normal document flow.
- *
- * (c) Thomas Schroeter <mailto: mail@tschroeter.com> and Investigative Reporters & Editors 2017
- * markup_kit may be freely distributed under the MIT license
- */
+/* positioning.css | MIT License | https://github.com/tschroeter/markup_kit */
+/*doc
+
+# Positioning Module
+
+ Module to place elements outside of the normal document flow.
+
+*/
 
 @import 'variables.css';
 
@@ -16,45 +18,45 @@
   position: absolute !important;
 }*/
 
-.kit_fixed
+.fixed
 {
   position: fixed !important;
-  z-index: 1000 !important;
+  z-index: 9999 !important;
 }
 
-.kit_right
+.right
 {
   top: 0;
   bottom: 0;
   right: 0;
 }
 
-.kit_left
+.left
 {
   top: 0;
   bottom: 0;
   left: 0;
 }
 
-.kit_top_left
+.top_left
 {
   top: 0;
   left: 0;
 }
 
-.kit_top_right
+.top_right
 {
   top: 0;
   right: 0;
 }
 
-.kit_bottom_left
+.bottom_left
 {
   bottom: 0;
   left: 0;
 }
 
-.kit_bottom_right
+.bottom_right
 {
   bottom: 0;
   right: 0;
@@ -62,38 +64,39 @@
 
 @media (--medium-up)
 {
-  .kit_fixed\@medium-up
+  .fixed\@medium-up
   {
     position: fixed !important;
-    z-index: 1000 !important;
+    z-index: 9999 !important;
+
   }
 
-  .kit_right\@medium-up
+  .right\@medium-up
   {
     top: 0;
     bottom: 0;
     right: 0;
   }
 
-  .kit_top_left\@medium-up
+  .top_left\@medium-up
   {
     top: 0;
     left: 0;
   }
 
-  .kit_top_right\@medium-up
+  .top_right\@medium-up
   {
     top: 0;
     right: 0;
   }
 
-  .kit_bottom_left\@medium-up
+  .bottom_left\@medium-up
   {
     bottom: 0;
     left: 0;
   }
 
-  .kit_bottom_right\@medium-up
+  .bottom_right\@medium-up
   {
     bottom: 0;
     right: 0;

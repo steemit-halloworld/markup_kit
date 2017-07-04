@@ -1,17 +1,18 @@
-/* Spacing
- * Module to define margin or padding values to an element especially for different viewport sizes
- *
- * (c) Thomas Schroeter <mailto: mail@tschroeter.com> and Investigative Reporters & Editors 2017
- * markup_kit may be freely distributed under the MIT license
- */
+/* spacing.css | MIT License | https://github.com/tschroeter/markup_kit */
+/*doc
 
-/*!@{
-//<!--------------------------------------------------------------------------------------------------------------------
-//! @name Variables
-//<!------------------------------------------------------------------------------------------------------------------*/
-/*region*/
+# Spacing Module
 
+Module to define margin or padding values to an element especially for different viewport sizes
+
+*/
+/* dependencies */
 @import 'variables.css';
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Variables                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
 
 :root
 {
@@ -20,19 +21,18 @@
 }
 
 /*endregion*/
-/*!@}*/
 
-.kit_margin
+.margin
 {
   margin-bottom: var(--margin);
 }
 
-* + .kit_margin
+* + .margin
 {
   margin-top: var(--margin) !important;
 }
 
-.kit_padding
+.padding
 {
   padding: var(--padding);
 }

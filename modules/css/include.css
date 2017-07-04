@@ -1,9 +1,15 @@
+@import 'normalisation.css';
+/* deprecated */
 @import 'core.css';
+@import 'float.css';
+@import 'flex.css';
 @import 'positioning.css';
 @import 'sizing.css';
 @import 'spacing.css';
 @import 'visibility.css';
-@import 'flexbox_grid.css';
+@import 'coloring.css';
+@import 'page.css';
+@import 'grid.css';
 @import 'list.css';
 @import 'off_canvas.css';
 @import 'card.css';

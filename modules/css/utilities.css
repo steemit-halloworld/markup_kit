@@ -13,42 +13,42 @@
   --logo_hover_color: var(--global-foreground-color);
 }
 
-.kit_box_shadow_small
+.box_shadow_small
 {
   box-shadow: var(--global_box_shadow_small);
 }
 
-.kit_box_shadow_medium
+.box_shadow_medium
 {
   box-shadow: var(--global_box_shadow_medium);
 }
 
-.kit_box_shadow_large
+.box_shadow_large
 {
   box-shadow: var(--global_box_shadow_large);
 }
 
-.kit_box_shadow_xxl
+.box_shadow_xxl
 {
   box-shadow: var(--global_box_shadow_xlarge);
 }
 
-.kit_bg_muted
+.bg_muted
 {
   background-color: var(--background_muted) !important;
 }
 
-.kit_bg_primary
+.bg_primary
 {
   background-color: var(--background_primary) !important;
 }
 
-.kit_bg_secondary
+.bg_secondary
 {
   background-color: var(--background_secondary) !important;
 }
 
-.kit_logo
+.logo
 {
   font-size: var(--logo_font_size);
   font-family: var(--logo_font_family);
@@ -56,8 +56,8 @@
   text-decoration: none;
 }
 
-.kit_logo:hover,
-.kit_logo:focus
+.logo:hover,
+.logo:focus
 {
   color: var(--logo-color);
   outline: none;
