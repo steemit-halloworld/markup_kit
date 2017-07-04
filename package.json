@@ -22,13 +22,14 @@
     "del-cli": "1.1.0"
   },
   "scripts": {
+    "preinstall": "npm run build",
     "build": "npm run build:css && npm run build:doc",
+    "watch": "onchange 'modules/css/*.css' -- npm run build",
     "cleanup": "del-cli build/css/*.css",
-    "build:css": "npm run build:css:stage1 && npm run build:css:stage2 && npm run build:css:stage3 && npm run watch",
+    "build:css": "npm run build:css:stage1 && npm run build:css:stage2 && npm run build:css:stage3",
     "build:css:stage1": "postcss -c postcss/stage1 modules/css/include.css -o build/css/style.stage1.css",
     "build:css:stage2": "postcss -c postcss/stage2 build/css/style.stage1.css -o build/css/style.stage2.css",
     "build:css:stage3": "postcss -c postcss/stage2 build/css/style.stage2.css -o build/css/style.stage3.css",
-    "build:doc": "sh bin/build_doc.sh",
-    "watch": "onchange 'modules/css/*.css' -- npm run build"
+    "build:doc": "sh bin/build_doc.sh"
   }
 }
