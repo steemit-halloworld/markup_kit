@@ -1,3 +1,5 @@
+/* kit.auto_complete.js | MIT License | github.com/tschroeter/markup_kit */
+
 (function ()
 {
   "use strict";
@@ -20,28 +22,17 @@
       component: this,
       html_element: html_element,
       drop_down_element: mount_drop_down_element(),
+      // options
       min_chars: 1,
       delay: 12,
       offset_left: 0,
       offset_top: 0,
-
-      scope: {},
-
-      on_select_callback: function (event, value) {
-        console.log('on_select ' + value);
-      },
-
+      // callbacks
+      on_select_callback: function () {},
       source_fn: function () {},
-
-      item_renderer: function (item)
-      {
-        const class_name = kit.string("{prefix}drop_down_item", {'prefix': kit.css_prefix()});
-
-        return kit.string('<div class="{class_name} autocomplete-suggestion" data-val="' + item.id + '">' + item + '</div>', {'class_name': class_name});
-      },
-
+      item_renderer: default_item_renderer(),
+      // status
       key_is_down: false
-
     };
 
     this.id = function () {return id;};
@@ -105,16 +96,20 @@
 //<!------------------------------------------------------------------------------------------------------------------->
 //region
 
-  function listen (owner, new_val, old_val)
+  proto.on_select = function (on_select_callback)
   {
+    prv[this.id()].on_select_callback = on_select_callback;
+    return this;
+  };
 
-    console.log("lets go");
+  function on_input_value_changed (owner, new_val, old_val)
+  {
     var div = prv[owner.id()].drop_down_element;
     if (kit.is_defined(new_val) && new_val.length >= prv[owner.id()].min_chars)
     {
       clearTimeout(prv[owner.id()].timer);
 
-      prv[owner.id()].timer = setTimeout(function () { prv[owner.id()].source_fn(new_val, function(data){suggest(owner, data)}); }, prv[owner.id()].delay);
+      prv[owner.id()].timer = setTimeout(function () { prv[owner.id()].source_fn(new_val, function (data) {suggest(owner, data)}); }, prv[owner.id()].delay);
     }
     else
     {
@@ -122,7 +117,7 @@
     }
   }
 
-  function watch (owner)
+  function watch_input_value (owner)
   {
     return prv[owner.id()].html_element.value;
   }
@@ -204,15 +199,17 @@
     kit.dom.on(document, 'mouseup', function (ev) {on_mouse_up(owner, ev)});
     kit.dom.on(document, 'keydown', function (ev) {on_key_down(owner, ev)});
 
-    prv[owner.id()].scope = new kit.global.Scope();
+    var scope = new kit.global.Scope();
 
-    var watcher = function () {return watch(owner);};
+    function watcher () {return watch_input_value(owner)}
 
-    prv[owner.id()].scope.watch(watcher, function(new_val, old_val) {listen(owner, new_val, old_val)});
+    function listener (new_val, old_val) {on_input_value_changed(owner, new_val, old_val)}
+
+    scope.watch(watcher, listener);
 
     (function repeat ()
     {
-      prv[owner.id()].scope.digest();
+      scope.digest();
 
       kit.global.request_animation_frame(repeat);
     }());
@@ -220,6 +217,36 @@
 
 //endregion
 //!@}
+
+//!@{
+//<!------------------------------------------------------------------------------------------------------------------->
+//! @name Managing Item Renderer
+//<!------------------------------------------------------------------------------------------------------------------->
+//region
+
+  proto.item_renderer = function (item_renderer_callback)
+  {
+    prv[this.id()].item_renderer = item_renderer_callback;
+    return this;
+  };
+
+  function default_item_renderer ()
+  {
+    return function (item)
+    {
+      var class_name = kit.string("{prefix}drop_down_item", {'prefix': kit.css_prefix()});
+      return kit.string('<div class="{class_name} autocomplete-suggestion" data-val="' + item.id + '">' + item + '</div>', {'class_name': class_name});
+    };
+  }
+
+//endregion
+//!@}
+
+//!@{
+//<!------------------------------------------------------------------------------------------------------------------->
+//! @name Managing Drop-Down Element
+//<!------------------------------------------------------------------------------------------------------------------->
+//region
 
   proto.relayout = function (is_resize, next_dom_node)
   {
@@ -263,6 +290,19 @@
     }
   };
 
+//endregion
+//!@{
+//<!------------------------------------------------------------------------------------------------------------------->
+//! @name Managing Data Source
+//<!------------------------------------------------------------------------------------------------------------------->
+//region
+
+  proto.source = function (source_callback)
+  {
+    prv[this.id()].source_fn = source_callback;
+    return this;
+  };
+
   function suggest (owner, data)
   {
     var input_val = prv[owner.id()].html_element.value;
@@ -288,22 +328,7 @@
     prv[owner.id()].is_key_down = false;
   }
 
-  proto.render_item = function (render_item_callback)
-  {
-    prv[this.id()].render_item = render_item_callback;
-    return this;
-  };
-
-  proto.source = function (source_fn)
-  {
-    prv[this.id()].source_fn = source_fn;
-    return this;
-  };
-
-  proto.on_select = function (on_select_callback)
-  {
-    prv[this.id()].on_select_callback = on_select_callback;
-    return this;
-  };
+//endregion
+//!@}
 
 }());
