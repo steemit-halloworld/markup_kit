@@ -21,7 +21,7 @@
       html_element: html_element,
       drop_down_element: mount_drop_down_element(),
       min_chars: 1,
-      delay: 150,
+      delay: 12,
       offset_left: 0,
       offset_top: 0,
 
