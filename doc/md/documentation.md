@@ -142,6 +142,22 @@ The Grid component comes with a default gutter, that is decreased automatically 
 smaller desktop viewport width. To apply a different gutter, add one of the following classes.
 
 
+#### Remove Grid Gutter
+
+Add the .collapse class to remove the grid gutter entirely.
+
+<div class="grid collapse">
+  <div class="w33">
+    <div class="card">33%</div>
+  </div>
+  <div class="w33">
+    <div class="card">33%</div>
+  </div>
+  <div class="w33">
+    <div class="card">33%</div>
+  </div>
+</div>
+
 
 # Normalisation Module
 

@@ -161,16 +161,16 @@ important to clear floats.
 {
   float: right;
 }
-.kit_clf, .kit_grid, .kit_grid_item, .kit_grid > *
+.kit_clf, .kit_grid
 {
 
 }
-.kit_clf:before, .kit_grid:before, .kit_grid_item:before, .kit_grid > *:before
+.kit_clf:before, .kit_grid:before
 {
   content: "";
   display: table-cell;
 }
-.kit_clf:after, .kit_grid:after, .kit_grid_item:after, .kit_grid > *:after
+.kit_clf:after, .kit_grid:after
 {
   clear: both;
   content: "";
@@ -721,7 +721,7 @@ The Coloring module define the background and foreground colors of elements.
 /*region*/
 :root
 {
-  /* gutter */
+  /* default gutter */
 }
 /*endregion*/
 /*--------------------------------------------------------------------------------------------------------------------*/
@@ -817,7 +817,6 @@ Sizing module to determine how much space of the the container each item will ta
 {
   float: left;
   min-height: 1px;
-
   /* fit width to content */
   width: auto;
   _width: 1px;
@@ -826,6 +825,22 @@ Sizing module to determine how much space of the the container each item will ta
   padding: 0 15px;
   /* vertical default gutter */
   margin: 0 0 15px;
+}
+@media(min-width: 1201px)
+{
+  .kit_grid
+  {
+    margin-left: -35px;
+    margin-right: -35px;
+  }
+
+  .kit_grid_item, .kit_grid > *
+  {
+    /* horizontal default gutter */
+    padding: 0 35px;
+    /* vertical default gutter */
+    margin: 0 0 35px;
+  }
 }
 .kit_grid > .kit_fill
 {
@@ -849,8 +864,32 @@ smaller desktop viewport width. To apply a different gutter, add one of the foll
 
 */
 /*region*/
+/*doc
+#### Remove Grid Gutter
+
+Add the .collapse class to remove the grid gutter entirely.
+
+<div class="grid collapse">
+  <div class="w33">
+    <div class="card">33%</div>
+  </div>
+  <div class="w33">
+    <div class="card">33%</div>
+  </div>
+  <div class="w33">
+    <div class="card">33%</div>
+  </div>
+</div>
+*/
 .kit_grid.kit_collapse
 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.kit_grid.kit_collapse > *
+{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 .kit_grid.kit_small
 {
