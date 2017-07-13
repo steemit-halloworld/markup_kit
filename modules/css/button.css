@@ -22,25 +22,55 @@ The Button module include predefined button styles with different semantic purpo
   --button-font-size: var(--global-font-size);
   --button-background-primary: var(--global-background-primary);
   --button-foreground-color-primary: var(--global-inverse-color);
+
+  --button_border_radius: var(--global-border-radius);
+  --button_background_color: var(--global-muted-background);
 }
 
 /*endregion*/
 
-.button
+/*doc
+
+## Button
+
+A standard button.
+
+<div class="buttons">
+  <button class="button">Click Me</button>
+  <button class="primary">Click Me</button>
+  <button class="secondary">Click Me</button>
+</div>
+*/
+
+.button,
+.buttons > *
 {
-  display: inline-block;
+  /* spacing */
+  margin: 0;
   padding: 0 var(--button-padding-horizontal);
-  text-align: center;
+  /* border */
+  border: none;
+  border-radius: var(--button_border_radius);
+  outline: none;
+  /* typography */
+  font: inherit;
   font-size: var(--button-font-size);
-  vertical-align: middle;
+  text-align: center;
+  text-transform: none;
   line-height: var(--button-line-height);
   text-decoration: none;
+  /* coloring */
+  color: inherit;
+  background: var(--button_background_color);
+  /* positioning */
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* Primary Buttons */
 
-.button.primary
+.button:hover,
+.buttons > *:hover
 {
-  background-color: var(--button-background-primary);
-  color: var(--button-foreground-color-primary);
+  background-color: color(var(--button_background_color) blackness(20%));
 }

@@ -23,17 +23,58 @@ The Coloring module define the background and foreground colors of elements.
 
 /*endregion*/
 
+/*doc
+
+<div class="">
+
+</div>
+
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Primary                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
 .bg
 { background-color: var(--background_default_background) !important; }
 
-.bg_muted
-{ background-color: var(--background_muted_background) !important; }
-
-.bg_primary,
-.bg_primary_\> > *
+.muted
 {
-  background-color: var(--background_primary_background) !important;
+  background-color: var(--background_muted_background) !important;
 }
 
-.bg_secondary
+.primary
+{
+  background-color: var(--background_primary_background) !important;
+  color: var(--global-inverse-color);
+}
+
+/*endregion*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Secondary                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+.secondary
 { background-color: var(--background_secondary_background) !important; }
+
+/*endregion*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Basic                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+.basic
+{
+  background-color: var(--global-background);
+}
+
+/*endregion*/
+
+
+
+
+

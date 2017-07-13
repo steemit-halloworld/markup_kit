@@ -161,16 +161,16 @@ important to clear floats.
 {
   float: right;
 }
-.kit_clf, .kit_grid
+.kit_clf, .kit_grid, .kit_cards, .kit_card, .kit_cards > .kit_card > .kit_content:after, .kit_card > .kit_content:after
 {
 
 }
-.kit_clf:before, .kit_grid:before
+.kit_clf:before, .kit_grid:before, .kit_cards:before, .kit_card:before, .kit_cards > .kit_card > .kit_content:after:before, .kit_card > .kit_content:after:before
 {
   content: "";
   display: table-cell;
 }
-.kit_clf:after, .kit_grid:after
+.kit_clf:after, .kit_grid:after, .kit_cards:after, .kit_card:after, .kit_cards > .kit_card > .kit_content:after:after, .kit_card > .kit_content:after:after
 {
   clear: both;
   content: "";
@@ -218,9 +218,6 @@ important to clear floats.
 */
 .kit_flx
 {
-  letter-spacing: -0.31em;
-  text-rendering: optimizespeed;
-  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,14 +229,7 @@ important to clear floats.
 }
 .kit_flx_u, .kit_flx > *
 {
-  zoom: 1;
-  letter-spacing: normal;
-  word-spacing: normal;
-  vertical-align: top;
-  text-rendering: auto;
-  display: inline-block;
   padding: 0 30px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 /*endregion*/
 /*--------------------------------------------------------------------------------------------------------------------*/
@@ -278,14 +268,10 @@ important to clear floats.
  Module to place elements outside of the normal document flow.
 
 */
-/*[class*='kit_top'],
-[class*='kit_bottom'],
-[class*='kit_left'],
-[class*='kit_right'],
-[class*='kit_center']
+[class*="kit_top"], [class*="kit_bottom"], [class*="kit_left"], [class*="kit_right"], [class*="kit_center"]
 {
   position: absolute !important;
-}*/
+}
 .kit_fixed
 {
   position: fixed !important;
@@ -663,16 +649,45 @@ The Coloring module define the background and foreground colors of elements.
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
 /*endregion*/
+/*doc
+
+<div class="">
+
+</div>
+
+*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Primary                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
 .kit_bg
 { background-color: #fff !important; }
-.kit_bg_muted
-{ background-color: #f8f8f8 !important; }
-.kit_bg_primary, .kit_bg_primary_\> > *
+.kit_muted
+{
+  background-color: #e0e1e2 !important;
+}
+.kit_primary
 {
   background-color: #1e87f0 !important;
+  color: #fff;
 }
-.kit_bg_secondary
+/*endregion*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Secondary                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.kit_secondary
 { background-color: #222 !important; }
+/*endregion*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Basic                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.kit_basic
+{
+  background-color: #fff;
+}
+/*endregion*/
 /* page.css | MIT License | https://github.com/tschroeter/markup_kit */
 /*doc
 
@@ -909,29 +924,188 @@ Add the .collapse class to remove the grid gutter entirely.
 /*region*/
 /*endregion*/
 /*!@}*/
-.kit_list li::before, .kit_list li::after
-{ /* micro clearfix */
-  content: "";
-  display: table;
+/*doc
+
+# List Module
+
+*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* List Component                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.kit_list
+{
+  list-style-type: none;
+  margin: 1em 0;
+  padding: 0 0;
 }
-.kit_list ul
-{ /** nested lists **/
-  padding-left: 30px;
+.kit_list:first-child
+{
+  margin-top: 0;
+  padding-top: 0;
 }
-.kit_list > li > :last-child
-{ /* remove margin from the last child */
+.kit_list:last-child
+{
   margin-bottom: 0;
+  padding-bottom: 0;
 }
-.kit_list > li:nth-child(n+2), .kit_list > li > ul
-{ /** list item margin */
-  margin-top: 10px;
+/*endregion*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* List Item                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+ul.kit_list li, ol.kit_list li, .kit_list > .kit_item, .kit_list .kit_list > .kit_item
+{
+  display: list-item;
+  table-layout: fixed;
+  list-style-type: none;
+  list-style-position: outside;
+
+  padding: 0 3px;
+  line-height: 1em;
 }
-.kit_list_divider > li:nth-child(n+2)
-{ /** list item divider style */
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid #e5e5e5;
+ul.kit_list > li:first-child:after, ol.kit_list > li:first-child:after, .kit_list > .kit_list > .kit_item, .kit_list > .kit_item:after
+{
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
+ul.kit_list li:first-child, ol.kit_list li:first-child, .kit_list .kit_list > .kit_item:first-child, .kit_list > .kit_item:first-child {
+  padding-top: 0;
+}
+ul.kit_list li:last-child, ol.kit_list li:last-child, .kit_list .kit_list > .kit_item:last-child, .kit_list > .kit_item:last-child
+{
+  padding-bottom: 0;
+}
+/*endregion*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* List Item Content                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.kit_list .kit_list > .kit_item > .kit_content, .kit_list > .kit_item > .kit_content
+{
+  line-height: 1em;
+}
+.kit_list .kit_list > .kit_item > .kit_image + .kit_content, .kit_list .kit_list > .kit_item > .kit_icon + .kit_content, .kit_list > .kit_item > .kit_image + .kit_content, .kit_list > .kit_item > .kit_icon + .kit_content
+{
+  display: table-cell;
+  border: 1px solid red;
+  padding: 0 0 0 0.5em;
+  vertical-align: center;
+}
+.kit_list .kit_list > .kit_item > img.kit_image + .kit_content, .kit_list > .kit_item > img.kit_image + .kit_content
+{
+  display: inline-block;
+}
+.kit_list .kit_list > .kit_item > .kit_content > .kit_list, .kit_list > .kit_item > .kit_content > .kit_list
+{
+  margin-left: 0;
+  padding-left: 0;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Horizontal List                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+/*doc
+
+## Horizontal List
+
+<div class="segment">
+  <div class="content">
+    <ul class="horizontal list">
+      <li><div class="content">1345 6787 6545 678</div></li>
+      <li><div class="content">1345 6787 6545 678</div></li>
+    </ul>
+  </div>
+</div>
+
+<div class="segment">
+            <div class="content">
+              <div class="header">fällige Wiedervorlagen</div>
+            </div>
+            <div class="content">
+              <ul class="list">
+                <li>
+                  <ul class="list">
+                    <li>06.07.2017</li>
+                    <li>
+                      <ul>
+                        <li>
+                          <a href="#">Angebot PHV machen</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul class="list">
+                    <li>Heute</li>
+                    <li>
+                      <ul>
+                        <li>
+                          <a href="#">Anrufen wegen Hypothek</a>
+                          <a href="#">Antrag WGBV wegschicken</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul class="list">
+                    <li>Morgen</li>
+                    <li>
+                      <ul>
+                        <li>
+                          <a href="#">Essen im Ritz</a>
+
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+              </ul>
+
+              <ul class="horizontal list">
+                <li>
+                  Heute
+                </li>
+                <li>bla bla</li>
+              </ul>
+            </div>
+          </div>
+
+*/
+.kit_horizontal.kit_list, ul.kit_horizontal.kit_list, ol.kit_horizontal.kit_list
+{
+  display: inline-block;
+  border: 1px solid green;
+}
+.kit_horizontal.kit_list > .kit_item, ul.kit_horizontal.kit_list > li, ol.kit_horizontal.kit_list > li
+{
+  display: inline-block;
+  margin-left: 0 3px;
+  border: 1px solid red;
+}
+.kit_horizontal.kit_list .kit_list
+{
+  padding-left: 0;
+  padding-bottom: 0;
+}
+.kit_horizontal.kit_list > .kit_item > .kit_image, .kit_horizontal.kit_list .kit_list > .kit_item > .kit_image, .kit_horizontal.kit_list > .kit_item > .kit_icon, .kit_horizontal.kit_list .kit_list > .kit_item > .kit_icon, .kit_horizontal.kit_list > .kit_item > .kit_content, .kit_horizontal.kit_list .kit_list > .kit_item > .kit_content
+{
+  vertical-align: center;
+}
+.kit_horizontal.kit_list > .kit_item:first-child, .kit_horizontal.kit_list > .kit_item:last-child, ul.kit_horizontal.kit_list > .kit_li:first-child, ul.kit_horizontal.kit_list > .kit_li:last-child, ol.kit_horizontal.kit_list > .kit_li:first-child, ol.kit_horizontal.kit_list > .kit_li:last-child
+{
+  padding-top: 3px;
+  padding-bottom: 0;
+}
+/*endregion*/
 /* off_canvas.css | MIT License | https://github.com/tschroeter/markup_kit */
 /*doc
 
@@ -1052,6 +1226,23 @@ To apply the component add the off_canvas class to a parent div container and us
 {
   border: 1px solid red;
 }
+.kit_segment {
+  position: relative;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0 #D4D4D5;
+  margin: 1em 0em;
+  padding: 1em 1em;
+  border-radius: .25rem;
+  border: 1px 1px solid #999;
+}
+.kit_segment:first-child
+{
+  margin-top: 0;
+}
+.kit_segment:last-child
+{
+  margin-bottom: 0;
+}
 /* card.css | MIT License | github.com/tschroeter/markup_kit */
 /*doc
 
@@ -1062,15 +1253,98 @@ To apply the component add the off_canvas class to a parent div container and us
 /* Variables                                                                                                          */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
+:root
+{
+  /* coloring */
+  /* sizing */
+  /* border */
+  /* shadow */
+  /* sizing */
+
+  /* spacing */
+
+  /* typography */
+}
 /*endregion*/
 .kit_card
 {
+  /* sizing */
+  max-width: 100%;
+  width: 250px !important;
+  /* positioning */
   position: relative;
   box-sizing: border-box;
-
-  background: #f8f8f8;
-  color: #666;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* border */
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px 0px #D4D4D5;
+  /* coloring */
+  background: transparent;
+  /* spacing */
+  padding: 0;
 }
+.kit_cards > .kit_card a, .kit_card a
+{
+  cursor: pointer;
+}
+.kit_card:first-child
+{
+  margin-top: 0;
+}
+.kit_card:last-child
+{
+  margin-bottom: 0;
+}
+/*
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Card Edges                                                                                                         */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.kit_cards > .kit_card > :first-child, .kit_card > :first-child
+{
+  border-radius: 0.25rem 0.25rem 0 0 !important;
+  border-top: none !important;
+}
+.kit_cards > .kit_card > :last-child, .kit_card > :last-child
+{
+  border-radius: 0 0 0.25rem 0.25rem !important;
+}
+.kit_cards > .kit_card > :only-child, .kit_card > :only-child
+{
+  border-radius: 0.25rem !important;
+}
+/*endregion*/
+/*
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Card Content                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.kit_cards > .kit_card > .kit_content, .kit_card > .kit_content
+{
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border: none;
+  border-top: 1px solid #D4D4D5;
+  background: transparent;
+  margin: 0;
+  padding: 1em 1em;
+  box-shadow: none;
+  font-size: 1em;
+  border-radius: 0;
+}
+.kit_cards > .kit_card > .kit_content > .kit_header, .kit_card > .kit_content > .kit_header
+{
+  display: block;
+  margin: 0;
+  color: #666;
+  font-weight: bold;
+}
+/*endregion*/
 /* Nav
 ** http://getmarkupkit.com
 **(c) Thomas Schroeter <mailto: mail@tschroeter.com> and Investigative Reporters & Editors 2017
@@ -1164,7 +1438,7 @@ To apply the component add the off_canvas class to a parent div container and us
 }
 .kit_navbar
 {
-  background: #f8f8f8;
+  background: #e0e1e2;
 }
 .kit_navbar > .kit_left, .kit_navbar > .kit_right
 {
@@ -1267,21 +1541,45 @@ The Button module include predefined button styles with different semantic purpo
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
 /*endregion*/
-.kit_button
+/*doc
+
+## Button
+
+A standard button.
+
+<div class="buttons">
+  <button class="button">Click Me</button>
+  <button class="primary">Click Me</button>
+  <button class="secondary">Click Me</button>
+</div>
+*/
+.kit_button, .kit_buttons > *
 {
-  display: inline-block;
+  /* spacing */
+  margin: 0;
   padding: 0 30px;
-  text-align: center;
+  /* border */
+  border: none;
+  border-radius: 0.25rem;
+  outline: none;
+  /* typography */
+  font: inherit;
   font-size: 16px;
-  vertical-align: middle;
+  text-align: center;
+  text-transform: none;
   line-height: 40px;
   text-decoration: none;
+  /* coloring */
+  color: inherit;
+  background: #e0e1e2;
+  /* positioning */
+  display: inline-block;
+  vertical-align: middle;
 }
 /* Primary Buttons */
-.kit_button.kit_primary
+.kit_button:hover, .kit_buttons > *:hover
 {
-  background-color: #1e87f0;
-  color: #fff;
+  background-color: rgb(208, 208, 208);
 }
 .kit_form .kit_label
 {
@@ -1312,10 +1610,10 @@ The Button module include predefined button styles with different semantic purpo
   max-width: 100%; /* prevent content overflow if a fixed width is used */
   width: 100%; /* takr full width */
   padding: 0 6px;
-  background: #f8f8f8;
+  background: #e0e1e2;
   color: #666;
   border: 0 none; /* reset default */
-  border: 1px solid #e5e5e5;
+  border: 1px solid #D4D4D5;
   -webkit_transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   -webkit_transition-property: color, background-color, border;
@@ -1355,7 +1653,7 @@ The Button module include predefined button styles with different semantic purpo
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-color: #f8f8f8;
+  background-color: #e0e1e2;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   margin-top: -4px;
@@ -1416,7 +1714,7 @@ The Button module include predefined button styles with different semantic purpo
     position: absolute;
     left: 0;
     top: 50%;
-    background-color: #f8f8f8;
+    background-color: #e0e1e2;
   }
 
   .kit_drop_down_nav_item\@medium-up:hover .kit_nav, .kit_drop_down_nav_item\@medium-up:hover > ul
@@ -1444,7 +1742,7 @@ The Button module include predefined button styles with different semantic purpo
 }
 .kit_bg_muted
 {
-  background-color: #f8f8f8 !important;
+  background-color: #e0e1e2 !important;
 }
 .kit_bg_primary
 {

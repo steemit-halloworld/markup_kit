@@ -6,6 +6,17 @@ The Button module include predefined button styles with different semantic purpo
 
 
 
+## Button
+
+A standard button.
+
+<div class="buttons">
+  <button class="button">Click Me</button>
+  <button class="primary">Click Me</button>
+  <button class="secondary">Click Me</button>
+</div>
+
+
 # Card Module
 
 
@@ -13,6 +24,12 @@ The Button module include predefined button styles with different semantic purpo
 # Coloring Module
 
 The Coloring module define the background and foreground colors of elements.
+
+
+
+<div class="">
+
+</div>
 
 
 
@@ -157,6 +174,81 @@ Add the .collapse class to remove the grid gutter entirely.
     <div class="card">33%</div>
   </div>
 </div>
+
+
+# List Module
+
+
+
+## Horizontal List
+
+<div class="segment">
+  <div class="content">
+    <ul class="horizontal list">
+      <li><div class="content">1345 6787 6545 678</div></li>
+      <li><div class="content">1345 6787 6545 678</div></li>
+    </ul>
+  </div>
+</div>
+
+<div class="segment">
+            <div class="content">
+              <div class="header">fällige Wiedervorlagen</div>
+            </div>
+            <div class="content">
+              <ul class="list">
+                <li>
+                  <ul class="list">
+                    <li>06.07.2017</li>
+                    <li>
+                      <ul>
+                        <li>
+                          <a href="#">Angebot PHV machen</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul class="list">
+                    <li>Heute</li>
+                    <li>
+                      <ul>
+                        <li>
+                          <a href="#">Anrufen wegen Hypothek</a>
+                          <a href="#">Antrag WGBV wegschicken</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul class="list">
+                    <li>Morgen</li>
+                    <li>
+                      <ul>
+                        <li>
+                          <a href="#">Essen im Ritz</a>
+
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+              </ul>
+
+              <ul class="horizontal list">
+                <li>
+                  Heute
+                </li>
+                <li>bla bla</li>
+              </ul>
+            </div>
+          </div>
+
 
 
 # Normalisation Module

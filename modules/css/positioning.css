@@ -9,14 +9,14 @@
 
 @import 'variables.css';
 
-/*[class*='kit_top'],
-[class*='kit_bottom'],
-[class*='kit_left'],
-[class*='kit_right'],
-[class*='kit_center']
+[class*='top'],
+[class*='bottom'],
+[class*='left'],
+[class*='right'],
+[class*='center']
 {
   position: absolute !important;
-}*/
+}
 
 .fixed
 {

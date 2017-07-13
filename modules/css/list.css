@@ -1,43 +1,267 @@
+/*doc
+
+# List Module
+
+*/
+
 
 @import 'variables.css';
+
+
 
 :root
 {
   --list_nested_padding_left: var(--global-gutter);
-
   --list_item_margin_top: var(--global-margin-small);
-
   --list_item_divider_margin_top: var(--global-margin-small);
   --list_item_divider_border_width: var(--global-border-width);
   --list_item_divider_border: var(--global-border-color);
+
+  --list_style_type: none;
+  --list_margin: 1em 0;
+  --list_horizontal_padding: 0;
+  --list_vertical_padding: 0;
+
+  --list_item_horizontal_padding: 0;
+  --list_item_vertical_padding: 3px;
+
+  --list_item_padding: var(--list_item_horizontal_padding) var(--list_item_vertical_padding);
+  --list_item_line_height: 1em;
+
+  --list_item_content_line_height: var(--list_item_line_height);
+
+  --list_style_position: outside;
+  --list_item_content_padding: 0.5em;
+  --list_item_content_vertical_align: center;
+
 }
 
-.list li::before,
-.list li::after
-{ /* micro clearfix */
-  content: "";
-  display: table;
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* List Component                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+.list
+{
+  list-style-type: var(--list_style_type);
+  margin: var(--list_margin);
+  padding: var(--list_horizontal_padding) var(--list_vertical_padding);
 }
 
-.list ul
-{ /** nested lists **/
-  padding-left: var(--list_nested_padding_left);
+.list:first-child
+{
+  margin-top: 0;
+  padding-top: 0;
 }
 
-.list > li > :last-child
-{ /* remove margin from the last child */
+.list:last-child
+{
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
-.list > li:nth-child(n+2),
-.list > li > ul
-{ /** list item margin */
-  margin-top: var(--list_item_margin_top);
+/*endregion*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* List Item                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+ul.list li,
+ol.list li,
+.list > .item,
+.list .list > .item
+{
+  display: list-item;
+  table-layout: fixed;
+  list-style-type: var(--list_style_type);
+  list-style-position: var(--list_style_position);
+
+  padding: var(--list_item_padding);
+  line-height: var(--list_item_line_height);
 }
 
-.list_divider > li:nth-child(n+2)
-{ /** list item divider style */
-  margin-top: var(--list_item_divider_margin_top);
-  padding-top: var(--list_item_divider_margin_top);
-  border-top: var(--list_item_divider_border_width) solid var(--list_item_divider_border);
+ul.list > li:first-child:after,
+ol.list > li:first-child:after,
+.list > .list > .item,
+.list > .item:after
+{
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
+
+ul.list li:first-child,
+ol.list li:first-child,
+.list .list > .item:first-child,
+.list > .item:first-child {
+  padding-top: 0;
+}
+ul.list li:last-child,
+ol.list li:last-child,
+.list .list > .item:last-child,
+.list > .item:last-child
+{
+  padding-bottom: 0;
+}
+
+/*endregion*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* List Item Content                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+.list .list > .item > .content,
+.list > .item > .content
+{
+  line-height: var(--list_item_content_line_height);
+}
+
+.list .list > .item > .image + .content,
+.list .list > .item > .icon + .content,
+.list > .item > .image + .content,
+.list > .item > .icon + .content
+{
+  display: table-cell;
+  border: 1px solid red;
+  padding: 0 0 0 var(--list_item_content_padding);
+  vertical-align: var(--list_item_content_vertical_align);
+}
+.list .list > .item > img.image + .content,
+.list > .item > img.image + .content
+{
+  display: inline-block;
+}
+.list .list > .item > .content > .list,
+.list > .item > .content > .list
+{
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Horizontal List                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+/*doc
+
+## Horizontal List
+
+<div class="segment">
+  <div class="content">
+    <ul class="horizontal list">
+      <li><div class="content">1345 6787 6545 678</div></li>
+      <li><div class="content">1345 6787 6545 678</div></li>
+    </ul>
+  </div>
+</div>
+
+<div class="segment">
+            <div class="content">
+              <div class="header">fällige Wiedervorlagen</div>
+            </div>
+            <div class="content">
+              <ul class="list">
+                <li>
+                  <ul class="list">
+                    <li>06.07.2017</li>
+                    <li>
+                      <ul>
+                        <li>
+                          <a href="#">Angebot PHV machen</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul class="list">
+                    <li>Heute</li>
+                    <li>
+                      <ul>
+                        <li>
+                          <a href="#">Anrufen wegen Hypothek</a>
+                          <a href="#">Antrag WGBV wegschicken</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul class="list">
+                    <li>Morgen</li>
+                    <li>
+                      <ul>
+                        <li>
+                          <a href="#">Essen im Ritz</a>
+
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+              </ul>
+
+              <ul class="horizontal list">
+                <li>
+                  Heute
+                </li>
+                <li>bla bla</li>
+              </ul>
+            </div>
+          </div>
+
+*/
+
+.horizontal.list,
+ul.horizontal.list,
+ol.horizontal.list
+{
+  display: inline-block;
+  border: 1px solid green;
+}
+
+.horizontal.list > .item,
+ul.horizontal.list > li,
+ol.horizontal.list > li
+{
+  display: inline-block;
+  margin-left: var(--list_item_padding);
+  border: 1px solid red;
+}
+
+.horizontal.list .list
+{
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+.horizontal.list > .item > .image,
+.horizontal.list .list > .item > .image,
+.horizontal.list > .item > .icon,
+.horizontal.list .list > .item > .icon,
+.horizontal.list > .item > .content,
+.horizontal.list .list > .item > .content
+{
+  vertical-align: var(--list_item_content_vertical_align);
+}
+
+.horizontal.list > .item:first-child,
+.horizontal.list > .item:last-child,
+ul.horizontal.list > .li:first-child,
+ul.horizontal.list > .li:last-child,
+ol.horizontal.list > .li:first-child,
+ol.horizontal.list > .li:last-child
+{
+  padding-top: var(--list_item_vertical_padding);
+  padding-bottom: var(--list_item_horizontal_padding);
+}
+
+/*endregion*/

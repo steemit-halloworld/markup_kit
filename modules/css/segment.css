@@ -1,0 +1,36 @@
+:root
+{
+  --segment_background: var(--global-background);
+  --segment_box_shadow: var(--global_subtle_shadow);
+  --segment_vertical_margin: 1em;
+  --segment_horizontal_margin: 0em;
+
+  --segment_margin: var(--segment_vertical_margin) var(--segment_horizontal_margin);
+  --segment_vertical_padding: 1em;
+  --segment_horizontal_padding: 1em;
+
+  --segment_padding: var(--segment_vertical_padding) var(--segment_horizontal_padding);
+  --segment_border_radius: var(--global_border_radius);
+  --segment_border_width: 1px;
+  --segment_border: var(--segment_border_width) 1px solid var(--global-muted-color);
+}
+
+.segment {
+  position: relative;
+  background: var(--segment_background);
+  box-shadow: var(--segment_box_shadow);
+  margin: var(--segment_margin);
+  padding: var(--segment_padding);
+  border-radius: var(--segment_border_radius);
+  border: var(--segment_border);
+}
+
+.segment:first-child
+{
+  margin-top: 0;
+}
+
+.segment:last-child
+{
+  margin-bottom: 0;
+}
