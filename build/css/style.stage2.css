@@ -1575,12 +1575,78 @@ A standard button.
   /* positioning */
   display: inline-block;
   vertical-align: middle;
+  /* cursor */
+  cursor: pointer;
 }
 /* Primary Buttons */
 .kit_button:hover, .kit_buttons > *:hover
 {
   background-color: rgb(208, 208, 208);
 }
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Animated Button                                                                                                    */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+/*doc
+
+## Animated Button
+
+<div class="animated button">
+  <div class="content visible">Sign Up</div>
+  <div class="content hidden">12.99$ a month</div>
+</div>
+
+*/
+.kit_animated.kit_button
+{
+  overflow: hidden;
+  position: relative;
+  padding-right: 0 !important;
+  z-index: 1;
+  vertical-align: middle;
+}
+.kit_animated.kit_button .kit_content
+{
+  will-change: transform, opacity;
+}
+.kit_animated.kit_button .kit_content
+{
+  will-change: transform, opacity;
+}
+.kit_animated.kit_button .kit_visible.kit_content
+{
+  position: relative;
+  margin-right: 30px;
+}
+.kit_animated.kit_button .kit_hidden.kit_content
+{
+  position: absolute;
+  width: 100%;
+}
+.kit_animated.kit_button .kit_visible.kit_content, .kit_animated.kit_button .kit_hidden.kit_content {
+  transition: right 0.3s ease 0s;
+}
+.kit_animated.kit_button .kit_visible.kit_content {
+  left: auto;
+  right: 0;
+}
+.kit_animated.kit_button .kit_hidden.kit_content {
+  top: 50%;
+  left: auto;
+  right: -100%;
+  margin-top: -20px;
+}
+.kit_animated.kit_button:focus .kit_visible.kit_content, .kit_animated.kit_button:hover .kit_visible.kit_content
+{
+  left: auto;
+  right: 200%;
+}
+.kit_animated.kit_button:focus .kit_hidden.kit_content, .kit_animated.kit_button:hover .kit_hidden.kit_content
+{
+  left: auto;
+  right: 0;
+}
+/*endregion*/
 .kit_form .kit_label
 {
   display: block;

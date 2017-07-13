@@ -25,6 +25,10 @@ The Button module include predefined button styles with different semantic purpo
 
   --button_border_radius: var(--global-border-radius);
   --button_background_color: var(--global-muted-background);
+
+  --button_animated_vertical_align: middle;
+  --button_animation_duration:0.3s;
+  --button_animation_easing:ease;
 }
 
 /*endregion*/
@@ -65,6 +69,8 @@ A standard button.
   /* positioning */
   display: inline-block;
   vertical-align: middle;
+  /* cursor */
+  cursor: pointer;
 }
 
 /* Primary Buttons */
@@ -74,3 +80,83 @@ A standard button.
 {
   background-color: color(var(--button_background_color) blackness(20%));
 }
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Animated Button                                                                                                    */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+/*doc
+
+## Animated Button
+
+<div class="animated button">
+  <div class="content visible">Sign Up</div>
+  <div class="content hidden">12.99$ a month</div>
+</div>
+
+*/
+
+.animated.button
+{
+  overflow: hidden;
+  position: relative;
+  padding-right: 0 !important;
+  z-index: 1;
+  vertical-align: var(--button_animated_vertical_align);
+}
+
+.animated.button .content
+{
+  will-change: transform, opacity;
+}
+
+.animated.button .content
+{
+  will-change: transform, opacity;
+}
+
+.animated.button .visible.content
+{
+  position: relative;
+  margin-right: var(--button-padding-horizontal);
+}
+
+.animated.button .hidden.content
+{
+  position: absolute;
+  width: 100%;
+}
+
+.animated.button .visible.content,
+.animated.button .hidden.content {
+  transition: right var(--button_animation_duration) var(--button_animation_easing) 0s;
+}
+.animated.button .visible.content {
+  left: auto;
+  right: 0;
+}
+.animated.button .hidden.content {
+  top: 50%;
+  left: auto;
+  right: -100%;
+  margin-top: calc((-1 * var(--button-line-height) / 2));
+}
+
+.animated.button:focus .visible.content,
+.animated.button:hover .visible.content
+{
+  left: auto;
+  right: 200%;
+}
+
+.animated.button:focus .hidden.content,
+.animated.button:hover .hidden.content
+{
+  left: auto;
+  right: 0;
+}
+
+
+/*endregion*/
+

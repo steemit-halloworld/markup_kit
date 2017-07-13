@@ -17,6 +17,15 @@ A standard button.
 </div>
 
 
+## Animated Button
+
+<div class="animated button">
+  <div class="content visible">Sign Up</div>
+  <div class="content hidden">12.99$ a month</div>
+</div>
+
+
+
 # Card Module
 
 
