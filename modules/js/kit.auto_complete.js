@@ -138,9 +138,7 @@
 
     var v = ev.target.getAttribute('data-val');
 
-    console.log( prv[owner.id()].drop_down_element.style);
     prv[owner.id()].drop_down_element.style.display = 'none';
-    console.log( prv[owner.id()].drop_down_element.style);
 
     if(ev.target.getAttribute('data-source-id') == prv[owner.id()].html_element.id)
     {
