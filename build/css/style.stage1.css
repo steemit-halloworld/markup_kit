@@ -602,7 +602,7 @@ Module to define margin or padding values to an element especially for different
 }
 .padding
 {
-  padding: 30px;
+  padding: 30px !important;
 }
 /* visibility.css | MIT License | github.com/tschroeter/markup_kit */
 /*doc
@@ -1138,7 +1138,7 @@ To apply the component add the off_canvas class to a parent div container and us
   left: 0;
   z-index: 1000;
 }
-@media (max-width: 639px)
+@media (max-width: 640px)
 {
   .off_canvas\@small-down
   {
@@ -1149,7 +1149,7 @@ To apply the component add the off_canvas class to a parent div container and us
   	z-index: 1000;
   }
 }
-@media (max-width: 959px)
+@media (max-width: 960px)
 {
   .off_canvas\@medium-down
   {
@@ -1184,7 +1184,7 @@ To apply the component add the off_canvas class to a parent div container and us
           transform: translateX(-100%);
   /* -----------------------------------*/
 }
-@media (max-width: 639px)
+@media (max-width: 640px)
 {
   .off_canvas_bar\@small-down
   {
@@ -1200,7 +1200,7 @@ To apply the component add the off_canvas class to a parent div container and us
           	transform: translateX(-100%);
   }
 }
-@media (max-width: 959px)
+@media (max-width: 960px)
 {
   .off_canvas_bar\@medium-down
   {
