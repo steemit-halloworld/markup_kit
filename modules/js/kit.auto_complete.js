@@ -16,12 +16,12 @@
   kit.Auto_complete = function (html_element)
   {
     var id = (++ref_counter);
-
+    var auto_complete_id = html_element.id + "_auto_complete";
     prv[id] = {
 
       component: this,
       html_element: html_element,
-      drop_down_element: mount_drop_down_element(),
+      drop_down_element: mount_drop_down_element(auto_complete_id),
       // options
       min_chars: 1,
       delay: 12,
@@ -40,10 +40,16 @@
     install_listeners(this);
   };
 
-  function mount_drop_down_element ()
+  function mount_drop_down_element (id)
   {
+
+    if(document.getElementById(id) !== null)
+    {
+      document.getElementById(id).parentNode.removeChild(document.getElementById(id));
+    }
     var div = document.createElement("div");
-    div.className = kit.string('auto_complete_suggestion {prefix}drop_down', {prefix: kit.css_prefix()});
+    div.className = kit.string('auto_complete_suggestion {prefix}drop_down', {prefix: 'kit_' /*kit.css_prefix()*/});
+    div.id = id;
     document.body.appendChild(div);
 
     return div;
@@ -132,17 +138,17 @@
 
     var v = ev.target.getAttribute('data-val');
 
-    owner.html_element().value = v;
-
+    console.log( prv[owner.id()].drop_down_element.style);
     prv[owner.id()].drop_down_element.style.display = 'none';
+    console.log( prv[owner.id()].drop_down_element.style);
 
-    if(!ev.target.getAttribute('data-source-id') === prv[owner.id()].html_element.id)
+    if(ev.target.getAttribute('data-source-id') == prv[owner.id()].html_element.id)
     {
-      console.log("ERROR");
-      return;
+      owner.html_element().value = v;
+      prv[owner.id()].on_select_callback(event, v);
     }
 
-    prv[owner.id()].on_select_callback(event, prv[owner.id()].value);
+
   }
 
   function get_selected_element (owner)
@@ -240,7 +246,7 @@
     return function (item)
     {
       var class_name = kit.string("{prefix}drop_down_item", {'prefix': kit.css_prefix()});
-      return kit.string('<div class="{class_name} autocomplete-suggestion" data-val="' + item.id + '">' + item + '</div>', {'class_name': class_name});
+      return kit.string('<div data-source-id="' + item[2] + '" class="{class_name} autocomplete-suggestion" data-val="' + item[1] + '">' + item[0] + '</div>', {'class_name': class_name});
     };
   }
 
@@ -273,7 +279,7 @@
     if (!div.maxHeight) div.maxHeight = parseInt(style(div).maxHeight);
     const selector = kit.string('.{prefix}drop_down_item', {'prefix': kit.css_prefix()});
 
-    if (!div.sug_height) div.sug_height = div.querySelector(selector).offsetHeight;
+   // if (!div.sug_height) div.sug_height = div.querySelector(selector).offsetHeight;
 
     if (div.sug_height)
     {
