@@ -29,7 +29,7 @@ const kit = (function ()
 
   var initialized = false;
 
-  var classname_prefix = 'kit_';
+  var classname_prefix = '';
 
   kit.init = function (classname_prefix_arg)
   {

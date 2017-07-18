@@ -44,7 +44,6 @@
   {
     var div = document.createElement("div");
     div.className = kit.string('auto_complete_suggestion {prefix}drop_down', {prefix: kit.css_prefix()});
-
     document.body.appendChild(div);
 
     return div;
@@ -131,23 +130,19 @@
   {
     if (!kit.global.has_class(ev.target, 'autocomplete-suggestion')) return;
 
-    var same = ev.target.getAttribute('data-source-id') === prv[owner.id()].html_element.id
+    var v = ev.target.getAttribute('data-val');
 
-    if(!same)
+    owner.html_element().value = v;
+
+    prv[owner.id()].drop_down_element.style.display = 'none';
+
+    if(!ev.target.getAttribute('data-source-id') === prv[owner.id()].html_element.id)
     {
       console.log("ERROR");
       return;
     }
 
-    var v = ev.target.getAttribute('data-val');
-
-    owner.html_element().value = v;
-
-
-    prv[owner.id()].drop_down_element.style.display = 'none';
-
-    prv[owner.id()].on_select_callback(event, v);
-
+    prv[owner.id()].on_select_callback(event, prv[owner.id()].value);
   }
 
   function get_selected_element (owner)
@@ -244,10 +239,8 @@
   {
     return function (item)
     {
-
-
       var class_name = kit.string("{prefix}drop_down_item", {'prefix': kit.css_prefix()});
-      return kit.string('<div data-source-id="' + item[2] + '" class="{class_name} autocomplete-suggestion" data-val="' + item[1] + '">' + item[0] + '</div>', {'class_name': class_name});
+      return kit.string('<div class="{class_name} autocomplete-suggestion" data-val="' + item.id + '">' + item + '</div>', {'class_name': class_name});
     };
   }
 
