@@ -131,13 +131,23 @@
   {
     if (!kit.global.has_class(ev.target, 'autocomplete-suggestion')) return;
 
+    var same = ev.target.getAttribute('data-source-id') === prv[owner.id()].html_element.id
+
+    if(!same)
+    {
+      console.log("ERROR");
+      return;
+    }
+
     var v = ev.target.getAttribute('data-val');
 
     owner.html_element().value = v;
 
+
     prv[owner.id()].drop_down_element.style.display = 'none';
 
-    prv[owner.id()].on_select_callback(event, prv[owner.id()].value);
+    prv[owner.id()].on_select_callback(event, v);
+
   }
 
   function get_selected_element (owner)
@@ -234,8 +244,10 @@
   {
     return function (item)
     {
+
+
       var class_name = kit.string("{prefix}drop_down_item", {'prefix': kit.css_prefix()});
-      return kit.string('<div class="{class_name} autocomplete-suggestion" data-val="' + item.id + '">' + item + '</div>', {'class_name': class_name});
+      return kit.string('<div data-source-id="' + item[2] + '" class="{class_name} autocomplete-suggestion" data-val="' + item[1] + '">' + item[0] + '</div>', {'class_name': class_name});
     };
   }
 
