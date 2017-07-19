@@ -109,6 +109,8 @@
 
   function on_input_value_changed (owner, new_val, old_val)
   {
+    if(new_val == old_val) return;
+
     var div = prv[owner.id()].drop_down_element;
     if (kit.is_defined(new_val) && new_val.length >= prv[owner.id()].min_chars)
     {
