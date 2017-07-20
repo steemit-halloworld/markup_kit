@@ -59,13 +59,13 @@ a:active, a:hover
 {
   outline: 0;
 }
-a, .kit_link
+a, .kit_kit_link
 {
   color: #1e87f0;
   text-decoration: none;
   cursor: pointer;
 }
-a:hover, .kit_link:hover
+a:hover, .kit_kit_link:hover
 {
   color: #0f6ecd;
   text-decoration: underline;
@@ -81,7 +81,7 @@ p, ul, dl, pre, address, fieldset, figure
   margin-top: 20px;
 }
 /* headings */
-h1, .kit_h1, h2, .kit_h2, h3, .kit_h3, h4, .kit_h4, h5, .kit_h5, h6, .kit_h6
+h1, .kit_kit_h1, h2, .kit_kit_h2, h3, .kit_kit_h3, h4, .kit_kit_h4, h5, .kit_kit_h5, h6, .kit_kit_h6
 {
   margin: 0 0 20px 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -89,40 +89,40 @@ h1, .kit_h1, h2, .kit_h2, h3, .kit_h3, h4, .kit_h4, h5, .kit_h5, h6, .kit_h6
   color: #333;
   text-transform: none;
 }
-* + h1, * + .kit_h1, * + h2, * + .kit_h2, * + h3, * + .kit_h3, * + h4, * + .kit_h4, * + h5, * + .kit_h5, * + h6, * + .kit_h6
+* + h1, * + .kit_kit_h1, * + h2, * + .kit_kit_h2, * + h3, * + .kit_kit_h3, * + h4, * + .kit_kit_h4, * + h5, * + .kit_kit_h5, * + h6, * + .kit_kit_h6
 { /* adjacent element margin */
   margin-top: 40px;
 }
-h1, .kit_h1
+h1, .kit_kit_h1
 {
   font-size: 42px;
   font-size: 2.625rem;
   line-height: 1.2;
 }
-h2, .kit_h2
+h2, .kit_kit_h2
 {
   font-size: 32px;
   font-size: 2rem;
   line-height: 1.3;
 }
-h3, .kit_h3
+h3, .kit_kit_h3
 {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1.4;
 }
-h4, .kit_h4
+h4, .kit_kit_h4
 {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.4;
 }
-h5, .kit_h5
+h5, .kit_kit_h5
 {
   font-size: 16px;
   line-height: 1.4;
 }
-h6, .kit_h6
+h6, .kit_kit_h6
 {
   font-size: 14px;
   font-size: 0.875rem;
@@ -153,24 +153,24 @@ important to clear floats.
 
 */
 /*region*/
-.kit_float, .kit_float.kit_left
+.kit_kit_float, .kit_kit_float.kit_kit_left
 {
   float: left;
 }
-.kit_float, .kit_float.kit_right
+.kit_kit_float, .kit_kit_float.kit_kit_right
 {
   float: right;
 }
-.kit_clf, .kit_grid, .kit_cards, .kit_card, .kit_cards > .kit_card > .kit_content:after, .kit_card > .kit_content:after
+.kit_kit_clf, .kit_kit_grid, .kit_kit_cards, .kit_kit_card, .kit_kit_cards > .kit_kit_card > .kit_kit_content:after, .kit_kit_card > .kit_kit_content:after
 {
 
 }
-.kit_clf:before, .kit_grid:before, .kit_cards:before, .kit_card:before, .kit_cards > .kit_card > .kit_content:after:before, .kit_card > .kit_content:after:before
+.kit_kit_clf:before, .kit_kit_grid:before, .kit_kit_cards:before, .kit_kit_card:before, .kit_kit_cards > .kit_kit_card > .kit_kit_content:after:before, .kit_kit_card > .kit_kit_content:after:before
 {
   content: "";
   display: table-cell;
 }
-.kit_clf:after, .kit_grid:after, .kit_cards:after, .kit_card:after, .kit_cards > .kit_card > .kit_content:after:after, .kit_card > .kit_content:after:after
+.kit_kit_clf:after, .kit_kit_grid:after, .kit_kit_cards:after, .kit_kit_card:after, .kit_kit_cards > .kit_kit_card > .kit_kit_content:after:after, .kit_kit_card > .kit_kit_content:after:after
 {
   clear: both;
   content: "";
@@ -216,7 +216,7 @@ important to clear floats.
 </div>
 
 */
-.kit_flx
+.kit_kit_flx
 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -227,7 +227,7 @@ important to clear floats.
       align-content: flex-start;
   margin: 0 -30px;
 }
-.kit_flx_u, .kit_flx > *
+.kit_kit_flx_u, .kit_kit_flx > *
 {
   padding: 0 30px;
 }
@@ -241,10 +241,10 @@ important to clear floats.
 /* Wrap Modifiers                                                                                                     */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
-.kit_flx.kit_wrap
+.kit_kit_flx.kit_kit_wrap
 {
 }
-.kit_flx.kit_nowrap
+.kit_kit_flx.kit_kit_nowrap
 {
 }
 /*endregion*/
@@ -253,10 +253,10 @@ important to clear floats.
 /* Ordering Modifiers                                                                                                 */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
-.kit_flx > .kit_first
+.kit_kit_flx > .kit_kit_first
 {
 }
-.kit_flx > .kit_last
+.kit_kit_flx > .kit_kit_last
 {
 }
 /*endregion*/
@@ -268,82 +268,82 @@ important to clear floats.
  Module to place elements outside of the normal document flow.
 
 */
-[class*="kit_top"], [class*="kit_bottom"], [class*="kit_left"], [class*="kit_right"], [class*="kit_center"]
+[class*="kit_kit_top"], [class*="kit_kit_bottom"], [class*="kit_kit_left"], [class*="kit_kit_right"], [class*="kit_kit_center"]
 {
   position: absolute !important;
 }
-.kit_fixed
+.kit_kit_fixed
 {
   position: fixed !important;
   z-index: 9999 !important;
 }
-.kit_right
+.kit_kit_right
 {
   top: 0;
   bottom: 0;
   right: 0;
 }
-.kit_left
+.kit_kit_left
 {
   top: 0;
   bottom: 0;
   left: 0;
 }
-.kit_top_left
+.kit_kit_top_left
 {
   top: 0;
   left: 0;
 }
-.kit_top_right
+.kit_kit_top_right
 {
   top: 0;
   right: 0;
 }
-.kit_bottom_left
+.kit_kit_bottom_left
 {
   bottom: 0;
   left: 0;
 }
-.kit_bottom_right
+.kit_kit_bottom_right
 {
   bottom: 0;
   right: 0;
 }
 @media (min-width: 961px)
 {
-  .kit_fixed\@medium-up
+  .kit_kit_fixed\@medium-up
   {
     position: fixed !important;
     z-index: 9999 !important;
 
   }
 
-  .kit_right\@medium-up
+  .kit_kit_right\@medium-up
   {
     top: 0;
     bottom: 0;
     right: 0;
   }
 
-  .kit_top_left\@medium-up
+  .kit_kit_top_left\@medium-up
   {
     top: 0;
     left: 0;
   }
 
-  .kit_top_right\@medium-up
+  .kit_kit_top_right\@medium-up
   {
     top: 0;
     right: 0;
   }
 
-  .kit_bottom_left\@medium-up
+  .kit_kit_bottom_left\@medium-up
   {
     bottom: 0;
     left: 0;
   }
 
-  .kit_bottom_right\@medium-up
+  .kit_kit_bottom_right\@medium-up
   {
     bottom: 0;
     right: 0;
@@ -360,19 +360,19 @@ important to clear floats.
 /* Fixed Width Modifiers                                                                                              */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
-.kit_w_sm
+.kit_kit_w_sm
 {
   width: 640px;
 }
-.kit_w_md
+.kit_kit_w_md
 {
   width: 960px;
 }
-.kit_w_lg
+.kit_kit_w_lg
 {
   width: 1200px;
 }
-.kit_w_xl
+.kit_kit_w_xl
 {
   width: 1600px;
 }
@@ -381,183 +381,183 @@ important to clear floats.
 /* Width Modifiers                                                                                                    */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
-.kit_w100
+.kit_kit_w100
 { width: 100% !important; }
-.kit_child_w10 > *, .kit_w10
+.kit_kit_child_w10 > *, .kit_kit_w10
 { width: 10% !important; }
-.kit_child_w20 > *, .kit_w20
+.kit_kit_child_w20 > *, .kit_kit_w20
 { width: 20% !important; }
-.kit_child_w25 > *, .kit_w25
+.kit_kit_child_w25 > *, .kit_kit_w25
 { width: 25% !important; }
-.kit_child_w30 > *, .kit_w30
+.kit_kit_child_w30 > *, .kit_kit_w30
 { width: 30% !important; }
-.kit_child_w33 > *, .kit_w33
+.kit_kit_child_w33 > *, .kit_kit_w33
 { width: 33.3333% !important; }
-.kit_child_w40 > *, .kit_w40
+.kit_kit_child_w40 > *, .kit_kit_w40
 { width: 40% !important; }
-.kit_child_w50 > *, .kit_w50
+.kit_kit_child_w50 > *, .kit_kit_w50
 { width: 50% !important; }
-.kit_child_w60 > *, .kit_w60
+.kit_kit_child_w60 > *, .kit_kit_w60
 { width: 60% !important; }
-.kit_child_w67 > *, .kit_w67
+.kit_kit_child_w67 > *, .kit_kit_w67
 { width: 67% !important; }
-.kit_child_w70 > *, .kit_w70
+.kit_kit_child_w70 > *, .kit_kit_w70
 { width: 70% !important; }
-.kit_child_w75 > *, .kit_w75
+.kit_kit_child_w75 > *, .kit_kit_w75
 { width: 75% !important; }
-.kit_child_w80 > *, .kit_w80
+.kit_kit_child_w80 > *, .kit_kit_w80
 { width: 80% !important; }
-.kit_child_w90 > *, .kit_w90
+.kit_kit_child_w90 > *, .kit_kit_w90
 { width: 90% !important; }
-.kit_child_w100, .kit_w100
+.kit_kit_child_w100, .kit_kit_w100
 { width: 100% !important; }
 @media (min-width: 641px)
 {
-  .kit_child_w10\@sm_up > *, .kit_w10\@sm_up
+  .kit_kit_child_w10\@sm_up > *, .kit_kit_w10\@sm_up
   { 	width: 10% !important; }
 
-  .kit_child_w20\@sm_up > *, .kit_w20\@sm_up
+  .kit_kit_child_w20\@sm_up > *, .kit_kit_w20\@sm_up
   { 	width: 20% !important; }
 
-  .kit_child_w25\@sm_up > *, .kit_w25\@sm_up
+  .kit_kit_child_w25\@sm_up > *, .kit_kit_w25\@sm_up
   { 	width: 25% !important; }
 
-  .kit_child_w33\@sm_up > *, .kit_w33\@sm_up
+  .kit_kit_child_w33\@sm_up > *, .kit_kit_w33\@sm_up
   { 	width: 33.3333% !important; }
 
-  .kit_child_w40\@sm_up > *, .kit_w40\@sm_up
+  .kit_kit_child_w40\@sm_up > *, .kit_kit_w40\@sm_up
   { 	width: 40% !important; }
 
-  .kit_child_w50\@sm_up > *, .kit_w50\@sm_up
+  .kit_kit_child_w50\@sm_up > *, .kit_kit_w50\@sm_up
   { 	width: 50% !important; }
 
-  .kit_child_w60\@sm_up > *, .kit_w60\@sm_up
+  .kit_kit_child_w60\@sm_up > *, .kit_kit_w60\@sm_up
   { 	width: 60% !important; }
 
-  .kit_child_w67\@sm_up > *, .kit_w67\@sm_up
+  .kit_kit_child_w67\@sm_up > *, .kit_kit_w67\@sm_up
   { 	width: 67% !important; }
 
-  .kit_child_w75\@sm_up > *, .kit_w75\@sm_up
+  .kit_kit_child_w75\@sm_up > *, .kit_kit_w75\@sm_up
   { 	width: 75% !important; }
 
-  .kit_child_w80\@sm_up > *, .kit_w80\@sm_up
+  .kit_kit_child_w80\@sm_up > *, .kit_kit_w80\@sm_up
   { 	width: 80% !important; }
 
-  .kit_child_w90\@sm_up > *, .kit_w90\@sm_up
+  .kit_kit_child_w90\@sm_up > *, .kit_kit_w90\@sm_up
   { 	width: 90% !important; }
 
-  .kit_child_w100\@sm_up, .kit_w100\@sm_up
+  .kit_kit_child_w100\@sm_up, .kit_kit_w100\@sm_up
   { 	width: 100% !important; }
 }
 @media (min-width: 961px)
 {
-  .kit_child_w10\@md_up > *, .kit_w10\@md_up
+  .kit_kit_child_w10\@md_up > *, .kit_kit_w10\@md_up
   { 	width: 10% !important; }
 
-  .kit_child_w20\@md_up > *, .kit_w20\@md_up
+  .kit_kit_child_w20\@md_up > *, .kit_kit_w20\@md_up
   { 	width: 20% !important; }
 
-  .kit_child_w25\@md_up > *, .kit_w25\@md_up
+  .kit_kit_child_w25\@md_up > *, .kit_kit_w25\@md_up
   { 	width: 25% !important; }
 
-  .kit_child_w33\@md_up > *, .kit_w33\@md_up
+  .kit_kit_child_w33\@md_up > *, .kit_kit_w33\@md_up
   { 	width: 33.3333% !important; }
 
-  .kit_child_w40\@md_up > *, .kit_w40\@md_up
+  .kit_kit_child_w40\@md_up > *, .kit_kit_w40\@md_up
   { 	width: 40% !important; }
 
-  .kit_child_w50\@md_up > *, .kit_w50\@md_up
+  .kit_kit_child_w50\@md_up > *, .kit_kit_w50\@md_up
   { 	width: 50% !important; }
 
-  .kit_child_w60\@md_up > *, .kit_w60\@md_up
+  .kit_kit_child_w60\@md_up > *, .kit_kit_w60\@md_up
   { 	width: 60% !important; }
 
-  .kit_child_w67\@md_up > *, .kit_w67\@md_up
+  .kit_kit_child_w67\@md_up > *, .kit_kit_w67\@md_up
   { 	width: 67% !important; }
 
-  .kit_child_w75\@md_up > *, .kit_w75\@md_up
+  .kit_kit_child_w75\@md_up > *, .kit_kit_w75\@md_up
   { 	width: 75% !important; }
 
-  .kit_child_w80\@md_up > *, .kit_w80\@md_up
+  .kit_kit_child_w80\@md_up > *, .kit_kit_w80\@md_up
   { 	width: 80% !important; }
 
-  .kit_child_w90\@md_up > *, .kit_w90\@md_up
+  .kit_kit_child_w90\@md_up > *, .kit_kit_w90\@md_up
   { 	width: 90% !important; }
 
-  .kit_child_w100\@md_up, .kit_w100\@md_up
+  .kit_kit_child_w100\@md_up, .kit_kit_w100\@md_up
   { 	width: 100% !important; }
 }
 @media (min-width: 1201px)
 {
-  .kit_child_w10\@lg_up > *, .kit_w10\@lg_up
+  .kit_kit_child_w10\@lg_up > *, .kit_kit_w10\@lg_up
   { 	width: 10% !important; }
 
-  .kit_child_w20\@lg_up > *, .kit_w20\@lg_up
+  .kit_kit_child_w20\@lg_up > *, .kit_kit_w20\@lg_up
   { 	width: 20% !important; }
 
-  .kit_child_w25\@lg_up > *, .kit_w25\@lg_up
+  .kit_kit_child_w25\@lg_up > *, .kit_kit_w25\@lg_up
   { 	width: 25% !important; }
 
-  .kit_child_w33\@lg_up > *, .kit_w33\@lg_up
+  .kit_kit_child_w33\@lg_up > *, .kit_kit_w33\@lg_up
   { 	width: 33.3333% !important; }
 
-  .kit_child_w40\@lg_up > *, .kit_w40\@lg_up
+  .kit_kit_child_w40\@lg_up > *, .kit_kit_w40\@lg_up
   { 	width: 40% !important; }
 
-  .kit_child_w50\@lg_up > *, .kit_w50\@lg_up
+  .kit_kit_child_w50\@lg_up > *, .kit_kit_w50\@lg_up
   { 	width: 50% !important; }
 
-  .kit_child_w60\@lg_up > *, .kit_w60\@lg_up
+  .kit_kit_child_w60\@lg_up > *, .kit_kit_w60\@lg_up
   { 	width: 60% !important; }
 
-  .kit_child_w67\@lg_up > *, .kit_w67\@lg_up
+  .kit_kit_child_w67\@lg_up > *, .kit_kit_w67\@lg_up
   { 	width: 67% !important; }
 
-  .kit_child_w75\@lg_up > *, .kit_w75\@lg_up
+  .kit_kit_child_w75\@lg_up > *, .kit_kit_w75\@lg_up
   { 	width: 75% !important; }
 
-  .kit_child_w80\@lg_up > *, .kit_w80\@lg_up
+  .kit_kit_child_w80\@lg_up > *, .kit_kit_w80\@lg_up
   { 	width: 80% !important; }
 
-  .kit_child_w90\@lg_up > *, .kit_w90\@lg_up
+  .kit_kit_child_w90\@lg_up > *, .kit_kit_w90\@lg_up
   { 	width: 90% !important; }
 
-  .kit_child_w100\@lg_up, .kit_w100\@lg_up
+  .kit_kit_child_w100\@lg_up, .kit_kit_w100\@lg_up
   { 	width: 100% !important; }
 }
 @media (min-width: 1601px)
 {
-  .kit_child_w10\@xl_up > *, .kit_w10\@xl_up
+  .kit_kit_child_w10\@xl_up > *, .kit_kit_w10\@xl_up
   { 	width: 10% !important; }
 
-  .kit_child_w20\@xl_up > *, .kit_w20\@xl_up
+  .kit_kit_child_w20\@xl_up > *, .kit_kit_w20\@xl_up
   { 	width: 20% !important; }
 
-  .kit_child_w25\@xl_up > *, .kit_w25\@xl_up
+  .kit_kit_child_w25\@xl_up > *, .kit_kit_w25\@xl_up
   { 	width: 25% !important; }
 
-  .kit_child_w33\@xl_up > *, .kit_w33\@xl_up
+  .kit_kit_child_w33\@xl_up > *, .kit_kit_w33\@xl_up
   { 	width: 33.3333% !important; }
 
-  .kit_child_w50\@xl_up > *, .kit_w50\@xl_up
+  .kit_kit_child_w50\@xl_up > *, .kit_kit_w50\@xl_up
   { 	width: 50% !important; }
 
-  .kit_child_w60\@xl_up > *, .kit_w60\@xl_up
+  .kit_kit_child_w60\@xl_up > *, .kit_kit_w60\@xl_up
   { 	width: 60% !important; }
 
-  .kit_child_w67\@xl_up > *, .kit_w67\@xl_up
+  .kit_kit_child_w67\@xl_up > *, .kit_kit_w67\@xl_up
   { 	width: 67% !important; }
 
-  .kit_child_w75\@xl_up > *, .kit_w75\@xl_up
+  .kit_kit_child_w75\@xl_up > *, .kit_kit_w75\@xl_up
   { 	width: 75% !important; }
 
-  .kit_child_w80\@xl_up > *, .kit_w80\@xl_up
+  .kit_kit_child_w80\@xl_up > *, .kit_kit_w80\@xl_up
   { 	width: 80% !important; }
 
-  .kit_child_w90\@xl_up > *, .kit_w90\@xl_up
+  .kit_kit_child_w90\@xl_up > *, .kit_kit_w90\@xl_up
   { 	width: 90% !important; }
 
-  .kit_child_w100\@xl_up, .kit_w100\@xl_up
+  .kit_kit_child_w100\@xl_up, .kit_kit_w100\@xl_up
   { 	width: 100% !important; }
 }
 /*endregion*/
@@ -565,15 +565,15 @@ important to clear floats.
 /* Height Modifiers                                                                                                   */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
-.kit_height_vp
+.kit_kit_height_vp
 {
   min-height: 100vh;
 }
-.kit_height_vp_4_5
+.kit_kit_height_vp_4_5
 {
   min-height: 80vh;
 }
-.kit_height_vp_3_5
+.kit_kit_height_vp_3_5
 {
   min-height: 60vh;
 }
@@ -592,46 +592,46 @@ Module to define margin or padding values to an element especially for different
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
 /*endregion*/
-.kit_margin
+.kit_kit_margin
 {
   margin-bottom: 20px;
 }
-* + .kit_margin
+* + .kit_kit_margin
 {
   margin-top: 20px !important;
 }
-.kit_padding
+.kit_kit_padding
 {
-  padding: 30px !important;
+  padding: 30px;
 }
 /* visibility.css | MIT License | github.com/tschroeter/markup_kit */
 /*doc
 
 */
-.kit_invisible
+.kit_kit_invisible
 {
   visibility: hidden !important;
 }
 @media (min-width: 641px)
 {
-  .kit_visible\@small-up
+  .kit_kit_visible\@small-up
   {
     visibility: visible !important;
   }
 
-  .kit_hidden\@small-up
+  .kit_kit_hidden\@small-up
   {
     display: none !important;
   }
 }
 @media (min-width: 961px)
 {
-  .kit_visible\@medium-up
+  .kit_kit_visible\@medium-up
   {
     visibility: visible !important;
   }
 
-  .kit_hidden\@medium-up
+  .kit_kit_hidden\@medium-up
   {
     display: none !important;
   }
@@ -660,13 +660,13 @@ The Coloring module define the background and foreground colors of elements.
 /* Primary                                                                                                          */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
-.kit_bg
+.kit_kit_bg
 { background-color: #fff !important; }
-.kit_muted
+.kit_kit_muted
 {
   background-color: #e0e1e2 !important;
 }
-.kit_primary
+.kit_kit_primary
 {
   background-color: #1e87f0 !important;
   color: #fff;
@@ -676,14 +676,14 @@ The Coloring module define the background and foreground colors of elements.
 /* Secondary                                                                                                          */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
-.kit_secondary
+.kit_kit_secondary
 { background-color: #222 !important; }
 /*endregion*/
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* Basic                                                                                                          */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
-.kit_basic
+.kit_kit_basic
 {
   background-color: #fff;
 }
@@ -693,7 +693,7 @@ The Coloring module define the background and foreground colors of elements.
 
 # Page module
 */
-.kit_page {
+.kit_kit_page {
   /* box sizing has to be 'content-box' so max-width is always
   the same and unaffected by padding on different viewport sizes*/
   box-sizing: content-box;
@@ -703,13 +703,13 @@ The Coloring module define the background and foreground colors of elements.
   padding-left: 30px;
   padding-right: 30px;
 }
-.kit_page > *
+.kit_kit_page > *
 {
   box-sizing: border-box;
 }
 @media (min-width: 641px)
 {
-  .kit_page
+  .kit_kit_page
   {
     padding-left: 30px;
     padding-right: 30px;
@@ -717,7 +717,7 @@ The Coloring module define the background and foreground colors of elements.
 }
 @media (min-width: 961px)
 {
-  .kit_page
+  .kit_kit_page
   {
     padding-left: 40px;
     padding-right: 40px;
@@ -821,14 +821,14 @@ Sizing module to determine how much space of the the container each item will ta
 
 */
 /*region*/
-.kit_grid
+.kit_kit_grid
 {
   /* extend clearfix modifier from Float module */
   /* default gutter */
   margin-left: -15px;
   margin-right: -15px;
 }
-.kit_grid_item, .kit_grid > *
+.kit_kit_grid_item, .kit_kit_grid > *
 {
   float: left;
   min-height: 1px;
@@ -843,13 +843,13 @@ Sizing module to determine how much space of the the container each item will ta
 }
 @media(min-width: 1201px)
 {
-  .kit_grid
+  .kit_kit_grid
   {
     margin-left: -35px;
     margin-right: -35px;
   }
 
-  .kit_grid_item, .kit_grid > *
+  .kit_kit_grid_item, .kit_kit_grid > *
   {
     /* horizontal default gutter */
     padding: 0 35px;
@@ -857,7 +857,7 @@ Sizing module to determine how much space of the the container each item will ta
     margin: 0 0 35px;
   }
 }
-.kit_grid > .kit_fill
+.kit_kit_grid > .kit_kit_fill
 {
   min-width: 50px;
   width: 10000px;
@@ -896,23 +896,23 @@ Add the .collapse class to remove the grid gutter entirely.
   </div>
 </div>
 */
-.kit_grid.kit_collapse
+.kit_kit_grid.kit_kit_collapse
 {
   margin-left: 0;
   margin-right: 0;
 }
-.kit_grid.kit_collapse > *
+.kit_kit_grid.kit_kit_collapse > *
 {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-.kit_grid.kit_small
+.kit_kit_grid.kit_kit_small
 {
 }
-.kit_grid.kit_medium
+.kit_kit_grid.kit_kit_medium
 {
 }
-.kit_grid.kit_large
+.kit_kit_grid.kit_kit_large
 {
 }
 /*endregion*/
@@ -933,18 +933,18 @@ Add the .collapse class to remove the grid gutter entirely.
 /* List Component                                                                                                          */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
-.kit_list
+.kit_kit_list
 {
   list-style-type: none;
   margin: 1em 0;
   padding: 0 0;
 }
-.kit_list:first-child
+.kit_kit_list:first-child
 {
   margin-top: 0;
   padding-top: 0;
 }
-.kit_list:last-child
+.kit_kit_list:last-child
 {
   margin-bottom: 0;
   padding-bottom: 0;
@@ -954,7 +954,7 @@ Add the .collapse class to remove the grid gutter entirely.
 /* List Item                                                                                                          */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
-ul.kit_list li, ol.kit_list li, .kit_list > .kit_item, .kit_list .kit_list > .kit_item
+ul.kit_kit_list li, ol.kit_kit_list li, .kit_kit_list > .kit_kit_item, .kit_kit_list .kit_kit_list > .kit_kit_item
 {
   display: list-item;
   table-layout: fixed;
@@ -964,7 +964,7 @@ ul.kit_list li, ol.kit_list li, .kit_list > .kit_item, .kit_list .kit_list > .ki
   padding: 0 3px;
   line-height: 1em;
 }
-ul.kit_list > li:first-child:after, ol.kit_list > li:first-child:after, .kit_list > .kit_list > .kit_item, .kit_list > .kit_item:after
+ul.kit_kit_list > li:first-child:after, ol.kit_kit_list > li:first-child:after, .kit_kit_list > .kit_kit_list > .kit_kit_item, .kit_kit_list > .kit_kit_item:after
 {
   content: '';
   display: block;
@@ -972,10 +972,10 @@ ul.kit_list > li:first-child:after, ol.kit_list > li:first-child:after, .kit_lis
   clear: both;
   visibility: hidden;
 }
-ul.kit_list li:first-child, ol.kit_list li:first-child, .kit_list .kit_list > .kit_item:first-child, .kit_list > .kit_item:first-child {
+ul.kit_kit_list li:first-child, ol.kit_kit_list li:first-child, .kit_kit_list .kit_kit_list > .kit_kit_item:first-child, .kit_kit_list > .kit_kit_item:first-child {
   padding-top: 0;
 }
-ul.kit_list li:last-child, ol.kit_list li:last-child, .kit_list .kit_list > .kit_item:last-child, .kit_list > .kit_item:last-child
+ul.kit_kit_list li:last-child, ol.kit_kit_list li:last-child, .kit_kit_list .kit_kit_list > .kit_kit_item:last-child, .kit_kit_list > .kit_kit_item:last-child
 {
   padding-bottom: 0;
 }
@@ -984,123 +984,76 @@ ul.kit_list li:last-child, ol.kit_list li:last-child, .kit_list .kit_list > .kit
 /* List Item Content                                                                                                          */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
-.kit_list .kit_list > .kit_item > .kit_content, .kit_list > .kit_item > .kit_content
+.kit_kit_list .kit_kit_list > .kit_kit_item > .kit_kit_content, .kit_kit_list > .kit_kit_item > .kit_kit_content
 {
   line-height: 1em;
 }
-.kit_list .kit_list > .kit_item > .kit_image + .kit_content, .kit_list .kit_list > .kit_item > .kit_icon + .kit_content, .kit_list > .kit_item > .kit_image + .kit_content, .kit_list > .kit_item > .kit_icon + .kit_content
+.kit_kit_list .kit_kit_list > .kit_kit_item > .kit_kit_image + .kit_kit_content, .kit_kit_list .kit_kit_list > .kit_kit_item > .kit_kit_icon + .kit_kit_content, .kit_kit_list > .kit_kit_item > .kit_kit_image + .kit_kit_content, .kit_kit_list > .kit_kit_item > .kit_kit_icon + .kit_kit_content
 {
   display: table-cell;
-  border: 1px solid red;
   padding: 0 0 0 0.5em;
   vertical-align: center;
 }
-.kit_list .kit_list > .kit_item > img.kit_image + .kit_content, .kit_list > .kit_item > img.kit_image + .kit_content
+.kit_kit_list .kit_kit_list > .kit_kit_item > img.kit_kit_image + .kit_kit_content, .kit_kit_list > .kit_kit_item > img.kit_kit_image + .kit_kit_content
 {
   display: inline-block;
 }
-.kit_list .kit_list > .kit_item > .kit_content > .kit_list, .kit_list > .kit_item > .kit_content > .kit_list
+.kit_kit_list .kit_kit_list > .kit_kit_item > .kit_kit_content > .kit_kit_list, .kit_kit_list > .kit_kit_item > .kit_kit_content > .kit_kit_list
 {
   margin-left: 0;
   padding-left: 0;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
+/* Divided List                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.kit_kit_divided.kit_kit_list > .kit_kit_item, .kit_kit_divided.kit_kit_list > li
+{
+  border-top: 1px solid #D4D4D5;
+}
+.kit_kit_divided.kit_kit_list > .kit_kit_item:first-child, .kit_kit_divided.kit_kit_list > li:first-child
+{
+  border-top: none;
+}
+.kit_kit_hidden.kit_kit_overflow
+{
+  overflow: hidden;
+}
+/*endregion*/
+/*--------------------------------------------------------------------------------------------------------------------*/
 /* Horizontal List                                                                                                          */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
-/*doc
-
-## Horizontal List
-
-<div class="segment">
-  <div class="content">
-    <ul class="horizontal list">
-      <li><div class="content">1345 6787 6545 678</div></li>
-      <li><div class="content">1345 6787 6545 678</div></li>
-    </ul>
-  </div>
-</div>
-
-<div class="segment">
-            <div class="content">
-              <div class="header">fällige Wiedervorlagen</div>
-            </div>
-            <div class="content">
-              <ul class="list">
-                <li>
-                  <ul class="list">
-                    <li>06.07.2017</li>
-                    <li>
-                      <ul>
-                        <li>
-                          <a href="#">Angebot PHV machen</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <ul class="list">
-                    <li>Heute</li>
-                    <li>
-                      <ul>
-                        <li>
-                          <a href="#">Anrufen wegen Hypothek</a>
-                          <a href="#">Antrag WGBV wegschicken</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <ul class="list">
-                    <li>Morgen</li>
-                    <li>
-                      <ul>
-                        <li>
-                          <a href="#">Essen im Ritz</a>
-
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-
-              </ul>
-
-              <ul class="horizontal list">
-                <li>
-                  Heute
-                </li>
-                <li>bla bla</li>
-              </ul>
-            </div>
-          </div>
-
-*/
-.kit_horizontal.kit_list, ul.kit_horizontal.kit_list, ol.kit_horizontal.kit_list
+.kit_kit_horizontal.kit_kit_list, ul.kit_kit_horizontal.kit_kit_list, ol.kit_kit_horizontal.kit_kit_list
 {
   display: inline-block;
-  border: 1px solid green;
+  white-space: nowrap;
 }
-.kit_horizontal.kit_list > .kit_item, ul.kit_horizontal.kit_list > li, ol.kit_horizontal.kit_list > li
+.kit_kit_horizontal.kit_kit_list > .kit_kit_item, ul.kit_kit_horizontal.kit_kit_list > li, ol.kit_kit_horizontal.kit_kit_list > li
 {
   display: inline-block;
+  white-space: nowrap;
+  position: relative;
   margin-left: 0 3px;
-  border: 1px solid red;
 }
-.kit_horizontal.kit_list .kit_list
+ul.kit_kit_horizontal.kit_kit_list li a
+{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+.kit_kit_horizontal.kit_kit_list .kit_kit_list
 {
   padding-left: 0;
   padding-bottom: 0;
 }
-.kit_horizontal.kit_list > .kit_item > .kit_image, .kit_horizontal.kit_list .kit_list > .kit_item > .kit_image, .kit_horizontal.kit_list > .kit_item > .kit_icon, .kit_horizontal.kit_list .kit_list > .kit_item > .kit_icon, .kit_horizontal.kit_list > .kit_item > .kit_content, .kit_horizontal.kit_list .kit_list > .kit_item > .kit_content
+.kit_kit_horizontal.kit_kit_list > .kit_kit_item > .kit_kit_image, .kit_kit_horizontal.kit_kit_list .kit_kit_list > .kit_kit_item > .kit_kit_image, .kit_kit_horizontal.kit_kit_list > .kit_kit_item > .kit_kit_icon, .kit_kit_horizontal.kit_kit_list .kit_kit_list > .kit_kit_item > .kit_kit_icon, .kit_kit_horizontal.kit_kit_list > .kit_kit_item > .kit_kit_content, .kit_kit_horizontal.kit_kit_list .kit_kit_list > .kit_kit_item > .kit_kit_content
 {
   vertical-align: center;
 }
-.kit_horizontal.kit_list > .kit_item:first-child, .kit_horizontal.kit_list > .kit_item:last-child, ul.kit_horizontal.kit_list > .kit_li:first-child, ul.kit_horizontal.kit_list > .kit_li:last-child, ol.kit_horizontal.kit_list > .kit_li:first-child, ol.kit_horizontal.kit_list > .kit_li:last-child
+.kit_kit_horizontal.kit_kit_list > .kit_kit_item:first-child, .kit_kit_horizontal.kit_kit_list > .kit_kit_item:last-child, ul.kit_kit_horizontal.kit_kit_list > .kit_kit_li:first-child, ul.kit_kit_horizontal.kit_kit_list > .kit_kit_li:last-child, ol.kit_kit_horizontal.kit_kit_list > .kit_kit_li:first-child, ol.kit_kit_horizontal.kit_kit_list > .kit_kit_li:last-child
 {
   padding-top: 3px;
   padding-bottom: 0;
@@ -1130,7 +1083,7 @@ useful for screens with small viewport.
 To apply the component add the off_canvas class to a parent div container and use the sub-component classes
 */
 /*region*/
-.kit_off_canvas
+.kit_kit_off_canvas
 {
   position: fixed;
   top: 0;
@@ -1140,7 +1093,7 @@ To apply the component add the off_canvas class to a parent div container and us
 }
 @media (max-width: 640px)
 {
-  .kit_off_canvas\@small-down
+  .kit_kit_off_canvas\@small-down
   {
   	position: fixed;
   	top: 0;
@@ -1151,7 +1104,7 @@ To apply the component add the off_canvas class to a parent div container and us
 }
 @media (max-width: 960px)
 {
-  .kit_off_canvas\@medium-down
+  .kit_kit_off_canvas\@medium-down
   {
   	position: fixed;
   	top: 0;
@@ -1166,7 +1119,7 @@ To apply the component add the off_canvas class to a parent div container and us
 /* Off-canvas Bar Sub-component                                                                                       */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
-.kit_off_canvas_bar
+.kit_kit_off_canvas_bar
 {
   /* set position ----------------------*/
   position: absolute;
@@ -1186,7 +1139,7 @@ To apply the component add the off_canvas class to a parent div container and us
 }
 @media (max-width: 640px)
 {
-  .kit_off_canvas_bar\@small-down
+  .kit_kit_off_canvas_bar\@small-down
   {
   	position: absolute;
   	top: 0;
@@ -1202,7 +1155,7 @@ To apply the component add the off_canvas class to a parent div container and us
 }
 @media (max-width: 960px)
 {
-  .kit_off_canvas_bar\@medium-down
+  .kit_kit_off_canvas_bar\@medium-down
   {
   	position: absolute;
   	top: 0;
@@ -1217,16 +1170,16 @@ To apply the component add the off_canvas class to a parent div container and us
   }
 }
 /*endregion*/
-.kit_off_canvas_checkbox_trigger:checked ~ [class*="kit_off_canvas"] [class*="kit_off_canvas_bar"], .kit_off_canvas_open [class*="kit_off_canvas_bar"]
+.kit_kit_off_canvas_checkbox_trigger:checked ~ [class*="kit_kit_off_canvas"] [class*="kit_kit_off_canvas_bar"], .kit_kit_off_canvas_open [class*="kit_kit_off_canvas_bar"]
 {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
-.kit_off_canvas_checkbox_trigger:checked ~ [class*="kit_off_canvas_content"]
+.kit_kit_off_canvas_checkbox_trigger:checked ~ [class*="kit_kit_off_canvas_content"]
 {
   border: 1px solid red;
 }
-.kit_segment {
+.kit_kit_segment {
   position: relative;
   background: #fff;
   box-shadow: 0px 1px 2px 0 #D4D4D5;
@@ -1235,11 +1188,11 @@ To apply the component add the off_canvas class to a parent div container and us
   border-radius: .25rem;
   border: 1px 1px solid #999;
 }
-.kit_segment:first-child
+.kit_kit_segment:first-child
 {
   margin-top: 0;
 }
-.kit_segment:last-child
+.kit_kit_segment:last-child
 {
   margin-bottom: 0;
 }
@@ -1266,7 +1219,7 @@ To apply the component add the off_canvas class to a parent div container and us
   /* typography */
 }
 /*endregion*/
-.kit_card
+.kit_kit_card
 {
   /* sizing */
   max-width: 100%;
@@ -1283,19 +1236,19 @@ To apply the component add the off_canvas class to a parent div container and us
   border-radius: 0.25rem;
   box-shadow: 0 1px 3px 0px #D4D4D5;
   /* coloring */
-  background: transparent;
+  background: rgba(255, 255, 255, 1) !important;
   /* spacing */
   padding: 0;
 }
-.kit_cards > .kit_card a, .kit_card a
+.kit_kit_cards > .kit_kit_card a, .kit_kit_card a
 {
   cursor: pointer;
 }
-.kit_card:first-child
+.kit_kit_card:first-child
 {
   margin-top: 0;
 }
-.kit_card:last-child
+.kit_kit_card:last-child
 {
   margin-bottom: 0;
 }
@@ -1304,16 +1257,16 @@ To apply the component add the off_canvas class to a parent div container and us
 /* Card Edges                                                                                                         */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
-.kit_cards > .kit_card > :first-child, .kit_card > :first-child
+.kit_kit_cards > .kit_kit_card > :first-child, .kit_kit_card > :first-child
 {
   border-radius: 0.25rem 0.25rem 0 0 !important;
   border-top: none !important;
 }
-.kit_cards > .kit_card > :last-child, .kit_card > :last-child
+.kit_kit_cards > .kit_kit_card > :last-child, .kit_kit_card > :last-child
 {
   border-radius: 0 0 0.25rem 0.25rem !important;
 }
-.kit_cards > .kit_card > :only-child, .kit_card > :only-child
+.kit_kit_cards > .kit_kit_card > :only-child, .kit_kit_card > :only-child
 {
   border-radius: 0.25rem !important;
 }
@@ -1323,21 +1276,21 @@ To apply the component add the off_canvas class to a parent div container and us
 /* Card Content                                                                                                          */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
-.kit_cards > .kit_card > .kit_content, .kit_card > .kit_content
+.kit_kit_cards > .kit_kit_card > .kit_kit_content, .kit_kit_card > .kit_kit_content
 {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   border: none;
   border-top: 1px solid #D4D4D5;
-  background: transparent;
+  background: inherit;
   margin: 0;
   padding: 1em 1em;
   box-shadow: none;
   font-size: 1em;
   border-radius: 0;
 }
-.kit_cards > .kit_card > .kit_content > .kit_header, .kit_card > .kit_content > .kit_header
+.kit_kit_cards > .kit_kit_card > .kit_kit_content > .kit_kit_header, .kit_kit_card > .kit_kit_content > .kit_kit_header
 {
   display: block;
   margin: 0;
@@ -1350,12 +1303,12 @@ To apply the component add the off_canvas class to a parent div container and us
 **(c) Thomas Schroeter <mailto: mail@tschroeter.com> and Investigative Reporters & Editors 2017
 ** markup_kit may be freely distributed under the MIT license
 */
-.kit_nav ul
+.kit_kit_nav ul
 {
   margin: 0;
   padding: 0;
 }
-.kit_nav > ul, nav > ul
+.kit_kit_nav > ul, nav > ul
 {
   padding: 0;
   list-style: none;
@@ -1366,37 +1319,37 @@ To apply the component add the off_canvas class to a parent div container and us
       flex-wrap: wrap;
   margin: 0 0 0 15px;
 }
-.kit_nav ul > *, nav ul > *
+.kit_kit_nav ul > *, nav ul > *
 {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
   margin-left: 15px;
 }
-.kit_nav li > a, nav ul li > a
+.kit_kit_nav li > a, nav ul li > a
 {
   display: block;
   text-decoration: none;
 }
-.kit_nav li > a:focus, nav li > a:focus
+.kit_kit_nav li > a:focus, nav li > a:focus
 {
   outline: none;
 }
-.kit_nav > li > a, nav ul li > a
+.kit_kit_nav > li > a, nav ul li > a
 {
   color: #999;
   padding: 5px 5px
 }
-.kit_nav > li > a:hover, .kit_nav > li > a:focus, nav ul li > a:hover, nav ul li > a:focus
+.kit_kit_nav > li > a:hover, .kit_kit_nav > li > a:focus, nav ul li > a:hover, nav ul li > a:focus
 {
   color: #666;
 }
-.kit_nav > li.kit_active > a, nav ul li.kit_active > a
+.kit_kit_nav > li.kit_kit_active > a, nav ul li.kit_kit_active > a
 {
   color: #333;
 }
 /* Justification */
-.kit_nav.kit_expand ul li
+.kit_kit_nav.kit_kit_expand ul li
 {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -1404,43 +1357,43 @@ To apply the component add the off_canvas class to a parent div container and us
   text-align: center;
 }
 /** Pills **/
-.kit_nav.kit_pills li.kit_active
+.kit_kit_nav.kit_kit_pills li.kit_kit_active
 {
   background: #1e87f0;
   border-radius: .25rem;
 }
-.kit_nav.kit_pills li.kit_active > a
+.kit_kit_nav.kit_kit_pills li.kit_kit_active > a
 {
   color: #fff;
 }
 /** Vertical Navigation */
-.kit_nav_vertical
+.kit_kit_nav_vertical
 {
   display: block;
 }
-.kit_nav_vertical > *
+.kit_kit_nav_vertical > *
 {
   padding-left: 0;
   margin-bottom: 5px;
 }
 @media (min-width: 961px)
 {
-  .kit_nav.kit_vertical\@medium-up
+  .kit_kit_nav.kit_kit_vertical\@medium-up
   {
     display: block;
   }
 
-  .kit_nav.kit_verticalmedium-up > *
+  .kit_kit_nav.kit_kit_verticalmedium-up > *
   {
     padding-left: 0;
     margin-bottom: 5px;
   }
 }
-.kit_navbar
+.kit_kit_navbar
 {
   background: #e0e1e2;
 }
-.kit_navbar > .kit_left, .kit_navbar > .kit_right
+.kit_kit_navbar > .kit_kit_left, .kit_kit_navbar > .kit_kit_right
 {
   position: relative !important;
   display: -webkit-box;
@@ -1450,24 +1403,24 @@ To apply the component add the off_canvas class to a parent div container and us
       -ms-flex-align: center;
           align-items: center;
 }
-.kit_navbar
+.kit_kit_navbar
 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
 }
-.kit_navbar ul > li > ul
+.kit_kit_navbar ul > li > ul
 {
   display: block;
 }
-.kit_navbar ul.kit_right
+.kit_kit_navbar ul.kit_kit_right
 {
   position: relative !important;
   margin-left: auto;
 }
 /** NavBar Navigation */
-.kit_navbar_nav
+.kit_kit_navbar_nav
 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1476,7 +1429,7 @@ To apply the component add the off_canvas class to a parent div container and us
   padding: 0;
   list-style: none;
 }
-.kit_navbar ul.kit_navbar_nav > li, .kit_navbar .kit_logo, .kit_navbar .kit_navbar_toggle
+.kit_kit_navbar ul.kit_kit_navbar_nav > li, .kit_kit_navbar .kit_kit_logo, .kit_kit_navbar .kit_kit_navbar_toggle
 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1490,7 +1443,7 @@ To apply the component add the off_canvas class to a parent div container and us
   padding: 0 15px;
   height: 80px;
 }
-input.kit_navbar_toggle
+input.kit_kit_navbar_toggle
 {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1503,7 +1456,7 @@ input.kit_navbar_toggle
 }
 @media (min-width: 961px)
 {
-  .kit_navbar_nav\@medium-up
+  .kit_kit_navbar_nav\@medium-up
   {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1513,7 +1466,7 @@ input.kit_navbar_toggle
     list-style: none;
   }
 
-  .kit_navbar ul.kit_navbar_nav\@medium-up > li, .kit_navbar .kit_logo, .kit_navbar .kit_navbar_toggle
+  .kit_kit_navbar ul.kit_kit_navbar_nav\@medium-up > li, .kit_kit_navbar .kit_kit_logo, .kit_kit_navbar .kit_kit_navbar_toggle
   {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1527,6 +1480,50 @@ input.kit_navbar_toggle
     padding: 0 15px;
     height: 80px;
   }
+}
+@font-face
+{
+  font-family: "Icons";
+  src: url("../fonts/icons.eot") format('embedded-opentype'),
+  url("../fonts/icons.otf") format('otf'),
+  url("../fonts/icons.woff2") format('woff2'),
+  url("../fonts/icons.woff") format('woff'),
+  url("../fonts/icons.ttf") format('truetype'),
+  url("../fonts/icons.svg#icons") format('svg');
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-decoration: inherit;
+  text-transform: none;
+}
+i.kit_kit_icon
+{
+  width: 1.18em;
+  height: 1em;
+  display: inline-block;
+  font-family: 'Icons';
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  text-align: center;
+  speak: none;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+i.kit_kit_icon:before
+{
+  background: none !important;
+}
+.kit_kit_car.kit_kit_icon:before
+{
+  content: "\f1b9";
+}
+.kit_kit_map.kit_kit_pin.kit_kit_icon:before
+{
+  content: "\f276";
 }
 /* button.css | MIT License | github.com/tschroeter/markup_kit */
 /*doc
@@ -1553,21 +1550,24 @@ A standard button.
   <button class="secondary">Click Me</button>
 </div>
 */
-.kit_button, .kit_buttons > *
+.kit_kit_button, .kit_kit_buttons > *
 {
+  /*sizing */
+  min-height: 1em;
   /* spacing */
   margin: 0;
-  padding: 0 30px;
+  padding: 0.5em 1.5em 0.5em;
   /* border */
   border: none;
   border-radius: 0.25rem;
   outline: none;
   /* typography */
   font: inherit;
-  font-size: 16px;
+  font-size: 1em;
+  line-height: 1em;
+  font-style: normal;
   text-align: center;
   text-transform: none;
-  line-height: 40px;
   text-decoration: none;
   /* coloring */
   color: inherit;
@@ -1577,12 +1577,39 @@ A standard button.
   vertical-align: middle;
   /* cursor */
   cursor: pointer;
+
+  -webkit-user-select: none;
+
+     -moz-user-select: none;
+
+      -ms-user-select: none;
+
+          user-select: none;
+}
+.kit_kit_button > .kit_kit_icon
+{
+  margin: 0 !important;
 }
 /* Primary Buttons */
-.kit_button:hover, .kit_buttons > *:hover
+.kit_kit_button:hover, .kit_kit_buttons > *:hover
 {
   background-color: rgb(208, 208, 208);
 }
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Circular Button                                                                                                    */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.kit_kit_circular.kit_kit_button
+{
+  border-radius: 10em;
+  padding: 0.5em 0.5em 0.5em;
+}
+.kit_kit_circular.kit_kit_button > .kit_kit_icon
+{
+  width: 1em;
+  vertical-align: baseline  ;
+}
+/*endregion*/
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* Animated Button                                                                                                    */
 /*--------------------------------------------------------------------------------------------------------------------*/
@@ -1597,7 +1624,7 @@ A standard button.
 </div>
 
 */
-.kit_animated.kit_button
+.kit_kit_animated.kit_kit_button
 {
   overflow: hidden;
   position: relative;
@@ -1605,72 +1632,75 @@ A standard button.
   z-index: 1;
   vertical-align: middle;
 }
-.kit_animated.kit_button .kit_content
+.kit_kit_animated.kit_kit_button .kit_kit_content
 {
   will-change: transform, opacity;
 }
-.kit_animated.kit_button .kit_content
+.kit_kit_animated.kit_kit_button .kit_kit_content
 {
   will-change: transform, opacity;
 }
-.kit_animated.kit_button .kit_visible.kit_content
+.kit_kit_animated.kit_kit_button .kit_kit_visible.kit_kit_content
 {
   position: relative;
-  margin-right: 30px;
+  margin-right: 1.5em;
 }
-.kit_animated.kit_button .kit_hidden.kit_content
+.kit_kit_animated.kit_kit_button .kit_kit_hidden.kit_kit_content
 {
   position: absolute;
   width: 100%;
 }
-.kit_animated.kit_button .kit_visible.kit_content, .kit_animated.kit_button .kit_hidden.kit_content {
+.kit_kit_animated.kit_kit_button .kit_kit_visible.kit_kit_content, .kit_kit_animated.kit_kit_button .kit_kit_hidden.kit_kit_content
+{
   transition: right 0.3s ease 0s;
 }
-.kit_animated.kit_button .kit_visible.kit_content {
+.kit_kit_animated.kit_kit_button .kit_kit_visible.kit_kit_content
+{
   left: auto;
   right: 0;
 }
-.kit_animated.kit_button .kit_hidden.kit_content {
+.kit_kit_animated.kit_kit_button .kit_kit_hidden.kit_kit_content
+{
   top: 50%;
   left: auto;
   right: -100%;
-  margin-top: -20px;
+  margin-top: calc((-1 * var(--button-line-height) / 2));
 }
-.kit_animated.kit_button:focus .kit_visible.kit_content, .kit_animated.kit_button:hover .kit_visible.kit_content
+.kit_kit_animated.kit_kit_button:focus .kit_kit_visible.kit_kit_content, .kit_kit_animated.kit_kit_button:hover .kit_kit_visible.kit_kit_content
 {
   left: auto;
   right: 200%;
 }
-.kit_animated.kit_button:focus .kit_hidden.kit_content, .kit_animated.kit_button:hover .kit_hidden.kit_content
+.kit_kit_animated.kit_kit_button:focus .kit_kit_hidden.kit_kit_content, .kit_kit_animated.kit_kit_button:hover .kit_kit_hidden.kit_kit_content
 {
   left: auto;
   right: 0;
 }
 /*endregion*/
-.kit_form .kit_label
+.kit_kit_form .kit_kit_label
 {
   display: block;
   margin-bottom: 10px;
 }
-.kit_input
+.kit_kit_input
 {
   overflow: visible;
   -webkit-appearance: textfield;
      -moz-appearance: textfield;
           appearance: textfield;
 }
-.kit_input, .kit_select, .kit_textarea, .kit_radio, .kit_checkbox
+.kit_kit_input, .kit_kit_select, .kit_kit_textarea, .kit_kit_radio, .kit_kit_checkbox
 {
   box-sizing: border-box;
   margin: 0;
   border-radius: 0;
   font: inherit;
 }
-.kit_input:focus, .kit_select:focus, .kit_textarea:focus
+.kit_kit_input:focus, .kit_kit_select:focus, .kit_kit_textarea:focus
 {
   outline: none;
 }
-.kit_input, .kit_select, .kit_textarea
+.kit_kit_input, .kit_kit_select, .kit_kit_textarea
 {
   /* prevent content overflow when fixed width is used */
   max-width: 100%; /* prevent content overflow if a fixed width is used */
@@ -1686,20 +1716,20 @@ A standard button.
   transition-property: color, background-color, border;
   line-height: 100% !important;
 }
-.kit_input:focus, .kit_select:focus, .kit_textarea:focus
+.kit_kit_input:focus, .kit_kit_select:focus, .kit_kit_textarea:focus
 {
   background: #fff;
   color: #666;
   border-color: #1e87f0;
 }
-.kit_input, .kit_select:not([multiple]):not([size])
+.kit_kit_input, .kit_kit_select:not([multiple]):not([size])
 {
   height: 40px;
   vertical-align: middle;
   display: inline-block;
   line-height: 40px;
 }
-.kit_select
+.kit_kit_select
 {
   /** remove default style */
   -webkit-appearance: none;
@@ -1709,7 +1739,7 @@ A standard button.
   background-repeat: no-repeat;
   background-position: 100% 50%;
 }
-.kit_checkbox
+.kit_kit_checkbox
 {
   display: inline-block;
   height: 16px;
@@ -1724,11 +1754,11 @@ A standard button.
   background-position: 50% 50%;
   margin-top: -4px;
 }
-.kit_checkbox:checked
+.kit_kit_checkbox:checked
 {
   background-color: #1e87f0;
 }
-.kit_checkbox:checked
+.kit_kit_checkbox:checked
 {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22#000%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
@@ -1738,7 +1768,7 @@ A standard button.
 # Dropdown Module
 
 */
-.kit_drop_down
+.kit_kit_drop_down
 {
   display: none; /* hide by default */
   position: absolute;
@@ -1751,30 +1781,30 @@ A standard button.
   box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
   @apply(--kit_drop_down_mixin);
 }
-.kit_drop_down .kit_drop_down_item
+.kit_kit_drop_down .kit_kit_drop_down_item
 {
   padding: 0 15px;
   @apply(--kit_drop_down_item_mixin);
 }
-.kit_drop_down .kit_drop_down_item.kit_selected, .kit_drop_down .kit_drop_down_item:hover
+.kit_kit_drop_down .kit_kit_drop_down_item.kit_kit_selected, .kit_kit_drop_down .kit_kit_drop_down_item:hover
 {
   color: #fff;
   background: #1e87f0;
 }
-.kit_drop_down .kit_drop_down_item:hover
+.kit_kit_drop_down .kit_kit_drop_down_item:hover
 {
 }
 /** Dropdown Menu **/
 @media (min-width: 961px)
 {
 
-  .kit_drop_down_nav_item\@medium-up
+  .kit_kit_drop_down_nav_item\@medium-up
   {
     position: relative;
     z-index: 4000;
   }
 
-  .kit_nav .kit_drop_down_nav_item\@medium-up > .kit_nav, nav .kit_drop_down_nav_item\@medium-up > ul
+  .kit_kit_nav .kit_kit_drop_down_nav_item\@medium-up > .kit_kit_nav, nav .kit_kit_drop_down_nav_item\@medium-up > ul
   {
     visibility: hidden;
     position: absolute;
@@ -1783,49 +1813,49 @@ A standard button.
     background-color: #e0e1e2;
   }
 
-  .kit_drop_down_nav_item\@medium-up:hover .kit_nav, .kit_drop_down_nav_item\@medium-up:hover > ul
+  .kit_kit_drop_down_nav_item\@medium-up:hover .kit_kit_nav, .kit_kit_drop_down_nav_item\@medium-up:hover > ul
   {
     visibility: visible;
   }
 }
 /** available mixins */
 /* deprecated */
-.kit_box_shadow_small
+.kit_kit_box_shadow_small
 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
 }
-.kit_box_shadow_medium
+.kit_kit_box_shadow_medium
 {
   box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
 }
-.kit_box_shadow_large
+.kit_kit_box_shadow_large
 {
   box-shadow: 0 14px 25px rgba(0, 0, 0, .16);
 }
-.kit_box_shadow_xxl
+.kit_kit_box_shadow_xxl
 {
   box-shadow: 0 28px 50px rgba(0, 0, 0, .16);
 }
-.kit_bg_muted
+.kit_kit_bg_muted
 {
   background-color: #e0e1e2 !important;
 }
-.kit_bg_primary
+.kit_kit_bg_primary
 {
   background-color: #1e87f0 !important;
 }
-.kit_bg_secondary
+.kit_kit_bg_secondary
 {
   background-color: #222 !important;
 }
-.kit_logo
+.kit_kit_logo
 {
   font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: #666;
   text-decoration: none;
 }
-.kit_logo:hover, .kit_logo:focus
+.kit_kit_logo:hover, .kit_kit_logo:focus
 {
   color: #666;
   outline: none;
