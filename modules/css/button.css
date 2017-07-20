@@ -6,7 +6,6 @@
 The Button module include predefined button styles with different semantic purposes.
 
 */
-
 @import 'variables.css';
 @import 'normalisation.css';
 
@@ -17,18 +16,17 @@ The Button module include predefined button styles with different semantic purpo
 
 :root
 {
-  --button-padding-horizontal: var(--global-gutter);
-  --button-line-height: var(--global-control-height);
+  --button-padding-horizontal: 1.5em;
+  --button-padding-vertical: 0.5em;
+
   --button-font-size: var(--global-font-size);
   --button-background-primary: var(--global-background-primary);
   --button-foreground-color-primary: var(--global-inverse-color);
-
   --button_border_radius: var(--global-border-radius);
   --button_background_color: var(--global-muted-background);
-
   --button_animated_vertical_align: middle;
-  --button_animation_duration:0.3s;
-  --button_animation_easing:ease;
+  --button_animation_duration: 0.3s;
+  --button_animation_easing: ease;
 }
 
 /*endregion*/
@@ -49,19 +47,22 @@ A standard button.
 .button,
 .buttons > *
 {
+  /*sizing */
+  min-height: 1em;
   /* spacing */
   margin: 0;
-  padding: 0 var(--button-padding-horizontal);
+  padding: var(--button-padding-vertical) var(--button-padding-horizontal) var(--button-padding-vertical);
   /* border */
   border: none;
   border-radius: var(--button_border_radius);
   outline: none;
   /* typography */
   font: inherit;
-  font-size: var(--button-font-size);
+  font-size: 1em;
+  line-height: 1em;
+  font-style: normal;
   text-align: center;
   text-transform: none;
-  line-height: var(--button-line-height);
   text-decoration: none;
   /* coloring */
   color: inherit;
@@ -71,6 +72,13 @@ A standard button.
   vertical-align: middle;
   /* cursor */
   cursor: pointer;
+
+  user-select: none;
+}
+
+.button > .icon
+{
+  margin: 0 !important;
 }
 
 /* Primary Buttons */
@@ -80,6 +88,25 @@ A standard button.
 {
   background-color: color(var(--button_background_color) blackness(20%));
 }
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Circular Button                                                                                                    */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+.circular.button
+{
+  border-radius: 10em;
+  padding: var(--button-padding-vertical) var(--button-padding-vertical) var(--button-padding-vertical);
+}
+
+.circular.button > .icon
+{
+  width: 1em;
+  vertical-align: baseline  ;
+}
+
+/*endregion*/
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* Animated Button                                                                                                    */
@@ -129,14 +156,19 @@ A standard button.
 }
 
 .animated.button .visible.content,
-.animated.button .hidden.content {
+.animated.button .hidden.content
+{
   transition: right var(--button_animation_duration) var(--button_animation_easing) 0s;
 }
-.animated.button .visible.content {
+
+.animated.button .visible.content
+{
   left: auto;
   right: 0;
 }
-.animated.button .hidden.content {
+
+.animated.button .hidden.content
+{
   top: 50%;
   left: auto;
   right: -100%;
@@ -156,7 +188,6 @@ A standard button.
   left: auto;
   right: 0;
 }
-
 
 /*endregion*/
 

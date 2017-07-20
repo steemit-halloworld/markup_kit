@@ -13,8 +13,8 @@
 :root
 {
   /* coloring */
-  --card_background: transparent;
-  --card_content_background: transparent;
+  --card_background: var(--global-background);
+  --card_content_background: inherit;
   --card_header_color: var(--global-foreground-color);
   /* sizing */
   --card_width: 250px;
@@ -58,7 +58,7 @@
   border-radius: var(--card_border_radius);
   box-shadow: var(--card_box_shadow);
   /* coloring */
-  background: var(--card_background);
+  background: #ffff !important;
   /* spacing */
   padding: var(--card_padding);
 }

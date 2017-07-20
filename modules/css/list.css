@@ -15,7 +15,7 @@
   --list_item_margin_top: var(--global-margin-small);
   --list_item_divider_margin_top: var(--global-margin-small);
   --list_item_divider_border_width: var(--global-border-width);
-  --list_item_divider_border: var(--global-border-color);
+  --list_item_divider_border: var(--global-border-width) solid var(--global-border-color);
 
   --list_style_type: none;
   --list_margin: 1em 0;
@@ -126,7 +126,6 @@ ol.list li:last-child,
 .list > .item > .icon + .content
 {
   display: table-cell;
-  border: 1px solid red;
   padding: 0 0 0 var(--list_item_content_padding);
   vertical-align: var(--list_item_content_vertical_align);
 }
@@ -143,89 +142,40 @@ ol.list li:last-child,
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
-/* Horizontal List                                                                                                          */
+/* Divided List                                                                                                          */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
 
-/*doc
+.divided.list > .item,
+.divided.list > li
+{
+  border-top: var(--list_item_divider_border);
+}
 
-## Horizontal List
+.divided.list > .item:first-child,
+.divided.list > li:first-child
+{
+  border-top: none;
+}
 
-<div class="segment">
-  <div class="content">
-    <ul class="horizontal list">
-      <li><div class="content">1345 6787 6545 678</div></li>
-      <li><div class="content">1345 6787 6545 678</div></li>
-    </ul>
-  </div>
-</div>
+.hidden.overflow
+{
+  overflow: hidden;
+}
 
-<div class="segment">
-            <div class="content">
-              <div class="header">fällige Wiedervorlagen</div>
-            </div>
-            <div class="content">
-              <ul class="list">
-                <li>
-                  <ul class="list">
-                    <li>06.07.2017</li>
-                    <li>
-                      <ul>
-                        <li>
-                          <a href="#">Angebot PHV machen</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
+/*endregion*/
 
-                <li>
-                  <ul class="list">
-                    <li>Heute</li>
-                    <li>
-                      <ul>
-                        <li>
-                          <a href="#">Anrufen wegen Hypothek</a>
-                          <a href="#">Antrag WGBV wegschicken</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <ul class="list">
-                    <li>Morgen</li>
-                    <li>
-                      <ul>
-                        <li>
-                          <a href="#">Essen im Ritz</a>
-
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-
-              </ul>
-
-              <ul class="horizontal list">
-                <li>
-                  Heute
-                </li>
-                <li>bla bla</li>
-              </ul>
-            </div>
-          </div>
-
-*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Horizontal List                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
 
 .horizontal.list,
 ul.horizontal.list,
 ol.horizontal.list
 {
   display: inline-block;
-  border: 1px solid green;
+  white-space: nowrap;
 }
 
 .horizontal.list > .item,
@@ -233,9 +183,21 @@ ul.horizontal.list > li,
 ol.horizontal.list > li
 {
   display: inline-block;
+  white-space: nowrap;
+  position: relative;
   margin-left: var(--list_item_padding);
-  border: 1px solid red;
 }
+
+ul.horizontal.list li a
+{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+
 
 .horizontal.list .list
 {

@@ -1,0 +1,54 @@
+:root
+{
+  --icon_width: 1.18em;
+  --icon_height: 1em;
+}
+
+@font-face
+{
+  font-family: "Icons";
+  src: url("../fonts/icons.eot") format('embedded-opentype'),
+  url("../fonts/icons.otf") format('otf'),
+  url("../fonts/icons.woff2") format('woff2'),
+  url("../fonts/icons.woff") format('woff'),
+  url("../fonts/icons.ttf") format('truetype'),
+  url("../fonts/icons.svg#icons") format('svg');
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-decoration: inherit;
+  text-transform: none;
+}
+
+i.icon
+{
+  width: var(--icon_width);
+  height: var(--icon_height);
+  display: inline-block;
+  font-family: 'Icons';
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  text-align: center;
+  speak: none;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
+}
+
+i.icon:before
+{
+  background: none !important;
+}
+
+.car.icon:before
+{
+  content: "\f1b9";
+}
+
+.map.pin.icon:before
+{
+  content: "\f276";
+}
+
