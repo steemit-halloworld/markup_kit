@@ -61,13 +61,13 @@ a:active, a:hover
 }
 a, .kit_kit_link
 {
-  color: #1e87f0;
+  color: #1E87F0;
   text-decoration: none;
   cursor: pointer;
 }
 a:hover, .kit_kit_link:hover
 {
-  color: #0f6ecd;
+  color: #0F6ECD;
   text-decoration: underline;
 }
 /* margins */
@@ -661,15 +661,15 @@ The Coloring module define the background and foreground colors of elements.
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
 .kit_kit_bg
-{ background-color: #fff !important; }
+{ background-color: #FFF !important; }
 .kit_kit_muted
 {
-  background-color: #e0e1e2 !important;
+  background-color: #E0E1E2 !important;
 }
 .kit_kit_primary
 {
-  background-color: #1e87f0 !important;
-  color: #fff;
+  background-color: #1E87F0 !important;
+  color: #FFF;
 }
 /*endregion*/
 /*--------------------------------------------------------------------------------------------------------------------*/
@@ -685,9 +685,63 @@ The Coloring module define the background and foreground colors of elements.
 /*region*/
 .kit_kit_basic
 {
-  background-color: #fff;
+  background-color: #FFF;
 }
 /*endregion*/
+/* heading.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Heading Module
+
+*/
+h1.kit_kit_header
+{
+  font-size: 2em;
+}
+h2.kit_kit_header
+{
+  font-size: 1.7142857143em;
+}
+h3.kit_kit_header
+{
+  font-size: 1.2857142857em;
+}
+h4.kit_kit_header
+{
+  font-size: 1.0714285714em;
+}
+h5.kit_kit_header
+{
+  font-size: 1em;
+}
+h4.kit_kit_sub.kit_kit_header
+{
+  font-size: 1em;
+}
+/* image.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Image Module
+
+*/
+.kit_kit_image
+{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+img.kit_kit_image
+{
+  display: block;
+}
+.kit_kit_circular.kit_kit_image {
+  overflow: hidden;
+}
+.kit_kit_circular.kit_kit_image
+{
+  border-radius: 500em;
+}
 /* page.css | MIT License | https://github.com/tschroeter/markup_kit */
 /*doc
 
@@ -1181,7 +1235,7 @@ To apply the component add the off_canvas class to a parent div container and us
 }
 .kit_kit_segment {
   position: relative;
-  background: #fff;
+  background: #FFF;
   box-shadow: 0px 1px 2px 0 #D4D4D5;
   margin: 1em 0em;
   padding: 1em 1em;
@@ -1239,6 +1293,7 @@ To apply the component add the off_canvas class to a parent div container and us
   background: rgba(255, 255, 255, 1) !important;
   /* spacing */
   padding: 0;
+  margin: 1em 0em;
 }
 .kit_kit_cards > .kit_kit_card a, .kit_kit_card a
 {
@@ -1290,7 +1345,7 @@ To apply the component add the off_canvas class to a parent div container and us
   font-size: 1em;
   border-radius: 0;
 }
-.kit_kit_cards > .kit_kit_card > .kit_kit_content > .kit_kit_header, .kit_kit_card > .kit_kit_content > .kit_kit_header
+.kit_kit_cards > .kit_kit_card > .kit_kit_content > .kit_kit_header, .kit_kit_cards > .kit_kit_card > .kit_kit_content.kit_kit_header, .kit_kit_card > .kit_kit_content > .kit_kit_header, .kit_kit_card > .kit_kit_content.kit_kit_header
 {
   display: block;
   margin: 0;
@@ -1359,12 +1414,12 @@ To apply the component add the off_canvas class to a parent div container and us
 /** Pills **/
 .kit_kit_nav.kit_kit_pills li.kit_kit_active
 {
-  background: #1e87f0;
+  background: #1E87F0;
   border-radius: .25rem;
 }
 .kit_kit_nav.kit_kit_pills li.kit_kit_active > a
 {
-  color: #fff;
+  color: #FFF;
 }
 /** Vertical Navigation */
 .kit_kit_nav_vertical
@@ -1391,7 +1446,7 @@ To apply the component add the off_canvas class to a parent div container and us
 }
 .kit_kit_navbar
 {
-  background: #e0e1e2;
+  background: #E0E1E2;
 }
 .kit_kit_navbar > .kit_kit_left, .kit_kit_navbar > .kit_kit_right
 {
@@ -1525,6 +1580,10 @@ i.kit_kit_icon:before
 {
   content: "\f276";
 }
+.kit_kit_plus.kit_kit_icon:before
+{
+  content: "\f067";
+}
 /* button.css | MIT License | github.com/tschroeter/markup_kit */
 /*doc
 
@@ -1571,7 +1630,7 @@ A standard button.
   text-decoration: none;
   /* coloring */
   color: inherit;
-  background: #e0e1e2;
+  background: #E0E1E2;
   /* positioning */
   display: inline-block;
   vertical-align: middle;
@@ -1706,7 +1765,7 @@ A standard button.
   max-width: 100%; /* prevent content overflow if a fixed width is used */
   width: 100%; /* takr full width */
   padding: 0 6px;
-  background: #e0e1e2;
+  background: #E0E1E2;
   color: #666;
   border: 0 none; /* reset default */
   border: 1px solid #D4D4D5;
@@ -1718,9 +1777,9 @@ A standard button.
 }
 .kit_kit_input:focus, .kit_kit_select:focus, .kit_kit_textarea:focus
 {
-  background: #fff;
+  background: #FFF;
   color: #666;
-  border-color: #1e87f0;
+  border-color: #1E87F0;
 }
 .kit_kit_input, .kit_kit_select:not([multiple]):not([size])
 {
@@ -1749,14 +1808,14 @@ A standard button.
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-color: #e0e1e2;
+  background-color: #E0E1E2;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   margin-top: -4px;
 }
 .kit_kit_checkbox:checked
 {
-  background-color: #1e87f0;
+  background-color: #1E87F0;
 }
 .kit_kit_checkbox:checked
 {
@@ -1775,7 +1834,7 @@ A standard button.
   z-index: 4000;
   box-sizing: border-box;
   min-width: 200px;
-  background: #fff;
+  background: #FFF;
   color: #999;
   padding: 15px 0;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
@@ -1788,8 +1847,8 @@ A standard button.
 }
 .kit_kit_drop_down .kit_kit_drop_down_item.kit_kit_selected, .kit_kit_drop_down .kit_kit_drop_down_item:hover
 {
-  color: #fff;
-  background: #1e87f0;
+  color: #FFF;
+  background: #1E87F0;
 }
 .kit_kit_drop_down .kit_kit_drop_down_item:hover
 {
@@ -1810,7 +1869,7 @@ A standard button.
     position: absolute;
     left: 0;
     top: 50%;
-    background-color: #e0e1e2;
+    background-color: #E0E1E2;
   }
 
   .kit_kit_drop_down_nav_item\@medium-up:hover .kit_kit_nav, .kit_kit_drop_down_nav_item\@medium-up:hover > ul
@@ -1838,11 +1897,11 @@ A standard button.
 }
 .kit_kit_bg_muted
 {
-  background-color: #e0e1e2 !important;
+  background-color: #E0E1E2 !important;
 }
 .kit_kit_bg_primary
 {
-  background-color: #1e87f0 !important;
+  background-color: #1E87F0 !important;
 }
 .kit_kit_bg_secondary
 {

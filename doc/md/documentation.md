@@ -185,6 +185,14 @@ Add the .collapse class to remove the grid gutter entirely.
 </div>
 
 
+# Heading Module
+
+
+
+# Image Module
+
+
+
 # List Module
 
 

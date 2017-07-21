@@ -6,26 +6,29 @@
   --global-foreground-color: #666;
   --global-emphasis-color: #333;
   --global-muted-color: #999;
-  --global-inverse-color: #fff;
-
-  --global-link-color: #1e87f0;
-  --global-link-hover-color: #0f6ecd;
+  --global-inverse-color: #FFF;
+  --global-link-color: #1E87F0;
+  --global-link-hover-color: #0F6ECD;
 
   /* Background Colors */
-  --global-background: #fff;
-  --global-muted-background: #e0e1e2;
-  --global-background-primary: #1e87f0;
+  --global-background: #FFF;
+  --global-muted-background: #E0E1E2;
+  --global-background-primary: #1E87F0;
   --global-background-secondary: #222;
-
-  --global-success-background: #32d296;
-  --global-warning-background: #faa05a;
-  --global-danger-background: #f0506e;
+  --global-success-background: #32D296;
+  --global-warning-background: #FAA05A;
+  --global-danger-background: #F0506E;
 
   /* Typography */
   --global-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --global-font-size: 16px;
   --global-line-height: 1.5;
-
+  --global-font-size-h1: 2em;
+  --global-font-size-h2: 1.7142857143em;
+  --global-font-size-h3: 1.2857142857em;
+  --global-font-size-h4: 1.0714285714em;
+  --global-font-size-h5: 1em;
+  --global-font-size-h4-sub: 1em;
   --global-small-font-size: 0.875rem;
   --global-medium-font-size: 1.25rem;
   --global-large-font-size: 1.5rem;
@@ -36,13 +39,13 @@
   --global-border-width: 1px;
   --global-border-color: #D4D4D5;
   --global-border-radius: 0.25rem;
+  --global-circular-radius: 500em;
 
   /* Spacings */
   --global-gutter: 30px;
   --global-gutter-small: 15px;
   --global-gutter-medium: 40px;
   --global-gutter-large: 70px;
-
   --global-margin: 20px;
   --global-margin-small: 10px;
   --global-margin-medium: 40px;
@@ -50,7 +53,6 @@
   --global-margin-xlarge: 140px;
 
   /* Controls */
-
   --global-control-height: 40px;
   --global-control-height-small: 30px;
   --global-control-height-large: 55px;
@@ -60,8 +62,6 @@
 
   /* Box Shadows */
   --global_subtle_shadow: 0px 1px 2px 0 var(--global-border-color);
-
-
   --global_box_shadow_small: 0 2px 8px rgba(0, 0, 0, 0.08);
   --global_box_shadow_medium: 0 5px 15px rgba(0, 0, 0, 0.08);
   --global_box_shadow_large: 0 14px 25px rgba(0, 0, 0, 0.16);
@@ -69,13 +69,11 @@
 
   /* Border Radius */
   --global_border_radius: .25rem;
-
   --global_sm_width: 640px;
   --global_md_width: 960px;
   --global_lg_width: 1200px;
   --global_xl_width: 1600px;
 }
-
 
 @custom-media --small-up (width > 640px);
 @custom-media --medium-up (width > 960px);
