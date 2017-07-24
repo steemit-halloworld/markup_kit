@@ -1,0 +1,105 @@
+/* flex.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Flex Module
+
+*/
+/* dependencies */
+@import 'variables.css';
+@import 'normalisation.css';
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Variables                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+:root
+{
+  --flex_gutter_horizontal: var(--global-gutter);
+  --flex_gutter_vertical: var(--global-gutter);
+}
+
+/*endregion*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Flex Component                                                                                                     */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*doc
+
+# Flex Component
+
+## Default Flex Configuration
+
+<div class="flx">
+  <div><div class="card">Item 1</div></div>
+  <div><div class="card">Item 2</div></div>
+  <div><div class="card">Item 3</div></div>
+  <div><div class="card">Item 4</div></div>
+  <div><div class="card">Item 5</div></div>
+  <div><div class="card">Item 6</div></div>
+  <div><div class="card">Item 7</div></div>
+  <div><div class="card">Item 8</div></div>
+  <div><div class="card">Item 9</div></div>
+  <div><div class="card">Item 10</div></div>
+  <div><div class="card">Item 11</div></div>
+</div>
+
+*/
+
+.flx
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin: 0 calc((-1) * var(--flex_gutter_horizontal));
+}
+
+.flx_u
+{
+  padding: 0 var(--flex_gutter_horizontal);
+}
+
+.flx > *
+{
+  @extend .flx_u;
+}
+
+/*endregion*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Gutter Modifiers                                                                                                   */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+/*endregion*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Wrap Modifiers                                                                                                     */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+.flx.wrap
+{
+}
+
+.flx.nowrap
+{
+}
+
+/*endregion*/
+/*!@}*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Ordering Modifiers                                                                                                 */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+.flx > .first
+{
+}
+
+.flx > .last
+{
+}
+
+/*endregion*/

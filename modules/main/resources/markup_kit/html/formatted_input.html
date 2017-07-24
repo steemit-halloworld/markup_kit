@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<meta charset="utf-8"/>
+
+<link rel="stylesheet" href="../css/include.min.css">
+
+<script type="text/javascript" src="../js/kit.core.js"></script>
+<script type="text/javascript" src="../js/kit.dom.js"></script>
+<script type="text/javascript" src="../js/kit.formatted_input.js"></script>
+
+<style rel="stylesheet" type="text/css">
+</style>
+
+
+<h1>Formatted_input Test</h1>
+
+<div class="kit_width_3_5 kit_padding">
+  <input value="1983-03-26" class="kit_input" id="date_field" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+</div>
+
+<script>
+
+  var input_field = document.getElementById('date_field');
+
+  var date_field = new Formatted_input(input_field);
+
+</script>
