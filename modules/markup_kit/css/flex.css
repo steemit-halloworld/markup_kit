@@ -46,7 +46,7 @@
 
 */
 
-.flx
+.flex.grid
 {
   display: flex;
   flex-wrap: wrap;
@@ -54,14 +54,10 @@
   margin: 0 calc((-1) * var(--flex_gutter_horizontal));
 }
 
-.flx_u
+.flex.grid > *
 {
-  padding: 0 var(--flex_gutter_horizontal);
-}
-
-.flx > *
-{
-  @extend .flx_u;
+  padding: var(--flex_gutter_horizontal) 0;
+  border: 1px solid red;
 }
 
 /*endregion*/
