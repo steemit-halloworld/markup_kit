@@ -1,0 +1,234 @@
+/* grid.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Grid Module
+
+*/
+/* dependencies */
+@import 'normalisation.css';
+@import 'variables.css';
+@import 'float.css';
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Variables                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+:root
+{
+  /* default gutter */
+  --grid_gutter_horizontal: calc(var(--global-gutter) / 2);
+  --grid_gutter_vertical: calc(var(--global-gutter) / 2);
+
+  --grid_gutter_horizontal-l: calc(var(--global-gutter-large) / 2);
+  --grid_gutter_vertical-l: calc(var(--global-gutter-large) / 2);
+}
+
+/*endregion*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Grid Component                                                                                                     */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*doc
+
+## Grid Component
+
+The Grid component arranges block elements into columns and works closely together with the width modifiers of the
+Sizing module to determine how much space of the the container each item will take up.
+
+### Default Grid Configuration
+
+<div class="grid">
+  <div class="w20">
+    <div class="card">20%</div>
+  </div>
+   <div class="w20">
+    <div class="card">20%</div>
+  </div>
+  <div class="w20">
+    <div class="card">20%</div>
+  </div>
+  <div class="w20">
+    <div class="card">20%</div>
+  </div>
+  <div class="w20">
+    <div class="card">20%</div>
+  </div>
+
+  <div class="w25">
+    <div class="card">25%</div>
+  </div>
+  <div class="w25">
+    <div class="card">25%</div>
+  </div>
+  <div class="w25">
+    <div class="card">25%</div>
+  </div>
+  <div class="w25">
+    <div class="card">25%</div>
+  </div>
+
+  <div class="w33">
+    <div class="card">33%</div>
+  </div>
+  <div class="w33">
+    <div class="card">33%</div>
+  </div>
+  <div class="w33">
+    <div class="card">33%</div>
+  </div>
+
+  <div class="w50">
+    <div class="card">50%</div>
+  </div>
+  <div class="w50">
+    <div class="card">50%</div>
+  </div>
+
+  <div class="w100">
+    <div class="card">100%</div>
+  </div>
+
+  <div>
+    <div class="card">auto</div>
+  </div>
+
+  <div>
+    <div class="card">auto</div>
+  </div>
+
+  <div>
+    <div class="card">auto</div>
+  </div>
+
+  <div class="fill">
+    <div class="card">fill</div>
+  </div>
+</div>
+
+*/
+/*region*/
+
+.grid
+{
+  /* extend clearfix modifier from Float module */
+  @extend .clf;
+  /* default gutter */
+  margin-left: calc((-1) * var(--grid_gutter_horizontal));
+  margin-right: calc((-1) * var(--grid_gutter_horizontal));
+}
+
+.grid_item
+{
+  float: left;
+  min-height: 1px;
+  /* fit width to content */
+  width: auto;
+  _width: 1px;
+
+  /* horizontal default gutter */
+  padding: 0 var(--grid_gutter_horizontal);
+  /* vertical default gutter */
+  margin: 0 0 var(--grid_gutter_vertical);
+}
+
+.grid > *
+{
+  @extend .grid_item;
+}
+
+@media(--large-up)
+{
+  .grid
+  {
+    margin-left: calc((-1) * var(--grid_gutter_horizontal-l));
+    margin-right: calc((-1) * var(--grid_gutter_horizontal-l));
+  }
+
+  .grid_item
+  {
+    /* horizontal default gutter */
+    padding: 0 var(--grid_gutter_horizontal-l);
+    /* vertical default gutter */
+    margin: 0 0 var(--grid_gutter_vertical-l);
+  }
+}
+
+.grid > .fill
+{
+  min-width: 50px;
+  width: 10000px;
+  *width: auto;
+  display: table-cell;
+  float: none;
+  _float: left;
+}
+
+/*endregion*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Gutter Modifiers                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*doc
+
+### Gutter Modifiers
+
+The Grid component comes with a default gutter, that is decreased automatically from a certain breakpoint, usually on a
+smaller desktop viewport width. To apply a different gutter, add one of the following classes.
+
+*/
+/*region*/
+
+/*doc
+#### Remove Grid Gutter
+
+Add the .collapse class to remove the grid gutter entirely.
+
+<div class="grid collapse">
+  <div class="w33">
+    <div class="card">33%</div>
+  </div>
+  <div class="w33">
+    <div class="card">33%</div>
+  </div>
+  <div class="w33">
+    <div class="card">33%</div>
+  </div>
+</div>
+*/
+
+.grid.collapse
+{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.grid.collapse > *
+{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.grid.small
+{
+}
+
+.grid.medium
+{
+}
+
+.grid.large
+{
+}
+
+/*endregion*/
+/*!@}*/
+
+/*!@{
+/*<!--------------------------------------------------------------------------------------------------------------------
+//! @name Push And Pull
+//<!------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+/*endregion*/
+/*!@}*/
