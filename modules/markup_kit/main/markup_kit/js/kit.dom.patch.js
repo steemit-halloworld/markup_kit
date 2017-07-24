@@ -6,15 +6,6 @@
 
   const scope = new kit.global.Scope();
 
-  kit.dom.patch_html = function (html_text)
-  {
-    var html_element = document.createElement( 'html' );
-    html_element.innerHTML = html_text;
-    var body_el = html_element.getElementsByTagName("body");
-    var old_pos = kit.dom.position(document.body);
-    kit.dom.patch(document.body.parentNode, body_el, document.body, old_pos);
-  };
-
   kit.dom.patch = function (parent_el, new_el, old_el, old_el_position)
   {
     var is_patched = patch_element(parent_el, new_el, old_el, old_el_position);

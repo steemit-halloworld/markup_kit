@@ -1,0 +1,95 @@
+
+@import 'variables.css';
+
+:root
+{
+  --nav-background: var(--global-muted-background);
+  --nav-item-padding-horizontal: 15px;
+  --nav-item-height: 80px;
+
+}
+
+.navbar
+{
+  background: var(--nav-background);
+}
+
+.navbar > .left,
+.navbar > .right
+{
+  position: relative !important;
+  display: flex;
+  align-items: center;
+}
+
+.navbar
+{
+  display: flex;
+  position: relative;
+}
+
+.navbar ul > li > ul
+{
+  display: block;
+}
+
+.navbar ul.right
+{
+  position: relative !important;
+  margin-left: auto;
+}
+
+/** NavBar Navigation */
+
+.navbar_nav
+{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar ul.navbar_nav > li,
+.navbar ul.navbar_nav > li,
+.navbar .logo,
+.navbar .navbar_toggle
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 var(--nav-item-padding-horizontal);
+  height: var(--nav-item-height);
+}
+
+input.navbar_toggle
+{
+  appearance: none;
+  height: 30px;
+  width: 30px;
+  background-size: 30px 30px;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>") no-repeat center center;
+}
+
+@media (--medium-up)
+{
+  .navbar_nav\@medium-up
+  {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .navbar ul.navbar_nav\@medium-up > li,
+  .navbar ul.navbar_nav\@medium-up > li,
+  .navbar .logo,
+  .navbar .navbar_toggle
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 var(--nav-item-padding-horizontal);
+    height: var(--nav-item-height);
+  }
+}
+

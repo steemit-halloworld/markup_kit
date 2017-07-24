@@ -1,0 +1,30 @@
+/* image.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Image Module
+
+*/
+
+.image
+{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+img.image
+{
+  display: block;
+}
+
+.circular.image {
+  overflow: hidden;
+}
+
+.circular.image
+{
+  border-radius: var(--global-circular-radius);
+}
+
+
