@@ -51,13 +51,12 @@
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  margin: 0 calc((-1) * var(--flex_gutter_horizontal));
+  margin: 0;
 }
 
 .flex.grid > *
 {
-  padding: var(--flex_gutter_horizontal) 0;
-  border: 1px solid red;
+  margin: var(--flex_gutter_vertical) var(--flex_gutter_horizontal);
 }
 
 /*endregion*/

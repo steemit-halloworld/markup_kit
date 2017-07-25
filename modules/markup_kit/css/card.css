@@ -71,11 +71,6 @@
   cursor: pointer;
 }
 
-.card:first-child
-{
-  margin-top: 0;
-}
-
 .card:last-child
 {
   margin-bottom: 0;
@@ -93,12 +88,12 @@
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
 
-.cards > .card > :first-child,
+/*.cards > .card > :first-child,
 .card > :first-child
 {
   border-radius: var(--card_border_radius) var(--card_border_radius) 0 0 !important;
   border-top: none !important;
-}
+}*/
 
 .cards > .card > :last-child,
 .card > :last-child
@@ -114,9 +109,8 @@
 
 /*endregion*/
 
-/*
 /*--------------------------------------------------------------------------------------------------------------------*/
-/* Card Content                                                                                                          */
+/* Card Content                                                                                                       */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
 
@@ -149,6 +143,30 @@
   margin: var(--card_header_margin);
   color: var(--card_header_color);
   font-weight: var(--card_header_font_weight);
+}
+
+/*endregion*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Card Images                                                                                                        */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+.card > .image
+{
+  position: relative;
+  display: block;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+.card > .image > img
+{
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: auto;
+  border-radius: inherit;
 }
 
 /*endregion*/

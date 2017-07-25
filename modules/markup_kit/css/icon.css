@@ -57,3 +57,8 @@ i.icon:before
   content: "\f067";
 }
 
+.window.close.icon:before
+{
+  content: "\f2d3";
+}
+

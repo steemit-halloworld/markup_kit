@@ -27,8 +27,10 @@ kit.dom = kit.native_dom = (function ()
      * @param {String} selector
      * @returns {Element}
      */
-    query: function (root_html_el, selector)
+    query: function (selector, root_html_el)
     {
+      if(!kit.is_defined(root_html_el)) root_html_el = document.body;
+
       return root_html_el.querySelector(selector);
     },
 
@@ -39,8 +41,10 @@ kit.dom = kit.native_dom = (function ()
      * @returns {NodeList}
      */
 
-    query_all: function (root_html_el, selector)
+    query_all: function (selector, root_html_el)
     {
+      if(!kit.is_defined(root_html_el)) root_html_el = document.body;
+
       return root_html_el.querySelectorAll(selector);
     },
 

@@ -6,7 +6,6 @@
  Module to place elements outside of the normal document flow.
 
 */
-
 @import 'variables.css';
 
 [class*='top'],
@@ -16,6 +15,7 @@
 [class*='center']
 {
   position: absolute !important;
+  z-index: 1;
 }
 
 .fixed
@@ -26,25 +26,21 @@
 
 .right
 {
-  top: 0;
-  bottom: 0;
   right: 0;
 }
 
 .left
 {
-  top: 0;
-  bottom: 0;
   left: 0;
 }
 
-.top_left
+.top.left
 {
   top: 0;
   left: 0;
 }
 
-.top_right
+.top.right
 {
   top: 0;
   right: 0;
@@ -62,13 +58,30 @@
   right: 0;
 }
 
+.center-vertical
+{
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.center-horizontal
+{
+  left: 50%;
+  transform: translateX(-50%);
+  display: table;
+}
+
+.shift-top-right
+{
+  transform: translate(50%, -50%);
+}
+
 @media (--medium-up)
 {
   .fixed\@medium-up
   {
     position: fixed !important;
     z-index: 9999 !important;
-
   }
 
   .right\@medium-up

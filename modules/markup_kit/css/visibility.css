@@ -9,6 +9,11 @@
   visibility: hidden !important;
 }
 
+*:not(:hover) .visible-on-hover
+{
+  visibility: hidden !important;
+}
+
 @media (--small-up)
 {
   .visible\@small-up
