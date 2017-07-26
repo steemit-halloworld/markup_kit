@@ -6,6 +6,16 @@
 
   const scope = new kit.global.Scope();
 
+
+
+  kit.dom.patch_html = function(html_text)
+  {
+    var doc = document.implementation.createHTMLDocument("example");
+    doc.documentElement.innerHTML = html_text;
+
+    return kit.dom.patch(document.body, doc.body.firstElementChild, document.body.firstElementChild, 0);
+  };
+
   kit.dom.patch = function (parent_el, new_el, old_el, old_el_position)
   {
     var is_patched = patch_element(parent_el, new_el, old_el, old_el_position);
@@ -41,6 +51,8 @@
 
     function remove_attribute (target, name, value)
     {
+      console.log("remove attribute " + name);
+
       if (name === 'class')
       {
         target.removeAttribute('class');
@@ -57,6 +69,9 @@
 
     function set_attribute (target, name, value)
     {
+
+      console.log("set attribute " + name);
+
       if (name === 'className')
       {
         target.setAttribute('class', value);
@@ -152,6 +167,9 @@
 
     function update_element (parent, new_node, old_node, index, dirty_nodes)
     {
+
+      console.log("update element " + new_node + " vs. " + old_node);
+
       if (!old_node)
       {
         parent.appendChild(new_node.cloneNode(true));
@@ -166,7 +184,10 @@
       }
       else if (has_node_changed(new_node, old_node))
       {
-        parent.replaceChild(new_node.cloneNode(true), parent.children[index])
+
+        console.log("replace node " + old_node.innerHTML + " vs. " + new_node.innerHTML);
+
+        parent.replaceChild(new_node.cloneNode(true), parent.children[index]);
         return true;
       }
       else if (new_node)

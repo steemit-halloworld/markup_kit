@@ -88,19 +88,20 @@
   position: relative;
   max-width: 100%;
   vertical-align: middle;
+  z-index: var(--global-component-layer);
 }
 
 .custom.field > input[type="file"]
 {
   position: absolute;
   top: 0;
-  z-index: 1000;
   left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
   -webkit-appearance: none;
   cursor: pointer;
+  z-index: var(--global-component-foreground-layer);
 }
 
 .custom.field input[type="file"]::-webkit-file-upload-button {

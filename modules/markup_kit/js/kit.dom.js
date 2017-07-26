@@ -29,7 +29,7 @@ kit.dom = kit.native_dom = (function ()
      */
     query: function (selector, root_html_el)
     {
-      if(!kit.is_defined(root_html_el)) root_html_el = document.body;
+      if (!kit.is_defined(root_html_el)) root_html_el = document.body;
 
       return root_html_el.querySelector(selector);
     },
@@ -43,7 +43,7 @@ kit.dom = kit.native_dom = (function ()
 
     query_all: function (selector, root_html_el)
     {
-      if(!kit.is_defined(root_html_el)) root_html_el = document.body;
+      if (!kit.is_defined(root_html_el)) root_html_el = document.body;
 
       return root_html_el.querySelectorAll(selector);
     },
@@ -74,6 +74,21 @@ kit.dom = kit.native_dom = (function ()
 //! @name HTML Element Utilities
 //<!------------------------------------------------------------------------------------------------------------------->
 //region
+
+    parent_by_tag_name: function (node, tag_name)
+    {
+      var parent;
+      if (node === null || tag_name === '') return;
+      parent = node.parentNode;
+      tag_name = tag_name.toUpperCase();
+      while (parent.tagName !== "HTML")
+      {
+        if (parent.tagName === tag_name) return parent;
+        parent = parent.parentNode;
+      }
+
+      return parent;
+    },
 
     position: function (html_el)
     {

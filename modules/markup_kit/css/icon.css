@@ -35,10 +35,18 @@ i.icon
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   backface-visibility: hidden;
+  text-indent: -9999px;
+  overflow: hidden;
 }
 
 i.icon:before
 {
+  text-indent: 0;
+  float: left;
+  margin: 0;
+  font-size: 1em;
+  line-height: 1em;
+  width:100%;
   background: none !important;
 }
 
@@ -60,5 +68,10 @@ i.icon:before
 .window.close.icon:before
 {
   content: "\f2d3";
+}
+
+.thin.close.icon:before
+{
+  content: "\00D7";
 }
 

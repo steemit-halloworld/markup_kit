@@ -58,7 +58,12 @@
   --global-control-height-large: 55px;
 
   /* Z-Index */
-  --global-z-index: 1000;
+  --global-layer: 100;
+  --global-component-layer: var(--global-layer);
+  --global-component-background-layer: 50;
+  --global-component-foreground-layer: 200;
+  --global-fixed-layer: 1000;
+  --global-sticky-layer: 1000;
 
   /* Box Shadows */
   --global_subtle_shadow: 0px 1px 2px 0 var(--global-border-color);

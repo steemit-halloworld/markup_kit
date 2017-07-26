@@ -15,13 +15,18 @@
 [class*='center']
 {
   position: absolute !important;
-  z-index: 1;
+}
+
+[class*='shift-']
+{
+  z-index: var(--global-sticky-layer) !important;
 }
 
 .fixed
 {
   position: fixed !important;
-  z-index: 9999 !important;
+  z-index: var(--global-fixed-layer);
+
 }
 
 .right

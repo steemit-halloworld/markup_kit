@@ -97,7 +97,7 @@ A standard button.
 .circular.button
 {
   border-radius: 10em;
-  padding: var(--button-padding-vertical) var(--button-padding-vertical) var(--button-padding-vertical);
+  padding: var(--button-padding-vertical);
 }
 
 .circular.button > .icon

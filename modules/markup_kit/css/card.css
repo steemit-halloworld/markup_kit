@@ -164,8 +164,9 @@
 {
   display: block;
   position: absolute;
-  height: 100%;
-  width: auto;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
   border-radius: inherit;
 }
 

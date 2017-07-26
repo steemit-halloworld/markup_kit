@@ -271,12 +271,16 @@ important to clear floats.
 [class*="kit_kit_top"], [class*="kit_kit_bottom"], [class*="kit_kit_left"], [class*="kit_kit_right"], [class*="kit_kit_center"]
 {
   position: absolute !important;
-  z-index: 1;
+}
+[class*="kit_kit_shift-"]
+{
+  z-index: 1000 !important;
 }
 .kit_kit_fixed
 {
   position: fixed !important;
-  z-index: 9999 !important;
+  z-index: 1000;
+
 }
 .kit_kit_right
 {
@@ -1383,8 +1387,10 @@ To apply the component add the off_canvas class to a parent div container and us
 {
   display: block;
   position: absolute;
-  height: 100%;
-  width: auto;
+  width: 250px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: inherit;
 }
 /*endregion*/
@@ -1602,9 +1608,17 @@ i.kit_kit_icon
   -webkit-font-smoothing: antialiased;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  text-indent: -9999px;
+  overflow: hidden;
 }
 i.kit_kit_icon:before
 {
+  text-indent: 0;
+  float: left;
+  margin: 0;
+  font-size: 1em;
+  line-height: 1em;
+  width:100%;
   background: none !important;
 }
 .kit_kit_car.kit_kit_icon:before
@@ -1622,6 +1636,10 @@ i.kit_kit_icon:before
 .kit_kit_window.kit_kit_close.kit_kit_icon:before
 {
   content: "\f2d3";
+}
+.kit_kit_thin.kit_kit_close.kit_kit_icon:before
+{
+  content: "\00D7";
 }
 /* button.css | MIT License | github.com/tschroeter/markup_kit */
 /*doc
@@ -1700,7 +1718,7 @@ A standard button.
 .kit_kit_circular.kit_kit_button
 {
   border-radius: 10em;
-  padding: 0.5em 0.5em 0.5em;
+  padding: 0.5em;
 }
 .kit_kit_circular.kit_kit_button > .kit_kit_icon
 {
@@ -1826,18 +1844,19 @@ A standard button.
   position: relative;
   max-width: 100%;
   vertical-align: middle;
+  z-index: 100;
 }
 .kit_kit_custom.kit_kit_field > input[type="file"]
 {
   position: absolute;
   top: 0;
-  z-index: 1000;
   left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
   -webkit-appearance: none;
   cursor: pointer;
+  z-index: 200;
 }
 .kit_kit_custom.kit_kit_field input[type="file"]::-webkit-file-upload-button {
   visibility: hidden;
