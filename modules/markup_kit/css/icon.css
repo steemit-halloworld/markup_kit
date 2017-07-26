@@ -75,3 +75,8 @@ i.icon:before
   content: "\00D7";
 }
 
+.trash.outline.icon:before
+{
+  content: "\f014";
+}
+

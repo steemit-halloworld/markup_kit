@@ -1641,6 +1641,10 @@ i.kit_icon:before
 {
   content: "\00D7";
 }
+.kit_trash.kit_outline.kit_icon:before
+{
+  content: "\f014";
+}
 /* button.css | MIT License | github.com/tschroeter/markup_kit */
 /*doc
 

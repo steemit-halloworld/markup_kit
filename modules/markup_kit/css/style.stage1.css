@@ -1641,6 +1641,10 @@ i.icon:before
 {
   content: "\00D7";
 }
+.trash.outline.icon:before
+{
+  content: "\f014";
+}
 /* button.css | MIT License | github.com/tschroeter/markup_kit */
 /*doc
 
