@@ -51,7 +51,7 @@
 
     function remove_attribute (target, name, value)
     {
-      console.log("remove attribute " + name);
+      //console.log("remove attribute " + name);
 
       if (name === 'class')
       {
@@ -70,7 +70,7 @@
     function set_attribute (target, name, value)
     {
 
-      console.log("set attribute " + name);
+      //console.log("set attribute " + name);
 
       if (name === 'className')
       {
@@ -168,7 +168,7 @@
     function update_element (parent, new_node, old_node, index, dirty_nodes)
     {
 
-      console.log("update element " + new_node + " vs. " + old_node);
+      //console.log("update element " + new_node + " vs. " + old_node);
 
       if (!old_node)
       {
@@ -185,7 +185,7 @@
       else if (has_node_changed(new_node, old_node))
       {
 
-        console.log("replace node " + old_node.innerHTML + " vs. " + new_node.innerHTML);
+        //console.log("replace node " + old_node.innerHTML + " vs. " + new_node.innerHTML);
 
         parent.replaceChild(new_node.cloneNode(true), parent.children[index]);
         return true;

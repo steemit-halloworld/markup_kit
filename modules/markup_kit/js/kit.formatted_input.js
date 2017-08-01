@@ -7,7 +7,6 @@
     var owner = this;
     var shadow_element;
     var html_element = html_element;
-
     owner.delimiter = '.';
     owner.block_delimiters = [];
 
@@ -16,13 +15,27 @@
 
     var is_backspace;
 
+    function on_change (event)
+    {
+      console.log("FORMAT");
+      var value = owner.shadow_element().value;
+      var visual_value = owner.render_formatter.format(value);
+      var object = owner.render_formatter.object();
+      var model_value = owner.formatter.date_to_text(object);
+
+      update_value(visual_value, model_value);      console.log(model_value);
+      //console.log(kit.Formatted_input.Date_formatter.prototype.date_to_text(event.target.value));
+      //console.log(kit.Formatted_input.Date_formatter.prototype.object(event.target.value));
+
+      fad_ima_submit('true', html_element.attributes['data-submit'].value, model_value)
+    }
 
     function on_key_down (event)
     {
       var char_code = event.which || event.keyCode;
       var value = owner.shadow_element().value;
 
-      is_backspace = char_code == 8 && is_delimiter(value.slice(-1), owner.render_formatter.delimiters());
+      is_backspace = char_code == 8 && is_delimiter(value.slice(-1), owner.html_element().value);
     }
 
     function on_input (event)
@@ -101,6 +114,7 @@
 
     add_event(owner.shadow_element(), 'input', on_input);
     add_event(owner.shadow_element(), 'keydown', on_key_down);
+    add_event(owner.shadow_element(), 'change', on_change);
 
     var model_value = owner.html_element().value;
     model_value = owner.formatter.format(model_value);
@@ -183,7 +197,6 @@
         if (block == '00') block = '01';
         if (parseInt(block0, 10) > 3) block = '0' + block0;
         if (parseInt(block, 10) > 31) block = '31';
-
         //day = parseInt(block, 10);
         break;
 
@@ -216,6 +229,8 @@
 
     date_to_text: function (date)
     {
+      console.log(date);
+
       var owner = this;
       var result = '';
 
@@ -230,10 +245,12 @@
         switch (pattern)
         {
           case 'd':
-            block += day;
+            var padded = "00" + parseInt(day, 10);
+            block += padded.substring(padded.length -2, padded.length);
             break;
           case 'm':
-            block += month + 1;
+            var padded = "00" + parseInt(month +1, 10);
+            block += padded.substring(padded.length -2, padded.length);
             break;
           case 'Y':
             block += year;

@@ -131,6 +131,12 @@ const kit = (function ()
     var name = component_name(html_el);
     var component_data = components[name];
 
+    if(component_data === undefined) {
+      console.error("MOUNT FAILED FOR " +  name);
+      console.error(html_el);
+      return;
+    }
+
     purge_instances();
 
     var instance_data = instances[kit.dom.emplace_id(html_el)];
