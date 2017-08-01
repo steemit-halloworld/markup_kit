@@ -106,6 +106,9 @@
 
       shadow_element.setAttribute("onfocusout", owner.html_element().getAttribute("onfocusout"));
 
+      var visual_value = owner.render_formatter.format(owner.html_element().value);
+      shadow_element.setAttribute("value", visual_value)
+
       return shadow_element;
     };
 
