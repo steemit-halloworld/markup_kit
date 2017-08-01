@@ -114,7 +114,7 @@ const kit = (function ()
 
     kit.log("mount_all");
 
-    var module_elements = kit.dom.query_all(html_el, COMPONENT_SELECTOR);
+    var module_elements = kit.dom.query_all(COMPONENT_SELECTOR, html_el);
     for (var i = 0, len = module_elements.length; i < len; i++)
     {
 
