@@ -36,6 +36,8 @@
       var value = owner.shadow_element().value;
 
       is_backspace = char_code == 8 && is_delimiter(value.slice(-1), owner.html_element().value);
+
+      //submit_time_capsule(100)
     }
 
     function on_input (event)
@@ -77,6 +79,24 @@
         return char == current;
       });
     }
+
+    function submit_time_capsule (wait)
+    {
+      var start_value = owner.html_element().value;
+
+      setInterval(function() {
+        console.log("TIME CAPSULE");
+        console.log(owner);
+        if(owner.html_element().value === start_value )
+        {
+
+          console.log("TIME Submit");
+          fad_ima_submit('true', owner.html_element().attributes['data-submit'].value, model_value)
+        }
+      }, wait);
+
+
+      }
 
     this.html_element = function ()
     {

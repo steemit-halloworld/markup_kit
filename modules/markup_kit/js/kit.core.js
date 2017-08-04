@@ -194,6 +194,10 @@ const kit = (function ()
     return new kit.Formatted_input(html_el);
   });
 
+  kit.register("unit", function (html_el) {
+    return new kit.Unit_input(html_el);
+  })
+
   return (kit.global.kit = kit.global.kit || kit);
 
 })();
