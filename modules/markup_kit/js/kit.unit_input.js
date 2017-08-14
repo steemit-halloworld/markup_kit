@@ -49,6 +49,13 @@
         handle_curser_pos();
         return;
       }
+      //if(event.keyCode >= 65 && event.keyCode <= 90)
+
+      if(event.keyCode < 48 || event.keyCode > 57)
+      {
+        return;
+      }
+
     }
 
     function on_input (event)
@@ -321,7 +328,7 @@
 
 
 
-      var result = result_precomma + result_postcomma + owner.unit_string;
+      var result = result_precomma + result_postcomma + " " + owner.unit_string;
       console.log("RESULT: " + result);
       return result;
     },
