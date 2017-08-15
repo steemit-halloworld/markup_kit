@@ -39,19 +39,22 @@
 
     function remove_boolean_attribute (target, name)
     {
+      //console.log("REMOVE BOOLEAN ATTRIBUTE: " + text(target) + " - " +  text(name));
       target.removeAttribute(name);
       target[name] = false;
     }
 
     function set_boolean_attribute (target, name, value)
     {
+      //console.log("SET BOOLEAN ATTRIBUTE: " + text(target) + " - " +  text(name));
       target.setAttribute(name, value);
       target[name] = (value == 'true');
     }
 
     function remove_attribute (target, name, value)
     {
-      //console.log("remove attribute " + name);
+      //console.log("REMOVE ATTRIBUTE: " + text(target) + " - " +  text(name));
+
 
       if (name === 'class')
       {
@@ -70,7 +73,7 @@
     function set_attribute (target, name, value)
     {
 
-      //console.log("set attribute " + name);
+      //console.log("SET ATTRIBUTE: " + text(target) + " - " +  text(name));
 
       if (name === 'className')
       {
@@ -88,6 +91,8 @@
 
     function update_attribute (target, name, new_val, old_val)
     {
+      //console.log("UPDATE ATTRIBUTE: " + text(target) + " - " +  text(name));
+
       if (!kit.is_defined(new_val))
       {
         remove_attribute(target, name, old_val);
@@ -104,6 +109,7 @@
 
     function update_attributes (target, new_attributes, old_attributes)
     {
+      //console.log("Update Attributes");
       var result = false;
       for (var i = 0; i < new_attributes.length || i < old_attributes.length; i++)
       {
@@ -115,7 +121,14 @@
         var new_val = new_attr ? new_attr.nodeValue : undefined;
 
         var x = update_attribute(target, name, new_val, old_val);
-
+        //console.log("ATTRS old");
+        //console.log(old_attr === undefined? "": old_attr.nodeName);
+        //console.log(old_attr === undefined? "": old_attr.nodeValue);
+        //console.log(" new ");
+        //console.log(new_attr === undefined? "": new_attr.nodeName);
+        //console.log(new_attr === undefined? "": new_attr.nodeValue);
+        //console.log("RESULT");
+        //console.log(x);
         result = result || x;
       }
 
@@ -131,12 +144,17 @@
 
     function has_node_changed (node1, node2)
     {
+      //console.log("compare " + node1.nodeName + " !== " + node2.nodeName + " || " + text(node1) + " !== " + text(node2))
+      //console.log(" ==> " + node1.nodeName !== node2.nodeName || text(node1) !== text(node2));
+      //console.log("compare " + node1.id + " !== " + node2.id);
+      //console.log(text(node1));
+      //console.log(text(node2));
       return node1.nodeName !== node2.nodeName || text(node1) !== text(node2);
     }
 
     function text (node)
     {
-      var child_count = node.childNodes.length;
+      var child_count = node.childNodes === undefined ? 0 : node.childNodes.length;
       var text = "";
       for (var i = 0; i < child_count; i++)
       {
@@ -154,6 +172,7 @@
       var dirty_nodes = [];
 
       position = position || 0;
+
 
       var result = update_element(parent_el, new_el, old_el, position, dirty_nodes);
 
@@ -203,8 +222,13 @@
           var n_new_node = new_node.children[i];
           var n_old_node = old_node.children[i];
 
+          //console.log("NEW EL -  OLD EL");
+          //console.log(n_new_node);
+          //console.log(n_old_node);
           const x = update_element(parent.children[index], n_new_node, n_old_node, i, dirty_nodes);
           result = result || x;
+          //console.log("RESULT");
+          //console.log(result);
         }
 
         return result;
