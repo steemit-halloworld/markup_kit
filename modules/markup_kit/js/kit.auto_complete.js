@@ -24,7 +24,7 @@
       drop_down_element: mount_drop_down_element(auto_complete_id),
       // options
       min_chars: 1,
-      delay: 1,
+      delay: 5,
       offset_left: 0,
       offset_top: 0,
       // callbacks
