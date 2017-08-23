@@ -1325,6 +1325,10 @@ To apply the component add the off_canvas class to a parent div container and us
 {
   margin-bottom: 0;
 }
+.kit_card:first-child
+{
+  margin-top: 0;
+}
 /*
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* Card Edges                                                                                                         */
@@ -1618,7 +1622,7 @@ i.kit_icon:before
   margin: 0;
   font-size: 1em;
   line-height: 1em;
-  width:100%;
+  width: 100%;
   background: none !important;
 }
 .kit_car.kit_icon:before
@@ -1632,6 +1636,10 @@ i.kit_icon:before
 .kit_plus.kit_icon:before
 {
   content: "\f067";
+}
+.kit_minus.kit_icon:before
+{
+  content: "\f068";
 }
 .kit_window.kit_close.kit_icon:before
 {

@@ -46,7 +46,7 @@ i.icon:before
   margin: 0;
   font-size: 1em;
   line-height: 1em;
-  width:100%;
+  width: 100%;
   background: none !important;
 }
 
@@ -63,6 +63,11 @@ i.icon:before
 .plus.icon:before
 {
   content: "\f067";
+}
+
+.minus.icon:before
+{
+  content: "\f068";
 }
 
 .window.close.icon:before

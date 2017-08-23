@@ -76,6 +76,11 @@
   margin-bottom: 0;
 }
 
+.card:first-child
+{
+  margin-top: 0;
+}
+
 .cards,
 .card
 {
