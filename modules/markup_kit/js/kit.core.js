@@ -114,7 +114,7 @@ const kit = (function ()
 
     kit.log("mount_all");
 
-    var module_elements = kit.dom.query_all(html_el, COMPONENT_SELECTOR);
+    var module_elements = kit.dom.query_all(COMPONENT_SELECTOR, html_el);
     for (var i = 0, len = module_elements.length; i < len; i++)
     {
 
@@ -130,6 +130,12 @@ const kit = (function ()
   {
     var name = component_name(html_el);
     var component_data = components[name];
+
+    if(component_data === undefined) {
+      console.error("MOUNT FAILED FOR " +  name);
+      console.error(html_el);
+      return;
+    }
 
     purge_instances();
 
@@ -187,6 +193,10 @@ const kit = (function ()
   {
     return new kit.Formatted_input(html_el);
   });
+
+  kit.register("unit", function (html_el) {
+    return new kit.Unit_input(html_el);
+  })
 
   return (kit.global.kit = kit.global.kit || kit);
 

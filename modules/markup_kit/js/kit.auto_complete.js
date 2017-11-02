@@ -24,7 +24,7 @@
       drop_down_element: mount_drop_down_element(auto_complete_id),
       // options
       min_chars: 1,
-      delay: 12,
+      delay: 5,
       offset_left: 0,
       offset_top: 0,
       // callbacks
@@ -158,6 +158,8 @@
 
   function on_key_down (owner, ev)
   {
+
+    console.log("ON KEY DOWN")
     prv[owner.id()].is_key_down = true;
 
     var key_code = window.event ? ev.keyCode : ev.which;
@@ -337,6 +339,19 @@
     div.innerHTML = s;
     owner.relayout();
     prv[owner.id()].is_key_down = false;
+  }
+
+  proto.trigger_input_change = function (owner, old_val, new_val) {
+    on_input_value_changed(owner, new_val, old_val);
+  }
+
+  proto.trigger_mount_drop_down_element = function()
+  {
+    prv[this.id()].mount_drop_down_element(this.id());
+  };
+
+  proto.set_min_chars = function (min_chars) {
+    prv[this.id()].min_chars = min_chars;
   }
 
 //endregion

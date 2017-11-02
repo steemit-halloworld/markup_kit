@@ -8,17 +8,17 @@
 
 
 
-  kit.dom.patch_html = function(html_text)
+  kit.dom.patch_html = function(html_text, ignore_fn)
   {
     var doc = document.implementation.createHTMLDocument("example");
     doc.documentElement.innerHTML = html_text;
 
-    return kit.dom.patch(document.body, doc.body.firstElementChild, document.body.firstElementChild, 0);
+    return kit.dom.patch(document.body, doc.body.firstElementChild, document.body.firstElementChild, 0, ignore_fn);
   };
 
-  kit.dom.patch = function (parent_el, new_el, old_el, old_el_position)
+  kit.dom.patch = function (parent_el, new_el, old_el, old_el_position, ignore_fn)
   {
-    var is_patched = patch_element(parent_el, new_el, old_el, old_el_position);
+    var is_patched = patch_element(parent_el, new_el, old_el, old_el_position, ignore_fn);
     kit.log("is patched " + is_patched);
     if (is_patched)
     {
@@ -39,19 +39,22 @@
 
     function remove_boolean_attribute (target, name)
     {
+      //console.log("REMOVE BOOLEAN ATTRIBUTE: " + text(target) + " - " +  text(name));
       target.removeAttribute(name);
       target[name] = false;
     }
 
     function set_boolean_attribute (target, name, value)
     {
+      //console.log("SET BOOLEAN ATTRIBUTE: " + text(target) + " - " +  text(name));
       target.setAttribute(name, value);
       target[name] = (value == 'true');
     }
 
     function remove_attribute (target, name, value)
     {
-      console.log("remove attribute " + name);
+      //console.log("REMOVE ATTRIBUTE: " + text(target) + " - " +  text(name));
+
 
       if (name === 'class')
       {
@@ -70,7 +73,7 @@
     function set_attribute (target, name, value)
     {
 
-      console.log("set attribute " + name);
+      //console.log("SET ATTRIBUTE: " + text(target) + " - " +  text(name));
 
       if (name === 'className')
       {
@@ -88,6 +91,8 @@
 
     function update_attribute (target, name, new_val, old_val)
     {
+      //console.log("UPDATE ATTRIBUTE: " + text(target) + " - " +  text(name));
+
       if (!kit.is_defined(new_val))
       {
         remove_attribute(target, name, old_val);
@@ -104,6 +109,7 @@
 
     function update_attributes (target, new_attributes, old_attributes)
     {
+      //console.log("Update Attributes");
       var result = false;
       for (var i = 0; i < new_attributes.length || i < old_attributes.length; i++)
       {
@@ -115,7 +121,14 @@
         var new_val = new_attr ? new_attr.nodeValue : undefined;
 
         var x = update_attribute(target, name, new_val, old_val);
-
+        //console.log("ATTRS old");
+        //console.log(old_attr === undefined? "": old_attr.nodeName);
+        //console.log(old_attr === undefined? "": old_attr.nodeValue);
+        //console.log(" new ");
+        //console.log(new_attr === undefined? "": new_attr.nodeName);
+        //console.log(new_attr === undefined? "": new_attr.nodeValue);
+        //console.log("RESULT");
+        //console.log(x);
         result = result || x;
       }
 
@@ -131,12 +144,17 @@
 
     function has_node_changed (node1, node2)
     {
+      //console.log("compare " + node1.nodeName + " !== " + node2.nodeName + " || " + text(node1) + " !== " + text(node2))
+      //console.log(" ==> " + node1.nodeName !== node2.nodeName || text(node1) !== text(node2));
+      //console.log("compare " + node1.id + " !== " + node2.id);
+      //console.log(text(node1));
+      //console.log(text(node2));
       return node1.nodeName !== node2.nodeName || text(node1) !== text(node2);
     }
 
     function text (node)
     {
-      var child_count = node.childNodes.length;
+      var child_count = node.childNodes === undefined ? 0 : node.childNodes.length;
       var text = "";
       for (var i = 0; i < child_count; i++)
       {
@@ -149,13 +167,14 @@
       return text.trim();
     }
 
-    function patch_element (parent_el, new_el, old_el, position)
+    function patch_element (parent_el, new_el, old_el, position, ignore_fn)
     {
       var dirty_nodes = [];
 
       position = position || 0;
 
-      var result = update_element(parent_el, new_el, old_el, position, dirty_nodes);
+
+      var result = update_element(parent_el, new_el, old_el, position, dirty_nodes, ignore_fn);
 
       for (var i in dirty_nodes)
       {
@@ -165,10 +184,10 @@
       return result;
     }
 
-    function update_element (parent, new_node, old_node, index, dirty_nodes)
+    function update_element (parent, new_node, old_node, index, dirty_nodes, ignore_fn)
     {
 
-      console.log("update element " + new_node + " vs. " + old_node);
+      //console.log("update element " + new_node + " vs. " + old_node);
 
       if (!old_node)
       {
@@ -185,7 +204,7 @@
       else if (has_node_changed(new_node, old_node))
       {
 
-        console.log("replace node " + old_node.innerHTML + " vs. " + new_node.innerHTML);
+        //console.log("replace node " + old_node.innerHTML + " vs. " + new_node.innerHTML);
 
         parent.replaceChild(new_node.cloneNode(true), parent.children[index]);
         return true;
@@ -198,13 +217,24 @@
         var new_child_count = new_node.children.length;
         var old_child_count = old_node.children.length;
 
-        for (var i = 0; i < new_child_count || i < old_child_count; i++)
+        for (var i = 0, j=0; i < new_child_count || j < old_child_count; i++, j++)
         {
           var n_new_node = new_node.children[i];
-          var n_old_node = old_node.children[i];
+          var n_old_node;
+          j--;
+          do
+          {
+            j++;
+            n_old_node = old_node.children[j];
+          } while (ignore_fn && ignore_fn(n_old_node));
 
-          const x = update_element(parent.children[index], n_new_node, n_old_node, i, dirty_nodes);
+          /*console.log("NEW EL -  OLD EL");
+          console.log(n_new_node);
+          console.log(n_old_node);*/
+          const x = update_element(parent.children[index], n_new_node, n_old_node, j, dirty_nodes);
           result = result || x;
+          //console.log("RESULT");
+          //console.log(result);
         }
 
         return result;
@@ -212,7 +242,6 @@
 
       return false;
     }
-
 //endregion
   };
 
