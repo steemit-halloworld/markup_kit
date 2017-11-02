@@ -1,0 +1,694 @@
+.input:disabled, .input.disabled, .textarea:disabled, .textarea.disabled, .select:disabled, .select.disabled, .global.form select:disabled, .global.form select.disabled, .global.form textarea:disabled, .global.form textarea.disabled, .global.form input:not([type='submit']):disabled, .global.form input:not([type='submit']).disabled
+{
+    resize:           none;
+    cursor:           not-allowed;
+    pointer-events:   none;
+    border-color:     #999;
+    font-style:       italic;
+    color:            #999;
+    background-color: #999;
+    opacity:          0.6;
+}
+/*doc
+
+# Getting Started
+
+markup-kit.css is a modern, lightweight and responsive CSS framework for faster developing web interfaces.
+
+## Installation
+
+## Browser Support
+
+markup-kit.css uses [Autoprefixer](https://github.com/postcss/autoprefixer) to make most styles compatible with
+earlier browsers. markup-kit.css is designed for modern browsers. The following browsers are recommended:
+
+* Chrome 35+
+* Firefox 31+
+* Safari 7+
+* IE 10+
+* Edge
+* Opera
+
+*/
+
+/* globals.css | MIT License | github.com/tschroeter/markup_kit */
+
+:root
+{
+
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Family                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Size                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Weight                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+
+  /*endregion*/
+
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Line Height                                                                                                      */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Spacing                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Border                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+
+  /* base colors */
+
+  /* text colors */
+
+  /* state colors */
+
+  /* background */
+
+  /** Grayscale **/
+  /*endregion*/
+}
+
+button, input, select, textarea
+{
+  color:       inherit;
+  font-size:   inherit;
+  line-height: inherit;
+}
+
+button, input, optgroup, select, textarea
+{
+  margin: 0;
+}
+
+/*doc
+
+# Normalisation
+
+All of the modules are build on top of the normalisation module. It's the foundation layer.
+
+The normalisation module applies some basic resets to ensure elements are rendered consistently across all browsers.
+
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/* Elements of HTML                                                                                                              */
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/*region*/
+
+*, ::before, ::after
+{
+  /* remove repeating backgrounds */
+  background-repeat: no-repeat;
+  /* add box sizing inheritance */
+  box-sizing:        inherit;
+  background-color:  inherit;
+}
+
+::before, ::after
+{
+  text-decoration: inherit;
+  vertical-align:  inherit;
+}
+
+/*doc
+
+## Box Sizing
+
+To ensure `padding` does not affect the computed width of an element the `box-sizing` is switched from `content-box` to
+`border-box`. On rare occasion `box-sizing`can be overridden. All nested elements including `::before` and `::after`
+inherit the specified `box sizing`
+
+*/
+
+:root
+{
+  box-sizing:               border-box;
+  cursor:                   default;
+  /* prevent font size adjustments after orientation changes in IE and iOS */
+  -ms-text-size-adjust:     100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*endregion*/
+
+body
+{
+  font-family:      Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size:        16px;
+  background-color: white;
+}
+
+/*doc
+
+# Typography
+
+Typography is one of the most important and most visible things on a web page. Even slightly imperfection ruin otherwise
+a perfect visual design.
+
+*/
+
+.type-scale-1, .global.typography h1
+{ font-size: 48px; font-size: 3rem; }
+
+.type-scale-2, .global.typography h2
+{ font-size: 36px; font-size: 2.25rem; }
+
+.type-scale-3, .global.typography h3
+{ font-size: 24px; font-size: 1.5rem; }
+
+.type-scale-4, .global.typography h4
+{ font-size: 20px; font-size: 1.25rem; }
+
+.type-scale-5, .global.typography h5
+{ font-size: 16px; font-size: 1rem; }
+
+.type-scale-6, .global.typography h6
+{ font-size: 14px; font-size: .875rem; }
+
+.type-scale-7
+{ font-size: 12px; font-size: .75rem; }
+
+/*doc
+
+## Measure
+
+Measure refers to the length of a line of text.
+
+<quote>
+"Anything from 45 to 75 characters is widely regarded as a satisfactory length of line for a single-column page...the
+66-character line (counting both letters and spaces) is widely regarded as ideal. For multiple-column work, a better
+average is 40-50 characters."
+
+  <span>Robert Bringhurst - <i>The Elements of Typographic Style</i></span>
+</quote>
+
+The following classes are used for setting measure:
+
+| Class            | Description                                                          |
+| ---------------- | -------------------------------------------------------------------- |
+| 'measure'        | line lengths ~66 characters                                          |
+| 'narrow measure' | line lengths ~45 characters                                          |
+| 'measure wide'   | line lengths ~80 characters                                          |
+
+*/
+
+.measure
+{
+  width: 30em;
+}
+
+.wide.measure
+{
+  width: 34em;
+}
+
+.narrow.measure
+{
+  width: 20em;
+}
+
+/*doc
+
+## Tracking
+
+In typography letter-spacing is commonly known as tracking. Tracking is the consistent white-space between letters in
+a piece of text. For example text that is set to uppercase should be tracked to improve readability but lowercase text
+should never be tracked. For some larger text, depending on the typeface a negative tracking might be desirable.
+
+*/
+
+.tracked
+{
+  letter-spacing: .1em;
+}
+
+.tight.tracked
+{
+  letter-spacing: -.05em;
+}
+
+.wide.tracked
+{
+  letter-spacing: .25em;
+}
+
+/*doc
+
+## Paragraphs
+
+*/
+
+.small
+{
+  font-size:   14px;
+  line-height: -0.5px;
+}
+
+.smaller
+{
+  font-size:   12px;
+  line-height: -2.5px;
+}
+
+/*doc
+
+# Form
+
+The Form module provides classes to customize the displays of HTML input controls for a more consistent rendering
+across browsers and devices.
+
+*/
+
+/*doc
+
+## Inputs
+
+All `<input>` fields must have one of the following type attributes:
+`text`, `date`, `datetime`, `datetime-local`, `email`, `month`, `number`, `password`, `search`, `tel`, `time`, `url`
+or `week`.
+
+<div data-module="kit-example">
+  <input class="input" type="text" placeholder="Search...">
+  <input class="input" disabled="true" type="text" value="Disabled">
+</div>
+
+*/
+
+.input, .textarea, .select, .global.form select, .global.form textarea, .global.form input:not([type='submit'])
+{
+  -webkit-appearance:          none;
+     -moz-appearance:          none;
+          appearance:          none;
+
+  /* Sizing */
+  padding:             .5em;
+  width:               22ch;
+
+  /* Positioning */
+
+  /* Theme */
+  border:              1px #D4D4D4 solid;
+  border-radius:       4px;
+
+  /* Animation */
+  transition-property: color, background-color, border;
+  transition:          0.2s ease-in-out
+}
+
+.input:focus, .textarea:focus, .select:focus, .global.form select:focus, .global.form textarea:focus, .global.form input:not([type='submit']):focus
+{
+    outline:      0;
+    border-color: #1C86F2;
+    box-shadow:   0 0 1px #1C86F2 inset;
+}
+
+/*doc
+
+## Select
+
+<label class="label">
+  Country:
+  <select class="select">
+    <option value="">State</option>
+    <option value="AL">Alabama</option>
+    <option value="AK">Alaska</option>
+    <option value="AZ">Arizona</option>
+    <option value="AR">Arkansas</option>
+    <option value="CA">California</option>
+    <option value="CO">Colorado</option>
+    <option value="CT">Connecticut</option>
+    <option value="DE">Delaware</option>
+    <option value="DC">District Of Columbia</option>
+    <option value="FL">Florida</option>
+    <option value="GA">Georgia</option>
+    <option value="HI">Hawaii</option>
+    <option value="ID">Idaho</option>
+    <option value="IL">Illinois</option>
+    <option value="IN">Indiana</option>
+    <option value="IA">Iowa</option>
+    <option value="KS">Kansas</option>
+    <option value="KY">Kentucky</option>
+    <option value="LA">Louisiana</option>
+    <option value="ME">Maine</option>
+    <option value="MD">Maryland</option>
+    <option value="MA">Massachusetts</option>
+    <option value="MI">Michigan</option>
+    <option value="MN">Minnesota</option>
+    <option value="MS">Mississippi</option>
+    <option value="MO">Missouri</option>
+    <option value="MT">Montana</option>
+    <option value="NE">Nebraska</option>
+    <option value="NV">Nevada</option>
+    <option value="NH">New Hampshire</option>
+    <option value="NJ">New Jersey</option>
+    <option value="NM">New Mexico</option>
+    <option value="NY">New York</option>
+    <option value="NC">North Carolina</option>
+    <option value="ND">North Dakota</option>
+    <option value="OH">Ohio</option>
+    <option value="OK">Oklahoma</option>
+    <option value="OR">Oregon</option>
+    <option value="PA">Pennsylvania</option>
+    <option value="RI">Rhode Island</option>
+    <option value="SC">South Carolina</option>
+    <option value="SD">South Dakota</option>
+    <option value="TN">Tennessee</option>
+    <option value="TX">Texas</option>
+    <option value="UT">Utah</option>
+    <option value="VT">Vermont</option>
+    <option value="VA">Virginia</option>
+    <option value="WA">Washington</option>
+    <option value="WV">West Virginia</option>
+    <option value="WI">Wisconsin</option>
+    <option value="WY">Wyoming</option>
+  </select>
+</label>
+
+
+
+
+
+*/
+
+.select, .global.form select
+{
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 12"><path fill="#5e6c75" d="M0.722,4.823L-0.01,4.1,4.134-.01,4.866,0.716Zm7.555,0L9.01,4.1,4.866-.01l-0.732.726ZM0.722,7.177L-0.01,7.9,4.134,12.01l0.732-.726Zm7.555,0L9.01,7.9,4.866,12.01l-0.732-.726Z"/></svg>') no-repeat right 16px center;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 12"><path fill="#5e6c75" d="M0.722,4.823L-0.01,4.1,4.134-.01,4.866,0.716Zm7.555,0L9.01,4.1,4.866-.01l-0.732.726ZM0.722,7.177L-0.01,7.9,4.134,12.01l0.732-.726Zm7.555,0L9.01,7.9,4.866,12.01l-0.732-.726Z"/></svg>') no-repeat right 1rem center;
+}
+
+.horizontal, .vertical, .fieldset, .label
+{
+  display:   -webkit-box;
+  display:   -ms-flexbox;
+  display:   flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.vertical, .fieldset, .label
+{
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.fieldset
+{
+  border:  none;
+  margin:  0;
+  padding: 0;
+}
+
+/*doc
+
+## Label
+
+<div data-module="kit-example">
+  <label class="label">Default</label>
+  <label class="success label">Success</label>
+  <label class="warning label">Warning</label>
+  <label class="error label">Error</label>
+  <label class="focused label">Focus</label>
+  <label class="dark label">Dark</label>
+  <label class="light label">Light</label>
+</div>
+
+### Basic
+
+To reduce the visual complexity add the `basic` class to a label.
+
+<div data-module="kit-example">
+<label class="label">Default</label>
+<label class="basic success label">Success</label>
+<label class="basic warning label">Warning</label>
+<label class="basic error label">Error</label>
+<label class="basic focused label">Focus</label>
+<label class="basic dark label">Dark</label>
+<label class="basic light label">Light</label>
+</div>
+
+*/
+
+.label
+{
+  display:       -webkit-inline-box;
+  display:       -ms-inline-flexbox;
+  display:       inline-flex;
+  -ms-flex-wrap:     wrap;
+      flex-wrap:     wrap;
+  /* Sizing */
+  margin:        .5em 0;
+  border:        1px solid transparent;
+  border-radius: 4px;
+}
+
+.label > *
+{
+  -webkit-box-flex:  1;
+      -ms-flex:  1 1 auto;
+          flex:  1 1 auto;
+  min-width: 0;
+}
+
+.label > input
+{
+  -webkit-box-flex:      0;
+      -ms-flex:      0 1 auto;
+          flex:      0 1 auto;
+  min-width: 0;
+  width:     100%;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/* Pointing Label                                                                                                            */
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/*region*/
+
+/*doc
+
+## Pointing
+
+A label can point to the context next to it
+
+<div data-module="kit-example">
+  <section>
+    <label class="basic success pointing label">Please enter a value</label>
+    <label class="basic warning bottom pointing label">Please enter a value</label>
+    <label class="left pointing error label">Please enter a value</label>
+    <label class="dark right pointing label">Please enter a value</label>
+  </section>
+
+  <section>
+    <input id="pointing_label_username" placeholder="Username" class="input">
+    <label for="pointing_label_username" class="light left pointing smaller label">The name is already taken</label>
+  </section>
+
+  <fieldset class="fieldset narrow measure">
+    <label class="label">Password <input id="pointing_label_password" class="input" type="password" placeholder="Password"></label>
+    <label for="pointing_label_password" class="light top pointing smaller label">Your password must be 6 characters or more</label>
+  </fieldset>
+
+</div>
+
+*/
+
+/*endregion*/
+
+.pointing.label
+{
+  position: relative;
+  z-index:  50;
+}
+
+.basic.pointing.label
+{
+  background-color: inherit;
+}
+
+.pointing.label:before
+{
+  background-color: inherit;
+  border-color:     inherit;
+  border-style:     solid;
+  border-width:     1px 0 0 1px;
+  position:         absolute;
+  z-index:          40;
+  content:          '';
+  -webkit-transform:        translateX(-50%) translateY(-50%) rotate(45deg);
+          transform:        translateX(-50%) translateY(-50%) rotate(45deg);
+  width:            .6666em;
+  height:           .6666em;
+  background-image: none;
+  top:              0;
+  left:             50%;
+  margin-top:       -0.5px;
+}
+
+[class*="bottom pointing"].label:before
+{
+  border-width: 0 1px 1px 0;
+  top:          100%;
+  margin-top:   0.5px;
+}
+
+[class*="left pointing"].label
+{
+  margin-left: .5em;
+}
+
+[class*="left pointing"].label:before
+{
+  border-width: 0 0 1px 1px;
+  top:          50%;
+  left:         0;
+  margin-top:   0;
+  margin-left:  -0.5px;
+}
+
+[class*="right pointing"].label
+{
+  margin-right: .5em;
+}
+
+[class*="right pointing"].label:before
+{
+  -webkit-transform:    translateX(50%) translateY(-50%) rotate(45deg);
+          transform:    translateX(50%) translateY(-50%) rotate(45deg);
+  border-width: 1px 1px 0 0;
+  top:          50%;
+  right:        0;
+  left:         auto;
+  bottom:       auto;
+  margin-top:   0;
+  margin-right: -0.5px;
+}
+
+.primary, .success, .warning, .error, .focused, .dark, .light
+{ padding: .5em; }
+
+.primary, .success, .warning, .error, .focused, .dark
+{
+  color: white;
+}
+
+.primary
+{
+  background-color: #C65146;
+  border-color:     #C65146
+}
+
+.primary.basic
+{
+    background-color: transparent;
+    color:            #C65146;
+}
+
+.success
+{
+  background-color: #32d296;
+  border-color:     #32d296
+}
+
+.success.basic
+{
+    background-color: transparent;
+    color:            #32d296;
+}
+
+.warning
+{
+  background-color: #faa05a;
+  border-color:     #faa05a
+}
+
+.warning.basic
+{
+    background-color: transparent;
+    color:            #faa05a;
+}
+
+.error
+{
+  background-color: #f0506e;
+  border-color:     #f0506e
+}
+
+.error.basic
+{
+    background-color: transparent;
+    color:            #f0506e;
+}
+
+.dark
+{
+  background-color: #32373D;
+  border-color:     #32373D
+}
+
+.dark.basic
+{
+    background-color: transparent;
+    color:            #32373D;
+}
+
+.light
+{
+  background-color: #D4D4D4;
+  border-color:     #D4D4D4
+}
+
+.light.basic
+{
+    background-color: transparent;
+    color:            #777;
+    border-color:     #777;
+}
+
+.focused
+{
+  background-color: #1C86F2;
+  border-color:     #1C86F2
+}
+
+.focused.basic
+{
+    background-color: transparent;
+    color:            #1C86F2;
+}
+
+.global.form
+{
+}
+
+.global.typography
+{
+}

@@ -1,0 +1,63 @@
+@import 'variables.css';
+@import 'normalisation.form.css';
+
+/*doc
+
+# Normalisation
+
+All of the modules are build on top of the normalisation module. It's the foundation layer.
+
+The normalisation module applies some basic resets to ensure elements are rendered consistently across all browsers.
+
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Elements of HTML                                                                                                              */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+*, ::before, ::after
+{
+  /* remove repeating backgrounds */
+  background-repeat: no-repeat;
+  /* add box sizing inheritance */
+  box-sizing:        inherit;
+  background-color:  inherit;
+}
+
+
+::before, ::after
+{
+  text-decoration: inherit;
+  vertical-align:  inherit;
+}
+
+
+/*doc
+
+## Box Sizing
+
+To ensure `padding` does not affect the computed width of an element the `box-sizing` is switched from `content-box` to
+`border-box`. On rare occasion `box-sizing`can be overridden. All nested elements including `::before` and `::after`
+inherit the specified `box sizing`
+
+*/
+
+:root
+{
+  box-sizing:               border-box;
+  cursor:                   default;
+  /* prevent font size adjustments after orientation changes in IE and iOS */
+  -ms-text-size-adjust:     100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+/*endregion*/
+
+body
+{
+  font-family:      var(--font-family);
+  font-size:        var(--font-size);
+  background-color: var(--color-bg-body);
+}
