@@ -1,0 +1,35 @@
+/*doc
+
+# Getting Started
+
+## Project Structure
+
+After downloading and extracting the files into the directory where your project is located the directory will looks
+something like this:
+*/
+
+@import 'base/include.css';
+
+
+/* deprecated */
+
+@import 'sizing.css';
+@import 'spacing.css';
+@import 'visibility.css';
+@import 'coloring.css';
+@import 'heading.css';
+@import 'image.css';
+@import 'layout/include.css';
+@import 'flank.css';
+@import 'off_canvas.css';
+@import 'item.css';
+@import 'card.css';
+@import 'icon.css';
+@import 'button.css';
+@import 'form/include.css';
+@import 'dropdown.css';
+/*@import 'form.css';*/
+
+
+/* deprecated */
+@import 'utilities.css';

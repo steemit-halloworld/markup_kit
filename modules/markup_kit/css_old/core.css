@@ -1,0 +1,104 @@
+
+@import 'variables.css';
+
+
+
+body
+{
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+}
+
+
+
+/* margins */
+
+p,
+ul,
+dl,
+pre,
+address,
+fieldset,
+figure
+{
+  margin: 0 0 var(--margin-vertical) 0;
+  list-style-type: none;
+}
+
+* + p,
+* + ul,
+* + ol,
+* + dl,
+* + pre,
+* + address,
+* + fieldset,
+* + figure
+{ /* adjacent element margin */
+  margin-top: var(--margin-vertical);
+}
+
+/* headings */
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6
+{
+  margin: 0 0 var(--margin-vertical) 0;
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  color: var(--heading-foreground-color);
+  text-transform: var(--heading-text-transform);
+}
+
+* + h1, * + .h1,
+* + h2, * + .h2,
+* + h3, * + .h3,
+* + h4, * + .h4,
+* + h5, * + .h5,
+* + h6, * + .h6
+{ /* adjacent element margin */
+  margin-top: var(--heading-margin-top);
+}
+
+h1, .h1
+{
+  font-size: var(--heading-font-size-h1);
+  line-height: var(--heading-line-height-h1);
+}
+
+h2, .h2
+{
+  font-size: var(--heading-font-size-h2);
+  line-height: var(--heading-line-height-h2);
+}
+
+h3, .h3
+{
+  font-size: var(--heading-font-size-h3);
+  line-height: var(--heading-line-height-h3);
+}
+
+h4, .h4
+{
+  font-size: var(--heading-font-size-h4);
+  line-height: var(--heading-line-height-h4);
+}
+
+h5, .h5
+{
+  font-size: var(--heading-font-size-h5);
+  line-height: var(--heading-line-height-h5);
+}
+
+h6, .h6
+{
+  font-size: var(--heading-font-size-h6);
+  line-height: var(--heading-line-height-h6);
+}

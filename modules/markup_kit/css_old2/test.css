@@ -1,0 +1,14 @@
+:root
+{
+  --font-size: 12px;
+}
+
+
+.test
+{
+  & span
+  {
+    font-size: var(--font-size);
+  }
+}
+

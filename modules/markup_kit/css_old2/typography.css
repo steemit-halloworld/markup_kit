@@ -1,0 +1,100 @@
+@import 'globals.css';
+
+
+/*doc
+
+# Typography
+
+*/
+
+html, .kit.root
+{
+  font-size: var(--font-size);
+}
+
+
+body
+{
+  font-family:      var(--font-family);
+  font-size:        1em;
+  line-height:      var(--line-height);
+  color:            var(--color);
+  background-color: transparent;
+}
+
+
+/*doc
+
+## Headings
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+*/
+
+h1, h2, h3, h4, h5, h6
+{
+  text-rendering: optimizeLegibility;
+  margin:         var(--heading-margin);
+  font-family:    var(--heading-font-family);
+  text-transform: var(--heading-text-transform);
+  letter-spacing: var(--heading-letter-spacing);
+  font-weight:    var(--heading-font-weight);
+}
+
+
+h1
+{
+  font-size:   var(--heading-font-size-1);
+  line-height: var(--heading-line-height-1);
+}
+
+
+h2
+{
+  font-size:   var(--heading-font-size-2);
+  line-height: var(--heading-line-height-2);
+}
+
+
+h3
+{
+  font-size:   var(--heading-font-size-3);
+  line-height: var(--heading-line-height-3);
+}
+
+
+h4
+{
+  font-size:   var(--heading-font-size-4);
+  line-height: var(--heading-line-height-4);
+}
+
+
+h5
+{
+  font-size:   var(--heading-font-size-5);
+  line-height: var(--heading-line-height-5);
+}
+
+
+h6
+{
+  font-size:   var(--heading-font-size-6);
+  line-height: var(--heading-line-height-6);
+}
+
+
+p, ul, ol, dl, blockquote, hr, pre, table, form, figure,
+p + h2, ul + h2, ol + h2, dl + h2, blockquote + h2, hr + h2, pre + h2, table + h2, form + h2, figure + h2,
+p + h3, ul + h3, ol + h3, dl + h3, blockquote + h3, hr + h3, pre + h3, table + h3, form + h3, figure + h3,
+p + h4, ul + h4, ol + h4, dl + h4, blockquote + h4, hr + h4, pre + h4, table + h4, form + h4, figure + h4,
+p + h5, ul + h5, ol + h5, dl + h5, blockquote + h5, hr + h5, pre + h5, table + h5, form + h5, figure + h5,
+p + h6, ul + h6, ol + h6, dl + h6, blockquote + h6, hr + h6, pre + h6, table + h6, form + h6, figure + h6
+{
+  margin-top: var(--line-height);
+}

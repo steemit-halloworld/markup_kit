@@ -1,0 +1,39 @@
+@import 'globals.css';
+
+
+.kit.input-opt-in input, .kit.input-opt-in textarea,
+.kit.input
+{
+  /* spacing */
+  padding:             var(--input-padding);
+  margin:              var(--input-margin);
+  /* remove default styles */
+  appearance:          none;
+  outline:             0;
+  /* border */
+  border:              var(--input-border);
+  border-radius:       var(--input-border-radius);
+  /* fonts */
+  font-family:         inherit;
+  font-size:           var(--input-font-size);
+  height:              auto;
+  /** animation */
+  transition-property: color, background-color, border;
+  transition:          0.2s ease-in-out;
+  /** shadow **/
+  box-shadow:          var(--input-box-shadow);
+}
+
+
+.kit.input-opt-in input:focus, .kit.input-opt-in textarea:focus,
+.kit.input:focus
+{
+  outline:    0;
+  border:     var(--input-focus-border);
+  box-shadow: var(--input-focus-box-shadow);
+}
+
+
+
+
+

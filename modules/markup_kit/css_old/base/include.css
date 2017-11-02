@@ -1,0 +1,15 @@
+/* base.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Base
+
+All modules should be build on top of the base module. It's the foundational layer.
+
+The base module builds upon the latest Normalize.css and applies some basic resets to ensure elements are rendered
+consistently across all browsers. It includes baseline parameters which all other elements inherit.
+
+*/
+
+@import 'normalize.css';
+@import 'reset.css';
+@import 'body.css';

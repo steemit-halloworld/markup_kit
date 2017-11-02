@@ -1,0 +1,58 @@
+@import '../variables.css';
+
+/*doc
+
+## Box Sizing
+
+The `box-sizing` is globally set to `border-box` on every element including `*:before` and `*:after`. This ensures
+padding does not affect the final computed size of an element.
+
+*/
+
+html
+{ box-sizing: border-box;}
+
+*, *:before, *:after
+{ box-sizing: inherit; }
+
+html, body
+{
+  max-width:  100%;
+  min-height: 100%;
+}
+
+html
+{
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  
+}
+
+
+img
+{
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6,
+p,
+dl, dd, dt,
+ul, li,
+ol, li,
+blockquote,
+cite,
+.field, .fields > *,
+fieldset,
+label,
+input, textarea, select
+{
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:first-child {
+     margin-top: 0;
+  }
+}

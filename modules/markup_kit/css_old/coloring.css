@@ -1,0 +1,80 @@
+/* coloring.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Coloring Module
+
+The Coloring module define the background and foreground colors of elements.
+
+*/
+@import 'variables.css';
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Variables                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+:root
+{
+  --background_default_background: var(--global-background);
+  --background_muted_background: var(--global-muted-background);
+  --background_primary_background: var(--global-background-primary);
+  --background_secondary_background: var(--global-background-secondary);
+}
+
+/*endregion*/
+
+/*doc
+
+<div class="">
+
+</div>
+
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Primary                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+.bg
+{ background-color: var(--background_default_background) !important; }
+
+.muted
+{
+  background-color: var(--background_muted_background) !important;
+}
+
+.primary
+{
+  background-color: var(--background_primary_background) !important;
+  color: var(--global-inverse-color);
+}
+
+/*endregion*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Secondary                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+.secondary
+{ background-color: var(--background_secondary_background) !important; }
+
+/*endregion*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Basic                                                                                                          */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+.basic
+{
+  background-color: var(--global-background);
+}
+
+/*endregion*/
+
+
+
+
+

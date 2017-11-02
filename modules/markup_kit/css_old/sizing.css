@@ -1,0 +1,87 @@
+/* sizing.css | MIT License | https://github.com/tschroeter/markup_kit */
+/*doc
+
+# Sizing Module
+
+ Module to define the width or height of elements especially for different viewport sizes.
+*/
+@import 'base/include.css';
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Fixed Width Modifiers                                                                                              */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+.w_sm
+{
+  width: var(--global_sm_width);
+}
+
+.w_md
+{
+  width: var(--global_md_width);
+}
+
+.w_lg
+{
+  width: var(--global_lg_width);
+}
+
+.w_xl
+{
+  width: var(--global_xl_width);
+}
+
+/*endregion*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Width Modifiers                                                                                                    */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+[class*="4 column wide"]
+{
+  width: var(--global-4-wide) !important;
+}
+[class*="8 column wide"]
+{
+  width: var(--global-8-wide) !important;
+}
+
+[class*="12 column wide"]
+{
+  width: var(--global-12-wide) !important;
+}
+
+
+[class*="1-4 wide"]
+{
+  width: 25% !important;
+}
+
+[class*="1-2 wide"],
+[class*="half wide"]
+{
+  width: 50% !important;
+}
+
+[class*="3-4 wide"]
+{
+  width: 75% !important;
+}
+
+[class*="fully wide"]
+{
+  width: 100% !important;
+}
+
+/*endregion*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Height Modifiers                                                                                                   */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+
+
+/*endregion*/

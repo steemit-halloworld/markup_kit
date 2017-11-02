@@ -1,0 +1,44 @@
+/* heading.css | MIT License | github.com/tschroeter/markup_kit */
+/*doc
+
+# Heading
+
+*/
+
+:root
+{
+  --heading-divided-border: 1px solid var(--global-border-color);
+  --heading-diviced-border-padding: 3px;
+}
+
+h1.header
+{ font-size: var(--global-font-size-h1);}
+
+h2.header
+{ font-size: var(--global-font-size-h2);}
+
+h3.header
+{ font-size: var(--global-font-size-h3);}
+
+h4.header
+{ font-size: var(--global-font-size-h4);}
+
+h5.header
+{ font-size: var(--global-font-size-h5);}
+
+h4.sub.header
+{ font-size: var(--global-font-size-h4-sub);}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Dividing                                                                                                           */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+
+.dividing.headers-1 h1,
+.dividing.headers-2 h2
+{
+  padding-bottom: var(--heading-diviced-border-padding);
+  border-bottom: var(--heading-divided-border);
+}
+
+/*endregion*/
