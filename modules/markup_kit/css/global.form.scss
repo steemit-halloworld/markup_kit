@@ -1,0 +1,30 @@
+@import 'form.css';
+
+
+.global.form
+{
+  & input:not([type='submit'])
+  {
+    @extend .input;
+  }
+
+  & textarea
+  {
+    @extend .textarea;
+  }
+
+  & button
+  {
+    @extend .button;
+  }
+
+  & input[type='submit']
+  {
+    @extend .button;
+  }
+
+  & select
+  {
+    @extend .select;
+  }
+}

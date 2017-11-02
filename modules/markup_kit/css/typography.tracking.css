@@ -1,0 +1,26 @@
+/*doc
+
+## Tracking
+
+In typography letter-spacing is commonly known as tracking. Tracking is the consistent white-space between letters in
+a piece of text. For example text that is set to uppercase should be tracked to improve readability but lowercase text
+should never be tracked. For some larger text, depending on the typeface a negative tracking might be desirable.
+
+*/
+
+.tracked
+{
+  letter-spacing: .1em;
+}
+
+
+.tight.tracked
+{
+  letter-spacing: -.05em;
+}
+
+
+.wide.tracked
+{
+  letter-spacing: .25em;
+}

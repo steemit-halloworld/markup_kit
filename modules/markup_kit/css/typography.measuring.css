@@ -1,0 +1,38 @@
+/*doc
+
+## Measure
+
+Measure refers to the length of a line of text.
+
+<quote>
+"Anything from 45 to 75 characters is widely regarded as a satisfactory length of line for a single-column page...the
+66-character line (counting both letters and spaces) is widely regarded as ideal. For multiple-column work, a better
+average is 40-50 characters."
+
+  <span>Robert Bringhurst - <i>The Elements of Typographic Style</i></span>
+</quote>
+
+The following classes are used for setting measure:
+
+| Class            | Description                                                          |
+| ---------------- | -------------------------------------------------------------------- |
+| 'measure'        | line lengths ~66 characters                                          |
+| 'narrow measure' | line lengths ~45 characters                                          |
+| 'measure wide'   | line lengths ~80 characters                                          |
+
+*/
+
+.measure
+{
+  width: 30em;
+}
+
+.wide.measure
+{
+  width: 34em;
+}
+
+.narrow.measure
+{
+  width: 20em;
+}

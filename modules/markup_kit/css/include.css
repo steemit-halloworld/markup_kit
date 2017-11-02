@@ -1,27 +1,35 @@
-@import 'normalisation.css';
-/* deprecated */
-@import 'core.css';
-@import 'float.css';
-@import 'flex.css';
-@import 'positioning.css';
-@import 'sizing.css';
-@import 'spacing.css';
-@import 'visibility.css';
-@import 'coloring.css';
-@import 'heading.css';
-@import 'image.css';
-@import 'page.css';
-@import 'grid.css';
-@import 'list.css';
-@import 'off_canvas.css';
-@import 'segment.css';
-@import 'card.css';
-@import 'nav.css';
-@import 'navbar.css';
-@import 'icon.css';
-@import 'button.css';
-@import 'form.css';
-@import 'dropdown.css';
 
-/* deprecated */
-@import 'utilities.css';
+/*doc
+
+# Getting Started
+
+markup-kit.css is a modern, lightweight and responsive CSS framework for faster developing web interfaces.
+
+## Installation
+
+TODO
+
+## Browser Support
+
+markup-kit.css uses [Autoprefixer](https://github.com/postcss/autoprefixer) to make most styles compatible with
+earlier browsers. markup-kit.css is designed for modern browsers. The following browsers are recommended:
+
+* Chrome 35+
+* Firefox 31+
+* Safari 7+
+* IE 10+
+* Edge
+* Opera
+
+## Applying Styles
+
+The framework won't do anything automatically except the Normalisation Module. The following HTML code won't change
+anything by simply adding
+
+*/
+
+@import 'normalization.css';
+@import 'typography.css';
+@import 'form.css';
+@import 'coloring.css';
+@import 'global.scss';

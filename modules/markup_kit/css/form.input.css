@@ -1,0 +1,56 @@
+@import 'variables.css';
+
+
+/*doc
+
+## Inputs
+
+All `<input>` fields must have one of the following type attributes:
+`text`, `date`, `datetime`, `datetime-local`, `email`, `month`, `number`, `password`, `search`, `tel`, `time`, `url`
+or `week`.
+
+<div data-module="kit-example">
+  <input class="input" type="text" placeholder="Search...">
+  <input class="input" disabled="true" type="text" value="Disabled">
+</div>
+
+*/
+
+.input, .textarea, .select
+{
+  appearance:          none;
+
+  /* Sizing */
+  padding:             var(--spacing-small);
+  width:               22ch;
+
+  /* Positioning */
+
+  /* Theme */
+  border:              var(--border-width) var(--border-color) var(--border-style);
+  border-radius:       var(--border-radius);
+
+  /* Animation */
+  transition-property: color, background-color, border;
+  transition:          0.2s ease-in-out;
+
+  &:focus
+  {
+    outline:      0;
+    border-color: var(--color-focus);
+    box-shadow:   0 0 1px var(--color-focus) inset;
+  }
+
+  &:disabled,
+  &.disabled
+  {
+    resize:           none;
+    cursor:           not-allowed;
+    pointer-events:   none;
+    border-color:     #999;
+    font-style:       italic;
+    color:            #999;
+    background-color: #999;
+    opacity:          0.6;
+  }
+}

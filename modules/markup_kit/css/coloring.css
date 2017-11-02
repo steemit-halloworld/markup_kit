@@ -1,80 +1,100 @@
-/* coloring.css | MIT License | github.com/tschroeter/markup_kit */
-/*doc
+.primary, .success, .warning, .error, .focused, .dark, .light
+{ padding: var(--spacing-small); }
 
-# Coloring Module
 
-The Coloring module define the background and foreground colors of elements.
-
-*/
-@import 'variables.css';
-
-/*--------------------------------------------------------------------------------------------------------------------*/
-/* Variables                                                                                                          */
-/*--------------------------------------------------------------------------------------------------------------------*/
-/*region*/
-
-:root
+.primary, .success, .warning, .error, .focused, .dark
 {
-  --background_default_background: var(--global-background);
-  --background_muted_background: var(--global-muted-background);
-  --background_primary_background: var(--global-background-primary);
-  --background_secondary_background: var(--global-background-secondary);
+  color: var(--color-text-inverted);
 }
 
-/*endregion*/
-
-/*doc
-
-<div class="">
-
-</div>
-
-*/
-
-/*--------------------------------------------------------------------------------------------------------------------*/
-/* Primary                                                                                                          */
-/*--------------------------------------------------------------------------------------------------------------------*/
-/*region*/
-
-.bg
-{ background-color: var(--background_default_background) !important; }
-
-.muted
-{
-  background-color: var(--background_muted_background) !important;
-}
 
 .primary
 {
-  background-color: var(--background_primary_background) !important;
-  color: var(--global-inverse-color);
+  background-color: var(--color-primary);
+  border-color:     var(--color-primary);
+
+  &.basic
+  {
+    background-color: transparent;
+    color:            var(--color-primary);
+  }
 }
 
-/*endregion*/
 
-/*--------------------------------------------------------------------------------------------------------------------*/
-/* Secondary                                                                                                          */
-/*--------------------------------------------------------------------------------------------------------------------*/
-/*region*/
-
-.secondary
-{ background-color: var(--background_secondary_background) !important; }
-
-/*endregion*/
-
-/*--------------------------------------------------------------------------------------------------------------------*/
-/* Basic                                                                                                          */
-/*--------------------------------------------------------------------------------------------------------------------*/
-/*region*/
-
-.basic
+.success
 {
-  background-color: var(--global-background);
+  background-color: var(--color-state-success);
+  border-color:     var(--color-state-success);
+
+  &.basic
+  {
+    background-color: transparent;
+    color:            var(--color-state-success);
+  }
 }
 
-/*endregion*/
+
+.warning
+{
+  background-color: var(--color-state-warning);
+  border-color:     var(--color-state-warning);
+
+  &.basic
+  {
+    background-color: transparent;
+    color:            var(--color-state-warning);
+  }
+}
 
 
+.error
+{
+  background-color: var(--color-state-error);
+  border-color:     var(--color-state-error);
+
+  &.basic
+  {
+    background-color: transparent;
+    color:            var(--color-state-error);
+  }
+}
 
 
+.dark
+{
+  background-color: var(--color-bg-dark);
+  border-color:     var(--color-bg-dark);
 
+  &.basic
+  {
+    background-color: transparent;
+    color:            var(--color-bg-dark);
+  }
+}
+
+
+.light
+{
+  background-color: var(--color-bg-light);
+  border-color:     var(--color-bg-light);
+
+  &.basic
+  {
+    background-color: transparent;
+    color:            var(--color-text-secondary);
+    border-color:     var(--color-text-secondary);
+  }
+}
+
+
+.focused
+{
+  background-color: var(--color-focus);
+  border-color:     var(--color-focus);
+
+  &.basic
+  {
+    background-color: transparent;
+    color:            var(--color-focus);
+  }
+}

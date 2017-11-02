@@ -1,0 +1,31 @@
+/*doc
+
+# Typography
+
+Typography is one of the most important and most visible things on a web page. Even slightly imperfection ruin otherwise
+a perfect visual design.
+
+*/
+
+@import 'variables.css';
+@import 'typography.scaling.css';
+@import 'typography.measuring.css';
+@import 'typography.tracking.css';
+@import 'typography.heading.css';
+@import 'typography.paragraph.css';
+
+
+.small
+{
+  font-size:   var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.smaller
+{
+  font-size:   var(--font-size-smaller);
+  line-height: var(--line-height-smaller);
+}
+
+
+

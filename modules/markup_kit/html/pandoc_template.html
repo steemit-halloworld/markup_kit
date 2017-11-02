@@ -1,55 +1,72 @@
 <!DOCTYPE html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta name="generator" content="pandoc" />
-  $for(author-meta)$
-  <meta name="author" content="$author-meta$" />
-  $endfor$
-  $if(date-meta)$
-  <meta name="date" content="$date-meta$" />
-  $endif$
-  <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
-  <style type="text/css">code{white-space: pre;}</style>
-  $if(quotes)$
-  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
-  $endif$
-  $if(highlighting-css)$
-  <style type="text/css">
-    $highlighting-css$
-  </style>
-  $endif$
-  $for(css)$
-  <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>
-  $endfor$
-  $if(math)$
-  $math$
-  $endif$
-  $for(header-includes)$
-  $header-includes$
-  $endfor$
-</head>
-<body>
-<div class="page">
+<meta charset="utf-8">
+<title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+<style type="text/css">code{white-space: pre;}</style>
+$if(quotes)$
+<style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+$endif$
+$if(highlighting-css)$
+<style type="text/css">
+  $highlighting-css$
+</style>
+$endif$
+$for(css)$
+<link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+$endfor$
+$if(math)$
+$math$
+$endif$
+$for(header-includes)$
+$header-includes$
+$endfor$
 
-
-  <nav>
+<main class="global typography | blank item | dividing headers-1" style="margin-left: 300px; position: relative;">
+  <nav class="left dividing flank | blank grouped items">
     $if(toc)$
     $toc$
     $endif$
   </nav>
 
-  <main>
-    $for(include-before)$
-    $include-before$
-    $endfor$
-    $body$
-    $for(include-after)$
-    $include-after$
-    $endfor$
-  </main>
+  $for(include-before)$
+  $include-before$
+  $endfor$
+  $body$
+  $for(include-after)$
+  $include-after$
+  $endfor$
+</main>
+<script type="application/javascript">
+  var module_elements = document.querySelectorAll("[data-module]");
 
+  for (var i = 0, len = module_elements.length; i < len; i++)
+  {
+    var module_element = module_elements[i];
+    if(module_element.getAttribute("data-module") === 'kit-example')
+    {
+      module_element.className += " item";
 
-</div>
-</body>
-</html>
+      var inner_html = module_element.innerHTML;
+      var code = document.createElement("code");
+
+      inner_html = inner_html.replace("<p>", "").replace("</p>", "");
+
+      module_element.appendChild(code);
+      code.textContent = inner_html;
+      code.className += "prettyprint html";
+
+      PR.prettyPrint();
+    }
+  }
+</script>
+<style>
+  .prettyprint
+  {
+    overflow-x: auto;
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+
+</style>
+

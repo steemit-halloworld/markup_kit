@@ -1,0 +1,16 @@
+.horizontal,
+.vertical,
+.fieldset,
+.label
+{
+  display:   flex;
+  flex-wrap: wrap;
+}
+
+
+.vertical,
+.fieldset,
+.label
+{
+  flex-direction: column;
+}

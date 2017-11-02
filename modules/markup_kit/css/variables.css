@@ -1,94 +1,109 @@
+/* globals.css | MIT License | github.com/tschroeter/markup_kit */
+
 :root
 {
-  --global_box_sizing: border-box;
 
-  /* Foreground Colors */
-  --global-foreground-color: #666;
-  --global-emphasis-color: #333;
-  --global-muted-color: #999;
-  --global-inverse-color: #FFF;
-  --global-link-color: #1E87F0;
-  --global-link-hover-color: #0F6ECD;
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Family                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  --font-family:            var(--font-family-sans-serif);
+  --font-family-system:     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-sans-serif: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  --font-family-serif:      Georgia, "Times New Roman", Times, serif;
+  --font-family-monospace:  Consolas, Monaco, 'Courier New', monospace;
+  /*endregion*/
 
-  /* Background Colors */
-  --global-background: #FFF;
-  --global-muted-background: #E0E1E2;
-  --global-background-primary: #1E87F0;
-  --global-background-secondary: #222;
-  --global-success-background: #32D296;
-  --global-warning-background: #FAA05A;
-  --global-danger-background: #F0506E;
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Size                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  --font-size-scale-factor: 1.1618;
+  --font-size:              16px;
+  --font-size-smaller:      calc(var(--font-size) - 4px);
+  --font-size-small:        calc(var(--font-size) - 2px);
+  --font-size-big:          calc(var(--font-size) + 2px);
+  --font-size-larger:       calc(var(--font-size) + 4px);
+  /*endregion*/
 
-  /* Typography */
-  --global-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --global-font-size: 16px;
-  --global-line-height: 1.5;
-  --global-font-size-h1: 2em;
-  --global-font-size-h2: 1.7142857143em;
-  --global-font-size-h3: 1.2857142857em;
-  --global-font-size-h4: 1.0714285714em;
-  --global-font-size-h5: 1em;
-  --global-font-size-h4-sub: 1em;
-  --global-small-font-size: 0.875rem;
-  --global-medium-font-size: 1.25rem;
-  --global-large-font-size: 1.5rem;
-  --global-xlarge-font-size: 2rem;
-  --global-xxlarge-font-size: 2.625rem;
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Weight                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  --font-weight:            normal;
+  --font-weight-thin:       200;
+  --font-weight-light:      300;
+  --font-weight-regular:    400;
+  --font-weight-medium:     500;
+  --font-weight-semibold:   600;
+  --font-weight-bold:       700;
+  --font-weight-black:      800;
 
-  /* Borders */
-  --global-border-width: 1px;
-  --global-border-color: #D4D4D5;
-  --global-border-radius: 0.25rem;
-  --global-circular-radius: 500em;
+  /*endregion*/
 
-  /* Spacings */
-  --global-gutter: 30px;
-  --global-gutter-small: 15px;
-  --global-gutter-medium: 40px;
-  --global-gutter-large: 70px;
-  --global-margin: 20px;
-  --global-margin-small: 10px;
-  --global-margin-medium: 40px;
-  --global-margin-large: 70px;
-  --global-margin-xlarge: 140px;
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Line Height                                                                                                      */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  --line-height:            1.5;
+  --line-height-smaller:    calc(var(--line-height) - 4px);
+  --line-height-small:      calc(var(--line-height) - 2px);
+  --line-height-big:        calc(var(--line-height) + 2px);
+  --line-height-larger:     calc(var(--line-height) + 4px);
+  /*endregion*/
 
-  /* Controls */
-  --global-control-height: 40px;
-  --global-control-height-small: 30px;
-  --global-control-height-large: 55px;
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Spacing                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  --spacing-small:          .5em;
+  --letter-spacing:         0;
+  /*endregion*/
 
-  /* Z-Index */
-  --global-layer: 100;
-  --global-component-layer: var(--global-layer);
-  --global-component-background-layer: 50;
-  --global-component-foreground-layer: 200;
-  --global-fixed-layer: 1000;
-  --global-sticky-layer: 1000;
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Border                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  --border-width:           1px;
+  --border-style:           solid;
+  --border-color:           var(--color-lightgray);
+  --border-radius:          4px;
+  /*endregion*/
 
-  /* Box Shadows */
-  --global_subtle_shadow: 0px 1px 2px 0 var(--global-border-color);
-  --global_box_shadow_small: 0 2px 8px rgba(0, 0, 0, 0.08);
-  --global_box_shadow_medium: 0 5px 15px rgba(0, 0, 0, 0.08);
-  --global_box_shadow_large: 0 14px 25px rgba(0, 0, 0, 0.16);
-  --global_box_shadow_xlarge: 0 28px 50px rgba(0, 0, 0, 0.16);
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  --color:                  var(--color-darkgray);
+  --color-focus:            #1C86F2;
 
-  /* Border Radius */
-  --global_border_radius: .25rem;
-  --global_sm_width: 640px;
-  --global_md_width: 960px;
-  --global_lg_width: 1200px;
-  --global_xl_width: 1600px;
+  /* base colors */
+  --color-primary:          #C65146;
+  --color-secondary:        #EBE1D3;
+
+  /* text colors */
+  --color-text-primary:     #444;
+  --color-text-secondary:   #777;
+  --color-text-inverted:    white;
+
+  /* state colors */
+  --color-state-success:    #32d296;
+  --color-state-warning:    #faa05a;
+  --color-state-error:      #f0506e;
+  --color-state-muted:      #EEE;
+
+  /* background */
+  --color-bg-dark:          #32373D;
+  --color-bg-light:         var(--color-lightgray);
+  --color-bg-body:          white;
+
+  /** Grayscale **/
+  --color-black:            #0D0D0E;
+  --color-darkgray:         #313439;
+  --color-midgray:          #676B72;
+  --color-gray:             #BDBDBD;
+  --color-lightgray:        #D4D4D4;
+  --color-silver:           #E0E1E1;
+  --color-aluminium:        #F8F8F8;
+  /*endregion*/
 }
-
-@custom-media --small-up (width > 640px);
-@custom-media --medium-up (width > 960px);
-@custom-media --large-up (width > 1200px);
-@custom-media --xxl-up (width > 1600px);
-
-@custom-media --small-down (width <= 640px);
-@custom-media --medium-down (width <= 960px);
-
-
-
-
-

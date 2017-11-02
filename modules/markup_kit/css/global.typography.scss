@@ -1,0 +1,23 @@
+@import 'typography.css';
+
+
+.global.typography
+{
+  & h1
+  { @extend .type-scale-1; }
+
+  & h2
+  { @extend .type-scale-2; }
+
+  & h3
+  { @extend .type-scale-3; }
+
+  & h4
+  { @extend .type-scale-4; }
+
+  & h5
+  { @extend .type-scale-5; }
+
+  & h6
+  { @extend .type-scale-6; }
+}
