@@ -1,100 +1,98 @@
 .primary, .success, .warning, .error, .focused, .dark, .light
 { padding: var(--spacing-small); }
 
-
 .primary, .success, .warning, .error, .focused, .dark
 {
-  color: var(--color-text-inverted);
+  color: var(--color-text-inverted) !important;
 }
 
+[class*='body background']
+{background-color: var(--color-bg-body);}
 
-.primary
+.white
+{background-color: white;}
+
+.primary, [class*='primary background']
 {
-  background-color: var(--color-primary);
-  border-color:     var(--color-primary);
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
 
   &.basic
   {
     background-color: transparent;
-    color:            var(--color-primary);
+    color: var(--color-primary);
   }
 }
-
 
 .success
 {
   background-color: var(--color-state-success);
-  border-color:     var(--color-state-success);
+  border-color: var(--color-state-success);
 
   &.basic
   {
     background-color: transparent;
-    color:            var(--color-state-success);
+    color: var(--color-state-success);
   }
 }
-
 
 .warning
 {
   background-color: var(--color-state-warning);
-  border-color:     var(--color-state-warning);
+  border-color: var(--color-state-warning);
 
   &.basic
   {
     background-color: transparent;
-    color:            var(--color-state-warning);
+    color: var(--color-state-warning);
   }
 }
-
 
 .error
 {
   background-color: var(--color-state-error);
-  border-color:     var(--color-state-error);
+  border-color: var(--color-state-error);
 
   &.basic
   {
     background-color: transparent;
-    color:            var(--color-state-error);
+    color: var(--color-state-error);
   }
 }
-
 
 .dark
 {
   background-color: var(--color-bg-dark);
-  border-color:     var(--color-bg-dark);
+  border-color: var(--color-bg-dark);
 
   &.basic
   {
     background-color: transparent;
-    color:            var(--color-bg-dark);
+    color: var(--color-bg-dark);
   }
 }
-
 
 .light
 {
   background-color: var(--color-bg-light);
-  border-color:     var(--color-bg-light);
+  border-color: var(--color-bg-light);
 
   &.basic
   {
     background-color: transparent;
-    color:            var(--color-text-secondary);
-    border-color:     var(--color-text-secondary);
+    color: var(--color-text-secondary);
+    border-color: var(--color-text-secondary);
   }
 }
-
 
 .focused
 {
   background-color: var(--color-focus);
-  border-color:     var(--color-focus);
+  border-color: var(--color-focus);
 
   &.basic
   {
     background-color: transparent;
-    color:            var(--color-focus);
+    color: var(--color-focus);
   }
 }

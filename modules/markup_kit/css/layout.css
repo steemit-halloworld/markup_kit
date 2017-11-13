@@ -1,16 +1,24 @@
-.horizontal,
-.vertical,
-.fieldset,
-.label
+@import 'layout.grid.css';
+@import 'layout.spacing.css';
+
+.fieldset:not(.inline)
 {
-  display:   flex;
-  flex-wrap: wrap;
+  @extend .grid;
 }
 
-
-.vertical,
-.fieldset,
-.label
+.row
 {
+  @extend .grid;
+  flex-wrap: nowrap;
+}
+
+.column
+{
+  @extend .grid;
   flex-direction: column;
+}
+
+.column > *
+{
+  flex-basis: auto;
 }

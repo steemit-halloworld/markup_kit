@@ -1,0 +1,4 @@
+@import 'core.settings.css';
+
+.body
+{ line-height: var(--line-height);}

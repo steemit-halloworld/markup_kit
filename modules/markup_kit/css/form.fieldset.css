@@ -1,8 +1,8 @@
-@import 'layout.css';
+@import 'layout.grid.css';
 
 .fieldset
 {
-  border:  none;
-  margin:  0;
+  border: none;
   padding: 0;
+  margin: 0;
 }

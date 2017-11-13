@@ -28,8 +28,11 @@ anything by simply adding
 
 */
 
+@import 'global.scss';
 @import 'normalization.css';
 @import 'typography.css';
 @import 'form.css';
-@import 'coloring.css';
-@import 'global.scss';
+@import 'table.css';
+@import 'layout.css';
+@import 'theming.css';
+@import 'section.css';

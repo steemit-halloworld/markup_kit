@@ -27,35 +27,59 @@ To reduce the visual complexity add the `basic` class to a label.
 </div>
 
 */
-@import 'variables.css';
-@import 'layout.css';
-
+@import 'core.settings.css';
+@import 'layout.grid.css';
 
 .label
 {
-  display:       inline-flex;
-  flex-wrap:     wrap;
   /* Sizing */
-  margin:        var(--spacing-small) 0;
-  border:        var(--border-width) var(--border-style) transparent;
+  /*margin: calc(var(--spacing-medium) / 2) 0;*/
+  /* Positioning */
+  display: inline-block;
+  border: var(--border-width) var(--border-style) transparent;
   border-radius: var(--border-radius);
+
+
 }
 
-
-.label > *
+.label:not(.inline)
 {
-  flex:  1 1 auto;
-  min-width: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
+.label:not(.inline) > *
+{
+  /*flex:  1 1 auto;*/
+  display: block;
+  width: 100%;
+  min-width: 1ch;
+}
+
+.label:not(.inline) > .input,
+.label:not(.inline) > .textarea,
+.label:not(.inline) > .select
+{
+  display: flex !important;
+}
+
+.label:not(.inline) > select
+{
+  min-width: 8ch;
+}
+
+/*.label:not(.inline) > select
+{
+  width: initial;
+  min-width: 100%;
+}*/
 
 .label > input
 {
-  flex:      0 1 auto;
+  /*flex:      0 1 auto;
   min-width: 0;
-  width:     100%;
+  width:     100%;*/
 }
-
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* Pointing Label                                                                                                            */
@@ -95,74 +119,67 @@ A label can point to the context next to it
 .pointing.label
 {
   position: relative;
-  z-index:  50;
+  z-index: 50;
 }
-
 
 .basic.pointing.label
 {
   background-color: inherit;
 }
 
-
 .pointing.label:before
 {
   background-color: inherit;
-  border-color:     inherit;
-  border-style:     var(--border-style);
-  border-width:     var(--border-width) 0 0 var(--border-width);
-  position:         absolute;
-  z-index:          40;
-  content:          '';
-  transform:        translateX(-50%) translateY(-50%) rotate(45deg);
-  width:            .6666em;
-  height:           .6666em;
+  border-color: inherit;
+  border-style: var(--border-style);
+  border-width: var(--border-width) 0 0 var(--border-width);
+  position: absolute;
+  z-index: 40;
+  content: '';
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  width: .6666em;
+  height: .6666em;
   background-image: none;
-  top:              0;
-  left:             50%;
-  margin-top:       calc(-1 * var(--border-width) / 2);
+  top: 0;
+  left: 50%;
+  margin-top: calc(-1 * var(--border-width) / 2);
 }
-
 
 [class*="bottom pointing"].label:before
 {
   border-width: 0 var(--border-width) var(--border-width) 0;
-  top:          100%;
-  margin-top:   calc(var(--border-width) / 2);
+  top: 100%;
+  margin-top: calc(var(--border-width) / 2);
 }
-
 
 [class*="left pointing"].label
 {
   margin-left: .5em;
 }
 
-
 [class*="left pointing"].label:before
 {
   border-width: 0 0 var(--border-width) var(--border-width);
-  top:          50%;
-  left:         0;
-  margin-top:   0;
-  margin-left:  calc(-1 * var(--border-width) / 2);
+  top: 50%;
+  left: 0;
+  margin-top: 0;
+  margin-left: calc(-1 * var(--border-width) / 2);
 }
-
 
 [class*="right pointing"].label
 {
   margin-right: .5em;
 }
 
-
 [class*="right pointing"].label:before
 {
-  transform:    translateX(50%) translateY(-50%) rotate(45deg);
+  transform: translateX(50%) translateY(-50%) rotate(45deg);
   border-width: var(--border-width) var(--border-width) 0 0;
-  top:          50%;
-  right:        0;
-  left:         auto;
-  bottom:       auto;
-  margin-top:   0;
+  top: 50%;
+  right: 0;
+  left: auto;
+  bottom: auto;
+  margin-top: 0;
   margin-right: calc(-1 * var(--border-width) / 2);
 }
 

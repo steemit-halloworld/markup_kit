@@ -1,0 +1,30 @@
+@import 'layout.width.css';
+@import 'layout.grid.spacing.css';
+
+.grid
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.grid:not(.body)
+{
+}
+
+.grid > *
+{
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  transition: flex 250ms linear;
+}
+
+.grid > *
+{ display: inline-block; }
+
+.grid > .grid
+{ display: flex; }
+
+
+

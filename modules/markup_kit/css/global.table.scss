@@ -1,0 +1,19 @@
+.global-table
+{
+  & table
+  {
+    @extend .table;
+  }
+
+  & th
+  {
+    @extend .th;
+  }
+
+
+
+  & td
+  {
+    @extend .td;
+  }
+}

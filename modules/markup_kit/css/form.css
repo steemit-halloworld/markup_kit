@@ -7,7 +7,7 @@ across browsers and devices.
 
 */
 
+@import 'form.label.css';
 @import 'form.input.css';
 @import 'form.select.css';
 @import 'form.fieldset.css';
-@import 'form.label.css';

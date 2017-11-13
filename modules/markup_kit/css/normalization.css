@@ -1,5 +1,6 @@
-@import 'variables.css';
+@import 'core.settings.css';
 @import 'normalisation.form.css';
+@import 'normalisation.spacing.css';
 
 /*doc
 
@@ -21,17 +22,14 @@ The normalisation module applies some basic resets to ensure elements are render
   /* remove repeating backgrounds */
   background-repeat: no-repeat;
   /* add box sizing inheritance */
-  box-sizing:        inherit;
-  background-color:  inherit;
+  box-sizing: inherit;
 }
-
 
 ::before, ::after
 {
   text-decoration: inherit;
-  vertical-align:  inherit;
+  vertical-align: inherit;
 }
-
 
 /*doc
 
@@ -45,19 +43,16 @@ inherit the specified `box sizing`
 
 :root
 {
-  box-sizing:               border-box;
-  cursor:                   default;
+  box-sizing: border-box;
+  cursor: default;
   /* prevent font size adjustments after orientation changes in IE and iOS */
-  -ms-text-size-adjust:     100%;
+  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-
 
 /*endregion*/
 
 body
 {
-  font-family:      var(--font-family);
-  font-size:        var(--font-size);
   background-color: var(--color-bg-body);
 }

@@ -1,14 +1,3 @@
-.input:disabled, .input.disabled, .textarea:disabled, .textarea.disabled, .select:disabled, .select.disabled, .global.form select:disabled, .global.form select.disabled, .global.form textarea:disabled, .global.form textarea.disabled, .global.form input:not([type='submit']):disabled, .global.form input:not([type='submit']).disabled
-{
-    resize:           none;
-    cursor:           not-allowed;
-    pointer-events:   none;
-    border-color:     #999;
-    font-style:       italic;
-    color:            #999;
-    background-color: #999;
-    opacity:          0.6;
-}
 /*doc
 
 # Getting Started
@@ -16,6 +5,8 @@
 markup-kit.css is a modern, lightweight and responsive CSS framework for faster developing web interfaces.
 
 ## Installation
+
+TODO
 
 ## Browser Support
 
@@ -29,78 +20,420 @@ earlier browsers. markup-kit.css is designed for modern browsers. The following 
 * Edge
 * Opera
 
+## Applying Styles
+
+The framework won't do anything automatically except the Normalisation Module. The following HTML code won't change
+anything by simply adding
+
 */
-
 /* globals.css | MIT License | github.com/tschroeter/markup_kit */
-
-:root
-{
-
+:root {
   /*------------------------------------------------------------------------------------------------------------------*/
   /* Font Family                                                                                                         */
   /*------------------------------------------------------------------------------------------------------------------*/
   /*region*/
   /*endregion*/
-
   /*------------------------------------------------------------------------------------------------------------------*/
   /* Font Size                                                                                                         */
   /*------------------------------------------------------------------------------------------------------------------*/
   /*region*/
   /*endregion*/
-
   /*------------------------------------------------------------------------------------------------------------------*/
   /* Font Weight                                                                                                         */
   /*------------------------------------------------------------------------------------------------------------------*/
   /*region*/
-
   /*endregion*/
-
   /*------------------------------------------------------------------------------------------------------------------*/
   /* Line Height                                                                                                      */
   /*------------------------------------------------------------------------------------------------------------------*/
   /*region*/
   /*endregion*/
-
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Golden Ratio                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
   /*------------------------------------------------------------------------------------------------------------------*/
   /* Spacing                                                                                                          */
   /*------------------------------------------------------------------------------------------------------------------*/
   /*region*/
   /*endregion*/
-
   /*------------------------------------------------------------------------------------------------------------------*/
   /* Border                                                                                                           */
   /*------------------------------------------------------------------------------------------------------------------*/
   /*region*/
   /*endregion*/
-
   /*------------------------------------------------------------------------------------------------------------------*/
   /* Colors                                                                                                           */
   /*------------------------------------------------------------------------------------------------------------------*/
   /*region*/
-
-  /* base colors */
-
-  /* text colors */
-
-  /* state colors */
-
-  /* background */
-
-  /** Grayscale **/
   /*endregion*/
-}
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /* base colors */
+  /*--color-focus: #1C86F2;*/
+  /* text colors */
+  /* state colors */
+  /* background */
+  /** Grayscale **/
+  /*endregion*/ }
 
-button, input, select, textarea
-{
-  color:       inherit;
-  font-size:   inherit;
-  line-height: inherit;
-}
+button, input, select, textarea {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit; }
 
-button, input, optgroup, select, textarea
-{
-  margin: 0;
-}
+button, input, optgroup, select, textarea {
+  margin: 0; }
+
+.block, address, aside, article,
+footer,
+div, dl,
+main,
+nav,
+ol,
+p,
+section,
+ul {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.block + .block, address + .block, aside + .block, article + .block,
+footer + .block,
+div + .block, dl + .block,
+main + .block,
+nav + .block,
+ol + .block,
+p + .block,
+section + .block,
+ul + .block, .block + address, address + address, aside + address, article + address,
+footer + address,
+div + address, dl + address,
+main + address,
+nav + address,
+ol + address,
+p + address,
+section + address,
+ul + address, .block + aside, address + aside, aside + aside, article + aside,
+footer + aside,
+div + aside, dl + aside,
+main + aside,
+nav + aside,
+ol + aside,
+p + aside,
+section + aside,
+ul + aside, .block + article, address + article, aside + article, article + article,
+footer + article,
+div + article, dl + article,
+main + article,
+nav + article,
+ol + article,
+p + article,
+section + article,
+ul + article, .block +
+footer, address +
+footer, aside +
+footer, article +
+footer,
+footer +
+footer,
+div +
+footer, dl +
+footer,
+main +
+footer,
+nav +
+footer,
+ol +
+footer,
+p +
+footer,
+section +
+footer,
+ul +
+footer, .block +
+div, address +
+div, aside +
+div, article +
+div,
+footer +
+div,
+div +
+div, dl +
+div,
+main +
+div,
+nav +
+div,
+ol +
+div,
+p +
+div,
+section +
+div,
+ul +
+div, .block + dl, address + dl, aside + dl, article + dl,
+footer + dl,
+div + dl, dl + dl,
+main + dl,
+nav + dl,
+ol + dl,
+p + dl,
+section + dl,
+ul + dl, .block +
+main, address +
+main, aside +
+main, article +
+main,
+footer +
+main,
+div +
+main, dl +
+main,
+main +
+main,
+nav +
+main,
+ol +
+main,
+p +
+main,
+section +
+main,
+ul +
+main, .block +
+nav, address +
+nav, aside +
+nav, article +
+nav,
+footer +
+nav,
+div +
+nav, dl +
+nav,
+main +
+nav,
+nav +
+nav,
+ol +
+nav,
+p +
+nav,
+section +
+nav,
+ul +
+nav, .block +
+ol, address +
+ol, aside +
+ol, article +
+ol,
+footer +
+ol,
+div +
+ol, dl +
+ol,
+main +
+ol,
+nav +
+ol,
+ol +
+ol,
+p +
+ol,
+section +
+ol,
+ul +
+ol, .block +
+p, address +
+p, aside +
+p, article +
+p,
+footer +
+p,
+div +
+p, dl +
+p,
+main +
+p,
+nav +
+p,
+ol +
+p,
+p +
+p,
+section +
+p,
+ul +
+p, .block +
+section, address +
+section, aside +
+section, article +
+section,
+footer +
+section,
+div +
+section, dl +
+section,
+main +
+section,
+nav +
+section,
+ol +
+section,
+p +
+section,
+section +
+section,
+ul +
+section, .block +
+ul, address +
+ul, aside +
+ul, article +
+ul,
+footer +
+ul,
+div +
+ul, dl +
+ul,
+main +
+ul,
+nav +
+ul,
+ol +
+ul,
+p +
+ul,
+section +
+ul,
+ul +
+ul {
+  margin-top: 0.75em; }
+
+h1, h2, h3, header {
+  margin-top: 0.75em;
+  margin-bottom: 0.375em; }
+
+h4, h5, h6 {
+  margin-top: 0.375em;
+  margin-bottom: 0.375em; }
+
+h1 + .block, h1 + address, h1 + aside, h1 + article, h1 +
+footer, h1 +
+div, h1 + dl, h1 +
+main, h1 +
+nav, h1 +
+ol, h1 +
+p, h1 +
+section, h1 +
+ul,
+h2 + .block,
+h2 + address,
+h2 + aside,
+h2 + article,
+h2 +
+footer,
+h2 +
+div,
+h2 + dl,
+h2 +
+main,
+h2 +
+nav,
+h2 +
+ol,
+h2 +
+p,
+h2 +
+section,
+h2 +
+ul,
+h3 + .block,
+h3 + address,
+h3 + aside,
+h3 + article,
+h3 +
+footer,
+h3 +
+div,
+h3 + dl,
+h3 +
+main,
+h3 +
+nav,
+h3 +
+ol,
+h3 +
+p,
+h3 +
+section,
+h3 +
+ul,
+h4 + .block,
+h4 + address,
+h4 + aside,
+h4 + article,
+h4 +
+footer,
+h4 +
+div,
+h4 + dl,
+h4 +
+main,
+h4 +
+nav,
+h4 +
+ol,
+h4 +
+p,
+h4 +
+section,
+h4 +
+ul,
+h5 + .block,
+h5 + address,
+h5 + aside,
+h5 + article,
+h5 +
+footer,
+h5 +
+div,
+h5 + dl,
+h5 +
+main,
+h5 +
+nav,
+h5 +
+ol,
+h5 +
+p,
+h5 +
+section,
+h5 +
+ul,
+h6 + .block,
+h6 + address,
+h6 + aside,
+h6 + article,
+h6 +
+footer,
+h6 +
+div,
+h6 + dl,
+h6 +
+main,
+h6 +
+nav,
+h6 +
+ol,
+h6 +
+p,
+h6 +
+section,
+h6 +
+ul {
+  margin-top: 0; }
 
 /*doc
 
@@ -111,29 +444,19 @@ All of the modules are build on top of the normalisation module. It's the founda
 The normalisation module applies some basic resets to ensure elements are rendered consistently across all browsers.
 
 */
-
 /*--------------------------------------------------------------------------------------------------------------------*/
-
 /* Elements of HTML                                                                                                              */
-
 /*--------------------------------------------------------------------------------------------------------------------*/
-
 /*region*/
-
-*, ::before, ::after
-{
+*, ::before, ::after {
   /* remove repeating backgrounds */
   background-repeat: no-repeat;
   /* add box sizing inheritance */
-  box-sizing:        inherit;
-  background-color:  inherit;
-}
+  box-sizing: inherit; }
 
-::before, ::after
-{
+::before, ::after {
   text-decoration: inherit;
-  vertical-align:  inherit;
-}
+  vertical-align: inherit; }
 
 /*doc
 
@@ -144,24 +467,16 @@ To ensure `padding` does not affect the computed width of an element the `box-si
 inherit the specified `box sizing`
 
 */
-
-:root
-{
-  box-sizing:               border-box;
-  cursor:                   default;
+:root {
+  box-sizing: border-box;
+  cursor: default;
   /* prevent font size adjustments after orientation changes in IE and iOS */
-  -ms-text-size-adjust:     100%;
-  -webkit-text-size-adjust: 100%;
-}
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
 
 /*endregion*/
-
-body
-{
-  font-family:      Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  font-size:        16px;
-  background-color: white;
-}
+body {
+  background-color: #F5F5F5; }
 
 /*doc
 
@@ -171,27 +486,36 @@ Typography is one of the most important and most visible things on a web page. E
 a perfect visual design.
 
 */
+.body, .global-typography body {
+  font-size: 16px; }
 
-.type-scale-1, .global.typography h1
-{ font-size: 48px; font-size: 3rem; }
+.type-scale-1 {
+  font-size: 48px;
+  font-size: 3rem; }
 
-.type-scale-2, .global.typography h2
-{ font-size: 36px; font-size: 2.25rem; }
+.type-scale-2 {
+  font-size: 36px;
+  font-size: 2.25rem; }
 
-.type-scale-3, .global.typography h3
-{ font-size: 24px; font-size: 1.5rem; }
+.type-scale-3 {
+  font-size: 24px;
+  font-size: 1.5rem; }
 
-.type-scale-4, .global.typography h4
-{ font-size: 20px; font-size: 1.25rem; }
+.type-scale-4 {
+  font-size: 20px;
+  font-size: 1.25rem; }
 
-.type-scale-5, .global.typography h5
-{ font-size: 16px; font-size: 1rem; }
+.type-scale-5 {
+  font-size: 16px;
+  font-size: 1rem; }
 
-.type-scale-6, .global.typography h6
-{ font-size: 14px; font-size: .875rem; }
+.type-scale-6 {
+  font-size: 14px;
+  font-size: .875rem; }
 
-.type-scale-7
-{ font-size: 12px; font-size: .75rem; }
+.type-scale-7 {
+  font-size: 12px;
+  font-size: .75rem; }
 
 /*doc
 
@@ -216,21 +540,17 @@ The following classes are used for setting measure:
 | 'measure wide'   | line lengths ~80 characters                                          |
 
 */
+.measure {
+  width: 30em; }
 
-.measure
-{
-  width: 30em;
-}
+.wide.measure {
+  width: 34em; }
 
-.wide.measure
-{
-  width: 34em;
-}
+.narrow.measure {
+  width: 20em; }
 
-.narrow.measure
-{
-  width: 20em;
-}
+.body, .global-typography body {
+  line-height: 1.5; }
 
 /*doc
 
@@ -241,39 +561,25 @@ a piece of text. For example text that is set to uppercase should be tracked to 
 should never be tracked. For some larger text, depending on the typeface a negative tracking might be desirable.
 
 */
+.tracked {
+  letter-spacing: .1em; }
 
-.tracked
-{
-  letter-spacing: .1em;
-}
+.tight.tracked {
+  letter-spacing: -.05em; }
 
-.tight.tracked
-{
-  letter-spacing: -.05em;
-}
+.wide.tracked {
+  letter-spacing: .25em; }
 
-.wide.tracked
-{
-  letter-spacing: .25em;
-}
+.body, .global-typography body {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
 
-/*doc
+.small {
+  font-size: 14px;
+  line-height: -0.5px; }
 
-## Paragraphs
-
-*/
-
-.small
-{
-  font-size:   14px;
-  line-height: -0.5px;
-}
-
-.smaller
-{
-  font-size:   12px;
-  line-height: -2.5px;
-}
+.smaller {
+  font-size: 12px;
+  line-height: -2.5px; }
 
 /*doc
 
@@ -283,6 +589,289 @@ The Form module provides classes to customize the displays of HTML input control
 across browsers and devices.
 
 */
+/*doc
+
+## Label
+
+<div data-module="kit-example">
+  <label class="label">Default</label>
+  <label class="success label">Success</label>
+  <label class="warning label">Warning</label>
+  <label class="error label">Error</label>
+  <label class="focused label">Focus</label>
+  <label class="dark label">Dark</label>
+  <label class="light label">Light</label>
+</div>
+
+### Basic
+
+To reduce the visual complexity add the `basic` class to a label.
+
+<div data-module="kit-example">
+<label class="label">Default</label>
+<label class="basic success label">Success</label>
+<label class="basic warning label">Warning</label>
+<label class="basic error label">Error</label>
+<label class="basic focused label">Focus</label>
+<label class="basic dark label">Dark</label>
+<label class="basic light label">Light</label>
+</div>
+
+*/
+/*.horizontal > *,
+.main > *,
+.div > *
+{
+  min-width: calc(100% - var(--spacing-medium));
+}
+
+.horizontal > .wide,
+.main > .wide,
+.div > .wide,
+.golden.grid > *:not(.wide)
+{
+  min-width: initial;
+}*/
+.grid, .fieldset:not(.inline), .global-form fieldset:not(.inline), .row, .column {
+  max-width: 100%; }
+
+.grid .grid, .fieldset:not(.inline) .grid, .global-form fieldset:not(.inline) .grid, .row .grid, .column .grid, .grid .fieldset:not(.inline), .fieldset:not(.inline) .fieldset:not(.inline), .global-form fieldset:not(.inline) .fieldset:not(.inline), .row .fieldset:not(.inline), .column .fieldset:not(.inline), .grid .global-form fieldset:not(.inline), .global-form .grid fieldset:not(.inline), .fieldset:not(.inline) .global-form fieldset:not(.inline), .global-form .fieldset:not(.inline) fieldset:not(.inline), .global-form fieldset:not(.inline) fieldset:not(.inline), .row .global-form fieldset:not(.inline), .global-form .row fieldset:not(.inline), .column .global-form fieldset:not(.inline), .global-form .column fieldset:not(.inline), .grid .row, .fieldset:not(.inline) .row, .global-form fieldset:not(.inline) .row, .row .row, .column .row, .grid .column, .fieldset:not(.inline) .column, .global-form fieldset:not(.inline) .column, .row .column, .column .column {
+  max-width: none;
+  max-width: initial; }
+
+/*.golden.grid > :nth-child(even):not(.wide),*/
+[class*='narrow wide'] {
+  -webkit-box-flex: 0 !important;
+  -ms-flex-positive: 0 !important;
+  flex-grow: 0 !important;
+  -ms-flex-negative: 0 !important;
+  flex-shrink: 0 !important;
+  -ms-flex-preferred-size: auto !important;
+  flex-basis: auto !important; }
+
+/*[class*='narrow wide']
+{
+  flex-basis: auto !important;
+}*/
+/*.grid > .wide,
+.grid > .width
+{
+  flex-grow: 0 !important;
+  flex-shrink: 0 !important;
+}*/
+.golden.grid > :nth-child(even):not(.wide), .golden.fieldset:not(.inline) > :nth-child(even):not(.wide), .global-form fieldset.golden:not(.inline) > :nth-child(even):not(.wide), .golden.row > :nth-child(even):not(.wide), .golden.column > :nth-child(even):not(.wide),
+.golden.grid > .medium, .golden.fieldset:not(.inline) > .medium, .global-form fieldset.golden:not(.inline) > .medium, .golden.row > .medium, .golden.column > .medium {
+  max-width: calc(38.1953% - 1rem) !important;
+  -webkit-box-flex: 0 !important;
+  -ms-flex: 0 1 calc(38.1953% - 1rem) !important;
+  flex: 0 1 calc(38.1953% - 1rem) !important; }
+
+/*[class*='golden ratio'] > :nth-child(odd):not(.wide),*/
+.golden.grid > .large, .golden.fieldset:not(.inline) > .large, .global-form fieldset.golden:not(.inline) > .large, .golden.row > .large, .golden.column > .large {
+  width: calc(61.8047% - 1rem) !important; }
+
+.golden.grid > .small, .golden.fieldset:not(.inline) > .small, .global-form fieldset.golden:not(.inline) > .small, .golden.row > .small, .golden.column > .small {
+  width: 23.60649% !important; }
+
+.width.full {
+  width: calc(100% - 1rem) !important;
+  min-width: calc(100% - 1rem) !important; }
+
+[class*='half wide'] {
+  width: calc(50% - 1rem) !important; }
+
+[class*='one-quarter wide'] {
+  width: 25% !important; }
+
+[class*='three-quarter wide'] {
+  width: 75% !important; }
+
+@media (min-width: 0) and (max-width: 768px) {
+  .stacked.grid > *, .stacked.fieldset:not(.inline) > *, .global-form fieldset.stacked:not(.inline) > *, .stacked.row > *, .stacked.column > * {
+    min-width: 100% !important;
+    width: 100% !important; } }
+
+.grid, .fieldset:not(.inline), .global-form fieldset:not(.inline), .row, .column {
+  margin-left: -4px !important;
+  margin-left: -0.25rem !important;
+  margin-right: -4px !important;
+  margin-right: -0.25rem !important; }
+
+.grid > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > *, .row > *, .column > * {
+  margin-left: 4px !important;
+  margin-left: 0.25rem !important;
+  margin-right: 4px !important;
+  margin-right: 0.25rem !important;
+  margin-bottom: 12px !important;
+  margin-bottom: 0.75rem !important; }
+
+.grid > .grid, .fieldset:not(.inline) > .grid, .global-form fieldset:not(.inline) > .grid, .row > .grid, .column > .grid, .grid > .fieldset:not(.inline), .fieldset:not(.inline) > .fieldset:not(.inline), .global-form fieldset:not(.inline) > .fieldset:not(.inline), .row > .fieldset:not(.inline), .column > .fieldset:not(.inline), .global-form .grid > fieldset:not(.inline), .global-form .fieldset:not(.inline) > fieldset:not(.inline), .global-form fieldset:not(.inline) > fieldset:not(.inline), .global-form .row > fieldset:not(.inline), .global-form .column > fieldset:not(.inline), .grid > .row, .fieldset:not(.inline) > .row, .global-form fieldset:not(.inline) > .row, .row > .row, .column > .row, .grid > .column, .fieldset:not(.inline) > .column, .global-form fieldset:not(.inline) > .column, .row > .column, .column > .column {
+  margin: 0 0 !important; }
+
+@media (min-width: 0) and (max-width: 768px) {
+  .stacked.grid > *, .stacked.fieldset:not(.inline) > *, .global-form fieldset.stacked:not(.inline) > *, .stacked.row > *, .stacked.column > *,
+  .stacked.grid,
+  .stacked.fieldset:not(.inline),
+  .global-form fieldset.stacked:not(.inline),
+  .stacked.row,
+  .stacked.column {
+    margin-left: 0 !important;
+    margin-right: 0 !important; } }
+
+.grid, .fieldset:not(.inline), .global-form fieldset:not(.inline), .row, .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch; }
+
+.grid > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > *, .row > *, .column > * {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  transition: -webkit-box-flex 250ms linear;
+  transition: flex 250ms linear;
+  transition: flex 250ms linear, -webkit-box-flex 250ms linear, -ms-flex 250ms linear; }
+
+.grid > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > *, .row > *, .column > * {
+  display: inline-block; }
+
+.grid > .grid, .fieldset:not(.inline) > .grid, .global-form fieldset:not(.inline) > .grid, .row > .grid, .column > .grid, .grid > .fieldset:not(.inline), .fieldset:not(.inline) > .fieldset:not(.inline), .global-form fieldset:not(.inline) > .fieldset:not(.inline), .row > .fieldset:not(.inline), .column > .fieldset:not(.inline), .global-form .grid > fieldset:not(.inline), .global-form .fieldset:not(.inline) > fieldset:not(.inline), .global-form fieldset:not(.inline) > fieldset:not(.inline), .global-form .row > fieldset:not(.inline), .global-form .column > fieldset:not(.inline), .grid > .row, .fieldset:not(.inline) > .row, .global-form fieldset:not(.inline) > .row, .row > .row, .column > .row, .grid > .column, .fieldset:not(.inline) > .column, .global-form fieldset:not(.inline) > .column, .row > .column, .column > .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.label, .global-form label {
+  /* Sizing */
+  /*margin: calc(var(--spacing-medium) / 2) 0;*/
+  /* Positioning */
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+
+.label:not(.inline), .global-form label:not(.inline) {
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.label:not(.inline) > *, .global-form label:not(.inline) > * {
+  /*flex:  1 1 auto;*/
+  display: block;
+  width: 100%;
+  min-width: 1ch; }
+
+.label:not(.inline) > .input, .global-form .label:not(.inline) > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form label:not(.inline) > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .label:not(.inline) > .input, .global-form label:not(.inline) > .input,
+.label:not(.inline) > .textarea, .global-form label:not(.inline) > .textarea, .global-form
+.label:not(.inline) > textarea, .global-form label:not(.inline) > textarea,
+.label:not(.inline) > .select, .global-form label:not(.inline) > .select, .global-form
+.label:not(.inline) > select, .global-form label:not(.inline) > select {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important; }
+
+.label:not(.inline) > select, .global-form label:not(.inline) > select {
+  min-width: 8ch; }
+
+/*.label:not(.inline) > select
+{
+  width: initial;
+  min-width: 100%;
+}*/
+.label > input, .global-form label > input {
+  /*flex:      0 1 auto;
+  min-width: 0;
+  width:     100%;*/ }
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Pointing Label                                                                                                            */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+/*doc
+
+## Pointing
+
+A label can point to the context next to it
+
+<div data-module="kit-example">
+  <section>
+    <label class="basic success pointing label">Please enter a value</label>
+    <label class="basic warning bottom pointing label">Please enter a value</label>
+    <label class="left pointing error label">Please enter a value</label>
+    <label class="dark right pointing label">Please enter a value</label>
+  </section>
+
+  <section>
+    <input id="pointing_label_username" placeholder="Username" class="input">
+    <label for="pointing_label_username" class="light left pointing smaller label">The name is already taken</label>
+  </section>
+
+  <fieldset class="fieldset narrow measure">
+    <label class="label">Password <input id="pointing_label_password" class="input" type="password" placeholder="Password"></label>
+    <label for="pointing_label_password" class="light top pointing smaller label">Your password must be 6 characters or more</label>
+  </fieldset>
+
+</div>
+
+*/
+/*endregion*/
+.pointing.label, .global-form label.pointing {
+  position: relative;
+  z-index: 50; }
+
+.basic.pointing.label, .global-form label.basic.pointing {
+  background-color: inherit; }
+
+.pointing.label:before, .global-form label.pointing:before {
+  background-color: inherit;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  position: absolute;
+  z-index: 40;
+  content: '';
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  width: .6666em;
+  height: .6666em;
+  background-image: none;
+  top: 0;
+  left: 50%;
+  margin-top: -0.5px; }
+
+[class*="bottom pointing"].label:before, .global-form label[class*="bottom pointing"]:before {
+  border-width: 0 1px 1px 0;
+  top: 100%;
+  margin-top: 0.5px; }
+
+[class*="left pointing"].label, .global-form label[class*="left pointing"] {
+  margin-left: .5em; }
+
+[class*="left pointing"].label:before, .global-form label[class*="left pointing"]:before {
+  border-width: 0 0 1px 1px;
+  top: 50%;
+  left: 0;
+  margin-top: 0;
+  margin-left: -0.5px; }
+
+[class*="right pointing"].label, .global-form label[class*="right pointing"] {
+  margin-right: .5em; }
+
+[class*="right pointing"].label:before, .global-form label[class*="right pointing"]:before {
+  -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
+  transform: translateX(50%) translateY(-50%) rotate(45deg);
+  border-width: 1px 1px 0 0;
+  top: 50%;
+  right: 0;
+  left: auto;
+  bottom: auto;
+  margin-top: 0;
+  margin-right: -0.5px; }
 
 /*doc
 
@@ -298,34 +887,173 @@ or `week`.
 </div>
 
 */
-
-.input, .textarea, .select, .global.form select, .global.form textarea, .global.form input:not([type='submit'])
-{
-  -webkit-appearance:          none;
-     -moz-appearance:          none;
-          appearance:          none;
-
+.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .input, .textarea, .global-form textarea, .select, .global-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   /* Sizing */
-  padding:             .5em;
-  width:               22ch;
-
+  padding: 8px;
+  padding: .5rem;
+  /*margin: calc(var(--spacing-medium) / 2) 0;*/
+  /*min-width: 2ch;*/
   /* Positioning */
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  position: relative;
+  overflow: visible;
+  vertical-align: baseline;
+  font-size: calc(1em - 1px); }
+  .input > .input:not(input), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .input > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:not(input), .global-form .input > .input:not(input), .input .select:not(select), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) .select:not(select), .input .global-form select:not(select), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) select:not(select), .global-form .input select:not(select), .textarea > .input:not(input), .global-form .textarea > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .textarea > .input:not(input), .global-form textarea > .input:not(input), .textarea .select:not(select), .global-form textarea .select:not(select), .textarea .global-form select:not(select), .global-form .textarea select:not(select), .global-form textarea select:not(select), .select > .input:not(input), .global-form .select > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .select > .input:not(input), .global-form select > .input:not(input), .select .select:not(select), .global-form select .select:not(select), .select .global-form select:not(select), .global-form .select select:not(select), .global-form select select:not(select) {
+    position: static; }
 
-  /* Theme */
-  border:              1px #D4D4D4 solid;
-  border-radius:       4px;
+.input > *, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > *, .global-form .input > *,
+.textarea > *, .global-form textarea > *,
+.select > *, .global-form select > * {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0; }
 
-  /* Animation */
-  transition-property: color, background-color, border;
-  transition:          0.2s ease-in-out
-}
+.input::-ms-clear, .global-form input:not([type='checkbox']):not([type='radio']):not([type='submit'])::-ms-clear, .global-form .input::-ms-clear,
+.textarea::-ms-clear,
+.global-form textarea::-ms-clear,
+.select::-ms-clear,
+.global-form select::-ms-clear {
+  display: none; }
 
-.input:focus, .textarea:focus, .select:focus, .global.form select:focus, .global.form textarea:focus, .global.form input:not([type='submit']):focus
-{
-    outline:      0;
-    border-color: #1C86F2;
-    box-shadow:   0 0 1px #1C86F2 inset;
-}
+.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .input, .textarea, .global-form textarea, .select, .global-form select {
+  /*Animation
+
+*/
+  /*transition-property: color, background-color, border;
+  transition: 0.2s ease-in-out;
+
+*/
+  /*Theme
+
+*/ }
+
+.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .input, .input > .focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus, .global-form .input > .focus, .textarea, .global-form textarea, .textarea > .focus, .global-form textarea > .focus, .select, .global-form select, .select > .focus, .global-form select > .focus {
+  border: 1px #D4D4D4 solid;
+  border-radius: 4px;
+  color: #444;
+  outline: 0; }
+
+.input.labeled, .global-form input.labeled:not([type='submit']):not([type='radio']):not([type='checkbox']),
+.textarea.labeled,
+.global-form textarea.labeled,
+.select.labeled,
+.global-form select.labeled {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0;
+  overflow: visible; }
+
+.input > .focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus, .global-form .input > .focus,
+.textarea > .focus, .global-form textarea > .focus,
+.select > .focus, .global-form select > .focus {
+  position: absolute;
+  background: transparent;
+  top: -1px;
+  right: -1px;
+  left: -1px;
+  bottom: -1px;
+  cursor: text;
+  pointer-events: none;
+  box-sizing: content-box; }
+
+.input:focus, .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .input:focus ~ .focus, .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .global-form .input:focus ~ .focus, .textarea:focus, .global-form textarea:focus, .textarea:focus ~ .focus, .global-form textarea:focus ~ .focus, .select:focus, .global-form select:focus, .select:focus ~ .focus, .global-form select:focus ~ .focus {
+  outline: 0;
+  border-color: #3091f3;
+  box-shadow: 0 0 0 1px #3091f3;
+  visibility: visible;
+  z-index: 1000; }
+
+.input > .input:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .input > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:focus, .global-form .input > .input:focus, .input .select:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) .select:focus, .input .global-form select:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) select:focus, .global-form .input select:focus, .textarea > .input:focus, .global-form .textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .textarea > .input:focus, .global-form textarea > .input:focus, .textarea .select:focus, .global-form textarea .select:focus, .textarea .global-form select:focus, .global-form .textarea select:focus, .global-form textarea select:focus, .select > .input:focus, .global-form .select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .select > .input:focus, .global-form select > .input:focus, .select .select:focus, .global-form select .select:focus, .select .global-form select:focus, .global-form .select select:focus, .global-form select select:focus {
+  box-shadow: none; }
+
+.input:disabled, .global-form input:disabled:not([type='submit']):not([type='radio']):not([type='checkbox']),
+.input.disabled,
+.global-form input.disabled:not([type='submit']):not([type='radio']):not([type='checkbox']),
+.textarea:disabled,
+.global-form textarea:disabled,
+.textarea.disabled,
+.global-form textarea.disabled,
+.select:disabled,
+.global-form select:disabled,
+.select.disabled,
+.global-form select.disabled {
+  resize: none;
+  cursor: not-allowed;
+  pointer-events: none;
+  border-color: #999;
+  font-style: italic;
+  color: #999;
+  background-color: #999;
+  opacity: 0.6; }
+
+.input[type='number'], .global-form input[type='number']:not([type='submit']):not([type='radio']):not([type='checkbox']),
+.textarea[type='number'],
+.global-form textarea[type='number'],
+.select[type='number'],
+.global-form select[type='number'] {
+  text-align: right;
+  -moz-appearance: textfield !important; }
+
+.input[type='number']::-webkit-inner-spin-button, .global-form input[type='number']:not([type='checkbox']):not([type='radio']):not([type='submit'])::-webkit-inner-spin-button,
+.input[type='number']::-webkit-outer-spin-button,
+.global-form input[type='number']:not([type='checkbox']):not([type='radio']):not([type='submit'])::-webkit-outer-spin-button,
+.textarea[type='number']::-webkit-inner-spin-button,
+.global-form textarea[type='number']::-webkit-inner-spin-button,
+.textarea[type='number']::-webkit-outer-spin-button,
+.global-form textarea[type='number']::-webkit-outer-spin-button,
+.select[type='number']::-webkit-inner-spin-button,
+.global-form select[type='number']::-webkit-inner-spin-button,
+.select[type='number']::-webkit-outer-spin-button,
+.global-form select[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .input, .textarea, .global-form textarea, .select, .global-form select {
+  /*& > .input:first-child, .select:first-child
+  {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }
+
+*/ }
+  .input > .input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .input > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input, .global-form .input > .input, .input .select, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) .select, .input .global-form select, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) select, .global-form .input select, .textarea > .input, .global-form .textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .textarea > .input, .global-form textarea > .input, .textarea .select, .global-form textarea .select, .textarea .global-form select, .global-form .textarea select, .global-form textarea select, .select > .input, .global-form .select > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .select > .input, .global-form select > .input, .select .select, .global-form select .select, .select .global-form select, .global-form .select select, .global-form select select {
+    outline: none;
+    border-radius: 0;
+    padding-right: 0;
+    border: 1px transparent solid;
+    height: 100%; }
+
+.input > .input:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .input > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:focus, .global-form .input > .input:focus,
+.textarea > .input:focus, .global-form
+.textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form
+.textarea > .input:focus, .global-form textarea > .input:focus,
+.select > .input:focus, .global-form
+.select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form
+.select > .input:focus, .global-form select > .input:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0; }
+
+.input > .label, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .label, .global-form .input > .label, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > label, .global-form .input > label,
+.textarea > .label, .global-form textarea > .label, .global-form
+.textarea > label, .global-form textarea > label,
+.select > .label, .global-form select > .label, .global-form
+.select > label, .global-form select > label {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 0px;
+  flex: 0 0 0;
+  width: auto; }
 
 /*doc
 
@@ -394,301 +1122,156 @@ or `week`.
 
 
 */
+.select, .global-form select {
+  /*background: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22red%22%20width%3D%229%22%20height%3D%2212%22%20viewBox%3D%220%200%209%2012%22%3E%3Cpath%20d%3D%22M0.722%2C4.823L-0.01%2C4.1%2C4.134-.01%2C4.866%2C0.716Zm7.555%2C0L9.01%2C4.1%2C4.866-.01l-0.732.726ZM0.722%2C7.177L-0.01%2C7.9%2C4.134%2C12.01l0.732-.726Zm7.555%2C0L9.01%2C7.9%2C4.866%2C12.01l-0.732-.726Z%22%2F%3E%3C%2Fsvg%3E') no-repeat right .5rem center;
+  */
+  padding-right: calc(.5rem + 1.125em) !important;
+  min-width: 10ch;
+  cursor: pointer;
+  background-color: white; }
 
-.select, .global.form select
-{
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 12"><path fill="#5e6c75" d="M0.722,4.823L-0.01,4.1,4.134-.01,4.866,0.716Zm7.555,0L9.01,4.1,4.866-.01l-0.732.726ZM0.722,7.177L-0.01,7.9,4.134,12.01l0.732-.726Zm7.555,0L9.01,7.9,4.866,12.01l-0.732-.726Z"/></svg>') no-repeat right 16px center;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 12"><path fill="#5e6c75" d="M0.722,4.823L-0.01,4.1,4.134-.01,4.866,0.716Zm7.555,0L9.01,4.1,4.866-.01l-0.732.726ZM0.722,7.177L-0.01,7.9,4.134,12.01l0.732-.726Zm7.555,0L9.01,7.9,4.866,12.01l-0.732-.726Z"/></svg>') no-repeat right 1rem center;
-}
+.selectselect {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
 
-.horizontal, .vertical, .fieldset, .label
-{
-  display:   -webkit-box;
-  display:   -ms-flexbox;
-  display:   flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
+.select, .global-form select {
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: calc(100% - 0.950em) 1.125em, calc(100% - 0.575em) 1.125em;
+  background-size: 0.375em 0.375em, 0.375em 0.375em;
+  background-repeat: no-repeat; }
 
-.vertical, .fieldset, .label
-{
+.select > .select, .global-form select > .select, .global-form .select > select, .global-form select > select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent !important;
+  outline: 0 !important;
+  color: inherit !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  border: none !important;
+  font-size: inherit; }
+
+.select > option, .global-form select > option {
+  color: #000 !important;
+  color: initial !important; }
+
+.select::-ms-expand, .global-form select::-ms-expand {
+  display: none; }
+
+.select:focus::-ms-value, .global-form select:focus::-ms-value {
+  background: transparent;
+  color: currentColor; }
+
+.fieldset, .global-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0; }
+
+.table, .global-table table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+  empty-cells: show; }
+
+.th, .global-table th {
+  text-align: left;
+  font-weight: 700;
+  vertical-align: bottom; }
+
+.td, .global-table td {
+  vertical-align: top; }
+
+.row {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
+
+.column {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
-.fieldset
-{
-  border:  none;
-  margin:  0;
-  padding: 0;
-}
+.column > * {
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto; }
 
-/*doc
+.primary, .success, .warning, .error, .focused, .dark, .light {
+  padding: 8px;
+  padding: .5rem; }
 
-## Label
+.primary, .success, .warning, .error, .focused, .dark {
+  color: white !important; }
 
-<div data-module="kit-example">
-  <label class="label">Default</label>
-  <label class="success label">Success</label>
-  <label class="warning label">Warning</label>
-  <label class="error label">Error</label>
-  <label class="focused label">Focus</label>
-  <label class="dark label">Dark</label>
-  <label class="light label">Light</label>
-</div>
+[class*='body background'] {
+  background-color: #F5F5F5; }
 
-### Basic
+.white {
+  background-color: white; }
 
-To reduce the visual complexity add the `basic` class to a label.
+.primary, [class*='primary background'] {
+  background-color: #1C86F2 !important;
+  border-color: #1C86F2 !important; }
 
-<div data-module="kit-example">
-<label class="label">Default</label>
-<label class="basic success label">Success</label>
-<label class="basic warning label">Warning</label>
-<label class="basic error label">Error</label>
-<label class="basic focused label">Focus</label>
-<label class="basic dark label">Dark</label>
-<label class="basic light label">Light</label>
-</div>
+.primary.basic,
+[class*='primary background'].basic {
+  background-color: transparent;
+  color: #1C86F2; }
 
-*/
+.success {
+  background-color: #32D296;
+  border-color: #32D296; }
 
-.label
-{
-  display:       -webkit-inline-box;
-  display:       -ms-inline-flexbox;
-  display:       inline-flex;
-  -ms-flex-wrap:     wrap;
-      flex-wrap:     wrap;
-  /* Sizing */
-  margin:        .5em 0;
-  border:        1px solid transparent;
-  border-radius: 4px;
-}
+.success.basic {
+  background-color: transparent;
+  color: #32D296; }
 
-.label > *
-{
-  -webkit-box-flex:  1;
-      -ms-flex:  1 1 auto;
-          flex:  1 1 auto;
-  min-width: 0;
-}
+.warning {
+  background-color: #FAA05A;
+  border-color: #FAA05A; }
 
-.label > input
-{
-  -webkit-box-flex:      0;
-      -ms-flex:      0 1 auto;
-          flex:      0 1 auto;
-  min-width: 0;
-  width:     100%;
-}
+.warning.basic {
+  background-color: transparent;
+  color: #FAA05A; }
 
-/*--------------------------------------------------------------------------------------------------------------------*/
+.error {
+  background-color: #F0506E;
+  border-color: #F0506E; }
 
-/* Pointing Label                                                                                                            */
+.error.basic {
+  background-color: transparent;
+  color: #F0506E; }
 
-/*--------------------------------------------------------------------------------------------------------------------*/
-
-/*region*/
-
-/*doc
-
-## Pointing
-
-A label can point to the context next to it
-
-<div data-module="kit-example">
-  <section>
-    <label class="basic success pointing label">Please enter a value</label>
-    <label class="basic warning bottom pointing label">Please enter a value</label>
-    <label class="left pointing error label">Please enter a value</label>
-    <label class="dark right pointing label">Please enter a value</label>
-  </section>
-
-  <section>
-    <input id="pointing_label_username" placeholder="Username" class="input">
-    <label for="pointing_label_username" class="light left pointing smaller label">The name is already taken</label>
-  </section>
-
-  <fieldset class="fieldset narrow measure">
-    <label class="label">Password <input id="pointing_label_password" class="input" type="password" placeholder="Password"></label>
-    <label for="pointing_label_password" class="light top pointing smaller label">Your password must be 6 characters or more</label>
-  </fieldset>
-
-</div>
-
-*/
-
-/*endregion*/
-
-.pointing.label
-{
-  position: relative;
-  z-index:  50;
-}
-
-.basic.pointing.label
-{
-  background-color: inherit;
-}
-
-.pointing.label:before
-{
-  background-color: inherit;
-  border-color:     inherit;
-  border-style:     solid;
-  border-width:     1px 0 0 1px;
-  position:         absolute;
-  z-index:          40;
-  content:          '';
-  -webkit-transform:        translateX(-50%) translateY(-50%) rotate(45deg);
-          transform:        translateX(-50%) translateY(-50%) rotate(45deg);
-  width:            .6666em;
-  height:           .6666em;
-  background-image: none;
-  top:              0;
-  left:             50%;
-  margin-top:       -0.5px;
-}
-
-[class*="bottom pointing"].label:before
-{
-  border-width: 0 1px 1px 0;
-  top:          100%;
-  margin-top:   0.5px;
-}
-
-[class*="left pointing"].label
-{
-  margin-left: .5em;
-}
-
-[class*="left pointing"].label:before
-{
-  border-width: 0 0 1px 1px;
-  top:          50%;
-  left:         0;
-  margin-top:   0;
-  margin-left:  -0.5px;
-}
-
-[class*="right pointing"].label
-{
-  margin-right: .5em;
-}
-
-[class*="right pointing"].label:before
-{
-  -webkit-transform:    translateX(50%) translateY(-50%) rotate(45deg);
-          transform:    translateX(50%) translateY(-50%) rotate(45deg);
-  border-width: 1px 1px 0 0;
-  top:          50%;
-  right:        0;
-  left:         auto;
-  bottom:       auto;
-  margin-top:   0;
-  margin-right: -0.5px;
-}
-
-.primary, .success, .warning, .error, .focused, .dark, .light
-{ padding: .5em; }
-
-.primary, .success, .warning, .error, .focused, .dark
-{
-  color: white;
-}
-
-.primary
-{
-  background-color: #C65146;
-  border-color:     #C65146
-}
-
-.primary.basic
-{
-    background-color: transparent;
-    color:            #C65146;
-}
-
-.success
-{
-  background-color: #32d296;
-  border-color:     #32d296
-}
-
-.success.basic
-{
-    background-color: transparent;
-    color:            #32d296;
-}
-
-.warning
-{
-  background-color: #faa05a;
-  border-color:     #faa05a
-}
-
-.warning.basic
-{
-    background-color: transparent;
-    color:            #faa05a;
-}
-
-.error
-{
-  background-color: #f0506e;
-  border-color:     #f0506e
-}
-
-.error.basic
-{
-    background-color: transparent;
-    color:            #f0506e;
-}
-
-.dark
-{
+.dark {
   background-color: #32373D;
-  border-color:     #32373D
-}
+  border-color: #32373D; }
 
-.dark.basic
-{
-    background-color: transparent;
-    color:            #32373D;
-}
+.dark.basic {
+  background-color: transparent;
+  color: #32373D; }
 
-.light
-{
+.light {
   background-color: #D4D4D4;
-  border-color:     #D4D4D4
-}
+  border-color: #D4D4D4; }
 
-.light.basic
-{
-    background-color: transparent;
-    color:            #777;
-    border-color:     #777;
-}
+.light.basic {
+  background-color: transparent;
+  color: #777;
+  border-color: #777; }
 
-.focused
-{
-  background-color: #1C86F2;
-  border-color:     #1C86F2
-}
+.focused {
+  background-color: #3091f3;
+  border-color: #3091f3; }
 
-.focused.basic
-{
-    background-color: transparent;
-    color:            #1C86F2;
-}
+.focused.basic {
+  background-color: transparent;
+  color: #3091f3; }
 
-.global.form
-{
-}
-
-.global.typography
-{
-}
+.section {
+  /* Sizing */
+  padding: 1em 3.44391%;
+  /* Theming */
+  box-shadow: #dfdfe0 1px 2px 1px 0px, #f2f2f2 -1px -1px 0px 0px; }

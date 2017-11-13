@@ -8,18 +8,18 @@
     "url": "git+https://github.com/tschroeter/markup_kit.git"
   },
   "devDependencies": {
+    "css-markdown": "^0.2.0",
+    "cssnano": "^3.1.0",
+    "del-cli": "1.1.0",
     "glob": "^7.1.2",
+    "node-sass": "^4.6.0",
     "onchange": "^2.5.0",
-    "postcss-cli": "^4.1.0",
+    "pandoc": "^0.2.0",
+    "postcss-cli": "^4.1.1",
     "postcss-cssnext": "^2.11.0",
-    "postcss-import": "^10.0.0",
     "postcss-extend": "^1.0.5",
-    "postcss-apply": "^0.8.0",
-    "postcss-prefixer": "^2.0.5",
-    "css-markdown": "0.2.0",
-    "pandoc": "0.2.0",
-    "cssnano": "3.1.0",
-    "del-cli": "1.1.0"
+    "postcss-import": "^10.0.0",
+    "postcss-prefixer": "^2.0.5"
   },
   "scripts": {
     "preinstall": "npm run build",
@@ -27,8 +27,14 @@
     "watch": "onchange 'modules/markup_kit/css/*.css' --exclude 'modules/markup_kit/css/*.stage*.css' -- npm run build",
     "cleanup": "del-cli build/css/*.css",
     "build:css": "npm run build:css:amalgamation && npm run build:css:minification",
-    "build:css:amalgamation": "postcss -c postcss/amalgamation modules/markup_kit/css/include.css -o modules/markup_kit/css/amalgamation.css",
+    "build:css:amalgamation": "postcss -c postcss/amalgamation modules/markup_kit/css/include.css | ./node_modules/node-sass/bin/node-sass > ./modules/markup_kit/css/amalgamation.css",
     "build:css:minification": "postcss -c postcss/minification modules/markup_kit/css/amalgamation.css -o modules/markup_kit/css/minification.css",
     "build:doc": "sh bin/build_doc.sh"
+  },
+  "dependencies": {
+    "node-pandoc": "^0.3.0",
+    "postcss": "^6.0.14",
+    "postcss-nesting": "^4.2.1",
+    "postcss-partial-import": "^4.1.0"
   }
 }

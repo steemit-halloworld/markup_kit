@@ -1,5 +1,4 @@
-@import 'variables.css';
-
+@import 'core.settings.css';
 
 /*doc
 
@@ -18,39 +17,134 @@ or `week`.
 
 .input, .textarea, .select
 {
-  appearance:          none;
+  appearance: none;
 
   /* Sizing */
-  padding:             var(--spacing-small);
-  width:               22ch;
+  padding: var(--spacing-small);
+
+  /*margin: calc(var(--spacing-medium) / 2) 0;*/
+  /*min-width: 2ch;*/
 
   /* Positioning */
+  display: inline-flex !important;
+  align-items: stretch;
+  position: relative;
+  overflow: visible;
+  vertical-align: baseline;
 
-  /* Theme */
-  border:              var(--border-width) var(--border-color) var(--border-style);
-  border-radius:       var(--border-radius);
+  font-size: calc(1em - 1px);
+
+  & > .input:not(input), .select:not(select)
+  {
+    position: static;
+  }
+
+  & > *
+  {
+    flex: 1 1 0;
+  }
+
+  &::-ms-clear
+  { display: none; }
+
 
   /* Animation */
-  transition-property: color, background-color, border;
-  transition:          0.2s ease-in-out;
+  /*transition-property: color, background-color, border;
+  transition: 0.2s ease-in-out;*/
 
-  &:focus
+  /* Theme */
+  &, & > .focus
   {
-    outline:      0;
+    border: var(--border-width) var(--border-color) var(--border-style);
+    border-radius: var(--border-radius);
+    color: var(--color-text-primary);
+    outline: 0;
+  }
+
+  &.labeled
+  {
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    overflow: visible;
+  }
+
+  & > .focus
+  {
+    position: absolute;
+    background: transparent;
+    top: calc(var(--border-width) / -1);
+    right: calc(var(--border-width) / -1);
+    left: calc(var(--border-width) / -1);
+    bottom: calc(var(--border-width) / -1);
+    cursor: text;
+    pointer-events: none;
+    box-sizing: content-box;
+  }
+
+  &:focus, &:focus ~ .focus
+  {
+    outline: 0;
     border-color: var(--color-focus);
-    box-shadow:   0 0 1px var(--color-focus) inset;
+    box-shadow: 0 0 0 1px var(--color-focus);
+    visibility: visible;
+    z-index: var(--zindex-glass-layer);
+  }
+
+  & > .input:focus, .select:focus
+  {
+    box-shadow: none;
   }
 
   &:disabled,
   &.disabled
   {
-    resize:           none;
-    cursor:           not-allowed;
-    pointer-events:   none;
-    border-color:     #999;
-    font-style:       italic;
-    color:            #999;
+    resize: none;
+    cursor: not-allowed;
+    pointer-events: none;
+    border-color: #999;
+    font-style: italic;
+    color: #999;
     background-color: #999;
-    opacity:          0.6;
+    opacity: 0.6;
+  }
+
+  &[type='number']
+  {
+    text-align: right;
+    -moz-appearance: textfield !important;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button
+    {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  & > .input, .select
+  {
+    outline: none;
+    border-radius: 0;
+    padding-right: 0;
+    border: var(--border-width) transparent var(--border-style);
+    height: 100%;
+  }
+
+  /*& > .input:first-child, .select:first-child
+  {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }*/
+
+  & > .input:focus
+  {
+    border-color: transparent;
+    box-shadow: 0 0 0;
+  }
+
+  & > .label
+  {
+    flex: 0 0 0;
+    width: auto;
   }
 }

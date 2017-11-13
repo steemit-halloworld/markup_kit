@@ -31,10 +31,6 @@ mkdir -p "$parent_path"/../doc/md
 mkdir -p "$parent_path"/../doc/html
 
 CSS_FILES=("$parent_path"/../modules/markup_kit/css/*.css)
-<<<<<<< HEAD
-EXCLUDES=("$parent_path"/../modules/markup_kit/css/amalgamation*.css)
-=======
->>>>>>> 0bfec654bb79d55780c4ba68bc04133494c82406
 
 for e in "${EXCLUDES[@]}"; do
   i=
@@ -42,10 +38,5 @@ for e in "${EXCLUDES[@]}"; do
   array_remove CSS_FILES ${i}
 done
 
-<<<<<<< HEAD
 css-markdown "$parent_path"/../modules/markup_kit/css/amalgamation.css > "$parent_path"/../doc/md/documentation.md
 pandoc --template "$parent_path"/../modules/markup_kit/html/pandoc_template.html  --toc --toc-depth 1 --css ./../../modules/markup_kit/css/minification.css -f markdown-markdown_in_html_blocks+raw_html-native_divs -t html --standalone -o "$parent_path"/../doc/html/documentation.html "$parent_path"/../doc/md/documentation.md
-=======
-css-markdown "${CSS_FILES[@]}" > "$parent_path"/../doc/md/documentation.md
-pandoc --template "$parent_path"/../modules/markup_kit/html/pandoc_template.html  --toc --toc-depth 2 --css ../../build/css/style.stage1.css -f markdown_strict -t html --standalone -o "$parent_path"/../doc/html/documentation.html "$parent_path"/../doc/md/documentation.md
->>>>>>> 0bfec654bb79d55780c4ba68bc04133494c82406
