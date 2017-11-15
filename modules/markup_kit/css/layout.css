@@ -1,5 +1,4 @@
 @import 'layout.grid.css';
-@import 'layout.spacing.css';
 
 .fieldset:not(.inline)
 {
@@ -12,13 +11,28 @@
   flex-wrap: nowrap;
 }
 
-.column
+[grid]
 {
   @extend .grid;
-  flex-direction: column;
 }
 
-.column > *
+[grid*='-column']
 {
-  flex-basis: auto;
+  @extend [class*='-column'];
 }
+
+[grid*='one-column']
+{
+  @extend .grid.one-column;
+}
+
+[grid*='golden']
+{
+  @extend .golden.grid;
+}
+
+[cell*='narrowed']
+{
+  @extend .narrowed-cell;
+}
+

@@ -618,86 +618,69 @@ To reduce the visual complexity add the `basic` class to a label.
 </div>
 
 */
-/*.horizontal > *,
-.main > *,
-.div > *
-{
-  min-width: calc(100% - var(--spacing-medium));
-}
-
-.horizontal > .wide,
-.main > .wide,
-.div > .wide,
-.golden.grid > *:not(.wide)
-{
-  min-width: initial;
-}*/
-.grid, .fieldset:not(.inline), .global-form fieldset:not(.inline), .row, .column {
+.grid, .fieldset:not(.inline), .global-form fieldset:not(.inline), .row, [grid] {
   max-width: 100%; }
 
-.grid .grid, .fieldset:not(.inline) .grid, .global-form fieldset:not(.inline) .grid, .row .grid, .column .grid, .grid .fieldset:not(.inline), .fieldset:not(.inline) .fieldset:not(.inline), .global-form fieldset:not(.inline) .fieldset:not(.inline), .row .fieldset:not(.inline), .column .fieldset:not(.inline), .grid .global-form fieldset:not(.inline), .global-form .grid fieldset:not(.inline), .fieldset:not(.inline) .global-form fieldset:not(.inline), .global-form .fieldset:not(.inline) fieldset:not(.inline), .global-form fieldset:not(.inline) fieldset:not(.inline), .row .global-form fieldset:not(.inline), .global-form .row fieldset:not(.inline), .column .global-form fieldset:not(.inline), .global-form .column fieldset:not(.inline), .grid .row, .fieldset:not(.inline) .row, .global-form fieldset:not(.inline) .row, .row .row, .column .row, .grid .column, .fieldset:not(.inline) .column, .global-form fieldset:not(.inline) .column, .row .column, .column .column {
-  max-width: none;
-  max-width: initial; }
+.grid > *:nth-last-child(2):first-child, .fieldset:not(.inline) > *:nth-last-child(2):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child, .row > *:nth-last-child(2):first-child, [grid] > *:nth-last-child(2):first-child, .grid > *:nth-last-child(2):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(2):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child ~ *, .row > *:nth-last-child(2):first-child ~ *, [grid] > *:nth-last-child(2):first-child ~ * {
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  width: calc(50% - 1rem); }
 
-/*.golden.grid > :nth-child(even):not(.wide),*/
-[class*='narrow wide'] {
+.grid > *:nth-last-child(3):first-child, .fieldset:not(.inline) > *:nth-last-child(3):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child, .row > *:nth-last-child(3):first-child, [grid] > *:nth-last-child(3):first-child, .grid > *:nth-last-child(3):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(3):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child ~ *, .row > *:nth-last-child(3):first-child ~ *, [grid] > *:nth-last-child(3):first-child ~ * {
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  width: calc(33.33333% - 1rem); }
+
+.grid > *:nth-last-child(4):first-child, .fieldset:not(.inline) > *:nth-last-child(4):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child, .row > *:nth-last-child(4):first-child, [grid] > *:nth-last-child(4):first-child, .grid > *:nth-last-child(4):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(4):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child ~ *, .row > *:nth-last-child(4):first-child ~ *, [grid] > *:nth-last-child(4):first-child ~ * {
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  width: calc(25% - 1rem); }
+
+.grid > *:nth-last-child(5):first-child, .fieldset:not(.inline) > *:nth-last-child(5):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child, .row > *:nth-last-child(5):first-child, [grid] > *:nth-last-child(5):first-child, .grid > *:nth-last-child(5):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(5):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child ~ *, .row > *:nth-last-child(5):first-child ~ *, [grid] > *:nth-last-child(5):first-child ~ * {
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  width: calc(20% - 1rem); }
+
+.grid > *:nth-last-child(6):first-child, .fieldset:not(.inline) > *:nth-last-child(6):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child, .row > *:nth-last-child(6):first-child, [grid] > *:nth-last-child(6):first-child, .grid > *:nth-last-child(6):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(6):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child ~ *, .row > *:nth-last-child(6):first-child ~ *, [grid] > *:nth-last-child(6):first-child ~ * {
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  width: calc(16.66667% - 1rem); }
+
+.grid[class*='-column'] > *, [class*='-column'].fieldset:not(.inline) > *, .global-form fieldset[class*='-column']:not(.inline) > *, .global-form fieldset[grid*='-column']:not(.inline) > *, .fieldset[grid*='-column']:not(.inline) > *, [class*='-column'].row > *, .row[grid*='-column'] > *, [class*='-column'][grid] > *, [grid][grid*='-column'] > *, .grid[grid*='-column'] > * {
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto; }
+
+.grid.one-column > *, .one-column.fieldset:not(.inline) > *, .global-form fieldset.one-column:not(.inline) > *, .one-column.row > *, .one-column[grid] > *, [grid*='one-column'] > * {
+  width: 100% !important; }
+
+.narrowed-cell, [cell*='narrowed'] {
   -webkit-box-flex: 0 !important;
-  -ms-flex-positive: 0 !important;
-  flex-grow: 0 !important;
-  -ms-flex-negative: 0 !important;
-  flex-shrink: 0 !important;
-  -ms-flex-preferred-size: auto !important;
-  flex-basis: auto !important; }
+  -ms-flex: 0 0 auto !important;
+  flex: 0 0 auto !important;
+  width: auto !important; }
 
-/*[class*='narrow wide']
-{
-  flex-basis: auto !important;
-}*/
-/*.grid > .wide,
-.grid > .width
-{
-  flex-grow: 0 !important;
-  flex-shrink: 0 !important;
-}*/
-.golden.grid > :nth-child(even):not(.wide), .golden.fieldset:not(.inline) > :nth-child(even):not(.wide), .global-form fieldset.golden:not(.inline) > :nth-child(even):not(.wide), .golden.row > :nth-child(even):not(.wide), .golden.column > :nth-child(even):not(.wide),
-.golden.grid > .medium, .golden.fieldset:not(.inline) > .medium, .global-form fieldset.golden:not(.inline) > .medium, .golden.row > .medium, .golden.column > .medium {
-  max-width: calc(38.1953% - 1rem) !important;
-  -webkit-box-flex: 0 !important;
-  -ms-flex: 0 1 calc(38.1953% - 1rem) !important;
-  flex: 0 1 calc(38.1953% - 1rem) !important; }
+.golden.grid > :nth-child(even), .golden.fieldset:not(.inline) > :nth-child(even), .global-form fieldset.golden:not(.inline) > :nth-child(even), .golden.row > :nth-child(even), .golden[grid] > :nth-child(even), [grid*='golden'] > :nth-child(even) {
+  width: auto;
+  max-width: calc(38.1953% - 1rem) !important; }
 
-/*[class*='golden ratio'] > :nth-child(odd):not(.wide),*/
-.golden.grid > .large, .golden.fieldset:not(.inline) > .large, .global-form fieldset.golden:not(.inline) > .large, .golden.row > .large, .golden.column > .large {
+.golden.grid > .tiny.width, .golden.fieldset:not(.inline) > .tiny.width, .global-form fieldset.golden:not(.inline) > .tiny.width, .golden.row > .tiny.width, .golden[grid] > .tiny.width, [grid*='golden'] > .tiny.width {
+  width: calc(14.58881% - 1rem) !important; }
+
+.golden.grid > .large.width, .golden.fieldset:not(.inline) > .large.width, .global-form fieldset.golden:not(.inline) > .large.width, .golden.row > .large.width, .golden[grid] > .large.width, [grid*='golden'] > .large.width {
   width: calc(61.8047% - 1rem) !important; }
 
-.golden.grid > .small, .golden.fieldset:not(.inline) > .small, .global-form fieldset.golden:not(.inline) > .small, .golden.row > .small, .golden.column > .small {
-  width: 23.60649% !important; }
-
-.width.full {
-  width: calc(100% - 1rem) !important;
-  min-width: calc(100% - 1rem) !important; }
-
-[class*='half wide'] {
-  width: calc(50% - 1rem) !important; }
-
-[class*='one-quarter wide'] {
-  width: 25% !important; }
-
-[class*='three-quarter wide'] {
-  width: 75% !important; }
-
 @media (min-width: 0) and (max-width: 768px) {
-  .stacked.grid > *, .stacked.fieldset:not(.inline) > *, .global-form fieldset.stacked:not(.inline) > *, .stacked.row > *, .stacked.column > * {
+  .grid > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > *, .row > *, [grid] > * {
     min-width: 100% !important;
     width: 100% !important; } }
 
-.grid, .fieldset:not(.inline), .global-form fieldset:not(.inline), .row, .column {
+.grid, .fieldset:not(.inline), .global-form fieldset:not(.inline), .row, [grid] {
   margin-left: -4px !important;
   margin-left: -0.25rem !important;
   margin-right: -4px !important;
   margin-right: -0.25rem !important; }
 
-.grid > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > *, .row > *, .column > * {
+.grid > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > *, .row > *, [grid] > * {
   margin-left: 4px !important;
   margin-left: 0.25rem !important;
   margin-right: 4px !important;
@@ -705,20 +688,20 @@ To reduce the visual complexity add the `basic` class to a label.
   margin-bottom: 12px !important;
   margin-bottom: 0.75rem !important; }
 
-.grid > .grid, .fieldset:not(.inline) > .grid, .global-form fieldset:not(.inline) > .grid, .row > .grid, .column > .grid, .grid > .fieldset:not(.inline), .fieldset:not(.inline) > .fieldset:not(.inline), .global-form fieldset:not(.inline) > .fieldset:not(.inline), .row > .fieldset:not(.inline), .column > .fieldset:not(.inline), .global-form .grid > fieldset:not(.inline), .global-form .fieldset:not(.inline) > fieldset:not(.inline), .global-form fieldset:not(.inline) > fieldset:not(.inline), .global-form .row > fieldset:not(.inline), .global-form .column > fieldset:not(.inline), .grid > .row, .fieldset:not(.inline) > .row, .global-form fieldset:not(.inline) > .row, .row > .row, .column > .row, .grid > .column, .fieldset:not(.inline) > .column, .global-form fieldset:not(.inline) > .column, .row > .column, .column > .column {
+.grid > .grid, .fieldset:not(.inline) > .grid, .global-form fieldset:not(.inline) > .grid, .row > .grid, [grid] > .grid, .grid > .fieldset:not(.inline), .fieldset:not(.inline) > .fieldset:not(.inline), .global-form fieldset:not(.inline) > .fieldset:not(.inline), .row > .fieldset:not(.inline), [grid] > .fieldset:not(.inline), .global-form .grid > fieldset:not(.inline), .global-form .fieldset:not(.inline) > fieldset:not(.inline), .global-form fieldset:not(.inline) > fieldset:not(.inline), .global-form .row > fieldset:not(.inline), .global-form [grid] > fieldset:not(.inline), .grid > .row, .fieldset:not(.inline) > .row, .global-form fieldset:not(.inline) > .row, .row > .row, [grid] > .row, .grid > [grid], .fieldset:not(.inline) > [grid], .global-form fieldset:not(.inline) > [grid], .row > [grid], [grid] > [grid] {
   margin: 0 0 !important; }
 
 @media (min-width: 0) and (max-width: 768px) {
-  .stacked.grid > *, .stacked.fieldset:not(.inline) > *, .global-form fieldset.stacked:not(.inline) > *, .stacked.row > *, .stacked.column > *,
+  .stacked.grid > *, .stacked.fieldset:not(.inline) > *, .global-form fieldset.stacked:not(.inline) > *, .stacked.row > *, .stacked[grid] > *,
   .stacked.grid,
   .stacked.fieldset:not(.inline),
   .global-form fieldset.stacked:not(.inline),
   .stacked.row,
-  .stacked.column {
+  .stacked[grid] {
     margin-left: 0 !important;
     margin-right: 0 !important; } }
 
-.grid, .fieldset:not(.inline), .global-form fieldset:not(.inline), .row, .column {
+.grid, .fieldset:not(.inline), .global-form fieldset:not(.inline), .row, [grid] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -726,9 +709,12 @@ To reduce the visual complexity add the `basic` class to a label.
   flex-wrap: wrap;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
-  align-items: stretch; }
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
-.grid > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > *, .row > *, .column > * {
+.grid > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > *, .row > *, [grid] > * {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -740,10 +726,10 @@ To reduce the visual complexity add the `basic` class to a label.
   transition: flex 250ms linear;
   transition: flex 250ms linear, -webkit-box-flex 250ms linear, -ms-flex 250ms linear; }
 
-.grid > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > *, .row > *, .column > * {
+.grid > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > *, .row > *, [grid] > * {
   display: inline-block; }
 
-.grid > .grid, .fieldset:not(.inline) > .grid, .global-form fieldset:not(.inline) > .grid, .row > .grid, .column > .grid, .grid > .fieldset:not(.inline), .fieldset:not(.inline) > .fieldset:not(.inline), .global-form fieldset:not(.inline) > .fieldset:not(.inline), .row > .fieldset:not(.inline), .column > .fieldset:not(.inline), .global-form .grid > fieldset:not(.inline), .global-form .fieldset:not(.inline) > fieldset:not(.inline), .global-form fieldset:not(.inline) > fieldset:not(.inline), .global-form .row > fieldset:not(.inline), .global-form .column > fieldset:not(.inline), .grid > .row, .fieldset:not(.inline) > .row, .global-form fieldset:not(.inline) > .row, .row > .row, .column > .row, .grid > .column, .fieldset:not(.inline) > .column, .global-form fieldset:not(.inline) > .column, .row > .column, .column > .column {
+.grid > .grid, .fieldset:not(.inline) > .grid, .global-form fieldset:not(.inline) > .grid, .row > .grid, [grid] > .grid, .grid > .fieldset:not(.inline), .fieldset:not(.inline) > .fieldset:not(.inline), .global-form fieldset:not(.inline) > .fieldset:not(.inline), .row > .fieldset:not(.inline), [grid] > .fieldset:not(.inline), .global-form .grid > fieldset:not(.inline), .global-form .fieldset:not(.inline) > fieldset:not(.inline), .global-form fieldset:not(.inline) > fieldset:not(.inline), .global-form .row > fieldset:not(.inline), .global-form [grid] > fieldset:not(.inline), .grid > .row, .fieldset:not(.inline) > .row, .global-form fieldset:not(.inline) > .row, .row > .row, [grid] > .row, .grid > [grid], .fieldset:not(.inline) > [grid], .global-form fieldset:not(.inline) > [grid], .row > [grid], [grid] > [grid] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -1188,16 +1174,6 @@ or `week`.
 .row {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap; }
-
-.column {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
-
-.column > * {
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto; }
 
 .primary, .success, .warning, .error, .focused, .dark, .light {
   padding: 8px;
