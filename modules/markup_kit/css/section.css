@@ -1,8 +1,8 @@
 .section
 {
   /* Sizing */
-  padding: 1em var(--golden-ratio-3);
-
+  padding: var(--spacing-large);
+  background: var(--color-bg-body);
   /* Theming */
   box-shadow: rgb(223, 223, 224) 1px 2px 1px 0px, rgb(242, 242, 242) -1px -1px 0px 0px;
 }

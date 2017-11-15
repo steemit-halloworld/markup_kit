@@ -91,15 +91,18 @@
 
     function update_attribute (target, name, new_val, old_val)
     {
-      //console.log("UPDATE ATTRIBUTE: " + text(target) + " - " +  text(name));
-
       if (!kit.is_defined(new_val))
       {
+        kit.log("REMOVE ATTRIBUTE: " + text(target) + " - " +  name);
+
         remove_attribute(target, name, old_val);
         return true;
       }
       else if (!kit.is_defined(old_val) || new_val != old_val)
       {
+
+        kit.log("SET ATTRIBUTE: " + text(target) + " - " +  name);
+
         set_attribute(target, name, new_val);
         return true;
       }
@@ -109,7 +112,6 @@
 
     function update_attributes (target, new_attributes, old_attributes)
     {
-      //console.log("Update Attributes");
       var result = false;
       for (var i = 0; i < new_attributes.length || i < old_attributes.length; i++)
       {
@@ -154,6 +156,8 @@
 
     function text (node)
     {
+      if(typeof node === 'string') return node;
+
       var child_count = node.childNodes === undefined ? 0 : node.childNodes.length;
       var text = "";
       for (var i = 0; i < child_count; i++)
@@ -191,7 +195,7 @@
 
       if (!old_node)
       {
-        console.log("append node " + new_node.innerHTML);
+        console.log("append node: " + new_node.innerHTML);
 
 
 
@@ -200,7 +204,7 @@
       }
       else if (!new_node)
       {
-        console.log("remove node " + old_node.innerHTML);
+        console.log("remove node: " + old_node.innerHTML);
 
         dirty_nodes.push(parent.children[index]);
         return true;
@@ -210,7 +214,7 @@
       else if (has_node_changed(new_node, old_node))
       {
 
-        console.log("replace node " + old_node.innerHTML + " vs. " + new_node.innerHTML);
+        console.log("replace node: " + old_node.innerHTML + " vs. " + new_node.innerHTML);
 
         parent.replaceChild(new_node.cloneNode(true), parent.children[index]);
         return true;

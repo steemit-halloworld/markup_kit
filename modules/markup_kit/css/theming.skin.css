@@ -1,5 +1,7 @@
-.primary, .success, .warning, .error, .focused, .dark, .light
-{ padding: var(--spacing-small); }
+.muted
+{
+  background: var(--color-muted) !important;
+}
 
 .primary, .success, .warning, .error, .focused, .dark
 {

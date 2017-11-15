@@ -1,32 +1,37 @@
+:root
+{
+  --grid-cell-gutter: var(--spacing-large);
+  --grid-cell-horizontal-margin: calc(var(--grid-cell-gutter) / 2);
+}
+
 [grid]
 {
   display: flex;
+  /* default grid configuration */
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: space-between;
   max-width: 100%;
 
-  & > *
-  {
-    flex: 1 1 0;
-    transition: flex 250ms linear;
-  }
+  /* default grid cell configuration */
+  & > * { flex: 1 1 0; transition: flex 250ms linear; }
 
-  /* Accommodate Cell Gutter By Default */
-  margin-left: calc(var(--spacing-small) / -2) !important;
-  margin-right: calc(var(--spacing-small) / -2) !important;
+  /* accommodate cell gutter by default */
+  margin-left: -(var(--grid-cell-horizontal-margin)) !important;
+  margin-right: -(var(--grid-cell-horizontal-margin)) !important;
 
-  & > * { margin-left: calc(var(--spacing-small) / 2) !important; margin-right: calc(var(--spacing-small) / 2) !important;}
+  /* override horizontal cell margin  */
+  & > * { margin-left: var(--grid-cell-horizontal-margin) !important; margin-right: var(--grid-cell-horizontal-margin) !important;}
   & > [grid] { margin: 0 0 !important; }
 
-  // Automatically Define Width Based on Child Count
-  & > *:nth-last-child(2):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 2) - var(--spacing-medium));}}
-  & > *:nth-last-child(3):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 3) - var(--spacing-medium));}}
-  & > *:nth-last-child(4):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 4) - var(--spacing-medium));}}
-  & > *:nth-last-child(5):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 5) - var(--spacing-medium));}}
-  & > *:nth-last-child(6):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 6) - var(--spacing-medium));}}
+  /* default grid cell width based on child count */
+  & > *:nth-last-child(2):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 2) - var(--grid-cell-gutter));}}
+  & > *:nth-last-child(3):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 3) - var(--grid-cell-gutter));}}
+  & > *:nth-last-child(4):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 4) - var(--grid-cell-gutter));}}
+  & > *:nth-last-child(5):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 5) - var(--grid-cell-gutter));}}
+  & > *:nth-last-child(6):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 6) - var(--grid-cell-gutter));}}
 
-  &[grid*='-column'] > * {flex-basis: auto !important;}
+  &[grid*='-column']    > * {flex-basis: auto !important;}
   &[grid*='one-column'] > * {width: 100% !important;}
 
   &[grid*='golden-ratio'] > :nth-child(even)

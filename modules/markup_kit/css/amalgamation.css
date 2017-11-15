@@ -476,7 +476,7 @@ inherit the specified `box sizing`
 
 /*endregion*/
 body {
-  background-color: #F5F5F5; }
+  background-color: #FFF; }
 
 /*doc
 
@@ -622,6 +622,7 @@ To reduce the visual complexity add the `basic` class to a label.
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* default grid configuration */
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-align: stretch;
@@ -641,48 +642,55 @@ To reduce the visual complexity add the `basic` class to a label.
   transition: flex 250ms linear, -webkit-box-flex 250ms linear, -ms-flex 250ms linear; }
 
 [grid], .fieldset:not(.inline), .global-form fieldset:not(.inline) {
-  /*Accommodate Cell Gutter By Default
+  /*accommodate cell gutter by default
 
 */
-  margin-left: -4px !important;
-  margin-left: -0.25rem !important;
-  margin-right: -4px !important;
-  margin-right: -0.25rem !important; }
+  margin-left: -16px !important;
+  margin-left: -1rem !important;
+  margin-right: -16px !important;
+  margin-right: -1rem !important;
+  /*override horizontal cell margin
+
+*/ }
 
 [grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
-  margin-left: 4px !important;
-  margin-left: 0.25rem !important;
-  margin-right: 4px !important;
-  margin-right: 0.25rem !important; }
+  margin-left: 16px !important;
+  margin-left: 1rem !important;
+  margin-right: 16px !important;
+  margin-right: 1rem !important; }
 
 [grid] > [grid], .fieldset:not(.inline) > [grid], .global-form fieldset:not(.inline) > [grid], [grid] > .fieldset:not(.inline), .fieldset:not(.inline) > .fieldset:not(.inline), .global-form fieldset:not(.inline) > .fieldset:not(.inline), .global-form [grid] > fieldset:not(.inline), .global-form .fieldset:not(.inline) > fieldset:not(.inline), .global-form fieldset:not(.inline) > fieldset:not(.inline) {
   margin: 0 0 !important; }
 
-[grid] > *:nth-last-child(2):first-child, .fieldset:not(.inline) > *:nth-last-child(2):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child,
-[grid] > *:nth-last-child(2):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(2):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child ~ * {
+[grid], .fieldset:not(.inline), .global-form fieldset:not(.inline) {
+  /*default grid cell width based on child count
+
+*/ }
+
+[grid] > *:nth-last-child(2):first-child, .fieldset:not(.inline) > *:nth-last-child(2):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child, [grid] > *:nth-last-child(2):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(2):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child ~ * {
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  width: calc(50% - 1rem); }
+  width: calc(50% - 2rem); }
 
 [grid] > *:nth-last-child(3):first-child, .fieldset:not(.inline) > *:nth-last-child(3):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child, [grid] > *:nth-last-child(3):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(3):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child ~ * {
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  width: calc(33.33333% - 1rem); }
+  width: calc(33.33333% - 2rem); }
 
 [grid] > *:nth-last-child(4):first-child, .fieldset:not(.inline) > *:nth-last-child(4):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child, [grid] > *:nth-last-child(4):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(4):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child ~ * {
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  width: calc(25% - 1rem); }
+  width: calc(25% - 2rem); }
 
 [grid] > *:nth-last-child(5):first-child, .fieldset:not(.inline) > *:nth-last-child(5):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child, [grid] > *:nth-last-child(5):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(5):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child ~ * {
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  width: calc(20% - 1rem); }
+  width: calc(20% - 2rem); }
 
 [grid] > *:nth-last-child(6):first-child, .fieldset:not(.inline) > *:nth-last-child(6):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child, [grid] > *:nth-last-child(6):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(6):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child ~ * {
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  width: calc(16.66667% - 1rem); }
+  width: calc(16.66667% - 2rem); }
 
 [grid][grid*='-column'] > *, [grid*='-column'].fieldset:not(.inline) > *, .global-form fieldset[grid*='-column']:not(.inline) > * {
   -ms-flex-preferred-size: auto !important;
@@ -1143,15 +1151,14 @@ or `week`.
 .td, .global-table td {
   vertical-align: top; }
 
-.primary, .success, .warning, .error, .focused, .dark, .light {
-  padding: 8px;
-  padding: .5rem; }
+.muted {
+  background: #f5f5f5 !important; }
 
 .primary, .success, .warning, .error, .focused, .dark {
   color: white !important; }
 
 [class*='body background'] {
-  background-color: #F5F5F5; }
+  background-color: #FFF; }
 
 .white {
   background-color: white; }
@@ -1216,6 +1223,8 @@ or `week`.
 
 .section {
   /* Sizing */
-  padding: 1em 3.44391%;
+  padding: 32px;
+  padding: 2rem;
+  background: #FFF;
   /* Theming */
   box-shadow: #dfdfe0 1px 2px 1px 0px, #f2f2f2 -1px -1px 0px 0px; }
