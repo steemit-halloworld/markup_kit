@@ -66,7 +66,7 @@
       }
       else
       {
-        target.removeAttribute('name');
+        target.removeAttribute(name);
       }
     }
 
