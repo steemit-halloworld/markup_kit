@@ -1,0 +1,19 @@
+[grid]
+{
+  max-width: 100%;
+
+  & > *:nth-last-child(2):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 2) - var(--spacing-medium));}}
+  & > *:nth-last-child(3):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 3) - var(--spacing-medium));}}
+  & > *:nth-last-child(4):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 4) - var(--spacing-medium));}}
+  & > *:nth-last-child(5):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 5) - var(--spacing-medium));}}
+  & > *:nth-last-child(6):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 6) - var(--spacing-medium));}}
+
+  &[grid*='-column'] > * {flex-basis: auto;}
+
+  &[grid*='one-column'] > * {width: 100% !important;};
+}
+
+[cell*='narrowed'] { flex: 0 0 auto !important; width: auto !important; }
+
+[grid*='golden-ratio'] > :nth-child(even)
+{ width: auto; max-width: calc(var(--golden-ratio-8) - var(--spacing-medium)) !important; }

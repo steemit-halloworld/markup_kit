@@ -1,38 +1,8 @@
 @import 'layout.grid.css';
+@import 'layout.grid.cell.css';
+@import 'layout.grid.spacing.css';
 
 .fieldset:not(.inline)
 {
-  @extend .grid;
+  @extend [grid];
 }
-
-.row
-{
-  @extend .grid;
-  flex-wrap: nowrap;
-}
-
-[grid]
-{
-  @extend .grid;
-}
-
-[grid*='-column']
-{
-  @extend [class*='-column'];
-}
-
-[grid*='one-column']
-{
-  @extend .grid.one-column;
-}
-
-[grid*='golden']
-{
-  @extend .golden.grid;
-}
-
-[cell*='narrowed']
-{
-  @extend .narrowed-cell;
-}
-

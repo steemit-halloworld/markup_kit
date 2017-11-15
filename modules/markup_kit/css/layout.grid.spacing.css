@@ -1,17 +1,17 @@
-.grid
+[grid]
 {
   margin-left: calc(var(--spacing-small) / -2) !important;
   margin-right: calc(var(--spacing-small) / -2) !important;
 }
 
-.grid > *
+[grid] > *
 {
   margin-left: calc(var(--spacing-small) / 2) !important;
   margin-right: calc(var(--spacing-small) / 2) !important;
   margin-bottom: 0.75rem !important;
 }
 
-.grid > .grid
+[grid] > [grid]
 {
   margin: 0 0 !important;
 
@@ -19,8 +19,8 @@
 
 @media (--only-small)
 {
-  .stacked.grid > *,
-  .stacked.grid
+  [grid] > *,
+  [grid]
   {
     margin-left: 0 !important;
     margin-right: 0 !important;
