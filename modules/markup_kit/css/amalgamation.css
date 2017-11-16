@@ -713,7 +713,6 @@ To reduce the visual complexity add the `basic` class to a label.
   [grid], .fieldset:not(.inline), .global-form fieldset:not(.inline), [grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
     margin-left: 0 !important;
     margin-right: 0 !important;
-    display: block !important;
     width: 100% !important; } }
 
 .label, .global-form label {
