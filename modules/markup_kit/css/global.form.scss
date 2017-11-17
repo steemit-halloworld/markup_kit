@@ -1,6 +1,6 @@
 .global-form
 {
-  & input:not([type='submit']):not([type='radio']):not([type='checkbox']), .input
+  & input:not([type='submit']):not([type='radio']):not([type='checkbox'])
   {
     @extend .input;
   }

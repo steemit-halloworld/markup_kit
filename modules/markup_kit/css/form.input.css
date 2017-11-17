@@ -72,7 +72,7 @@ or `week`.
   & > .focus
   {
     position: absolute;
-    background: transparent;
+    background: transparent !important;
     top: calc(var(--border-width) / -1);
     right: calc(var(--border-width) / -1);
     left: calc(var(--border-width) / -1);
@@ -91,7 +91,7 @@ or `week`.
     z-index: var(--zindex-glass-layer);
   }
 
-  & > .input:focus, .select:focus
+  & > .input:focus, > .select:focus
   {
     box-shadow: none;
   }
@@ -122,11 +122,14 @@ or `week`.
     }
   }
 
-  & > .input, .select
+  & > .input, > .select
   {
     outline: none;
+    margin: 0 !important;
     border-radius: 0;
     padding-right: 0;
+    color: inherit;
+    background: transparent;
     border: var(--border-width) transparent var(--border-style);
     height: 100%;
   }

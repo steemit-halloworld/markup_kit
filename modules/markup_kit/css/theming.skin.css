@@ -1,20 +1,18 @@
+
 .muted
 {
   background: var(--color-muted) !important;
 }
 
-.primary, .success, .warning, .error, .focused, .dark
+.primary:not(.basic), .success:not(.basic), .warning:not(.basic), .error:not(.basic), .focused:not(.basic), .dark:not(.basic)
 {
   color: var(--color-text-inverted) !important;
 }
 
-[class*='body background']
-{background-color: var(--color-bg-body);}
-
 .white
 {background-color: white;}
 
-.primary, [class*='primary background']
+.primary, * .primary
 {
   background-color: var(--color-primary) !important;
   border-color: var(--color-primary) !important;
@@ -52,8 +50,11 @@
 
 .error
 {
-  background-color: var(--color-state-error);
-  border-color: var(--color-state-error);
+  &, & > .focus
+  {
+    background-color: var(--color-state-error);
+    border-color: var(--color-state-error);
+  }
 
   &.basic
   {

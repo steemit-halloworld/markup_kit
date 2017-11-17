@@ -1,0 +1,17 @@
+.error.input > .primary.input,
+.error.input > .primary.select
+{
+  background-color: var(--color-state-error) !important;
+  border-color: var(--color-state-error) !important;
+}
+
+.input.error
+{
+  &:focus, &:focus ~ .focus,
+  &  .input:focus ~ .focus,
+  &  .select:focus ~ .focus
+  {
+    box-shadow: 0 0 0 1px var(--color-state-error) !important;
+    border-color: var(--color-state-error) !important;
+  }
+}

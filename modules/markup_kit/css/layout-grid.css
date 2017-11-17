@@ -16,6 +16,12 @@
   /* default grid cell configuration */
   & > * { flex: 1 1 0; transition: flex 250ms linear; }
 
+  /*doc
+
+    ## Margin And Gutter
+    TODO
+   */
+
   /* accommodate cell gutter by default */
   margin-left: -(var(--grid-cell-horizontal-margin)) !important;
   margin-right: -(var(--grid-cell-horizontal-margin)) !important;
@@ -23,6 +29,8 @@
   /* override horizontal cell margin  */
   & > * { margin-left: var(--grid-cell-horizontal-margin) !important; margin-right: var(--grid-cell-horizontal-margin) !important;}
   & > [grid] { margin: 0 0 !important; }
+
+
 
   /* default grid cell width based on child count */
   & > *:nth-last-child(2):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 2) - var(--grid-cell-gutter));}}

@@ -642,22 +642,28 @@ To reduce the visual complexity add the `basic` class to a label.
   transition: flex 250ms linear, -webkit-box-flex 250ms linear, -ms-flex 250ms linear; }
 
 [grid], .fieldset:not(.inline), .global-form fieldset:not(.inline) {
+  /*doc
+
+    ## Margin And Gutter
+    TODO
+
+*/
   /*accommodate cell gutter by default
 
 */
-  margin-left: -16px !important;
-  margin-left: -1rem !important;
-  margin-right: -16px !important;
-  margin-right: -1rem !important;
+  margin-left: -12px !important;
+  margin-left: -0.75rem !important;
+  margin-right: -12px !important;
+  margin-right: -0.75rem !important;
   /*override horizontal cell margin
 
 */ }
 
 [grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
-  margin-left: 16px !important;
-  margin-left: 1rem !important;
-  margin-right: 16px !important;
-  margin-right: 1rem !important; }
+  margin-left: 12px !important;
+  margin-left: 0.75rem !important;
+  margin-right: 12px !important;
+  margin-right: 0.75rem !important; }
 
 [grid] > [grid], .fieldset:not(.inline) > [grid], .global-form fieldset:not(.inline) > [grid], [grid] > .fieldset:not(.inline), .fieldset:not(.inline) > .fieldset:not(.inline), .global-form fieldset:not(.inline) > .fieldset:not(.inline), .global-form [grid] > fieldset:not(.inline), .global-form .fieldset:not(.inline) > fieldset:not(.inline), .global-form fieldset:not(.inline) > fieldset:not(.inline) {
   margin: 0 0 !important; }
@@ -670,27 +676,27 @@ To reduce the visual complexity add the `basic` class to a label.
 [grid] > *:nth-last-child(2):first-child, .fieldset:not(.inline) > *:nth-last-child(2):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child, [grid] > *:nth-last-child(2):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(2):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child ~ * {
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  width: calc(50% - 2rem); }
+  width: calc(50% - 1.5rem); }
 
 [grid] > *:nth-last-child(3):first-child, .fieldset:not(.inline) > *:nth-last-child(3):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child, [grid] > *:nth-last-child(3):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(3):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child ~ * {
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  width: calc(33.33333% - 2rem); }
+  width: calc(33.33333% - 1.5rem); }
 
 [grid] > *:nth-last-child(4):first-child, .fieldset:not(.inline) > *:nth-last-child(4):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child, [grid] > *:nth-last-child(4):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(4):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child ~ * {
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  width: calc(25% - 2rem); }
+  width: calc(25% - 1.5rem); }
 
 [grid] > *:nth-last-child(5):first-child, .fieldset:not(.inline) > *:nth-last-child(5):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child, [grid] > *:nth-last-child(5):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(5):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child ~ * {
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  width: calc(20% - 2rem); }
+  width: calc(20% - 1.5rem); }
 
 [grid] > *:nth-last-child(6):first-child, .fieldset:not(.inline) > *:nth-last-child(6):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child, [grid] > *:nth-last-child(6):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(6):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child ~ * {
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  width: calc(16.66667% - 2rem); }
+  width: calc(16.66667% - 1.5rem); }
 
 [grid][grid*='-column'] > *, [grid*='-column'].fieldset:not(.inline) > *, .global-form fieldset[grid*='-column']:not(.inline) > * {
   -ms-flex-preferred-size: auto !important;
@@ -716,6 +722,10 @@ To reduce the visual complexity add the `basic` class to a label.
     width: 100% !important; } }
 
 .label, .global-form label {
+  margin-top: 16px;
+  margin-top: 1rem;
+  margin-bottom: 8px;
+  margin-bottom: .5rem;
   /* Sizing */
   /*margin: calc(var(--spacing-medium) / 2) 0;*/
   /* Positioning */
@@ -733,14 +743,18 @@ To reduce the visual complexity add the `basic` class to a label.
   width: 100%;
   min-width: 1ch; }
 
-.label:not(.inline) > .input, .global-form .label:not(.inline) > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form label:not(.inline) > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .label:not(.inline) > .input, .global-form label:not(.inline) > .input,
+.label:not(.inline) > .input, .global-form label:not(.inline) > .input, .global-form .label:not(.inline) > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form label:not(.inline) > input:not([type='submit']):not([type='radio']):not([type='checkbox']),
 .label:not(.inline) > .textarea, .global-form label:not(.inline) > .textarea, .global-form
 .label:not(.inline) > textarea, .global-form label:not(.inline) > textarea,
 .label:not(.inline) > .select, .global-form label:not(.inline) > .select, .global-form
 .label:not(.inline) > select, .global-form label:not(.inline) > select {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
-  display: flex !important; }
+  display: flex !important;
+  margin-top: 8px;
+  margin-top: .5rem;
+  margin-bottom: -8px;
+  margin-bottom: -.5rem; }
 
 .label:not(.inline) > select, .global-form label:not(.inline) > select {
   min-width: 8ch; }
@@ -756,7 +770,7 @@ To reduce the visual complexity add the `basic` class to a label.
   width:     100%;*/ }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
-/* Pointing Label                                                                                                            */
+/* Pointing Label                                                                                                     */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
 /*doc
@@ -854,7 +868,7 @@ or `week`.
 </div>
 
 */
-.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .input, .textarea, .global-form textarea, .select, .global-form select {
+.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea, .global-form textarea, .select, .global-form select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -874,24 +888,24 @@ or `week`.
   overflow: visible;
   vertical-align: baseline;
   font-size: calc(1em - 1px); }
-  .input > .input:not(input), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .input > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:not(input), .global-form .input > .input:not(input), .input .select:not(select), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) .select:not(select), .input .global-form select:not(select), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) select:not(select), .global-form .input select:not(select), .textarea > .input:not(input), .global-form .textarea > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .textarea > .input:not(input), .global-form textarea > .input:not(input), .textarea .select:not(select), .global-form textarea .select:not(select), .textarea .global-form select:not(select), .global-form .textarea select:not(select), .global-form textarea select:not(select), .select > .input:not(input), .global-form .select > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .select > .input:not(input), .global-form select > .input:not(input), .select .select:not(select), .global-form select .select:not(select), .select .global-form select:not(select), .global-form .select select:not(select), .global-form select select:not(select) {
+  .input > .input:not(input), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:not(input), .global-form .input > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .input .select:not(select), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) .select:not(select), .input .global-form select:not(select), .global-form .input select:not(select), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) select:not(select), .textarea > .input:not(input), .global-form textarea > .input:not(input), .global-form .textarea > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea .select:not(select), .global-form textarea .select:not(select), .textarea .global-form select:not(select), .global-form .textarea select:not(select), .global-form textarea select:not(select), .select > .input:not(input), .global-form select > .input:not(input), .global-form .select > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .select .select:not(select), .global-form select .select:not(select), .select .global-form select:not(select), .global-form .select select:not(select), .global-form select select:not(select) {
     position: static; }
 
-.input > *, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > *, .global-form .input > *,
+.input > *, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > *,
 .textarea > *, .global-form textarea > *,
 .select > *, .global-form select > * {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 0px;
   flex: 1 1 0; }
 
-.input::-ms-clear, .global-form input:not([type='checkbox']):not([type='radio']):not([type='submit'])::-ms-clear, .global-form .input::-ms-clear,
+.input::-ms-clear, .global-form input:not([type='checkbox']):not([type='radio']):not([type='submit'])::-ms-clear,
 .textarea::-ms-clear,
 .global-form textarea::-ms-clear,
 .select::-ms-clear,
 .global-form select::-ms-clear {
   display: none; }
 
-.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .input, .textarea, .global-form textarea, .select, .global-form select {
+.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea, .global-form textarea, .select, .global-form select {
   /*Animation
 
 */
@@ -903,7 +917,7 @@ or `week`.
 
 */ }
 
-.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .input, .input > .focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus, .global-form .input > .focus, .textarea, .global-form textarea, .textarea > .focus, .global-form textarea > .focus, .select, .global-form select, .select > .focus, .global-form select > .focus {
+.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .input > .focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus, .textarea, .global-form textarea, .textarea > .focus, .global-form textarea > .focus, .select, .global-form select, .select > .focus, .global-form select > .focus {
   border: 1px #D4D4D4 solid;
   border-radius: 4px;
   color: #444;
@@ -923,11 +937,11 @@ or `week`.
   padding: 0;
   overflow: visible; }
 
-.input > .focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus, .global-form .input > .focus,
+.input > .focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus,
 .textarea > .focus, .global-form textarea > .focus,
 .select > .focus, .global-form select > .focus {
   position: absolute;
-  background: transparent;
+  background: transparent !important;
   top: -1px;
   right: -1px;
   left: -1px;
@@ -936,14 +950,14 @@ or `week`.
   pointer-events: none;
   box-sizing: content-box; }
 
-.input:focus, .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .input:focus ~ .focus, .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .global-form .input:focus ~ .focus, .textarea:focus, .global-form textarea:focus, .textarea:focus ~ .focus, .global-form textarea:focus ~ .focus, .select:focus, .global-form select:focus, .select:focus ~ .focus, .global-form select:focus ~ .focus {
+.input:focus, .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .input:focus ~ .focus, .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .textarea:focus, .global-form textarea:focus, .textarea:focus ~ .focus, .global-form textarea:focus ~ .focus, .select:focus, .global-form select:focus, .select:focus ~ .focus, .global-form select:focus ~ .focus {
   outline: 0;
   border-color: #3091f3;
   box-shadow: 0 0 0 1px #3091f3;
   visibility: visible;
   z-index: 1000; }
 
-.input > .input:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .input > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:focus, .global-form .input > .input:focus, .input .select:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) .select:focus, .input .global-form select:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) select:focus, .global-form .input select:focus, .textarea > .input:focus, .global-form .textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .textarea > .input:focus, .global-form textarea > .input:focus, .textarea .select:focus, .global-form textarea .select:focus, .textarea .global-form select:focus, .global-form .textarea select:focus, .global-form textarea select:focus, .select > .input:focus, .global-form .select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .select > .input:focus, .global-form select > .input:focus, .select .select:focus, .global-form select .select:focus, .select .global-form select:focus, .global-form .select select:focus, .global-form select select:focus {
+.input > .input:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:focus, .global-form .input > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .input > .select:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .select:focus, .global-form .input > select:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > select:focus, .textarea > .input:focus, .global-form textarea > .input:focus, .global-form .textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea > .select:focus, .global-form textarea > .select:focus, .global-form .textarea > select:focus, .global-form textarea > select:focus, .select > .input:focus, .global-form select > .input:focus, .global-form .select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .select > .select:focus, .global-form select > .select:focus, .global-form .select > select:focus, .global-form select > select:focus {
   box-shadow: none; }
 
 .input:disabled, .global-form input:disabled:not([type='submit']):not([type='radio']):not([type='checkbox']),
@@ -988,31 +1002,32 @@ or `week`.
   -webkit-appearance: none;
   margin: 0; }
 
-.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .input, .textarea, .global-form textarea, .select, .global-form select {
+.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea, .global-form textarea, .select, .global-form select {
   /*& > .input:first-child, .select:first-child
   {
     border-radius: var(--border-radius) 0 0 var(--border-radius);
   }
 
 */ }
-  .input > .input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .input > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input, .global-form .input > .input, .input .select, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) .select, .input .global-form select, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) select, .global-form .input select, .textarea > .input, .global-form .textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .textarea > .input, .global-form textarea > .input, .textarea .select, .global-form textarea .select, .textarea .global-form select, .global-form .textarea select, .global-form textarea select, .select > .input, .global-form .select > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .select > .input, .global-form select > .input, .select .select, .global-form select .select, .select .global-form select, .global-form .select select, .global-form select select {
+  .input > .input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input, .global-form .input > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .input > .select, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .select, .global-form .input > select, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > select, .textarea > .input, .global-form textarea > .input, .global-form .textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea > .select, .global-form textarea > .select, .global-form .textarea > select, .global-form textarea > select, .select > .input, .global-form select > .input, .global-form .select > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .select > .select, .global-form select > .select, .global-form .select > select, .global-form select > select {
     outline: none;
+    margin: 0 !important;
     border-radius: 0;
     padding-right: 0;
+    color: inherit;
+    background: transparent;
     border: 1px transparent solid;
     height: 100%; }
 
-.input > .input:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form .input > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:focus, .global-form .input > .input:focus,
-.textarea > .input:focus, .global-form
-.textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form
-.textarea > .input:focus, .global-form textarea > .input:focus,
-.select > .input:focus, .global-form
-.select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form
-.select > .input:focus, .global-form select > .input:focus {
+.input > .input:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:focus, .global-form .input > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']),
+.textarea > .input:focus, .global-form textarea > .input:focus, .global-form
+.textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']),
+.select > .input:focus, .global-form select > .input:focus, .global-form
+.select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) {
   border-color: transparent;
   box-shadow: 0 0 0; }
 
-.input > .label, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .label, .global-form .input > .label, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > label, .global-form .input > label,
+.input > .label, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .label, .global-form .input > label, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > label,
 .textarea > .label, .global-form textarea > .label, .global-form
 .textarea > label, .global-form textarea > label,
 .select > .label, .global-form select > .label, .global-form
@@ -1155,21 +1170,18 @@ or `week`.
 .muted {
   background: #f5f5f5 !important; }
 
-.primary, .success, .warning, .error, .focused, .dark {
+.primary:not(.basic), .success:not(.basic), .warning:not(.basic), .error:not(.basic), .focused:not(.basic), .dark:not(.basic) {
   color: white !important; }
-
-[class*='body background'] {
-  background-color: #FFF; }
 
 .white {
   background-color: white; }
 
-.primary, [class*='primary background'] {
+.primary, * .primary {
   background-color: #1C86F2 !important;
   border-color: #1C86F2 !important; }
 
 .primary.basic,
-[class*='primary background'].basic {
+* .primary.basic {
   background-color: transparent;
   color: #1C86F2; }
 
@@ -1189,7 +1201,7 @@ or `week`.
   background-color: transparent;
   color: #FAA05A; }
 
-.error {
+.error, .error > .focus {
   background-color: #F0506E;
   border-color: #F0506E; }
 
@@ -1222,10 +1234,20 @@ or `week`.
   background-color: transparent;
   color: #3091f3; }
 
+.error.input > .primary.input, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) > .primary.input, .global-form .error.input > input.primary:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) > input.primary:not([type='submit']):not([type='radio']):not([type='checkbox']),
+.error.input > .primary.select, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) > .primary.select, .global-form
+.error.input > select.primary, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) > select.primary {
+  background-color: #F0506E !important;
+  border-color: #F0506E !important; }
+
+.input.error:focus, .global-form input.error:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .input.error:focus ~ .focus, .global-form input.error:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .input.error .input:focus ~ .focus, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) .input:focus ~ .focus, .input.error .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .global-form .input.error input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .input.error .select:focus ~ .focus, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) .select:focus ~ .focus, .input.error .global-form select:focus ~ .focus, .global-form .input.error select:focus ~ .focus, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) select:focus ~ .focus {
+  box-shadow: 0 0 0 1px #F0506E !important;
+  border-color: #F0506E !important; }
+
 .section {
   /* Sizing */
-  padding: 32px;
-  padding: 2rem;
+  padding: 24px;
+  padding: 1.5rem;
   background: #FFF;
   /* Theming */
   box-shadow: #dfdfe0 1px 2px 1px 0px, #f2f2f2 -1px -1px 0px 0px; }
