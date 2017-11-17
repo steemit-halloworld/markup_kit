@@ -165,5 +165,13 @@
   --scale-factor-golden: 1.618;
 }
 
-@custom-media --only-small (width >= 0) and (width <= 768px);
-@custom-media --not-small (width >= 768px);
+@custom-media --only-xsmall (width >= 0) and (width < 600px);
+@custom-media --only-small (width >= 600) and (width < 840px);
+@custom-media --only-medium (width >= 840) and (width < 1024px);
+@custom-media --only-large (width >= 1024) and (width < 1440px);
+@custom-media --only-xlarge (width >= 1440px);
+
+@custom-media --not-xsmall (width >= 600px);
+@custom-media --not-small (width >= 840px);
+@custom-media --not-medium (width >= 1024px);
+@custom-media --not-large (width >= 1440px);
