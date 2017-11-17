@@ -1,4 +1,4 @@
-@import 'layout-grid.css';
+@import 'layout-grid';
 
 .fieldset:not(.inline)
 {

@@ -154,6 +154,19 @@ or `week`.
 
 
 
+## Inputs
+
+All `<input>` fields must have one of the following type attributes:
+`text`, `date`, `datetime`, `datetime-local`, `email`, `month`, `number`, `password`, `search`, `tel`, `time`, `url`
+or `week`.
+
+<div data-module="kit-example">
+  <input class="input" type="text" placeholder="Search...">
+  <input class="input" disabled="true" type="text" value="Disabled">
+</div>
+
+
+
 ## Select
 
 <label class="label">

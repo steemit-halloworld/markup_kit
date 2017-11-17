@@ -79,15 +79,12 @@ anything by simply adding
   /* background */
   /** Grayscale **/
   /*endregion*/ }
-
 button, input, select, textarea {
   color: inherit;
   font-size: inherit;
   line-height: inherit; }
-
 button, input, optgroup, select, textarea {
   margin: 0; }
-
 .block, address, aside, article,
 footer,
 div, dl,
@@ -99,7 +96,6 @@ section,
 ul {
   margin-top: 0;
   margin-bottom: 0; }
-
 .block + .block, address + .block, aside + .block, article + .block,
 footer + .block,
 div + .block, dl + .block,
@@ -310,15 +306,12 @@ ul,
 ul +
 ul {
   margin-top: 0.75em; }
-
 h1, h2, h3, header {
   margin-top: 0.75em;
   margin-bottom: 0.375em; }
-
 h4, h5, h6 {
   margin-top: 0.375em;
   margin-bottom: 0.375em; }
-
 h1 + .block, h1 + address, h1 + aside, h1 + article, h1 +
 footer, h1 +
 div, h1 + dl, h1 +
@@ -327,114 +320,48 @@ nav, h1 +
 ol, h1 +
 p, h1 +
 section, h1 +
-ul,
-h2 + .block,
-h2 + address,
-h2 + aside,
-h2 + article,
-h2 +
-footer,
-h2 +
-div,
-h2 + dl,
-h2 +
-main,
-h2 +
-nav,
-h2 +
-ol,
-h2 +
-p,
-h2 +
-section,
-h2 +
-ul,
-h3 + .block,
-h3 + address,
-h3 + aside,
-h3 + article,
-h3 +
-footer,
-h3 +
-div,
-h3 + dl,
-h3 +
-main,
-h3 +
-nav,
-h3 +
-ol,
-h3 +
-p,
-h3 +
-section,
-h3 +
-ul,
-h4 + .block,
-h4 + address,
-h4 + aside,
-h4 + article,
-h4 +
-footer,
-h4 +
-div,
-h4 + dl,
-h4 +
-main,
-h4 +
-nav,
-h4 +
-ol,
-h4 +
-p,
-h4 +
-section,
-h4 +
-ul,
-h5 + .block,
-h5 + address,
-h5 + aside,
-h5 + article,
-h5 +
-footer,
-h5 +
-div,
-h5 + dl,
-h5 +
-main,
-h5 +
-nav,
-h5 +
-ol,
-h5 +
-p,
-h5 +
-section,
-h5 +
-ul,
-h6 + .block,
-h6 + address,
-h6 + aside,
-h6 + article,
-h6 +
-footer,
-h6 +
-div,
-h6 + dl,
-h6 +
-main,
-h6 +
-nav,
-h6 +
-ol,
-h6 +
-p,
-h6 +
-section,
-h6 +
+ul, h2 + .block, h2 + address, h2 + aside, h2 + article, h2 +
+footer, h2 +
+div, h2 + dl, h2 +
+main, h2 +
+nav, h2 +
+ol, h2 +
+p, h2 +
+section, h2 +
+ul, h3 + .block, h3 + address, h3 + aside, h3 + article, h3 +
+footer, h3 +
+div, h3 + dl, h3 +
+main, h3 +
+nav, h3 +
+ol, h3 +
+p, h3 +
+section, h3 +
+ul, h4 + .block, h4 + address, h4 + aside, h4 + article, h4 +
+footer, h4 +
+div, h4 + dl, h4 +
+main, h4 +
+nav, h4 +
+ol, h4 +
+p, h4 +
+section, h4 +
+ul, h5 + .block, h5 + address, h5 + aside, h5 + article, h5 +
+footer, h5 +
+div, h5 + dl, h5 +
+main, h5 +
+nav, h5 +
+ol, h5 +
+p, h5 +
+section, h5 +
+ul, h6 + .block, h6 + address, h6 + aside, h6 + article, h6 +
+footer, h6 +
+div, h6 + dl, h6 +
+main, h6 +
+nav, h6 +
+ol, h6 +
+p, h6 +
+section, h6 +
 ul {
   margin-top: 0; }
-
 /*doc
 
 # Normalisation
@@ -453,11 +380,9 @@ The normalisation module applies some basic resets to ensure elements are render
   background-repeat: no-repeat;
   /* add box sizing inheritance */
   box-sizing: inherit; }
-
 ::before, ::after {
   text-decoration: inherit;
   vertical-align: inherit; }
-
 /*doc
 
 ## Box Sizing
@@ -473,11 +398,9 @@ inherit the specified `box sizing`
   /* prevent font size adjustments after orientation changes in IE and iOS */
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
-
 /*endregion*/
 body {
   background-color: #FFF; }
-
 /*doc
 
 # Typography
@@ -486,37 +409,82 @@ Typography is one of the most important and most visible things on a web page. E
 a perfect visual design.
 
 */
+/* globals.css | MIT License | github.com/tschroeter/markup_kit */
+:root {
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Family                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Size                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Weight                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Line Height                                                                                                      */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Golden Ratio                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Spacing                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Border                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /* base colors */
+  /*--color-focus: #1C86F2;*/
+  /* text colors */
+  /* state colors */
+  /* background */
+  /** Grayscale **/
+  /*endregion*/ }
 .body, .global-typography body {
   font-size: 16px; }
-
 .type-scale-1 {
   font-size: 48px;
   font-size: 3rem; }
-
 .type-scale-2 {
   font-size: 36px;
   font-size: 2.25rem; }
-
 .type-scale-3 {
   font-size: 24px;
   font-size: 1.5rem; }
-
 .type-scale-4 {
   font-size: 20px;
   font-size: 1.25rem; }
-
 .type-scale-5 {
   font-size: 16px;
   font-size: 1rem; }
-
 .type-scale-6 {
   font-size: 14px;
   font-size: .875rem; }
-
 .type-scale-7 {
   font-size: 12px;
   font-size: .75rem; }
-
 /*doc
 
 ## Measure
@@ -542,16 +510,65 @@ The following classes are used for setting measure:
 */
 .measure {
   width: 30em; }
-
 .wide.measure {
   width: 34em; }
-
 .narrow.measure {
   width: 20em; }
-
+/* globals.css | MIT License | github.com/tschroeter/markup_kit */
+:root {
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Family                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Size                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Weight                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Line Height                                                                                                      */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Golden Ratio                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Spacing                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Border                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /* base colors */
+  /*--color-focus: #1C86F2;*/
+  /* text colors */
+  /* state colors */
+  /* background */
+  /** Grayscale **/
+  /*endregion*/ }
 .body, .global-typography body {
   line-height: 1.5; }
-
 /*doc
 
 ## Tracking
@@ -563,24 +580,18 @@ should never be tracked. For some larger text, depending on the typeface a negat
 */
 .tracked {
   letter-spacing: .1em; }
-
 .tight.tracked {
   letter-spacing: -.05em; }
-
 .wide.tracked {
   letter-spacing: .25em; }
-
 .body, .global-typography body {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
-
 .small {
   font-size: 14px;
   line-height: -0.5px; }
-
 .smaller {
   font-size: 12px;
   line-height: -2.5px; }
-
 /*doc
 
 # Form
@@ -618,109 +629,138 @@ To reduce the visual complexity add the `basic` class to a label.
 </div>
 
 */
+/* globals.css | MIT License | github.com/tschroeter/markup_kit */
+:root {
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Family                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Size                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Weight                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Line Height                                                                                                      */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Golden Ratio                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Spacing                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Border                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /* base colors */
+  /*--color-focus: #1C86F2;*/
+  /* text colors */
+  /* state colors */
+  /* background */
+  /** Grayscale **/
+  /*endregion*/ }
 [grid], .fieldset:not(.inline), .global-form fieldset:not(.inline) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   /* default grid configuration */
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  max-width: 100%; }
-
-[grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 0px;
-  flex: 1 1 0;
-  transition: -webkit-box-flex 250ms linear;
-  transition: flex 250ms linear;
-  transition: flex 250ms linear, -webkit-box-flex 250ms linear, -ms-flex 250ms linear; }
-
-[grid], .fieldset:not(.inline), .global-form fieldset:not(.inline) {
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 100%;
+  /* default grid cell configuration */
   /*doc
 
     ## Margin And Gutter
     TODO
-
-*/
-  /*accommodate cell gutter by default
-
-*/
+   */
+  /* accommodate cell gutter by default */
   margin-left: -12px !important;
   margin-left: -0.75rem !important;
   margin-right: -12px !important;
   margin-right: -0.75rem !important;
-  /*override horizontal cell margin
-
-*/ }
-
+  /* override horizontal cell margin  */
+  /* default grid cell width based on child count */ }
 [grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
-  margin-left: 12px !important;
-  margin-left: 0.75rem !important;
-  margin-right: 12px !important;
-  margin-right: 0.75rem !important; }
-
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    transition: -webkit-box-flex 250ms linear;
+    transition: flex 250ms linear;
+    transition: flex 250ms linear, -webkit-box-flex 250ms linear, -ms-flex 250ms linear; }
+[grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
+    margin-left: 12px !important;
+    margin-left: 0.75rem !important;
+    margin-right: 12px !important;
+    margin-right: 0.75rem !important; }
 [grid] > [grid], .fieldset:not(.inline) > [grid], .global-form fieldset:not(.inline) > [grid], [grid] > .fieldset:not(.inline), .fieldset:not(.inline) > .fieldset:not(.inline), .global-form fieldset:not(.inline) > .fieldset:not(.inline), .global-form [grid] > fieldset:not(.inline), .global-form .fieldset:not(.inline) > fieldset:not(.inline), .global-form fieldset:not(.inline) > fieldset:not(.inline) {
-  margin: 0 0 !important; }
-
-[grid], .fieldset:not(.inline), .global-form fieldset:not(.inline) {
-  /*default grid cell width based on child count
-
-*/ }
-
+    margin: 0 0 !important; }
 [grid] > *:nth-last-child(2):first-child, .fieldset:not(.inline) > *:nth-last-child(2):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child, [grid] > *:nth-last-child(2):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(2):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child ~ * {
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  width: calc(50% - 1.5rem); }
-
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(50% - 1.5rem); }
 [grid] > *:nth-last-child(3):first-child, .fieldset:not(.inline) > *:nth-last-child(3):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child, [grid] > *:nth-last-child(3):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(3):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child ~ * {
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  width: calc(33.33333% - 1.5rem); }
-
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(33.33333% - 1.5rem); }
 [grid] > *:nth-last-child(4):first-child, .fieldset:not(.inline) > *:nth-last-child(4):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child, [grid] > *:nth-last-child(4):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(4):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child ~ * {
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  width: calc(25% - 1.5rem); }
-
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(25% - 1.5rem); }
 [grid] > *:nth-last-child(5):first-child, .fieldset:not(.inline) > *:nth-last-child(5):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child, [grid] > *:nth-last-child(5):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(5):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child ~ * {
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  width: calc(20% - 1.5rem); }
-
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(20% - 1.5rem); }
 [grid] > *:nth-last-child(6):first-child, .fieldset:not(.inline) > *:nth-last-child(6):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child, [grid] > *:nth-last-child(6):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(6):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child ~ * {
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  width: calc(16.66667% - 1.5rem); }
-
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(16.66667% - 1.5rem); }
 [grid][grid*='-column'] > *, [grid*='-column'].fieldset:not(.inline) > *, .global-form fieldset[grid*='-column']:not(.inline) > * {
-  -ms-flex-preferred-size: auto !important;
-  flex-basis: auto !important; }
-
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important; }
 [grid][grid*='one-column'] > *, [grid*='one-column'].fieldset:not(.inline) > *, .global-form fieldset[grid*='one-column']:not(.inline) > * {
-  width: 100% !important; }
-
+    width: 100% !important; }
 [grid][grid*='golden-ratio'] > :nth-child(even), [grid*='golden-ratio'].fieldset:not(.inline) > :nth-child(even), .global-form fieldset[grid*='golden-ratio']:not(.inline) > :nth-child(even) {
-  width: auto;
-  max-width: calc(38.1953% - 1rem) !important; }
-
+    width: auto;
+    max-width: calc(38.1953% - 1rem) !important; }
 [cell~='narrowed'] {
   -webkit-box-flex: 0 !important;
-  -ms-flex: 0 0 auto !important;
-  flex: 0 0 auto !important;
+      -ms-flex: 0 0 auto !important;
+          flex: 0 0 auto !important;
   width: auto !important; }
-
 @media (min-width: 0) and (max-width: 768px) {
   [grid], .fieldset:not(.inline), .global-form fieldset:not(.inline), [grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
     margin-left: 0 !important;
     margin-right: 0 !important;
     width: 100% !important; } }
-
 .label, .global-form label {
   margin-top: 16px;
   margin-top: 1rem;
@@ -732,17 +772,14 @@ To reduce the visual complexity add the `basic` class to a label.
   display: inline-block;
   border: 1px solid transparent;
   border-radius: 4px; }
-
 .label:not(.inline), .global-form label:not(.inline) {
   text-overflow: ellipsis;
   white-space: nowrap; }
-
 .label:not(.inline) > *, .global-form label:not(.inline) > * {
   /*flex:  1 1 auto;*/
   display: block;
   width: 100%;
   min-width: 1ch; }
-
 .label:not(.inline) > .input, .global-form label:not(.inline) > .input, .global-form .label:not(.inline) > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form label:not(.inline) > input:not([type='submit']):not([type='radio']):not([type='checkbox']),
 .label:not(.inline) > .textarea, .global-form label:not(.inline) > .textarea, .global-form
 .label:not(.inline) > textarea, .global-form label:not(.inline) > textarea,
@@ -755,10 +792,8 @@ To reduce the visual complexity add the `basic` class to a label.
   margin-top: .5rem;
   margin-bottom: -8px;
   margin-bottom: -.5rem; }
-
 .label:not(.inline) > select, .global-form label:not(.inline) > select {
   min-width: 8ch; }
-
 /*.label:not(.inline) > select
 {
   width: initial;
@@ -768,7 +803,6 @@ To reduce the visual complexity add the `basic` class to a label.
   /*flex:      0 1 auto;
   min-width: 0;
   width:     100%;*/ }
-
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* Pointing Label                                                                                                     */
 /*--------------------------------------------------------------------------------------------------------------------*/
@@ -804,10 +838,8 @@ A label can point to the context next to it
 .pointing.label, .global-form label.pointing {
   position: relative;
   z-index: 50; }
-
 .basic.pointing.label, .global-form label.basic.pointing {
   background-color: inherit; }
-
 .pointing.label:before, .global-form label.pointing:before {
   background-color: inherit;
   border-color: inherit;
@@ -817,35 +849,30 @@ A label can point to the context next to it
   z-index: 40;
   content: '';
   -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
   width: .6666em;
   height: .6666em;
   background-image: none;
   top: 0;
   left: 50%;
   margin-top: -0.5px; }
-
 [class*="bottom pointing"].label:before, .global-form label[class*="bottom pointing"]:before {
   border-width: 0 1px 1px 0;
   top: 100%;
   margin-top: 0.5px; }
-
 [class*="left pointing"].label, .global-form label[class*="left pointing"] {
   margin-left: .5em; }
-
 [class*="left pointing"].label:before, .global-form label[class*="left pointing"]:before {
   border-width: 0 0 1px 1px;
   top: 50%;
   left: 0;
   margin-top: 0;
   margin-left: -0.5px; }
-
 [class*="right pointing"].label, .global-form label[class*="right pointing"] {
   margin-right: .5em; }
-
 [class*="right pointing"].label:before, .global-form label[class*="right pointing"]:before {
   -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
-  transform: translateX(50%) translateY(-50%) rotate(45deg);
+          transform: translateX(50%) translateY(-50%) rotate(45deg);
   border-width: 1px 1px 0 0;
   top: 50%;
   right: 0;
@@ -853,7 +880,59 @@ A label can point to the context next to it
   bottom: auto;
   margin-top: 0;
   margin-right: -0.5px; }
-
+/* globals.css | MIT License | github.com/tschroeter/markup_kit */
+:root {
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Family                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Size                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Weight                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Line Height                                                                                                      */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Golden Ratio                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Spacing                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Border                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /* base colors */
+  /*--color-focus: #1C86F2;*/
+  /* text colors */
+  /* state colors */
+  /* background */
+  /** Grayscale **/
+  /*endregion*/ }
 /*doc
 
 ## Inputs
@@ -870,8 +949,8 @@ or `week`.
 */
 .input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea, .global-form textarea, .select, .global-form select {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   /* Sizing */
   padding: 8px;
   padding: .5rem;
@@ -882,134 +961,76 @@ or `week`.
   display: -ms-inline-flexbox !important;
   display: inline-flex !important;
   -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   position: relative;
   overflow: visible;
   vertical-align: baseline;
-  font-size: calc(1em - 1px); }
-  .input > .input:not(input), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:not(input), .global-form .input > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .input .select:not(select), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) .select:not(select), .input .global-form select:not(select), .global-form .input select:not(select), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) select:not(select), .textarea > .input:not(input), .global-form textarea > .input:not(input), .global-form .textarea > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea .select:not(select), .global-form textarea .select:not(select), .textarea .global-form select:not(select), .global-form .textarea select:not(select), .global-form textarea select:not(select), .select > .input:not(input), .global-form select > .input:not(input), .global-form .select > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .select .select:not(select), .global-form select .select:not(select), .select .global-form select:not(select), .global-form .select select:not(select), .global-form select select:not(select) {
-    position: static; }
-
-.input > *, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > *,
-.textarea > *, .global-form textarea > *,
-.select > *, .global-form select > * {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 0px;
-  flex: 1 1 0; }
-
-.input::-ms-clear, .global-form input:not([type='checkbox']):not([type='radio']):not([type='submit'])::-ms-clear,
-.textarea::-ms-clear,
-.global-form textarea::-ms-clear,
-.select::-ms-clear,
-.global-form select::-ms-clear {
-  display: none; }
-
-.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea, .global-form textarea, .select, .global-form select {
-  /*Animation
-
-*/
+  font-size: calc(1em - 1px);
+  /* Animation */
   /*transition-property: color, background-color, border;
-  transition: 0.2s ease-in-out;
-
-*/
-  /*Theme
-
-*/ }
-
-.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .input > .focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus, .textarea, .global-form textarea, .textarea > .focus, .global-form textarea > .focus, .select, .global-form select, .select > .focus, .global-form select > .focus {
-  border: 1px #D4D4D4 solid;
-  border-radius: 4px;
-  color: #444;
-  outline: 0; }
-
-.input.labeled, .global-form input.labeled:not([type='submit']):not([type='radio']):not([type='checkbox']),
-.textarea.labeled,
-.global-form textarea.labeled,
-.select.labeled,
-.global-form select.labeled {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 0;
-  overflow: visible; }
-
-.input > .focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus,
-.textarea > .focus, .global-form textarea > .focus,
-.select > .focus, .global-form select > .focus {
-  position: absolute;
-  background: transparent !important;
-  top: -1px;
-  right: -1px;
-  left: -1px;
-  bottom: -1px;
-  cursor: text;
-  pointer-events: none;
-  box-sizing: content-box; }
-
-.input:focus, .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .input:focus ~ .focus, .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .textarea:focus, .global-form textarea:focus, .textarea:focus ~ .focus, .global-form textarea:focus ~ .focus, .select:focus, .global-form select:focus, .select:focus ~ .focus, .global-form select:focus ~ .focus {
-  outline: 0;
-  border-color: #3091f3;
-  box-shadow: 0 0 0 1px #3091f3;
-  visibility: visible;
-  z-index: 1000; }
-
-.input > .input:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:focus, .global-form .input > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .input > .select:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .select:focus, .global-form .input > select:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > select:focus, .textarea > .input:focus, .global-form textarea > .input:focus, .global-form .textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea > .select:focus, .global-form textarea > .select:focus, .global-form .textarea > select:focus, .global-form textarea > select:focus, .select > .input:focus, .global-form select > .input:focus, .global-form .select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .select > .select:focus, .global-form select > .select:focus, .global-form .select > select:focus, .global-form select > select:focus {
-  box-shadow: none; }
-
-.input:disabled, .global-form input:disabled:not([type='submit']):not([type='radio']):not([type='checkbox']),
-.input.disabled,
-.global-form input.disabled:not([type='submit']):not([type='radio']):not([type='checkbox']),
-.textarea:disabled,
-.global-form textarea:disabled,
-.textarea.disabled,
-.global-form textarea.disabled,
-.select:disabled,
-.global-form select:disabled,
-.select.disabled,
-.global-form select.disabled {
-  resize: none;
-  cursor: not-allowed;
-  pointer-events: none;
-  border-color: #999;
-  font-style: italic;
-  color: #999;
-  background-color: #999;
-  opacity: 0.6; }
-
-.input[type='number'], .global-form input[type='number']:not([type='submit']):not([type='radio']):not([type='checkbox']),
-.textarea[type='number'],
-.global-form textarea[type='number'],
-.select[type='number'],
-.global-form select[type='number'] {
-  text-align: right;
-  -moz-appearance: textfield !important; }
-
-.input[type='number']::-webkit-inner-spin-button, .global-form input[type='number']:not([type='checkbox']):not([type='radio']):not([type='submit'])::-webkit-inner-spin-button,
-.input[type='number']::-webkit-outer-spin-button,
-.global-form input[type='number']:not([type='checkbox']):not([type='radio']):not([type='submit'])::-webkit-outer-spin-button,
-.textarea[type='number']::-webkit-inner-spin-button,
-.global-form textarea[type='number']::-webkit-inner-spin-button,
-.textarea[type='number']::-webkit-outer-spin-button,
-.global-form textarea[type='number']::-webkit-outer-spin-button,
-.select[type='number']::-webkit-inner-spin-button,
-.global-form select[type='number']::-webkit-inner-spin-button,
-.select[type='number']::-webkit-outer-spin-button,
-.global-form select[type='number']::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0; }
-
-.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea, .global-form textarea, .select, .global-form select {
+  transition: 0.2s ease-in-out;*/
+  /* Theme */
   /*& > .input:first-child, .select:first-child
   {
     border-radius: var(--border-radius) 0 0 var(--border-radius);
-  }
-
-*/ }
-  .input > .input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input, .global-form .input > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .input > .select, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .select, .global-form .input > select, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > select, .textarea > .input, .global-form textarea > .input, .global-form .textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea > .select, .global-form textarea > .select, .global-form .textarea > select, .global-form textarea > select, .select > .input, .global-form select > .input, .global-form .select > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .select > .select, .global-form select > .select, .global-form .select > select, .global-form select > select {
+  }*/ }
+.input > .input:not(input), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:not(input), .global-form .input > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .input .select:not(select), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) .select:not(select), .input .global-form select:not(select), .global-form .input select:not(select), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) select:not(select), .textarea > .input:not(input), .global-form textarea > .input:not(input), .global-form .textarea > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea .select:not(select), .global-form textarea .select:not(select), .textarea .global-form select:not(select), .global-form .textarea select:not(select), .global-form textarea select:not(select), .select > .input:not(input), .global-form select > .input:not(input), .global-form .select > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .select .select:not(select), .global-form select .select:not(select), .select .global-form select:not(select), .global-form .select select:not(select), .global-form select select:not(select) {
+    position: static; }
+.input > *, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > *, .textarea > *, .global-form textarea > *, .select > *, .global-form select > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0; }
+.input::-ms-clear, .global-form input:not([type='checkbox']):not([type='radio']):not([type='submit'])::-ms-clear, .textarea::-ms-clear, .global-form textarea::-ms-clear, .select::-ms-clear, .global-form select::-ms-clear {
+    display: none; }
+.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .input > .focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus, .textarea, .global-form textarea, .textarea > .focus, .global-form textarea > .focus, .select, .global-form select, .select > .focus, .global-form select > .focus {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.input.labeled, .global-form input.labeled:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea.labeled, .global-form textarea.labeled, .select.labeled, .global-form select.labeled {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0;
+    overflow: visible; }
+.input > .focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus, .textarea > .focus, .global-form textarea > .focus, .select > .focus, .global-form select > .focus {
+    position: absolute;
+    background: transparent !important;
+    top: -1px;
+    right: -1px;
+    left: -1px;
+    bottom: -1px;
+    cursor: text;
+    pointer-events: none;
+    box-sizing: content-box; }
+.input:focus, .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .input:focus ~ .focus, .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .textarea:focus, .global-form textarea:focus, .textarea:focus ~ .focus, .global-form textarea:focus ~ .focus, .select:focus, .global-form select:focus, .select:focus ~ .focus, .global-form select:focus ~ .focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.input > .input:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:focus, .global-form .input > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .input > .select:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .select:focus, .global-form .input > select:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > select:focus, .textarea > .input:focus, .global-form textarea > .input:focus, .global-form .textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea > .select:focus, .global-form textarea > .select:focus, .global-form .textarea > select:focus, .global-form textarea > select:focus, .select > .input:focus, .global-form select > .input:focus, .global-form .select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .select > .select:focus, .global-form select > .select:focus, .global-form .select > select:focus, .global-form select > select:focus {
+    box-shadow: none; }
+.input:disabled, .global-form input:disabled:not([type='submit']):not([type='radio']):not([type='checkbox']), .input.disabled, .global-form input.disabled:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea:disabled, .global-form textarea:disabled, .textarea.disabled, .global-form textarea.disabled, .select:disabled, .global-form select:disabled, .select.disabled, .global-form select.disabled {
+    resize: none;
+    cursor: not-allowed;
+    pointer-events: none;
+    border-color: #999;
+    font-style: italic;
+    color: #999;
+    background-color: #999;
+    opacity: 0.6; }
+.input[type='number'], .global-form input[type='number']:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea[type='number'], .global-form textarea[type='number'], .select[type='number'], .global-form select[type='number'] {
+    text-align: right;
+    -moz-appearance: textfield !important; }
+.input[type='number']::-webkit-inner-spin-button, .global-form input[type='number']:not([type='checkbox']):not([type='radio']):not([type='submit'])::-webkit-inner-spin-button, .input[type='number']::-webkit-outer-spin-button, .global-form input[type='number']:not([type='checkbox']):not([type='radio']):not([type='submit'])::-webkit-outer-spin-button, .textarea[type='number']::-webkit-inner-spin-button, .global-form textarea[type='number']::-webkit-inner-spin-button, .textarea[type='number']::-webkit-outer-spin-button, .global-form textarea[type='number']::-webkit-outer-spin-button, .select[type='number']::-webkit-inner-spin-button, .global-form select[type='number']::-webkit-inner-spin-button, .select[type='number']::-webkit-outer-spin-button, .global-form select[type='number']::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
+.input > .input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input, .global-form .input > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .input > .select, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .select, .global-form .input > select, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > select, .textarea > .input, .global-form textarea > .input, .global-form .textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea > .select, .global-form textarea > .select, .global-form .textarea > select, .global-form textarea > select, .select > .input, .global-form select > .input, .global-form .select > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .select > .select, .global-form select > .select, .global-form .select > select, .global-form select > select {
     outline: none;
     margin: 0 !important;
     border-radius: 0;
@@ -1018,25 +1039,181 @@ or `week`.
     background: transparent;
     border: 1px transparent solid;
     height: 100%; }
+.input > .input:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:focus, .global-form .input > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea > .input:focus, .global-form textarea > .input:focus, .global-form .textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .select > .input:focus, .global-form select > .input:focus, .global-form .select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    border-color: transparent;
+    box-shadow: 0 0 0; }
+.input > .label, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .label, .global-form .input > label, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > label, .textarea > .label, .global-form textarea > .label, .global-form .textarea > label, .global-form textarea > label, .select > .label, .global-form select > .label, .global-form .select > label, .global-form select > label {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 0px;
+            flex: 0 0 0;
+    width: auto; }
+/* globals.css | MIT License | github.com/tschroeter/markup_kit */
+:root {
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Family                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Size                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Weight                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Line Height                                                                                                      */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Golden Ratio                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Spacing                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Border                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /* base colors */
+  /*--color-focus: #1C86F2;*/
+  /* text colors */
+  /* state colors */
+  /* background */
+  /** Grayscale **/
+  /*endregion*/ }
+/*doc
 
-.input > .input:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:focus, .global-form .input > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']),
-.textarea > .input:focus, .global-form textarea > .input:focus, .global-form
-.textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']),
-.select > .input:focus, .global-form select > .input:focus, .global-form
-.select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) {
-  border-color: transparent;
-  box-shadow: 0 0 0; }
+## Inputs
 
-.input > .label, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .label, .global-form .input > label, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > label,
-.textarea > .label, .global-form textarea > .label, .global-form
-.textarea > label, .global-form textarea > label,
-.select > .label, .global-form select > .label, .global-form
-.select > label, .global-form select > label {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 0px;
-  flex: 0 0 0;
-  width: auto; }
+All `<input>` fields must have one of the following type attributes:
+`text`, `date`, `datetime`, `datetime-local`, `email`, `month`, `number`, `password`, `search`, `tel`, `time`, `url`
+or `week`.
 
+<div data-module="kit-example">
+  <input class="input" type="text" placeholder="Search...">
+  <input class="input" disabled="true" type="text" value="Disabled">
+</div>
+
+*/
+.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea, .global-form textarea, .select, .global-form select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* Sizing */
+  padding: 8px;
+  padding: .5rem;
+  /*margin: calc(var(--spacing-medium) / 2) 0;*/
+  /*min-width: 2ch;*/
+  /* Positioning */
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+  overflow: visible;
+  vertical-align: baseline;
+  font-size: calc(1em - 1px);
+  /* Animation */
+  /*transition-property: color, background-color, border;
+  transition: 0.2s ease-in-out;*/
+  /* Theme */
+  /*& > .input:first-child, .select:first-child
+  {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }*/ }
+.input > .input:not(input), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:not(input), .global-form .input > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .input .select:not(select), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) .select:not(select), .input .global-form select:not(select), .global-form .input select:not(select), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) select:not(select), .textarea > .input:not(input), .global-form textarea > .input:not(input), .global-form .textarea > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea .select:not(select), .global-form textarea .select:not(select), .textarea .global-form select:not(select), .global-form .textarea select:not(select), .global-form textarea select:not(select), .select > .input:not(input), .global-form select > .input:not(input), .global-form .select > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:not(input):not([type='submit']):not([type='radio']):not([type='checkbox']), .select .select:not(select), .global-form select .select:not(select), .select .global-form select:not(select), .global-form .select select:not(select), .global-form select select:not(select) {
+    position: static; }
+.input > *, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > *, .textarea > *, .global-form textarea > *, .select > *, .global-form select > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0; }
+.input::-ms-clear, .global-form input:not([type='checkbox']):not([type='radio']):not([type='submit'])::-ms-clear, .textarea::-ms-clear, .global-form textarea::-ms-clear, .select::-ms-clear, .global-form select::-ms-clear {
+    display: none; }
+.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .input > .focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus, .textarea, .global-form textarea, .textarea > .focus, .global-form textarea > .focus, .select, .global-form select, .select > .focus, .global-form select > .focus {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.input.labeled, .global-form input.labeled:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea.labeled, .global-form textarea.labeled, .select.labeled, .global-form select.labeled {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0;
+    overflow: visible; }
+.input > .focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus, .textarea > .focus, .global-form textarea > .focus, .select > .focus, .global-form select > .focus {
+    position: absolute;
+    background: transparent !important;
+    top: -1px;
+    right: -1px;
+    left: -1px;
+    bottom: -1px;
+    cursor: text;
+    pointer-events: none;
+    box-sizing: content-box; }
+.input:focus, .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .input:focus ~ .focus, .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .textarea:focus, .global-form textarea:focus, .textarea:focus ~ .focus, .global-form textarea:focus ~ .focus, .select:focus, .global-form select:focus, .select:focus ~ .focus, .global-form select:focus ~ .focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.input > .input:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:focus, .global-form .input > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .input > .select:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .select:focus, .global-form .input > select:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > select:focus, .textarea > .input:focus, .global-form textarea > .input:focus, .global-form .textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea > .select:focus, .global-form textarea > .select:focus, .global-form .textarea > select:focus, .global-form textarea > select:focus, .select > .input:focus, .global-form select > .input:focus, .global-form .select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .select > .select:focus, .global-form select > .select:focus, .global-form .select > select:focus, .global-form select > select:focus {
+    box-shadow: none; }
+.input:disabled, .global-form input:disabled:not([type='submit']):not([type='radio']):not([type='checkbox']), .input.disabled, .global-form input.disabled:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea:disabled, .global-form textarea:disabled, .textarea.disabled, .global-form textarea.disabled, .select:disabled, .global-form select:disabled, .select.disabled, .global-form select.disabled {
+    resize: none;
+    cursor: not-allowed;
+    pointer-events: none;
+    border-color: #999;
+    font-style: italic;
+    color: #999;
+    background-color: #999;
+    opacity: 0.6; }
+.input[type='number'], .global-form input[type='number']:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea[type='number'], .global-form textarea[type='number'], .select[type='number'], .global-form select[type='number'] {
+    text-align: right;
+    -moz-appearance: textfield !important; }
+.input[type='number']::-webkit-inner-spin-button, .global-form input[type='number']:not([type='checkbox']):not([type='radio']):not([type='submit'])::-webkit-inner-spin-button, .input[type='number']::-webkit-outer-spin-button, .global-form input[type='number']:not([type='checkbox']):not([type='radio']):not([type='submit'])::-webkit-outer-spin-button, .textarea[type='number']::-webkit-inner-spin-button, .global-form textarea[type='number']::-webkit-inner-spin-button, .textarea[type='number']::-webkit-outer-spin-button, .global-form textarea[type='number']::-webkit-outer-spin-button, .select[type='number']::-webkit-inner-spin-button, .global-form select[type='number']::-webkit-inner-spin-button, .select[type='number']::-webkit-outer-spin-button, .global-form select[type='number']::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
+.input > .input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input, .global-form .input > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .input > .select, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .select, .global-form .input > select, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > select, .textarea > .input, .global-form textarea > .input, .global-form .textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea > .select, .global-form textarea > .select, .global-form .textarea > select, .global-form textarea > select, .select > .input, .global-form select > .input, .global-form .select > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .select > .select, .global-form select > .select, .global-form .select > select, .global-form select > select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.input > .input:focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input:focus, .global-form .input > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea > .input:focus, .global-form textarea > .input:focus, .global-form .textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .select > .input:focus, .global-form select > .input:focus, .global-form .select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    border-color: transparent;
+    box-shadow: 0 0 0; }
+.input > .label, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .label, .global-form .input > label, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > label, .textarea > .label, .global-form textarea > .label, .global-form .textarea > label, .global-form textarea > label, .select > .label, .global-form select > .label, .global-form .select > label, .global-form select > label {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 0px;
+            flex: 0 0 0;
+    width: auto; }
 /*doc
 
 ## Select
@@ -1111,139 +1288,272 @@ or `week`.
   min-width: 10ch;
   cursor: pointer;
   background-color: white; }
-
 .selectselect {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden; }
-
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; }
 .select, .global-form select {
-  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
-  background-position: calc(100% - 0.950em) 1.125em, calc(100% - 0.575em) 1.125em;
-  background-size: 0.375em 0.375em, 0.375em 0.375em;
-  background-repeat: no-repeat; }
-
+    background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+    background-position: calc(100% - 0.950em) 1.125em, calc(100% - 0.575em) 1.125em;
+    background-size: 0.375em 0.375em, 0.375em 0.375em;
+    background-repeat: no-repeat; }
 .select > .select, .global-form select > .select, .global-form .select > select, .global-form select > select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: transparent !important;
-  outline: 0 !important;
-  color: inherit !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  border-radius: 0 !important;
-  border: none !important;
-  font-size: inherit; }
-
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background: transparent !important;
+    outline: 0 !important;
+    color: inherit !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    font-size: inherit; }
 .select > option, .global-form select > option {
-  color: #000 !important;
-  color: initial !important; }
-
+    color: #000 !important;
+    color: initial !important; }
 .select::-ms-expand, .global-form select::-ms-expand {
-  display: none; }
-
+    display: none; }
 .select:focus::-ms-value, .global-form select:focus::-ms-value {
-  background: transparent;
-  color: currentColor; }
+    background: transparent;
+    color: currentColor; }
+[grid], .fieldset:not(.inline), .global-form fieldset:not(.inline) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* default grid configuration */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 100%;
+  /* default grid cell configuration */
+  /*doc
 
+    ## Margin And Gutter
+    TODO
+   */
+  /* accommodate cell gutter by default */
+  margin-left: -12px !important;
+  margin-left: -0.75rem !important;
+  margin-right: -12px !important;
+  margin-right: -0.75rem !important;
+  /* override horizontal cell margin  */
+  /* default grid cell width based on child count */ }
+[grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    transition: -webkit-box-flex 250ms linear;
+    transition: flex 250ms linear;
+    transition: flex 250ms linear, -webkit-box-flex 250ms linear, -ms-flex 250ms linear; }
+[grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
+    margin-left: 12px !important;
+    margin-left: 0.75rem !important;
+    margin-right: 12px !important;
+    margin-right: 0.75rem !important; }
+[grid] > [grid], .fieldset:not(.inline) > [grid], .global-form fieldset:not(.inline) > [grid], [grid] > .fieldset:not(.inline), .fieldset:not(.inline) > .fieldset:not(.inline), .global-form fieldset:not(.inline) > .fieldset:not(.inline), .global-form [grid] > fieldset:not(.inline), .global-form .fieldset:not(.inline) > fieldset:not(.inline), .global-form fieldset:not(.inline) > fieldset:not(.inline) {
+    margin: 0 0 !important; }
+[grid] > *:nth-last-child(2):first-child, .fieldset:not(.inline) > *:nth-last-child(2):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child, [grid] > *:nth-last-child(2):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(2):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(50% - 1.5rem); }
+[grid] > *:nth-last-child(3):first-child, .fieldset:not(.inline) > *:nth-last-child(3):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child, [grid] > *:nth-last-child(3):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(3):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(33.33333% - 1.5rem); }
+[grid] > *:nth-last-child(4):first-child, .fieldset:not(.inline) > *:nth-last-child(4):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child, [grid] > *:nth-last-child(4):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(4):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(25% - 1.5rem); }
+[grid] > *:nth-last-child(5):first-child, .fieldset:not(.inline) > *:nth-last-child(5):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child, [grid] > *:nth-last-child(5):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(5):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(20% - 1.5rem); }
+[grid] > *:nth-last-child(6):first-child, .fieldset:not(.inline) > *:nth-last-child(6):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child, [grid] > *:nth-last-child(6):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(6):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(16.66667% - 1.5rem); }
+[grid][grid*='-column'] > *, [grid*='-column'].fieldset:not(.inline) > *, .global-form fieldset[grid*='-column']:not(.inline) > * {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important; }
+[grid][grid*='one-column'] > *, [grid*='one-column'].fieldset:not(.inline) > *, .global-form fieldset[grid*='one-column']:not(.inline) > * {
+    width: 100% !important; }
+[grid][grid*='golden-ratio'] > :nth-child(even), [grid*='golden-ratio'].fieldset:not(.inline) > :nth-child(even), .global-form fieldset[grid*='golden-ratio']:not(.inline) > :nth-child(even) {
+    width: auto;
+    max-width: calc(38.1953% - 1rem) !important; }
+[cell~='narrowed'] {
+  -webkit-box-flex: 0 !important;
+      -ms-flex: 0 0 auto !important;
+          flex: 0 0 auto !important;
+  width: auto !important; }
+@media (min-width: 0) and (max-width: 768px) {
+  [grid], .fieldset:not(.inline), .global-form fieldset:not(.inline), [grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important; } }
 .fieldset, .global-form fieldset {
   border: none;
   padding: 0;
   margin: 0; }
-
 .table, .global-table table {
   border-collapse: collapse;
   border-spacing: 0;
   max-width: 100%;
   width: 100%;
   empty-cells: show; }
-
 .th, .global-table th {
   text-align: left;
   font-weight: 700;
   vertical-align: bottom; }
-
 .td, .global-table td {
   vertical-align: top; }
+[grid], .fieldset:not(.inline), .global-form fieldset:not(.inline) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* default grid configuration */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 100%;
+  /* default grid cell configuration */
+  /*doc
 
+    ## Margin And Gutter
+    TODO
+   */
+  /* accommodate cell gutter by default */
+  margin-left: -12px !important;
+  margin-left: -0.75rem !important;
+  margin-right: -12px !important;
+  margin-right: -0.75rem !important;
+  /* override horizontal cell margin  */
+  /* default grid cell width based on child count */ }
+[grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    transition: -webkit-box-flex 250ms linear;
+    transition: flex 250ms linear;
+    transition: flex 250ms linear, -webkit-box-flex 250ms linear, -ms-flex 250ms linear; }
+[grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
+    margin-left: 12px !important;
+    margin-left: 0.75rem !important;
+    margin-right: 12px !important;
+    margin-right: 0.75rem !important; }
+[grid] > [grid], .fieldset:not(.inline) > [grid], .global-form fieldset:not(.inline) > [grid], [grid] > .fieldset:not(.inline), .fieldset:not(.inline) > .fieldset:not(.inline), .global-form fieldset:not(.inline) > .fieldset:not(.inline), .global-form [grid] > fieldset:not(.inline), .global-form .fieldset:not(.inline) > fieldset:not(.inline), .global-form fieldset:not(.inline) > fieldset:not(.inline) {
+    margin: 0 0 !important; }
+[grid] > *:nth-last-child(2):first-child, .fieldset:not(.inline) > *:nth-last-child(2):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child, [grid] > *:nth-last-child(2):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(2):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(50% - 1.5rem); }
+[grid] > *:nth-last-child(3):first-child, .fieldset:not(.inline) > *:nth-last-child(3):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child, [grid] > *:nth-last-child(3):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(3):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(33.33333% - 1.5rem); }
+[grid] > *:nth-last-child(4):first-child, .fieldset:not(.inline) > *:nth-last-child(4):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child, [grid] > *:nth-last-child(4):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(4):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(25% - 1.5rem); }
+[grid] > *:nth-last-child(5):first-child, .fieldset:not(.inline) > *:nth-last-child(5):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child, [grid] > *:nth-last-child(5):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(5):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(20% - 1.5rem); }
+[grid] > *:nth-last-child(6):first-child, .fieldset:not(.inline) > *:nth-last-child(6):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child, [grid] > *:nth-last-child(6):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(6):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(16.66667% - 1.5rem); }
+[grid][grid*='-column'] > *, [grid*='-column'].fieldset:not(.inline) > *, .global-form fieldset[grid*='-column']:not(.inline) > * {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important; }
+[grid][grid*='one-column'] > *, [grid*='one-column'].fieldset:not(.inline) > *, .global-form fieldset[grid*='one-column']:not(.inline) > * {
+    width: 100% !important; }
+[grid][grid*='golden-ratio'] > :nth-child(even), [grid*='golden-ratio'].fieldset:not(.inline) > :nth-child(even), .global-form fieldset[grid*='golden-ratio']:not(.inline) > :nth-child(even) {
+    width: auto;
+    max-width: calc(38.1953% - 1rem) !important; }
+[cell~='narrowed'] {
+  -webkit-box-flex: 0 !important;
+      -ms-flex: 0 0 auto !important;
+          flex: 0 0 auto !important;
+  width: auto !important; }
+@media (min-width: 0) and (max-width: 768px) {
+  [grid], .fieldset:not(.inline), .global-form fieldset:not(.inline), [grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important; } }
 .muted {
   background: #f5f5f5 !important; }
-
 .primary:not(.basic), .success:not(.basic), .warning:not(.basic), .error:not(.basic), .focused:not(.basic), .dark:not(.basic) {
   color: white !important; }
-
 .white {
   background-color: white; }
-
 .primary, * .primary {
   background-color: #1C86F2 !important;
   border-color: #1C86F2 !important; }
-
-.primary.basic,
-* .primary.basic {
-  background-color: transparent;
-  color: #1C86F2; }
-
+.primary.basic, * .primary.basic {
+    background-color: transparent;
+    color: #1C86F2; }
 .success {
   background-color: #32D296;
   border-color: #32D296; }
-
 .success.basic {
-  background-color: transparent;
-  color: #32D296; }
-
+    background-color: transparent;
+    color: #32D296; }
 .warning {
   background-color: #FAA05A;
   border-color: #FAA05A; }
-
 .warning.basic {
-  background-color: transparent;
-  color: #FAA05A; }
-
+    background-color: transparent;
+    color: #FAA05A; }
 .error, .error > .focus {
   background-color: #F0506E;
   border-color: #F0506E; }
-
 .error.basic {
   background-color: transparent;
   color: #F0506E; }
-
 .dark {
   background-color: #32373D;
   border-color: #32373D; }
-
 .dark.basic {
-  background-color: transparent;
-  color: #32373D; }
-
+    background-color: transparent;
+    color: #32373D; }
 .light {
   background-color: #D4D4D4;
   border-color: #D4D4D4; }
-
 .light.basic {
-  background-color: transparent;
-  color: #777;
-  border-color: #777; }
-
+    background-color: transparent;
+    color: #777;
+    border-color: #777; }
 .focused {
-  background-color: #3091f3;
-  border-color: #3091f3; }
-
+  background-color: rgb(48, 145, 243);
+  border-color: rgb(48, 145, 243); }
 .focused.basic {
-  background-color: transparent;
-  color: #3091f3; }
-
+    background-color: transparent;
+    color: rgb(48, 145, 243); }
 .error.input > .primary.input, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) > .primary.input, .global-form .error.input > input.primary:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) > input.primary:not([type='submit']):not([type='radio']):not([type='checkbox']),
 .error.input > .primary.select, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) > .primary.select, .global-form
 .error.input > select.primary, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) > select.primary {
   background-color: #F0506E !important;
   border-color: #F0506E !important; }
-
-.input.error:focus, .global-form input.error:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .input.error:focus ~ .focus, .global-form input.error:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .input.error .input:focus ~ .focus, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) .input:focus ~ .focus, .input.error .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .global-form .input.error input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .input.error .select:focus ~ .focus, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) .select:focus ~ .focus, .input.error .global-form select:focus ~ .focus, .global-form .input.error select:focus ~ .focus, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) select:focus ~ .focus {
+.input.error:focus, .global-form input.error:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .input.error:focus ~ .focus, .global-form input.error:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus,
+.input.error .input:focus ~ .focus, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) .input:focus ~ .focus,
+.input.error .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .global-form
+.input.error input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus,
+.input.error .select:focus ~ .focus, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) .select:focus ~ .focus,
+.input.error .global-form select:focus ~ .focus, .global-form
+.input.error select:focus ~ .focus, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) select:focus ~ .focus {
   box-shadow: 0 0 0 1px #F0506E !important;
   border-color: #F0506E !important; }
-
 .section {
   /* Sizing */
   padding: 24px;

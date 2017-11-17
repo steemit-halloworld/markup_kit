@@ -7,13 +7,13 @@ a perfect visual design.
 
 */
 
-@import 'core.settings.css';
-@import 'typography.scaling.css';
-@import 'typography.measuring.css';
-@import 'typography.leading.css';
-@import 'typography.tracking.css';
-@import 'typography.heading.css';
-@import 'typography.font-family.css';
+@import 'core.settings';
+@import 'typography.scaling';
+@import 'typography.measuring';
+@import 'typography.leading';
+@import 'typography.tracking';
+@import 'typography.heading';
+@import 'typography.font-family';
 
 .small
 {

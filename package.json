@@ -22,12 +22,11 @@
     "postcss-prefixer": "^2.0.5"
   },
   "scripts": {
-    "preinstall": "npm run build",
     "build": "npm run build:css && npm run build:doc",
     "watch": "onchange 'modules/markup_kit/css/*.css' --exclude 'modules/markup_kit/css/*.stage*.css' -- npm run build",
     "cleanup": "del-cli build/css/*.css",
     "build:css": "npm run build:css:amalgamation && npm run build:css:minification",
-    "build:css:amalgamation": "postcss -c postcss/amalgamation modules/markup_kit/css/include.css | ./node_modules/node-sass/bin/node-sass > ./modules/markup_kit/css/amalgamation.css",
+    "build:css:amalgamation": "./node_modules/node-sass/bin/node-sass modules/markup_kit/css/include.css | postcss -c postcss/amalgamation > ./modules/markup_kit/css/amalgamation.css",
     "build:css:minification": "postcss -c postcss/minification modules/markup_kit/css/amalgamation.css -o modules/markup_kit/css/minification.css",
     "build:doc": "sh bin/build_doc.sh"
   },

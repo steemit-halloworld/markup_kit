@@ -1,6 +1,6 @@
-@import 'core.settings.css';
-@import 'normalisation.form.css';
-@import 'normalisation.spacing.css';
+@import 'core.settings';
+@import 'normalisation.form';
+@import 'normalisation.spacing';
 
 /*doc
 
