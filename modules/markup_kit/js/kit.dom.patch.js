@@ -195,7 +195,7 @@
 
       if (!old_node)
       {
-        console.log("append node: " + new_node.innerHTML);
+        kit.log("append node: " + new_node.innerHTML);
 
 
 
@@ -204,7 +204,7 @@
       }
       else if (!new_node)
       {
-        console.log("remove node: " + old_node.innerHTML);
+        kit.log("remove node: " + old_node.innerHTML);
 
         dirty_nodes.push(parent.children[index]);
         return true;
@@ -214,7 +214,7 @@
       else if (has_node_changed(new_node, old_node))
       {
 
-        console.log("replace node: " + old_node.innerHTML + " vs. " + new_node.innerHTML);
+        kit.log("replace node: " + old_node.innerHTML + " vs. " + new_node.innerHTML);
 
         parent.replaceChild(new_node.cloneNode(true), parent.children[index]);
         return true;

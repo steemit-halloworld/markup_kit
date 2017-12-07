@@ -186,7 +186,7 @@ const kit = (function ()
 
   kit.log = function (string)
   {
-    console.log(string);
+    //console.log(string);
   };
 
   kit.register("formatted_date", function (html_el)

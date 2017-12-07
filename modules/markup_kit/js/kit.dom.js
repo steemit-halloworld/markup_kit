@@ -13,7 +13,27 @@ kit.dom = kit.native_dom = (function ()
 
   var incrementing_id = 0;
 
+  function load_dom (text, as_html)
+  {
+    if (typeof DOMParser != 'undefined')
+    {
+      return new DOMParser().parseFromString(text, as_html ? 'text/html' : 'application/xml');
+    }
+
+    throw new Error('Your environment does not support loading documents');
+  }
+
   const obj = {
+
+    load_html_dom: function (text)
+    {
+      return load_dom(text, true);
+    },
+
+    load_dom: function (text)
+    {
+      load_dom(text, false);
+    },
 
 //!@{
 //<!------------------------------------------------------------------------------------------------------------------->
