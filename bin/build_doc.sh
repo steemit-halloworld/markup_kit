@@ -38,5 +38,5 @@ for e in "${EXCLUDES[@]}"; do
   array_remove CSS_FILES ${i}
 done
 
-css-markdown "$parent_path"/../modules/markup_kit/css/amalgamation.css > "$parent_path"/../doc/md/documentation.md
-pandoc --template "$parent_path"/../modules/markup_kit/html/pandoc_template.html  --toc --toc-depth 1 --css ./../../modules/markup_kit/css/minification.css -f markdown-markdown_in_html_blocks+raw_html-native_divs -t html --standalone -o "$parent_path"/../doc/html/documentation.html "$parent_path"/../doc/md/documentation.md
+css-markdown "$parent_path"/../dist/markup_kit/css/amalgamation.css > "$parent_path"/../doc/md/documentation.md
+pandoc --template "$parent_path"/../modules/markup_kit/html/pandoc_template.html  --toc --toc-depth 1 --css ./../../dist/markup_kit/css/minification.css -f markdown-markdown_in_html_blocks+raw_html-native_divs -t html5 --standalone -o "$parent_path"/../doc/html/documentation.html "$parent_path"/../doc/md/documentation.md

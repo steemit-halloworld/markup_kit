@@ -1,28 +1,14 @@
 .global-form
 {
-  & input:not([type='submit']):not([type='radio']):not([type='checkbox'])
-  {
-    @extend .input;
-  }
 
-
-  & textarea
-  {
-    @extend .textarea;
-  }
-
-  & select
-  {
-    @extend .select;
-  }
 
   & label
   {
     @extend .label;
   }
 
-  & fieldset
+  & .grid
   {
-    @extend .fieldset;
+    @extend .grid;
   }
 }

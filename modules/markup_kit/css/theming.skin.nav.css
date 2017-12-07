@@ -1,0 +1,10 @@
+:root
+{
+  --nav--background    : #fff;
+  --nav--font-family   : var(--font-family);
+  --nav--padding       : var(--spacing-small);
+  --nav--border-width  : 1px;
+  --nav--border-radius : var(--border-radius);
+  --nav--border        : var(--nav--border-width) solid var(--border-color);
+  --nav--margin        : 0px;
+}

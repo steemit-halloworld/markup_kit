@@ -22,21 +22,26 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
-<main class="" style="margin-left: 300px; position: relative;">
-  <nav class="left dividing flank | blank grouped items">
+<div grid>
+  <nav style="position: -webkit-sticky; top: 0;">
     $if(toc)$
     $toc$
     $endif$
   </nav>
 
-  $for(include-before)$
-  $include-before$
-  $endfor$
-  $body$
-  $for(include-after)$
-  $include-after$
-  $endfor$
-</main>
+  <main>
+
+
+    $for(include-before)$
+    $include-before$
+    $endfor$
+    $body$
+    $for(include-after)$
+    $include-after$
+    $endfor$
+  </main>
+</div>
+
 <script type="application/javascript">
   var module_elements = document.querySelectorAll("[data-module]");
 
@@ -51,10 +56,11 @@ $endfor$
       var code = document.createElement("code");
 
       inner_html = inner_html.replace("<p>", "").replace("</p>", "");
+      inner_html = inner_html.replace("=\"\"", "").replace("</p>", "");
 
       module_element.appendChild(code);
       code.textContent = inner_html;
-      code.className += "prettyprint html";
+      code.className += "prettyprint lang-html";
 
       PR.prettyPrint();
     }

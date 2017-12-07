@@ -1,4 +1,4 @@
-/*doc
+/*md
 
 # Getting Started
 
@@ -79,6 +79,8 @@ anything by simply adding
   /* background */
   /** Grayscale **/
   /*endregion*/ }
+/* 4 columns */
+/* 8 columns */
 button, input, select, textarea {
   color: inherit;
   font-size: inherit;
@@ -462,7 +464,11 @@ a perfect visual design.
   /* background */
   /** Grayscale **/
   /*endregion*/ }
-.body, .global-typography body {
+/* 4 columns */
+/* 8 columns */
+.body {
+  font-size: 16px; }
+.global-typography body {
   font-size: 16px; }
 .type-scale-1 {
   font-size: 48px;
@@ -567,7 +573,11 @@ The following classes are used for setting measure:
   /* background */
   /** Grayscale **/
   /*endregion*/ }
-.body, .global-typography body {
+/* 4 columns */
+/* 8 columns */
+.body {
+  line-height: 1.5; }
+.global-typography body {
   line-height: 1.5; }
 /*doc
 
@@ -584,7 +594,9 @@ should never be tracked. For some larger text, depending on the typeface a negat
   letter-spacing: -.05em; }
 .wide.tracked {
   letter-spacing: .25em; }
-.body, .global-typography body {
+.body {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
+.global-typography body {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
 .small {
   font-size: 14px;
@@ -682,86 +694,20 @@ To reduce the visual complexity add the `basic` class to a label.
   /* background */
   /** Grayscale **/
   /*endregion*/ }
-[grid], .fieldset:not(.inline), .global-form fieldset:not(.inline) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  /* default grid configuration */
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-width: 100%;
-  /* default grid cell configuration */
-  /*doc
-
-    ## Margin And Gutter
-    TODO
-   */
-  /* accommodate cell gutter by default */
-  margin-left: -12px !important;
-  margin-left: -0.75rem !important;
-  margin-right: -12px !important;
-  margin-right: -0.75rem !important;
-  /* override horizontal cell margin  */
-  /* default grid cell width based on child count */ }
-[grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 0px;
-            flex: 1 1 0;
-    transition: -webkit-box-flex 250ms linear;
-    transition: flex 250ms linear;
-    transition: flex 250ms linear, -webkit-box-flex 250ms linear, -ms-flex 250ms linear; }
-[grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
-    margin-left: 12px !important;
-    margin-left: 0.75rem !important;
-    margin-right: 12px !important;
-    margin-right: 0.75rem !important; }
-[grid] > [grid], .fieldset:not(.inline) > [grid], .global-form fieldset:not(.inline) > [grid], [grid] > .fieldset:not(.inline), .fieldset:not(.inline) > .fieldset:not(.inline), .global-form fieldset:not(.inline) > .fieldset:not(.inline), .global-form [grid] > fieldset:not(.inline), .global-form .fieldset:not(.inline) > fieldset:not(.inline), .global-form fieldset:not(.inline) > fieldset:not(.inline) {
-    margin: 0 0 !important; }
-[grid] > *:nth-last-child(2):first-child, .fieldset:not(.inline) > *:nth-last-child(2):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child, [grid] > *:nth-last-child(2):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(2):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: calc(50% - 1.5rem); }
-[grid] > *:nth-last-child(3):first-child, .fieldset:not(.inline) > *:nth-last-child(3):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child, [grid] > *:nth-last-child(3):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(3):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: calc(33.33333% - 1.5rem); }
-[grid] > *:nth-last-child(4):first-child, .fieldset:not(.inline) > *:nth-last-child(4):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child, [grid] > *:nth-last-child(4):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(4):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: calc(25% - 1.5rem); }
-[grid] > *:nth-last-child(5):first-child, .fieldset:not(.inline) > *:nth-last-child(5):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child, [grid] > *:nth-last-child(5):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(5):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: calc(20% - 1.5rem); }
-[grid] > *:nth-last-child(6):first-child, .fieldset:not(.inline) > *:nth-last-child(6):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child, [grid] > *:nth-last-child(6):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(6):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: calc(16.66667% - 1.5rem); }
-[grid][grid*='-column'] > *, [grid*='-column'].fieldset:not(.inline) > *, .global-form fieldset[grid*='-column']:not(.inline) > * {
-    -ms-flex-preferred-size: auto !important;
-        flex-basis: auto !important; }
-[grid][grid*='one-column'] > *, [grid*='one-column'].fieldset:not(.inline) > *, .global-form fieldset[grid*='one-column']:not(.inline) > * {
-    width: 100% !important; }
-[grid][grid*='golden-ratio'] > :nth-child(even), [grid*='golden-ratio'].fieldset:not(.inline) > :nth-child(even), .global-form fieldset[grid*='golden-ratio']:not(.inline) > :nth-child(even) {
-    width: auto;
-    max-width: calc(38.1953% - 1rem) !important; }
-[cell~='narrowed'] {
-  -webkit-box-flex: 0 !important;
-      -ms-flex: 0 0 auto !important;
-          flex: 0 0 auto !important;
-  width: auto !important; }
-@media (min-width: 0) and (max-width: 768px) {
-  [grid], .fieldset:not(.inline), .global-form fieldset:not(.inline), [grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 100% !important; } }
-.label, .global-form label {
+/* 4 columns */
+/* 8 columns */
+.label {
+  margin-top: 16px;
+  margin-top: 1rem;
+  margin-bottom: 8px;
+  margin-bottom: .5rem;
+  /* Sizing */
+  /*margin: calc(var(--spacing-medium) / 2) 0;*/
+  /* Positioning */
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+.global-form label {
   margin-top: 16px;
   margin-top: 1rem;
   margin-bottom: 8px;
@@ -780,11 +726,97 @@ To reduce the visual complexity add the `basic` class to a label.
   display: block;
   width: 100%;
   min-width: 1ch; }
-.label:not(.inline) > .input, .global-form label:not(.inline) > .input, .global-form .label:not(.inline) > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form label:not(.inline) > input:not([type='submit']):not([type='radio']):not([type='checkbox']),
-.label:not(.inline) > .textarea, .global-form label:not(.inline) > .textarea, .global-form
-.label:not(.inline) > textarea, .global-form label:not(.inline) > textarea,
-.label:not(.inline) > .select, .global-form label:not(.inline) > .select, .global-form
-.label:not(.inline) > select, .global-form label:not(.inline) > select {
+.label:not(.inline) > .input {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  margin-top: 8px;
+  margin-top: .5rem;
+  margin-bottom: -8px;
+  margin-bottom: -.5rem; }
+.global-form label:not(.inline) > .input {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  margin-top: 8px;
+  margin-top: .5rem;
+  margin-bottom: -8px;
+  margin-bottom: -.5rem; }
+.global-form .label:not(.inline) > input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  margin-top: 8px;
+  margin-top: .5rem;
+  margin-bottom: -8px;
+  margin-bottom: -.5rem; }
+.global-form label:not(.inline) > input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  margin-top: 8px;
+  margin-top: .5rem;
+  margin-bottom: -8px;
+  margin-bottom: -.5rem; }
+.label:not(.inline) > .textarea {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  margin-top: 8px;
+  margin-top: .5rem;
+  margin-bottom: -8px;
+  margin-bottom: -.5rem; }
+.global-form label:not(.inline) > .textarea {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  margin-top: 8px;
+  margin-top: .5rem;
+  margin-bottom: -8px;
+  margin-bottom: -.5rem; }
+.global-form
+.label:not(.inline) > textarea {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  margin-top: 8px;
+  margin-top: .5rem;
+  margin-bottom: -8px;
+  margin-bottom: -.5rem; }
+.global-form label:not(.inline) > textarea {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  margin-top: 8px;
+  margin-top: .5rem;
+  margin-bottom: -8px;
+  margin-bottom: -.5rem; }
+.label:not(.inline) > .select {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  margin-top: 8px;
+  margin-top: .5rem;
+  margin-bottom: -8px;
+  margin-bottom: -.5rem; }
+.global-form label:not(.inline) > .select {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  margin-top: 8px;
+  margin-top: .5rem;
+  margin-bottom: -8px;
+  margin-bottom: -.5rem; }
+.global-form
+.label:not(.inline) > select {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  margin-top: 8px;
+  margin-top: .5rem;
+  margin-bottom: -8px;
+  margin-bottom: -.5rem; }
+.global-form label:not(.inline) > select {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -840,7 +872,7 @@ A label can point to the context next to it
   z-index: 50; }
 .basic.pointing.label, .global-form label.basic.pointing {
   background-color: inherit; }
-.pointing.label:before, .global-form label.pointing:before {
+.pointing.label:before {
   background-color: inherit;
   border-color: inherit;
   border-style: solid;
@@ -856,13 +888,39 @@ A label can point to the context next to it
   top: 0;
   left: 50%;
   margin-top: -0.5px; }
-[class*="bottom pointing"].label:before, .global-form label[class*="bottom pointing"]:before {
+.global-form label.pointing:before {
+  background-color: inherit;
+  border-color: inherit;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  position: absolute;
+  z-index: 40;
+  content: '';
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  width: .6666em;
+  height: .6666em;
+  background-image: none;
+  top: 0;
+  left: 50%;
+  margin-top: -0.5px; }
+[class*="bottom pointing"].label:before {
+  border-width: 0 1px 1px 0;
+  top: 100%;
+  margin-top: 0.5px; }
+.global-form label[class*="bottom pointing"]:before {
   border-width: 0 1px 1px 0;
   top: 100%;
   margin-top: 0.5px; }
 [class*="left pointing"].label, .global-form label[class*="left pointing"] {
   margin-left: .5em; }
-[class*="left pointing"].label:before, .global-form label[class*="left pointing"]:before {
+[class*="left pointing"].label:before {
+  border-width: 0 0 1px 1px;
+  top: 50%;
+  left: 0;
+  margin-top: 0;
+  margin-left: -0.5px; }
+.global-form label[class*="left pointing"]:before {
   border-width: 0 0 1px 1px;
   top: 50%;
   left: 0;
@@ -870,7 +928,17 @@ A label can point to the context next to it
   margin-left: -0.5px; }
 [class*="right pointing"].label, .global-form label[class*="right pointing"] {
   margin-right: .5em; }
-[class*="right pointing"].label:before, .global-form label[class*="right pointing"]:before {
+[class*="right pointing"].label:before {
+  -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
+          transform: translateX(50%) translateY(-50%) rotate(45deg);
+  border-width: 1px 1px 0 0;
+  top: 50%;
+  right: 0;
+  left: auto;
+  bottom: auto;
+  margin-top: 0;
+  margin-right: -0.5px; }
+.global-form label[class*="right pointing"]:before {
   -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
           transform: translateX(50%) translateY(-50%) rotate(45deg);
   border-width: 1px 1px 0 0;
@@ -933,6 +1001,8 @@ A label can point to the context next to it
   /* background */
   /** Grayscale **/
   /*endregion*/ }
+/* 4 columns */
+/* 8 columns */
 /*doc
 
 ## Inputs
@@ -947,7 +1017,147 @@ or `week`.
 </div>
 
 */
-.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea, .global-form textarea, .select, .global-form select {
+.input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* Sizing */
+  padding: 8px;
+  padding: .5rem;
+  /*margin: calc(var(--spacing-medium) / 2) 0;*/
+  /*min-width: 2ch;*/
+  /* Positioning */
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+  overflow: visible;
+  vertical-align: baseline;
+  font-size: calc(1em - 1px);
+  /* Animation */
+  /*transition-property: color, background-color, border;
+  transition: 0.2s ease-in-out;*/
+  /* Theme */
+  /*& > .input:first-child, .select:first-child
+  {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }*/ }
+.global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* Sizing */
+  padding: 8px;
+  padding: .5rem;
+  /*margin: calc(var(--spacing-medium) / 2) 0;*/
+  /*min-width: 2ch;*/
+  /* Positioning */
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+  overflow: visible;
+  vertical-align: baseline;
+  font-size: calc(1em - 1px);
+  /* Animation */
+  /*transition-property: color, background-color, border;
+  transition: 0.2s ease-in-out;*/
+  /* Theme */
+  /*& > .input:first-child, .select:first-child
+  {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }*/ }
+.textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* Sizing */
+  padding: 8px;
+  padding: .5rem;
+  /*margin: calc(var(--spacing-medium) / 2) 0;*/
+  /*min-width: 2ch;*/
+  /* Positioning */
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+  overflow: visible;
+  vertical-align: baseline;
+  font-size: calc(1em - 1px);
+  /* Animation */
+  /*transition-property: color, background-color, border;
+  transition: 0.2s ease-in-out;*/
+  /* Theme */
+  /*& > .input:first-child, .select:first-child
+  {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }*/ }
+.global-form textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* Sizing */
+  padding: 8px;
+  padding: .5rem;
+  /*margin: calc(var(--spacing-medium) / 2) 0;*/
+  /*min-width: 2ch;*/
+  /* Positioning */
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+  overflow: visible;
+  vertical-align: baseline;
+  font-size: calc(1em - 1px);
+  /* Animation */
+  /*transition-property: color, background-color, border;
+  transition: 0.2s ease-in-out;*/
+  /* Theme */
+  /*& > .input:first-child, .select:first-child
+  {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }*/ }
+.select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* Sizing */
+  padding: 8px;
+  padding: .5rem;
+  /*margin: calc(var(--spacing-medium) / 2) 0;*/
+  /*min-width: 2ch;*/
+  /* Positioning */
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+  overflow: visible;
+  vertical-align: baseline;
+  font-size: calc(1em - 1px);
+  /* Animation */
+  /*transition-property: color, background-color, border;
+  transition: 0.2s ease-in-out;*/
+  /* Theme */
+  /*& > .input:first-child, .select:first-child
+  {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }*/ }
+.global-form select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -983,7 +1193,62 @@ or `week`.
             flex: 1 1 0; }
 .input::-ms-clear, .global-form input:not([type='checkbox']):not([type='radio']):not([type='submit'])::-ms-clear, .textarea::-ms-clear, .global-form textarea::-ms-clear, .select::-ms-clear, .global-form select::-ms-clear {
     display: none; }
-.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .input > .focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus, .textarea, .global-form textarea, .textarea > .focus, .global-form textarea > .focus, .select, .global-form select, .select > .focus, .global-form select > .focus {
+.input {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.input > .focus {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.textarea {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.global-form textarea {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.textarea > .focus {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.global-form textarea > .focus {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.select {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.global-form select {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.select > .focus {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.global-form select > .focus {
     border: 1px #D4D4D4 solid;
     border-radius: 4px;
     color: #444;
@@ -997,7 +1262,7 @@ or `week`.
             justify-content: space-between;
     padding: 0;
     overflow: visible; }
-.input > .focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus, .textarea > .focus, .global-form textarea > .focus, .select > .focus, .global-form select > .focus {
+.input > .focus {
     position: absolute;
     background: transparent !important;
     top: -1px;
@@ -1007,7 +1272,123 @@ or `week`.
     cursor: text;
     pointer-events: none;
     box-sizing: content-box; }
-.input:focus, .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .input:focus ~ .focus, .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .textarea:focus, .global-form textarea:focus, .textarea:focus ~ .focus, .global-form textarea:focus ~ .focus, .select:focus, .global-form select:focus, .select:focus ~ .focus, .global-form select:focus ~ .focus {
+.global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus {
+    position: absolute;
+    background: transparent !important;
+    top: -1px;
+    right: -1px;
+    left: -1px;
+    bottom: -1px;
+    cursor: text;
+    pointer-events: none;
+    box-sizing: content-box; }
+.textarea > .focus {
+    position: absolute;
+    background: transparent !important;
+    top: -1px;
+    right: -1px;
+    left: -1px;
+    bottom: -1px;
+    cursor: text;
+    pointer-events: none;
+    box-sizing: content-box; }
+.global-form textarea > .focus {
+    position: absolute;
+    background: transparent !important;
+    top: -1px;
+    right: -1px;
+    left: -1px;
+    bottom: -1px;
+    cursor: text;
+    pointer-events: none;
+    box-sizing: content-box; }
+.select > .focus {
+    position: absolute;
+    background: transparent !important;
+    top: -1px;
+    right: -1px;
+    left: -1px;
+    bottom: -1px;
+    cursor: text;
+    pointer-events: none;
+    box-sizing: content-box; }
+.global-form select > .focus {
+    position: absolute;
+    background: transparent !important;
+    top: -1px;
+    right: -1px;
+    left: -1px;
+    bottom: -1px;
+    cursor: text;
+    pointer-events: none;
+    box-sizing: content-box; }
+.input:focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.input:focus ~ .focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.textarea:focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.global-form textarea:focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.textarea:focus ~ .focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.global-form textarea:focus ~ .focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.select:focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.global-form select:focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.select:focus ~ .focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.global-form select:focus ~ .focus {
     outline: 0;
     border-color: rgb(48, 145, 243);
     box-shadow: 0 0 0 1px rgb(48, 145, 243);
@@ -1030,7 +1411,214 @@ or `week`.
 .input[type='number']::-webkit-inner-spin-button, .global-form input[type='number']:not([type='checkbox']):not([type='radio']):not([type='submit'])::-webkit-inner-spin-button, .input[type='number']::-webkit-outer-spin-button, .global-form input[type='number']:not([type='checkbox']):not([type='radio']):not([type='submit'])::-webkit-outer-spin-button, .textarea[type='number']::-webkit-inner-spin-button, .global-form textarea[type='number']::-webkit-inner-spin-button, .textarea[type='number']::-webkit-outer-spin-button, .global-form textarea[type='number']::-webkit-outer-spin-button, .select[type='number']::-webkit-inner-spin-button, .global-form select[type='number']::-webkit-inner-spin-button, .select[type='number']::-webkit-outer-spin-button, .global-form select[type='number']::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0; }
-.input > .input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input, .global-form .input > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .input > .select, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .select, .global-form .input > select, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > select, .textarea > .input, .global-form textarea > .input, .global-form .textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea > .select, .global-form textarea > .select, .global-form .textarea > select, .global-form textarea > select, .select > .input, .global-form select > .input, .global-form .select > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .select > .select, .global-form select > .select, .global-form .select > select, .global-form select > select {
+.input > .input {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form .input > input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.input > .select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form .input > select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.textarea > .input {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form textarea > .input {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form .textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.textarea > .select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form textarea > .select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form .textarea > select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form textarea > select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.select > .input {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form select > .input {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form .select > input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form select > input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.select > .select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form select > .select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form .select > select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form select > select {
     outline: none;
     margin: 0 !important;
     border-radius: 0;
@@ -1100,6 +1688,8 @@ or `week`.
   /* background */
   /** Grayscale **/
   /*endregion*/ }
+/* 4 columns */
+/* 8 columns */
 /*doc
 
 ## Inputs
@@ -1114,7 +1704,147 @@ or `week`.
 </div>
 
 */
-.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea, .global-form textarea, .select, .global-form select {
+.input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* Sizing */
+  padding: 8px;
+  padding: .5rem;
+  /*margin: calc(var(--spacing-medium) / 2) 0;*/
+  /*min-width: 2ch;*/
+  /* Positioning */
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+  overflow: visible;
+  vertical-align: baseline;
+  font-size: calc(1em - 1px);
+  /* Animation */
+  /*transition-property: color, background-color, border;
+  transition: 0.2s ease-in-out;*/
+  /* Theme */
+  /*& > .input:first-child, .select:first-child
+  {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }*/ }
+.global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* Sizing */
+  padding: 8px;
+  padding: .5rem;
+  /*margin: calc(var(--spacing-medium) / 2) 0;*/
+  /*min-width: 2ch;*/
+  /* Positioning */
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+  overflow: visible;
+  vertical-align: baseline;
+  font-size: calc(1em - 1px);
+  /* Animation */
+  /*transition-property: color, background-color, border;
+  transition: 0.2s ease-in-out;*/
+  /* Theme */
+  /*& > .input:first-child, .select:first-child
+  {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }*/ }
+.textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* Sizing */
+  padding: 8px;
+  padding: .5rem;
+  /*margin: calc(var(--spacing-medium) / 2) 0;*/
+  /*min-width: 2ch;*/
+  /* Positioning */
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+  overflow: visible;
+  vertical-align: baseline;
+  font-size: calc(1em - 1px);
+  /* Animation */
+  /*transition-property: color, background-color, border;
+  transition: 0.2s ease-in-out;*/
+  /* Theme */
+  /*& > .input:first-child, .select:first-child
+  {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }*/ }
+.global-form textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* Sizing */
+  padding: 8px;
+  padding: .5rem;
+  /*margin: calc(var(--spacing-medium) / 2) 0;*/
+  /*min-width: 2ch;*/
+  /* Positioning */
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+  overflow: visible;
+  vertical-align: baseline;
+  font-size: calc(1em - 1px);
+  /* Animation */
+  /*transition-property: color, background-color, border;
+  transition: 0.2s ease-in-out;*/
+  /* Theme */
+  /*& > .input:first-child, .select:first-child
+  {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }*/ }
+.select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* Sizing */
+  padding: 8px;
+  padding: .5rem;
+  /*margin: calc(var(--spacing-medium) / 2) 0;*/
+  /*min-width: 2ch;*/
+  /* Positioning */
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+  overflow: visible;
+  vertical-align: baseline;
+  font-size: calc(1em - 1px);
+  /* Animation */
+  /*transition-property: color, background-color, border;
+  transition: 0.2s ease-in-out;*/
+  /* Theme */
+  /*& > .input:first-child, .select:first-child
+  {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }*/ }
+.global-form select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1150,7 +1880,62 @@ or `week`.
             flex: 1 1 0; }
 .input::-ms-clear, .global-form input:not([type='checkbox']):not([type='radio']):not([type='submit'])::-ms-clear, .textarea::-ms-clear, .global-form textarea::-ms-clear, .select::-ms-clear, .global-form select::-ms-clear {
     display: none; }
-.input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']), .input > .focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus, .textarea, .global-form textarea, .textarea > .focus, .global-form textarea > .focus, .select, .global-form select, .select > .focus, .global-form select > .focus {
+.input {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.input > .focus {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.textarea {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.global-form textarea {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.textarea > .focus {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.global-form textarea > .focus {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.select {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.global-form select {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.select > .focus {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px;
+    color: #444;
+    outline: 0; }
+.global-form select > .focus {
     border: 1px #D4D4D4 solid;
     border-radius: 4px;
     color: #444;
@@ -1164,7 +1949,7 @@ or `week`.
             justify-content: space-between;
     padding: 0;
     overflow: visible; }
-.input > .focus, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus, .textarea > .focus, .global-form textarea > .focus, .select > .focus, .global-form select > .focus {
+.input > .focus {
     position: absolute;
     background: transparent !important;
     top: -1px;
@@ -1174,7 +1959,123 @@ or `week`.
     cursor: text;
     pointer-events: none;
     box-sizing: content-box; }
-.input:focus, .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .input:focus ~ .focus, .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .textarea:focus, .global-form textarea:focus, .textarea:focus ~ .focus, .global-form textarea:focus ~ .focus, .select:focus, .global-form select:focus, .select:focus ~ .focus, .global-form select:focus ~ .focus {
+.global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .focus {
+    position: absolute;
+    background: transparent !important;
+    top: -1px;
+    right: -1px;
+    left: -1px;
+    bottom: -1px;
+    cursor: text;
+    pointer-events: none;
+    box-sizing: content-box; }
+.textarea > .focus {
+    position: absolute;
+    background: transparent !important;
+    top: -1px;
+    right: -1px;
+    left: -1px;
+    bottom: -1px;
+    cursor: text;
+    pointer-events: none;
+    box-sizing: content-box; }
+.global-form textarea > .focus {
+    position: absolute;
+    background: transparent !important;
+    top: -1px;
+    right: -1px;
+    left: -1px;
+    bottom: -1px;
+    cursor: text;
+    pointer-events: none;
+    box-sizing: content-box; }
+.select > .focus {
+    position: absolute;
+    background: transparent !important;
+    top: -1px;
+    right: -1px;
+    left: -1px;
+    bottom: -1px;
+    cursor: text;
+    pointer-events: none;
+    box-sizing: content-box; }
+.global-form select > .focus {
+    position: absolute;
+    background: transparent !important;
+    top: -1px;
+    right: -1px;
+    left: -1px;
+    bottom: -1px;
+    cursor: text;
+    pointer-events: none;
+    box-sizing: content-box; }
+.input:focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.input:focus ~ .focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.textarea:focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.global-form textarea:focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.textarea:focus ~ .focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.global-form textarea:focus ~ .focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.select:focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.global-form select:focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.select:focus ~ .focus {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+.global-form select:focus ~ .focus {
     outline: 0;
     border-color: rgb(48, 145, 243);
     box-shadow: 0 0 0 1px rgb(48, 145, 243);
@@ -1197,7 +2098,214 @@ or `week`.
 .input[type='number']::-webkit-inner-spin-button, .global-form input[type='number']:not([type='checkbox']):not([type='radio']):not([type='submit'])::-webkit-inner-spin-button, .input[type='number']::-webkit-outer-spin-button, .global-form input[type='number']:not([type='checkbox']):not([type='radio']):not([type='submit'])::-webkit-outer-spin-button, .textarea[type='number']::-webkit-inner-spin-button, .global-form textarea[type='number']::-webkit-inner-spin-button, .textarea[type='number']::-webkit-outer-spin-button, .global-form textarea[type='number']::-webkit-outer-spin-button, .select[type='number']::-webkit-inner-spin-button, .global-form select[type='number']::-webkit-inner-spin-button, .select[type='number']::-webkit-outer-spin-button, .global-form select[type='number']::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0; }
-.input > .input, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input, .global-form .input > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .input > .select, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .select, .global-form .input > select, .global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > select, .textarea > .input, .global-form textarea > .input, .global-form .textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .textarea > .select, .global-form textarea > .select, .global-form .textarea > select, .global-form textarea > select, .select > .input, .global-form select > .input, .global-form .select > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form select > input:not([type='submit']):not([type='radio']):not([type='checkbox']), .select > .select, .global-form select > .select, .global-form .select > select, .global-form select > select {
+.input > .input {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .input {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form .input > input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.input > .select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > .select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form .input > select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form input:not([type='submit']):not([type='radio']):not([type='checkbox']) > select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.textarea > .input {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form textarea > .input {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form .textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form textarea > input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.textarea > .select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form textarea > .select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form .textarea > select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form textarea > select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.select > .input {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form select > .input {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form .select > input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form select > input:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.select > .select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form select > .select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form .select > select {
+    outline: none;
+    margin: 0 !important;
+    border-radius: 0;
+    padding-right: 0;
+    color: inherit;
+    background: transparent;
+    border: 1px transparent solid;
+    height: 100%; }
+.global-form select > select {
     outline: none;
     margin: 0 !important;
     border-radius: 0;
@@ -1281,7 +2389,14 @@ or `week`.
 
 
 */
-.select, .global-form select {
+.select {
+  /*background: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22red%22%20width%3D%229%22%20height%3D%2212%22%20viewBox%3D%220%200%209%2012%22%3E%3Cpath%20d%3D%22M0.722%2C4.823L-0.01%2C4.1%2C4.134-.01%2C4.866%2C0.716Zm7.555%2C0L9.01%2C4.1%2C4.866-.01l-0.732.726ZM0.722%2C7.177L-0.01%2C7.9%2C4.134%2C12.01l0.732-.726Zm7.555%2C0L9.01%2C7.9%2C4.866%2C12.01l-0.732-.726Z%22%2F%3E%3C%2Fsvg%3E') no-repeat right .5rem center;
+  */
+  padding-right: calc(.5rem + 1.125em) !important;
+  min-width: 10ch;
+  cursor: pointer;
+  background-color: white; }
+.global-form select {
   /*background: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22red%22%20width%3D%229%22%20height%3D%2212%22%20viewBox%3D%220%200%209%2012%22%3E%3Cpath%20d%3D%22M0.722%2C4.823L-0.01%2C4.1%2C4.134-.01%2C4.866%2C0.716Zm7.555%2C0L9.01%2C4.1%2C4.866-.01l-0.732.726ZM0.722%2C7.177L-0.01%2C7.9%2C4.134%2C12.01l0.732-.726Zm7.555%2C0L9.01%2C7.9%2C4.866%2C12.01l-0.732-.726Z%22%2F%3E%3C%2Fsvg%3E') no-repeat right .5rem center;
   */
   padding-right: calc(.5rem + 1.125em) !important;
@@ -1292,7 +2407,12 @@ or `week`.
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden; }
-.select, .global-form select {
+.select {
+    background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+    background-position: calc(100% - 0.950em) 1.125em, calc(100% - 0.575em) 1.125em;
+    background-size: 0.375em 0.375em, 0.375em 0.375em;
+    background-repeat: no-repeat; }
+.global-form select {
     background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
     background-position: calc(100% - 0.950em) 1.125em, calc(100% - 0.575em) 1.125em;
     background-size: 0.375em 0.375em, 0.375em 0.375em;
@@ -1317,85 +2437,6 @@ or `week`.
 .select:focus::-ms-value, .global-form select:focus::-ms-value {
     background: transparent;
     color: currentColor; }
-[grid], .fieldset:not(.inline), .global-form fieldset:not(.inline) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  /* default grid configuration */
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-width: 100%;
-  /* default grid cell configuration */
-  /*doc
-
-    ## Margin And Gutter
-    TODO
-   */
-  /* accommodate cell gutter by default */
-  margin-left: -12px !important;
-  margin-left: -0.75rem !important;
-  margin-right: -12px !important;
-  margin-right: -0.75rem !important;
-  /* override horizontal cell margin  */
-  /* default grid cell width based on child count */ }
-[grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 0px;
-            flex: 1 1 0;
-    transition: -webkit-box-flex 250ms linear;
-    transition: flex 250ms linear;
-    transition: flex 250ms linear, -webkit-box-flex 250ms linear, -ms-flex 250ms linear; }
-[grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
-    margin-left: 12px !important;
-    margin-left: 0.75rem !important;
-    margin-right: 12px !important;
-    margin-right: 0.75rem !important; }
-[grid] > [grid], .fieldset:not(.inline) > [grid], .global-form fieldset:not(.inline) > [grid], [grid] > .fieldset:not(.inline), .fieldset:not(.inline) > .fieldset:not(.inline), .global-form fieldset:not(.inline) > .fieldset:not(.inline), .global-form [grid] > fieldset:not(.inline), .global-form .fieldset:not(.inline) > fieldset:not(.inline), .global-form fieldset:not(.inline) > fieldset:not(.inline) {
-    margin: 0 0 !important; }
-[grid] > *:nth-last-child(2):first-child, .fieldset:not(.inline) > *:nth-last-child(2):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child, [grid] > *:nth-last-child(2):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(2):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: calc(50% - 1.5rem); }
-[grid] > *:nth-last-child(3):first-child, .fieldset:not(.inline) > *:nth-last-child(3):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child, [grid] > *:nth-last-child(3):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(3):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: calc(33.33333% - 1.5rem); }
-[grid] > *:nth-last-child(4):first-child, .fieldset:not(.inline) > *:nth-last-child(4):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child, [grid] > *:nth-last-child(4):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(4):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: calc(25% - 1.5rem); }
-[grid] > *:nth-last-child(5):first-child, .fieldset:not(.inline) > *:nth-last-child(5):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child, [grid] > *:nth-last-child(5):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(5):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: calc(20% - 1.5rem); }
-[grid] > *:nth-last-child(6):first-child, .fieldset:not(.inline) > *:nth-last-child(6):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child, [grid] > *:nth-last-child(6):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(6):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: calc(16.66667% - 1.5rem); }
-[grid][grid*='-column'] > *, [grid*='-column'].fieldset:not(.inline) > *, .global-form fieldset[grid*='-column']:not(.inline) > * {
-    -ms-flex-preferred-size: auto !important;
-        flex-basis: auto !important; }
-[grid][grid*='one-column'] > *, [grid*='one-column'].fieldset:not(.inline) > *, .global-form fieldset[grid*='one-column']:not(.inline) > * {
-    width: 100% !important; }
-[grid][grid*='golden-ratio'] > :nth-child(even), [grid*='golden-ratio'].fieldset:not(.inline) > :nth-child(even), .global-form fieldset[grid*='golden-ratio']:not(.inline) > :nth-child(even) {
-    width: auto;
-    max-width: calc(38.1953% - 1rem) !important; }
-[cell~='narrowed'] {
-  -webkit-box-flex: 0 !important;
-      -ms-flex: 0 0 auto !important;
-          flex: 0 0 auto !important;
-  width: auto !important; }
-@media (min-width: 0) and (max-width: 768px) {
-  [grid], .fieldset:not(.inline), .global-form fieldset:not(.inline), [grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 100% !important; } }
 .fieldset, .global-form fieldset {
   border: none;
   padding: 0;
@@ -1412,95 +2453,597 @@ or `week`.
   vertical-align: bottom; }
 .td, .global-table td {
   vertical-align: top; }
-[grid], .fieldset:not(.inline), .global-form fieldset:not(.inline) {
+/*doc
+
+# Grid
+
+The Grid system of Markup Kit divide horizontal space into units called `cells`. To create a grid add the `grid`
+attribute or class to an element. It is recommended to use the `grid` attribute because it is more expressive and
+do not polluting classes which should be used semantically:
+
+<div data-module="kit-example">
+  <!-- class approach -->
+  <div class="grid">
+    <div>1nd column</div>
+    <div>2nd column</div>
+  </div>
+
+ <!-- attribute approach -->
+  <div grid>
+    <div>1nd column</div>
+    <div>2nd column</div>
+  </div>
+</div>
+
+## Cells
+
+Adding child elements to a grid creates the cells. All grid cells span **4 columns by default**.
+
+## Columns
+
+A grid has a maximum of **12 columns** per row. The total number of grid columns per row varies based on the breakpoint
+system. It has **12 columns on large screens**, **8 columns on medium screens** and **4 columns on small screens**.
+Therefore it renders 3, 2 or 1 column per row depending on the screen.
+
+The default column count, span and other arbitrary features of grids can be changed by adjusting the underlying theme
+variables or using modifiers.
+
+## Rows
+
+Rows are groups of columns.
+
+Rows are either be explicit defined by nesting grids, or implicit, automatically occurring when no more space is left
+in a previous row.
+
+Most grids do not need to specify rows explicit cells will automatically flow to the next row when all columns are
+taken in the current row.
+
+
+
+
+
+
+
+
+## Usage
+
+To create a grid there are 3 ways:
+
+* add the `grid` attribute to an element
+* add the `grid` class to an element
+* building it semantically
+
+Its recommended to use to attribute when building a layout in the prototyping phase and
+
+Any child element defines a cell. By default the cell width is calculated based on a total of 12 possible
+columns. A cell spans 4-columns by default. The number of total grid columns varies based on the breakpoint system.
+
+
+## Margin and Gutters
+
+The grid focuses on consistent margin and gutter widths following an 8px baseline grid. Margins and gutters can be
+8, 16, 24 or 40px wide. Margins and gutters don't need to be equal.
+
+*/
+.grid, .global-form .grid,
+[grid] {
+  box-sizing: border-box;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* default grid configuration */
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-width: 100%;
-  /* default grid cell configuration */
-  /*doc
-
-    ## Margin And Gutter
-    TODO
-   */
-  /* accommodate cell gutter by default */
-  margin-left: -12px !important;
-  margin-left: -0.75rem !important;
-  margin-right: -12px !important;
-  margin-right: -0.75rem !important;
-  /* override horizontal cell margin  */
-  /* default grid cell width based on child count */ }
-[grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
+          align-items: stretch; }
+.grid > * {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 0px;
-            flex: 1 1 0;
-    transition: -webkit-box-flex 250ms linear;
-    transition: flex 250ms linear;
-    transition: flex 250ms linear, -webkit-box-flex 250ms linear, -ms-flex 250ms linear; }
-[grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
-    margin-left: 12px !important;
-    margin-left: 0.75rem !important;
-    margin-right: 12px !important;
-    margin-right: 0.75rem !important; }
-[grid] > [grid], .fieldset:not(.inline) > [grid], .global-form fieldset:not(.inline) > [grid], [grid] > .fieldset:not(.inline), .fieldset:not(.inline) > .fieldset:not(.inline), .global-form fieldset:not(.inline) > .fieldset:not(.inline), .global-form [grid] > fieldset:not(.inline), .global-form .fieldset:not(.inline) > fieldset:not(.inline), .global-form fieldset:not(.inline) > fieldset:not(.inline) {
-    margin: 0 0 !important; }
-[grid] > *:nth-last-child(2):first-child, .fieldset:not(.inline) > *:nth-last-child(2):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child, [grid] > *:nth-last-child(2):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(2):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(2):first-child ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: calc(50% - 1.5rem); }
-[grid] > *:nth-last-child(3):first-child, .fieldset:not(.inline) > *:nth-last-child(3):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child, [grid] > *:nth-last-child(3):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(3):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(3):first-child ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: calc(33.33333% - 1.5rem); }
-[grid] > *:nth-last-child(4):first-child, .fieldset:not(.inline) > *:nth-last-child(4):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child, [grid] > *:nth-last-child(4):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(4):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(4):first-child ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: calc(25% - 1.5rem); }
-[grid] > *:nth-last-child(5):first-child, .fieldset:not(.inline) > *:nth-last-child(5):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child, [grid] > *:nth-last-child(5):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(5):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(5):first-child ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: calc(20% - 1.5rem); }
-[grid] > *:nth-last-child(6):first-child, .fieldset:not(.inline) > *:nth-last-child(6):first-child, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child, [grid] > *:nth-last-child(6):first-child ~ *, .fieldset:not(.inline) > *:nth-last-child(6):first-child ~ *, .global-form fieldset:not(.inline) > *:nth-last-child(6):first-child ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: calc(16.66667% - 1.5rem); }
-[grid][grid*='-column'] > *, [grid*='-column'].fieldset:not(.inline) > *, .global-form fieldset[grid*='-column']:not(.inline) > * {
-    -ms-flex-preferred-size: auto !important;
-        flex-basis: auto !important; }
-[grid][grid*='one-column'] > *, [grid*='one-column'].fieldset:not(.inline) > *, .global-form fieldset[grid*='one-column']:not(.inline) > * {
-    width: 100% !important; }
-[grid][grid*='golden-ratio'] > :nth-child(even), [grid*='golden-ratio'].fieldset:not(.inline) > :nth-child(even), .global-form fieldset[grid*='golden-ratio']:not(.inline) > :nth-child(even) {
-    width: auto;
-    max-width: calc(38.1953% - 1rem) !important; }
-[cell~='narrowed'] {
-  -webkit-box-flex: 0 !important;
-      -ms-flex: 0 0 auto !important;
-          flex: 0 0 auto !important;
-  width: auto !important; }
-@media (min-width: 0) and (max-width: 768px) {
-  [grid], .fieldset:not(.inline), .global-form fieldset:not(.inline), [grid] > *, .fieldset:not(.inline) > *, .global-form fieldset:not(.inline) > * {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 100% !important; } }
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: calc(33.33333% - 24px);
+    box-sizing: border-box;
+    margin: 12px; }
+.global-form .grid > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: calc(33.33333% - 24px);
+    box-sizing: border-box;
+    margin: 12px; }
+[grid] > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: calc(33.33333% - 24px);
+    box-sizing: border-box;
+    margin: 12px; }
+.grid > .grid-cell.is-1-col-wide {
+    width: calc(8.33333% - 24px); }
+.global-form .grid > .grid-cell.is-1-col-wide {
+    width: calc(8.33333% - 24px); }
+.grid [cell~='is-1-col-wide'] {
+    width: calc(8.33333% - 24px); }
+[grid] > .grid-cell.is-1-col-wide {
+    width: calc(8.33333% - 24px); }
+[grid] [cell~='is-1-col-wide'] {
+    width: calc(8.33333% - 24px); }
+.grid > .grid-cell.is-2-col-wide {
+    width: calc(16.66667% - 24px); }
+.global-form .grid > .grid-cell.is-2-col-wide {
+    width: calc(16.66667% - 24px); }
+.grid [cell~='is-2-col-wide'] {
+    width: calc(16.66667% - 24px); }
+[grid] > .grid-cell.is-2-col-wide {
+    width: calc(16.66667% - 24px); }
+[grid] [cell~='is-2-col-wide'] {
+    width: calc(16.66667% - 24px); }
+.grid > .grid-cell.is-3-col-wide {
+    width: calc(25% - 24px); }
+.global-form .grid > .grid-cell.is-3-col-wide {
+    width: calc(25% - 24px); }
+.grid [cell~='is-3-col-wide'] {
+    width: calc(25% - 24px); }
+[grid] > .grid-cell.is-3-col-wide {
+    width: calc(25% - 24px); }
+[grid] [cell~='is-3-col-wide'] {
+    width: calc(25% - 24px); }
+.grid > .grid-cell.is-4-col-wide {
+    width: calc(33.33333% - 24px); }
+.global-form .grid > .grid-cell.is-4-col-wide {
+    width: calc(33.33333% - 24px); }
+.grid [cell~='is-4-col-wide'] {
+    width: calc(33.33333% - 24px); }
+[grid] > .grid-cell.is-4-col-wide {
+    width: calc(33.33333% - 24px); }
+[grid] [cell~='is-4-col-wide'] {
+    width: calc(33.33333% - 24px); }
+.grid > .grid-cell.is-5-col-wide {
+    width: calc(41.66667% - 24px); }
+.global-form .grid > .grid-cell.is-5-col-wide {
+    width: calc(41.66667% - 24px); }
+.grid [cell~='is-5-col-wide'] {
+    width: calc(41.66667% - 24px); }
+[grid] > .grid-cell.is-5-col-wide {
+    width: calc(41.66667% - 24px); }
+[grid] [cell~='is-5-col-wide'] {
+    width: calc(41.66667% - 24px); }
+.grid > .grid-cell.is-6-col-wide {
+    width: calc(50% - 24px); }
+.global-form .grid > .grid-cell.is-6-col-wide {
+    width: calc(50% - 24px); }
+.grid [cell~='is-6-col-wide'] {
+    width: calc(50% - 24px); }
+[grid] > .grid-cell.is-6-col-wide {
+    width: calc(50% - 24px); }
+[grid] [cell~='is-6-col-wide'] {
+    width: calc(50% - 24px); }
+.grid > .grid-cell.is-7-col-wide {
+    width: calc(58.33333% - 24px); }
+.global-form .grid > .grid-cell.is-7-col-wide {
+    width: calc(58.33333% - 24px); }
+.grid [cell~='is-7-col-wide'] {
+    width: calc(58.33333% - 24px); }
+[grid] > .grid-cell.is-7-col-wide {
+    width: calc(58.33333% - 24px); }
+[grid] [cell~='is-7-col-wide'] {
+    width: calc(58.33333% - 24px); }
+.grid > .grid-cell.is-8-col-wide {
+    width: calc(66.66667% - 24px); }
+.global-form .grid > .grid-cell.is-8-col-wide {
+    width: calc(66.66667% - 24px); }
+.grid [cell~='is-8-col-wide'] {
+    width: calc(66.66667% - 24px); }
+[grid] > .grid-cell.is-8-col-wide {
+    width: calc(66.66667% - 24px); }
+[grid] [cell~='is-8-col-wide'] {
+    width: calc(66.66667% - 24px); }
+.grid > .grid-cell.is-9-col-wide {
+    width: calc(75% - 24px); }
+.global-form .grid > .grid-cell.is-9-col-wide {
+    width: calc(75% - 24px); }
+.grid [cell~='is-9-col-wide'] {
+    width: calc(75% - 24px); }
+[grid] > .grid-cell.is-9-col-wide {
+    width: calc(75% - 24px); }
+[grid] [cell~='is-9-col-wide'] {
+    width: calc(75% - 24px); }
+.grid > .grid-cell.is-10-col-wide {
+    width: calc(83.33333% - 24px); }
+.global-form .grid > .grid-cell.is-10-col-wide {
+    width: calc(83.33333% - 24px); }
+.grid [cell~='is-10-col-wide'] {
+    width: calc(83.33333% - 24px); }
+[grid] > .grid-cell.is-10-col-wide {
+    width: calc(83.33333% - 24px); }
+[grid] [cell~='is-10-col-wide'] {
+    width: calc(83.33333% - 24px); }
+.grid > .grid-cell.is-11-col-wide {
+    width: calc(91.66667% - 24px); }
+.global-form .grid > .grid-cell.is-11-col-wide {
+    width: calc(91.66667% - 24px); }
+.grid [cell~='is-11-col-wide'] {
+    width: calc(91.66667% - 24px); }
+[grid] > .grid-cell.is-11-col-wide {
+    width: calc(91.66667% - 24px); }
+[grid] [cell~='is-11-col-wide'] {
+    width: calc(91.66667% - 24px); }
+.grid > .grid-cell.is-12-col-wide {
+    width: calc(100% - 24px); }
+.global-form .grid > .grid-cell.is-12-col-wide {
+    width: calc(100% - 24px); }
+.grid [cell~='is-12-col-wide'] {
+    width: calc(100% - 24px); }
+[grid] > .grid-cell.is-12-col-wide {
+    width: calc(100% - 24px); }
+[grid] [cell~='is-12-col-wide'] {
+    width: calc(100% - 24px); }
+.grid > .grid-cell.has-xsmall-width {
+    width: calc(16.66667% - 24px); }
+.global-form .grid > .grid-cell.has-xsmall-width {
+    width: calc(16.66667% - 24px); }
+.grid [cell~='has-xsmall-width'] {
+    width: calc(16.66667% - 24px); }
+[grid] > .grid-cell.has-xsmall-width {
+    width: calc(16.66667% - 24px); }
+[grid] [cell~='has-xsmall-width'] {
+    width: calc(16.66667% - 24px); }
+.grid > .grid-cell.has-small-width {
+    width: calc(25% - 24px); }
+.global-form .grid > .grid-cell.has-small-width {
+    width: calc(25% - 24px); }
+.grid [cell~='has-small-width'] {
+    width: calc(25% - 24px); }
+[grid] > .grid-cell.has-small-width {
+    width: calc(25% - 24px); }
+[grid] [cell~='has-small-width'] {
+    width: calc(25% - 24px); }
+.grid > .grid-cell.has-medium-width {
+    width: calc(41.66667% - 24px); }
+.global-form .grid > .grid-cell.has-medium-width {
+    width: calc(41.66667% - 24px); }
+.grid [cell~='has-medium-width'] {
+    width: calc(41.66667% - 24px); }
+[grid] > .grid-cell.has-medium-width {
+    width: calc(41.66667% - 24px); }
+[grid] [cell~='has-medium-width'] {
+    width: calc(41.66667% - 24px); }
+.grid > .grid-cell.has-large-width {
+    width: calc(58.33333% - 24px); }
+.global-form .grid > .grid-cell.has-large-width {
+    width: calc(58.33333% - 24px); }
+.grid [cell~='has-large-width'] {
+    width: calc(58.33333% - 24px); }
+[grid] > .grid-cell.has-large-width {
+    width: calc(58.33333% - 24px); }
+[grid] [cell~='has-large-width'] {
+    width: calc(58.33333% - 24px); }
+.grid > .grid-cell.has-xlarge-width {
+    width: calc(66.66667% - 24px); }
+.global-form .grid > .grid-cell.has-xlarge-width {
+    width: calc(66.66667% - 24px); }
+.grid [cell~='has-xlarge-width'] {
+    width: calc(66.66667% - 24px); }
+[grid] > .grid-cell.has-xlarge-width {
+    width: calc(66.66667% - 24px); }
+[grid] [cell~='has-xlarge-width'] {
+    width: calc(66.66667% - 24px); }
+@media (min-width: 0px) and (max-width: 599px) {
+  .grid > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: calc(100% - 8px);
+    box-sizing: border-box;
+    margin: 4px; }
+  .global-form .grid > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: calc(100% - 8px);
+    box-sizing: border-box;
+    margin: 4px; }
+  [grid] > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: calc(100% - 8px);
+    box-sizing: border-box;
+    margin: 4px; }
+  .grid > .grid-cell.has-xsmall-width {
+    width: calc(100% - 8px); }
+  .global-form .grid > .grid-cell.has-xsmall-width {
+    width: calc(100% - 8px); }
+  .grid [cell~='has-xsmall-width'] {
+    width: calc(100% - 8px); }
+  [grid] > .grid-cell.has-xsmall-width {
+    width: calc(100% - 8px); }
+  [grid] [cell~='has-xsmall-width'] {
+    width: calc(100% - 8px); }
+  .grid > .grid-cell.has-small-width {
+    width: calc(100% - 8px); }
+  .global-form .grid > .grid-cell.has-small-width {
+    width: calc(100% - 8px); }
+  .grid [cell~='has-small-width'] {
+    width: calc(100% - 8px); }
+  [grid] > .grid-cell.has-small-width {
+    width: calc(100% - 8px); }
+  [grid] [cell~='has-small-width'] {
+    width: calc(100% - 8px); }
+  .grid > .grid-cell.has-medium-width {
+    width: calc(100% - 8px); }
+  .global-form .grid > .grid-cell.has-medium-width {
+    width: calc(100% - 8px); }
+  .grid [cell~='has-medium-width'] {
+    width: calc(100% - 8px); }
+  [grid] > .grid-cell.has-medium-width {
+    width: calc(100% - 8px); }
+  [grid] [cell~='has-medium-width'] {
+    width: calc(100% - 8px); }
+  .grid > .grid-cell.has-large-width {
+    width: calc(100% - 8px); }
+  .global-form .grid > .grid-cell.has-large-width {
+    width: calc(100% - 8px); }
+  .grid [cell~='has-large-width'] {
+    width: calc(100% - 8px); }
+  [grid] > .grid-cell.has-large-width {
+    width: calc(100% - 8px); }
+  [grid] [cell~='has-large-width'] {
+    width: calc(100% - 8px); }
+  .grid > .grid-cell.has-xlarge-width {
+    width: calc(100% - 8px); }
+  .global-form .grid > .grid-cell.has-xlarge-width {
+    width: calc(100% - 8px); }
+  .grid [cell~='has-xlarge-width'] {
+    width: calc(100% - 8px); }
+  [grid] > .grid-cell.has-xlarge-width {
+    width: calc(100% - 8px); }
+  [grid] [cell~='has-xlarge-width'] {
+    width: calc(100% - 8px); } }
+@media (min-width: 600px) and (max-width: 839px) {
+  .grid > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: calc(50% - 8px);
+    box-sizing: border-box;
+    margin: 4px; }
+  .global-form .grid > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: calc(50% - 8px);
+    box-sizing: border-box;
+    margin: 4px; }
+  [grid] > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: calc(50% - 8px);
+    box-sizing: border-box;
+    margin: 4px; }
+  .grid > .grid-cell.has-xsmall-width {
+    width: calc(12.5% - 8px); }
+  .global-form .grid > .grid-cell.has-xsmall-width {
+    width: calc(12.5% - 8px); }
+  .grid [cell~='has-xsmall-width'] {
+    width: calc(12.5% - 8px); }
+  [grid] > .grid-cell.has-xsmall-width {
+    width: calc(12.5% - 8px); }
+  [grid] [cell~='has-xsmall-width'] {
+    width: calc(12.5% - 8px); }
+  .grid > .grid-cell.has-small-width {
+    width: calc(25% - 8px); }
+  .global-form .grid > .grid-cell.has-small-width {
+    width: calc(25% - 8px); }
+  .grid [cell~='has-small-width'] {
+    width: calc(25% - 8px); }
+  [grid] > .grid-cell.has-small-width {
+    width: calc(25% - 8px); }
+  [grid] [cell~='has-small-width'] {
+    width: calc(25% - 8px); }
+  .grid > .grid-cell.has-medium-width {
+    width: calc(37.5% - 8px); }
+  .global-form .grid > .grid-cell.has-medium-width {
+    width: calc(37.5% - 8px); }
+  .grid [cell~='has-medium-width'] {
+    width: calc(37.5% - 8px); }
+  [grid] > .grid-cell.has-medium-width {
+    width: calc(37.5% - 8px); }
+  [grid] [cell~='has-medium-width'] {
+    width: calc(37.5% - 8px); }
+  .grid > .grid-cell.has-large-width {
+    width: calc(62.5% - 8px); }
+  .global-form .grid > .grid-cell.has-large-width {
+    width: calc(62.5% - 8px); }
+  .grid [cell~='has-large-width'] {
+    width: calc(62.5% - 8px); }
+  [grid] > .grid-cell.has-large-width {
+    width: calc(62.5% - 8px); }
+  [grid] [cell~='has-large-width'] {
+    width: calc(62.5% - 8px); }
+  .grid > .grid-cell.has-xlarge-width {
+    width: calc(75% - 8px); }
+  .global-form .grid > .grid-cell.has-xlarge-width {
+    width: calc(75% - 8px); }
+  .grid [cell~='has-xlarge-width'] {
+    width: calc(75% - 8px); }
+  [grid] > .grid-cell.has-xlarge-width {
+    width: calc(75% - 8px); }
+  [grid] [cell~='has-xlarge-width'] {
+    width: calc(75% - 8px); } }
+@media (min-width: 840px) and (max-width: 1023px) {
+  .grid > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: calc(50% - 16px);
+    box-sizing: border-box;
+    margin: 8px; }
+  .global-form .grid > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: calc(50% - 16px);
+    box-sizing: border-box;
+    margin: 8px; }
+  [grid] > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: calc(50% - 16px);
+    box-sizing: border-box;
+    margin: 8px; }
+  .grid > .grid-cell.has-xsmall-width {
+    width: calc(12.5% - 16px); }
+  .global-form .grid > .grid-cell.has-xsmall-width {
+    width: calc(12.5% - 16px); }
+  .grid [cell~='has-xsmall-width'] {
+    width: calc(12.5% - 16px); }
+  [grid] > .grid-cell.has-xsmall-width {
+    width: calc(12.5% - 16px); }
+  [grid] [cell~='has-xsmall-width'] {
+    width: calc(12.5% - 16px); }
+  .grid > .grid-cell.has-small-width {
+    width: calc(25% - 16px); }
+  .global-form .grid > .grid-cell.has-small-width {
+    width: calc(25% - 16px); }
+  .grid [cell~='has-small-width'] {
+    width: calc(25% - 16px); }
+  [grid] > .grid-cell.has-small-width {
+    width: calc(25% - 16px); }
+  [grid] [cell~='has-small-width'] {
+    width: calc(25% - 16px); }
+  .grid > .grid-cell.has-medium-width {
+    width: calc(37.5% - 16px); }
+  .global-form .grid > .grid-cell.has-medium-width {
+    width: calc(37.5% - 16px); }
+  .grid [cell~='has-medium-width'] {
+    width: calc(37.5% - 16px); }
+  [grid] > .grid-cell.has-medium-width {
+    width: calc(37.5% - 16px); }
+  [grid] [cell~='has-medium-width'] {
+    width: calc(37.5% - 16px); }
+  .grid > .grid-cell.has-large-width {
+    width: calc(62.5% - 16px); }
+  .global-form .grid > .grid-cell.has-large-width {
+    width: calc(62.5% - 16px); }
+  .grid [cell~='has-large-width'] {
+    width: calc(62.5% - 16px); }
+  [grid] > .grid-cell.has-large-width {
+    width: calc(62.5% - 16px); }
+  [grid] [cell~='has-large-width'] {
+    width: calc(62.5% - 16px); }
+  .grid > .grid-cell.has-xlarge-width {
+    width: calc(75% - 16px); }
+  .global-form .grid > .grid-cell.has-xlarge-width {
+    width: calc(75% - 16px); }
+  .grid [cell~='has-xlarge-width'] {
+    width: calc(75% - 16px); }
+  [grid] > .grid-cell.has-xlarge-width {
+    width: calc(75% - 16px); }
+  [grid] [cell~='has-xlarge-width'] {
+    width: calc(75% - 16px); } }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .grid > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: calc(33.33333% - 24px);
+    box-sizing: border-box;
+    margin: 12px; }
+  .global-form .grid > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: calc(33.33333% - 24px);
+    box-sizing: border-box;
+    margin: 12px; }
+  [grid] > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: calc(33.33333% - 24px);
+    box-sizing: border-box;
+    margin: 12px; }
+  .grid > .grid-cell.has-xsmall-width {
+    width: calc(16.66667% - 24px); }
+  .global-form .grid > .grid-cell.has-xsmall-width {
+    width: calc(16.66667% - 24px); }
+  .grid [cell~='has-xsmall-width'] {
+    width: calc(16.66667% - 24px); }
+  [grid] > .grid-cell.has-xsmall-width {
+    width: calc(16.66667% - 24px); }
+  [grid] [cell~='has-xsmall-width'] {
+    width: calc(16.66667% - 24px); }
+  .grid > .grid-cell.has-small-width {
+    width: calc(25% - 24px); }
+  .global-form .grid > .grid-cell.has-small-width {
+    width: calc(25% - 24px); }
+  .grid [cell~='has-small-width'] {
+    width: calc(25% - 24px); }
+  [grid] > .grid-cell.has-small-width {
+    width: calc(25% - 24px); }
+  [grid] [cell~='has-small-width'] {
+    width: calc(25% - 24px); }
+  .grid > .grid-cell.has-medium-width {
+    width: calc(41.66667% - 24px); }
+  .global-form .grid > .grid-cell.has-medium-width {
+    width: calc(41.66667% - 24px); }
+  .grid [cell~='has-medium-width'] {
+    width: calc(41.66667% - 24px); }
+  [grid] > .grid-cell.has-medium-width {
+    width: calc(41.66667% - 24px); }
+  [grid] [cell~='has-medium-width'] {
+    width: calc(41.66667% - 24px); }
+  .grid > .grid-cell.has-large-width {
+    width: calc(58.33333% - 24px); }
+  .global-form .grid > .grid-cell.has-large-width {
+    width: calc(58.33333% - 24px); }
+  .grid [cell~='has-large-width'] {
+    width: calc(58.33333% - 24px); }
+  [grid] > .grid-cell.has-large-width {
+    width: calc(58.33333% - 24px); }
+  [grid] [cell~='has-large-width'] {
+    width: calc(58.33333% - 24px); }
+  .grid > .grid-cell.has-xlarge-width {
+    width: calc(66.66667% - 24px); }
+  .global-form .grid > .grid-cell.has-xlarge-width {
+    width: calc(66.66667% - 24px); }
+  .grid [cell~='has-xlarge-width'] {
+    width: calc(66.66667% - 24px); }
+  [grid] > .grid-cell.has-xlarge-width {
+    width: calc(66.66667% - 24px); }
+  [grid] [cell~='has-xlarge-width'] {
+    width: calc(66.66667% - 24px); } }
 .muted {
   background: #f5f5f5 !important; }
-.primary:not(.basic), .success:not(.basic), .warning:not(.basic), .error:not(.basic), .focused:not(.basic), .dark:not(.basic) {
+.primary:not(.basic) {
+  color: white !important; }
+.success:not(.basic) {
+  color: white !important; }
+.warning:not(.basic) {
+  color: white !important; }
+.error:not(.basic) {
+  color: white !important; }
+.focused:not(.basic) {
+  color: white !important; }
+.dark:not(.basic) {
   color: white !important; }
 .white {
   background-color: white; }
-.primary, * .primary {
+.primary {
   background-color: #1C86F2 !important;
   border-color: #1C86F2 !important; }
-.primary.basic, * .primary.basic {
+* .primary {
+  background-color: #1C86F2 !important;
+  border-color: #1C86F2 !important; }
+.primary.basic {
+    background-color: transparent;
+    color: #1C86F2; }
+* .primary.basic {
     background-color: transparent;
     color: #1C86F2; }
 .success {
@@ -1515,7 +3058,10 @@ or `week`.
 .warning.basic {
     background-color: transparent;
     color: #FAA05A; }
-.error, .error > .focus {
+.error {
+  background-color: #F0506E;
+  border-color: #F0506E; }
+.error > .focus {
   background-color: #F0506E;
   border-color: #F0506E; }
 .error.basic {
@@ -1540,18 +3086,73 @@ or `week`.
 .focused.basic {
     background-color: transparent;
     color: rgb(48, 145, 243); }
-.error.input > .primary.input, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) > .primary.input, .global-form .error.input > input.primary:not([type='submit']):not([type='radio']):not([type='checkbox']), .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) > input.primary:not([type='submit']):not([type='radio']):not([type='checkbox']),
-.error.input > .primary.select, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) > .primary.select, .global-form
-.error.input > select.primary, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) > select.primary {
+.error.input > .primary.input {
   background-color: #F0506E !important;
   border-color: #F0506E !important; }
-.input.error:focus, .global-form input.error:focus:not([type='submit']):not([type='radio']):not([type='checkbox']), .input.error:focus ~ .focus, .global-form input.error:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus,
-.input.error .input:focus ~ .focus, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) .input:focus ~ .focus,
-.input.error .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .global-form
-.input.error input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus,
-.input.error .select:focus ~ .focus, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) .select:focus ~ .focus,
-.input.error .global-form select:focus ~ .focus, .global-form
-.input.error select:focus ~ .focus, .global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) select:focus ~ .focus {
+.global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) > .primary.input {
+  background-color: #F0506E !important;
+  border-color: #F0506E !important; }
+.global-form .error.input > input.primary:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+  background-color: #F0506E !important;
+  border-color: #F0506E !important; }
+.global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) > input.primary:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+  background-color: #F0506E !important;
+  border-color: #F0506E !important; }
+.error.input > .primary.select {
+  background-color: #F0506E !important;
+  border-color: #F0506E !important; }
+.global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) > .primary.select {
+  background-color: #F0506E !important;
+  border-color: #F0506E !important; }
+.global-form
+.error.input > select.primary {
+  background-color: #F0506E !important;
+  border-color: #F0506E !important; }
+.global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) > select.primary {
+  background-color: #F0506E !important;
+  border-color: #F0506E !important; }
+.input.error:focus {
+  box-shadow: 0 0 0 1px #F0506E !important;
+  border-color: #F0506E !important; }
+.global-form input.error:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) {
+  box-shadow: 0 0 0 1px #F0506E !important;
+  border-color: #F0506E !important; }
+.input.error:focus ~ .focus {
+  box-shadow: 0 0 0 1px #F0506E !important;
+  border-color: #F0506E !important; }
+.global-form input.error:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus {
+  box-shadow: 0 0 0 1px #F0506E !important;
+  border-color: #F0506E !important; }
+.input.error .input:focus ~ .focus {
+  box-shadow: 0 0 0 1px #F0506E !important;
+  border-color: #F0506E !important; }
+.global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) .input:focus ~ .focus {
+  box-shadow: 0 0 0 1px #F0506E !important;
+  border-color: #F0506E !important; }
+.input.error .global-form input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus {
+  box-shadow: 0 0 0 1px #F0506E !important;
+  border-color: #F0506E !important; }
+.global-form
+.input.error input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus {
+  box-shadow: 0 0 0 1px #F0506E !important;
+  border-color: #F0506E !important; }
+.global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) input:focus:not([type='submit']):not([type='radio']):not([type='checkbox']) ~ .focus {
+  box-shadow: 0 0 0 1px #F0506E !important;
+  border-color: #F0506E !important; }
+.input.error .select:focus ~ .focus {
+  box-shadow: 0 0 0 1px #F0506E !important;
+  border-color: #F0506E !important; }
+.global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) .select:focus ~ .focus {
+  box-shadow: 0 0 0 1px #F0506E !important;
+  border-color: #F0506E !important; }
+.input.error .global-form select:focus ~ .focus {
+  box-shadow: 0 0 0 1px #F0506E !important;
+  border-color: #F0506E !important; }
+.global-form
+.input.error select:focus ~ .focus {
+  box-shadow: 0 0 0 1px #F0506E !important;
+  border-color: #F0506E !important; }
+.global-form input.error:not([type='submit']):not([type='radio']):not([type='checkbox']) select:focus ~ .focus {
   box-shadow: 0 0 0 1px #F0506E !important;
   border-color: #F0506E !important; }
 .section {

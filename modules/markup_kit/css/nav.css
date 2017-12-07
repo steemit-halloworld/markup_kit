@@ -1,0 +1,36 @@
+/*doc
+
+# Navigation
+
+  <div data-module="kit-example">
+    <ul class="nav">
+      <li class="item">Home</li>
+      <li class="item">About</li>
+      <li class="item">News</li>
+      <li class="item">Help</li>
+    </ul>
+  </div>
+
+*/
+
+.nav
+{
+  font-family    : var(--nav--font-family);
+  padding        : var(--nav--padding);
+  border         : var(--nav--border);
+  border-radius  : var(--nav--border-radius);
+  margin         : var(--nav--margin);
+  display        : block;
+  flex-direction : column;
+
+  & .item
+  {
+    position : relative;
+    display  : block;
+  }
+}
+
+ul.nav
+{
+  list-style-type : none;
+}

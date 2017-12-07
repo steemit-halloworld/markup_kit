@@ -165,10 +165,10 @@
   --scale-factor-golden: 1.618;
 }
 
-@custom-media --only-xsmall (width >= 0) and (width < 600px);
-@custom-media --only-small (width >= 600) and (width < 840px);
-@custom-media --only-medium (width >= 840) and (width < 1024px);
-@custom-media --only-large (width >= 1024) and (width < 1440px);
+@custom-media --only-xsmall (width >= 0px) and (width < 600px); /* 4 columns */
+@custom-media --only-small (width >= 600px) and (width < 840px); /* 8 columns */
+@custom-media --only-medium (width >= 840px) and (width < 1024px);
+@custom-media --only-large (width >= 1024px) and (width < 1440px);
 @custom-media --only-xlarge (width >= 1440px);
 
 @custom-media --not-xsmall (width >= 600px);

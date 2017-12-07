@@ -28,7 +28,6 @@ To reduce the visual complexity add the `basic` class to a label.
 
 */
 @import 'core.settings';
-@import 'layout-grid';
 
 .label
 {

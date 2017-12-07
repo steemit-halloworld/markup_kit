@@ -12,6 +12,11 @@
     "cssnano": "^3.1.0",
     "del-cli": "1.1.0",
     "glob": "^7.1.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
     "node-sass": "^4.6.0",
     "onchange": "^2.5.0",
     "pandoc": "^0.2.0",
@@ -25,14 +30,14 @@
     "build": "npm run build:css && npm run build:doc",
     "watch": "onchange 'modules/markup_kit/css/*.css' --exclude 'modules/markup_kit/css/*.stage*.css' -- npm run build",
     "cleanup": "del-cli build/css/*.css",
-    "build:css": "npm run build:css:amalgamation && npm run build:css:minification",
-    "build:css:amalgamation": "./node_modules/node-sass/bin/node-sass modules/markup_kit/css/include.css | postcss -c postcss/amalgamation > ./modules/markup_kit/css/amalgamation.css",
-    "build:css:minification": "postcss -c postcss/minification modules/markup_kit/css/amalgamation.css -o modules/markup_kit/css/minification.css",
+    "build:css": "gulp",
     "build:doc": "sh bin/build_doc.sh"
   },
   "dependencies": {
     "node-pandoc": "^0.3.0",
     "postcss": "^6.0.14",
+    "postcss-css-variables": "^0.8.0",
+    "postcss-nested": "^2.1.2",
     "postcss-nesting": "^4.2.1",
     "postcss-partial-import": "^4.1.0"
   }

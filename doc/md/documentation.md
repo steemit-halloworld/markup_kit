@@ -231,3 +231,87 @@ or `week`.
 
 
 
+
+
+# Navigation
+
+  <div data-module="kit-example">
+    <ul class="nav">
+      <li class="item">Home</li>
+      <li class="item">About</li>
+      <li class="item">News</li>
+      <li class="item">Help</li>
+    </ul>
+  </div>
+
+
+
+# Grid
+
+The Grid system of Markup Kit divide horizontal space into units called `cells`. To create a grid add the `grid`
+attribute or class to an element. It is recommended to use the `grid` attribute because it is more expressive and
+do not polluting classes which should be used semantically:
+
+<div data-module="kit-example">
+  <!-- class approach -->
+  <div class="grid">
+    <div>1nd column</div>
+    <div>2nd column</div>
+  </div>
+
+ <!-- attribute approach -->
+  <div grid>
+    <div>1nd column</div>
+    <div>2nd column</div>
+  </div>
+</div>
+
+## Cells
+
+Adding child elements to a grid creates the cells. All grid cells span **4 columns by default**.
+
+## Columns
+
+A grid has a maximum of **12 columns** per row. The total number of grid columns per row varies based on the breakpoint
+system. It has **12 columns on large screens**, **8 columns on medium screens** and **4 columns on small screens**.
+Therefore it renders 3, 2 or 1 column per row depending on the screen.
+
+The default column count, span and other arbitrary features of grids can be changed by adjusting the underlying theme
+variables or using modifiers.
+
+## Rows
+
+Rows are groups of columns.
+
+Rows are either be explicit defined by nesting grids, or implicit, automatically occurring when no more space is left
+in a previous row.
+
+Most grids do not need to specify rows explicit cells will automatically flow to the next row when all columns are
+taken in the current row.
+
+
+
+
+
+
+
+
+## Usage
+
+To create a grid there are 3 ways:
+
+* add the `grid` attribute to an element
+* add the `grid` class to an element
+* building it semantically
+
+Its recommended to use to attribute when building a layout in the prototyping phase and
+
+Any child element defines a cell. By default the cell width is calculated based on a total of 12 possible
+columns. A cell spans 4-columns by default. The number of total grid columns varies based on the breakpoint system.
+
+
+## Margin and Gutters
+
+The grid focuses on consistent margin and gutter widths following an 8px baseline grid. Margins and gutters can be
+8, 16, 24 or 40px wide. Margins and gutters don't need to be equal.
+
