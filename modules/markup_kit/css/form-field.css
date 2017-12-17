@@ -10,17 +10,35 @@ A form field is an element containing a label element and at least one belonging
 {
   border         : none;
   padding        : 0;
-  margin         : 0;
   display        : inline-flex;
   flex-wrap      : wrap;
   align-items    : center;
   vertical-align : middle;
+  margin-top     : 16px;
 
-  & > *
+  & > .form-field:nth-last-child(1):first-child
   {
-    flex  : 1 1 auto;
+    margin-top: 0;
   }
 
-  &:not(.is-inline) > *:not(label):nth-last-child(1):nth-of-type(1) { &, & ~ * {flex-basis: auto; width: calc(100% / 1);}}
-  &:not(.is-inline) > *:not(label):nth-last-child(2):nth-of-type(1) { &, & ~ * {flex-basis: auto; width: calc(100% / 2);}}
+  &:not(.is-inline) > *
+  {
+    flex : 1 1 auto;
+  }
+
+  &.is-inline, &.is-inline > *
+  {
+    display : inline-block;
+  }
+
+  &:not(.is-inline) > *:not(label):nth-last-child(1):nth-of-type(1)
+  {
+    &, & ~ *
+    { flex-basis : auto; width : calc(100% / 1); }
+  }
+  &:not(.is-inline) > *:not(label):nth-last-child(2):nth-of-type(1)
+  {
+    &, & ~ *
+    { flex-basis : auto; width : calc(100% / 2); }
+  }
 }
