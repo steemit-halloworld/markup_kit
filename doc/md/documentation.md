@@ -233,6 +233,51 @@ or `week`.
 
 
 
+## Form Field
+
+A form field is an element containing a label element and at least one belonging form control element.
+By default the label will be positioned above the control.
+
+<div data-module="kit-example">
+  <label class="form-field">
+    User Name
+    <input>
+  </label>
+</div>
+
+### Inline Form Field
+
+A field can have its label next to the control instead of above it.
+
+<div data-module="kit-example">
+  <div class="form-field is-aligned">
+    <label>Name&#32;<input type="text" placeholder="First name"></label> <input type="text" placeholder="Last name">
+  </div>
+</div>
+
+### Alignment
+
+By default the label will be positioned at the start of the control. To change the alignment use the `is-align-start`
+modifier:
+
+<div data-module="kit-example">
+  <label class="form-field is-align-start">
+    User Name&#32;<input>
+  </label>
+</div>
+
+<div data-module="kit-example">
+  <label class="form-field is-aligned">
+    <label><input type="checkbox"> Yes</label> <label><input type="checkbox"> No</label>
+  </label>
+  <br>
+  <label class="form-field is-aligned">
+    <input type="checkbox"> Make my profile visible
+  </label>
+</div>
+
+
+
 # Navigation
 
   <div data-module="kit-example">

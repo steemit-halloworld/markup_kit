@@ -1,0 +1,8 @@
+.control:not(input):not(textarea):not(select):not(button)
+{
+  display: inline-flex;
+  align-items: stretch;
+  vertical-align: baseline;
+  position: relative;
+  vertical-align: baseline;
+}

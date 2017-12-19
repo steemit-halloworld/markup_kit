@@ -26,11 +26,11 @@ or `week`.
   /*min-width: 2ch;*/
 
   /* Positioning */
-  display: inline-flex !important;
-  align-items: stretch;
-  position: relative;
-  overflow: visible;
-  vertical-align: baseline;
+  /*display: inline-flex !important;*/
+  /*align-items: stretch;*/
+  /*position: relative;*/
+  /*overflow: visible;*/
+  /*vertical-align: baseline;*/
 
   font-size: calc(1em - 1px);
 
