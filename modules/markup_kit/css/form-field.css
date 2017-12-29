@@ -73,7 +73,6 @@ modifier:
     & > *:nth-last-child(3n) {margin-left: 0; margin-right: .25em; }
     & > *:nth-last-child(3n+1) {margin-left: .25em; margin-right: .25em; }
     & > *:nth-last-child(3n) + * {margin-left: .25em; margin-right: .25em; }
-
   }
 
   &.is-aligned > *
