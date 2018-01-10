@@ -2,40 +2,169 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>Form Test</title>
-<link rel="stylesheet" href="/modules/markup_kit/css/amalgamation.css">
+<link rel="stylesheet" href="../dist/markup_kit/css/amalgamation.css">
 
-<div class="global form">
+<h1>Form Controls</h1>
 
-  <div class="form-item">
-    <label for="firstname">Name</label>
-    <input type="text" id="firstname" name="firstname" placeholder="Firstname">
-    <input placeholder="Lastname" class="field" type="text">
+<fieldset>
+  <legend>Personal Information</legend>
+
+  <ul>
+    <li>
+      <label class="ui input control">
+        <input type="text">
+        <span class="focus-ring"></span>
+        <label class="label">First Name</label>
+      </label>
+    </li>
+
+    <li>
+      <label class="ui input control">
+        <input type="text">
+        <span class="focus-ring"></span>
+        <label class="label">Last Name</label>
+      </label>
+    </li>
+
+    <li>
+      <label class="ui input control">
+        <input type="email">
+        <span class="focus-ring"></span>
+        <label class="label">Email Address</label>
+      </label>
+    </li>
+
+    <li>
+      <label class="ui input control">
+        <textarea></textarea>
+        <span class="focus-ring"></span>
+        <label class="label">Address</label>
+      </label>
+    </li>
+
+    <li>
+      <label class="ui select control">
+        <select>
+          <option>2017</option>
+          <option>2018</option>
+          <option>2019</option>
+        </select>
+        <label class="label">Year</label>
+        <span class="focus-ring"></span>
+      </label>
+    </li>
+
+    <li>
+      <label class="ui checkbox control">
+        <input type="checkbox">
+        Check this custom checkbox
+      </label>
+    </li>
+
+    <li>
+      <label class="ui radio control">
+        <input type="radio" name="radio-x">
+        Toggle this custom radio
+      </label>
+
+      <label class="ui radio control">
+        <input type="radio" name="radio-x">
+        Or toggle this other cutom radio
+      </label>
+
+    </li>
+
+
+    <li>
+      <label class="ui input control" style="width: 200px;">
+        <textarea></textarea>
+        <span class="focus-ring"></span>
+        <label class="label">Long Label Test To Test Cutting Label Text</label>
+      </label>
+    </li>
+
+
+  </ul>
+</fieldset>
+
+<fieldset>
+  <legend>Label Alignment</legend>
+
+  <ul>
+    <li>
+      <label class="ui input control">
+        <input type="text">
+        <span class="focus-ring"></span>
+        <label class="label">Label is above the Input Field</label>
+      </label>
+    </li>
+
+    <li>
+      <label class="ui input control is-start-aligned">
+        <input type="text">
+        <span class="focus-ring"></span>
+        <label class="label">Label is below The Input Field</label>
+      </label>
+    </li>
+
+    <li>
+      <label class="ui input control --is-horizontal">
+        <input type="text">
+        <span class="focus-ring"></span>
+        <label class="label">Label is inline</label>
+      </label>
+    </li>
+
+
+    <li>
+      <label class="ui input control">
+        <input type="text">
+        <span class="focus-ring"></span>
+        <label class="label">Label is above the Input Field</label>
+      </label>
+    </li>
+  </ul>
+</fieldset>
+
+<fieldset>
+  <legend>Control Variations</legend>
+  <div style="line-height: 1.5;">
+    <div class="ui input control">
+      <label class="label" for="domain-input">Domain</label>
+      <label for="domain-input">http:// </label>
+      <input id="domain-input" value="google">
+      <select title="Top Level Domain">
+        <option>.de</option>
+        <option>.com</option>
+        <option>.net</option>
+      </select>
+
+      <span class="focus-ring"></span>
+
+    </div>
+
+    <div class="ui input control">
+      <input title="input" type="text" placeholder="Hallo">
+      <span class="focus-ring"></span>
+    </div>
+
+    <div class="ui input control">
+      <div><input type="checkbox"></div>
+      <input placeholder="Bla">
+      <span class="focus-ring"></span>
+    </div>
+
+    <label class="ui radio control">
+      <input name="radio-x" type="radio"> Yes
+    </label>
+
+    <label class="ui radio control">
+      <input name="radio-x" type="radio"> No
+    </label>
+
+
+
   </div>
 
-  <div class="form-item">
-    <label for="address">Billing Address</label>
-    <input placeholder="Address" type="text" id="address" class="field">
-    <input placeholder="# Apt" class="narrowed field" type="text" size="4">
-  </div>
 
-  <fieldset>
-    <legend>Hallo</legend>
-    <label>Test</label>
-    <input>
-    <input>
-  </fieldset>
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
+</fieldset>

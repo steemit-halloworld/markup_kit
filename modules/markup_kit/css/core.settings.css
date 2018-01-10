@@ -85,6 +85,9 @@
 
   --input-vertical-padding: var(--spacing-small);
 
+  --table-cell-vertical-padding: var(--spacing-small);
+  --table-cell-horizontal-padding: var(--spacing-small);
+
   --letter-spacing: 0;
   /*endregion*/
 

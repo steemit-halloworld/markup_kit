@@ -30,12 +30,9 @@ anything by simply adding
 @import 'normalization';
 @import 'typography';
 @import 'theming';
-@import 'form';
-@import 'form-field';
+@import 'control';
 @import 'table';
 
 @import 'nav';
 
-@import 'layout';
 @import 'section';
-@import 'global';

@@ -1,0 +1,13 @@
+.ui.input.control
+{
+  /*& > *:not(input:not([type])):not(input[type='text']):not(input[type='email']):not(input[type='number']):not(.label)
+  {
+    flex: 1 1 0;
+    white-space: nowrap;
+  }*/
+
+  & > input[type='number']
+  {
+    text-align: right;
+  }
+}

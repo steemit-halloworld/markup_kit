@@ -1,38 +1,41 @@
-.table
+.ui.table
 {
-  border-collapse: collapse;
-  border-spacing: 0;
-  max-width: 100%;
-  width: 100%;
-  empty-cells: show;
+  border-collapse : collapse;
+  border-spacing  : 0;
+  max-width       : 100%;
+  width           : 100%;
+  empty-cells     : show;
 }
 
-.th
+.ui.small.table
 {
-  text-align: left;
-  font-weight: 700;
-  vertical-align: bottom;
+  font-size: .9em;
 }
 
-.td
+.ui.table th
 {
-  vertical-align: top;
+  text-align     : left;
+  font-weight    : 700;
+  vertical-align : bottom;
 }
 
-.tr
+.ui.table td
 {
+  vertical-align : top;
 }
 
-.th,
-.td
+.ui.table th,
+.ui.table td
 {
+  padding: var(--table-cell-vertical-padding) var(--table-cell-horizontal-padding);
+  border-bottom : var(--border-width) var(--border-color) var(--border-style);
 
   &:first-child
   {
-
+    padding-left : 0;
   }
   &:last-child
   {
-
+    padding-right : 0;
   }
 }
