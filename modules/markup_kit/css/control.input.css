@@ -1,13 +1,64 @@
 .ui.input.control
 {
-  /*& > *:not(input:not([type])):not(input[type='text']):not(input[type='email']):not(input[type='number']):not(.label)
-  {
-    flex: 1 1 0;
-    white-space: nowrap;
-  }*/
-
   & > input[type='number']
   {
-    text-align: right;
+    text-align : right;
+  }
+
+  &.--has-float-label
+  {
+    margin         : 0;
+    vertical-align : baseline;
+
+    & > input::placeholder,
+    & > textarea::placeholder
+    {
+      opacity    : 1;
+      transition : all .2s;
+    }
+
+    & > input,
+    & > textarea
+    {
+      padding : 1em .25em .2em;
+    }
+
+    & > input::-webkit-contacts-auto-fill-button,
+    & > input::-webkit-credentials-auto-fill-button
+    {
+    }
+
+    & > input:placeholder-shown:not(:focus)::placeholder,
+    & > textarea:placeholder-shown:not(:focus)::placeholder
+    {
+      opacity : 0;
+    }
+
+    & > .label
+    {
+      position       : absolute;
+      margin         : 0; /* reset default margin */
+      cursor         : text;
+      font-size      : 75%;
+      opacity        : 1;
+      transition     : all .2s;
+      top            : 0;
+      left           : .25em;
+      right          : .25em;
+      padding        : 0 1px;
+      z-index        : calc(var(--zindex-glass-layer) + 1);
+      color          : var(--border-color);
+    }
+
+    & > input:focus ~ .label
+    {
+      color : var(--color-focus);
+    }
+
+    & > input:placeholder-shown:not(:focus) ~ .label,
+    & > textarea:placeholder-shown:not(:focus) ~ .label
+    {
+      top : 35%;
+    }
   }
 }

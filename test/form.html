@@ -3,44 +3,116 @@
 <meta name="viewport" content="width=device-width">
 <title>Form Test</title>
 <link rel="stylesheet" href="../dist/markup_kit/css/amalgamation.css">
+<style type="text/css">
+
+  body
+  {
+    font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  fieldset
+  {
+    position: relative;
+    display: block;
+    min-width: 450px;
+  }
+
+
+  ul li
+  {
+    margin-bottom : .5em;
+  }
+
+  *[grid]
+  {
+    display : flex;
+    flex-align: center;
+    flex-wrap: wrap;
+  }
+
+  ul
+  {
+    list-style-type: none;
+    padding: 0;
+  }
+
+</style>
 
 <h1>Form Controls</h1>
+
+<div grid>
+  <fieldset>
+    <legend>Login</legend>
+
+    <ul>
+      <li>
+        <label class="ui input control --has-float-label">
+          <input type="text" placeholder="Type Your Username">
+          <label class="label">Username</label>
+        </label>
+
+      <li>
+        <label class="ui input control --has-float-label">
+          <input type="password" placeholder="••••••••">
+          <label class="label">Password</label>
+        </label>
+
+      <li>
+        <button class="ui control button">Login</button>
+
+    </ul>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Kontaktformular</legend>
+
+    <ul grid>
+      <li>
+        <label class="ui input control --has-float-label">
+          <input type="text" placeholder=" ">
+          <span class="focus-ring"></span>
+          <label class="label">First name</label>
+        </label>
+
+        <label class="ui input control --has-float-label">
+          <input type="text" placeholder=" ">
+          <span class="focus-ring"></span>
+          <label class="label">Last name</label>
+        </label>
+      <li>
+    </ul>
+
+    <ul>
+      <li>
+        <label class="ui input control --has-float-label">
+          <input type="email" placeholder="mail@example.com">
+          <span class="focus-ring"></span>
+          <label class="label">E-Mail</label>
+        </label>
+      </li>
+    </ul>
+
+    <ul>
+      <li><label class="ui input control --has-float-label">
+        <textarea placeholder=" " rows="7"></textarea>
+        <span class="focus-ring"></span>
+        <label class="label">Your Message</label>
+      </label>
+
+    </ul>
+
+  </fieldset>
+
+</div>
+
 
 <fieldset>
   <legend>Personal Information</legend>
 
   <ul>
-    <li>
-      <label class="ui input control">
-        <input type="text">
-        <span class="focus-ring"></span>
-        <label class="label">First Name</label>
-      </label>
-    </li>
 
-    <li>
-      <label class="ui input control">
-        <input type="text">
-        <span class="focus-ring"></span>
-        <label class="label">Last Name</label>
-      </label>
-    </li>
 
-    <li>
-      <label class="ui input control">
-        <input type="email">
-        <span class="focus-ring"></span>
-        <label class="label">Email Address</label>
-      </label>
-    </li>
-
-    <li>
-      <label class="ui input control">
-        <textarea></textarea>
-        <span class="focus-ring"></span>
-        <label class="label">Address</label>
-      </label>
-    </li>
 
     <li>
       <label class="ui select control">
@@ -55,8 +127,16 @@
     </li>
 
     <li>
+      <label class="ui input control">
+        <input type="number">
+        <span class="label">Number Field</span>
+      </label>
+    </li>
+
+    <li>
       <label class="ui checkbox control">
         <input type="checkbox">
+        <span class="control-indicator"></span>
         Check this custom checkbox
       </label>
     </li>
@@ -64,11 +144,13 @@
     <li>
       <label class="ui radio control">
         <input type="radio" name="radio-x">
+        <span class="control-indicator"></span>
         Toggle this custom radio
       </label>
 
       <label class="ui radio control">
         <input type="radio" name="radio-x">
+        <span class="control-indicator"></span>
         Or toggle this other cutom radio
       </label>
 
@@ -93,36 +175,35 @@
   <ul>
     <li>
       <label class="ui input control">
-        <input type="text">
+        <input type="text" placeholder="field1">
         <span class="focus-ring"></span>
-        <label class="label">Label is above the Input Field</label>
+        <label class="label">Label is above the Input Field 'field1'</label>
       </label>
     </li>
 
     <li>
-      <label class="ui input control is-start-aligned">
-        <input type="text">
+      <label class="ui input control --is-start-aligned">
+        <input type="text" placeholder="field2">
         <span class="focus-ring"></span>
-        <label class="label">Label is below The Input Field</label>
+        <label class="label">Label is below The Input Field 'field2'</label>
       </label>
     </li>
 
     <li>
       <label class="ui input control --is-horizontal">
-        <input type="text">
+        <input type="text" placeholder="field3">
         <span class="focus-ring"></span>
-        <label class="label">Label is inline</label>
+        <label class="label">Inline Label for 'field3'</label>
+      </label>
+      <label class="ui input control --has-float-label">
+        <input type="text" placeholder="field4">
+        <span class="focus-ring"></span>
+        <label class="label">Label is floating inside Input Field 'field4'</label>
       </label>
     </li>
 
 
-    <li>
-      <label class="ui input control">
-        <input type="text">
-        <span class="focus-ring"></span>
-        <label class="label">Label is above the Input Field</label>
-      </label>
-    </li>
+
   </ul>
 </fieldset>
 
@@ -131,13 +212,18 @@
   <div style="line-height: 1.5;">
     <div class="ui input control">
       <label class="label" for="domain-input">Domain</label>
+
       <label for="domain-input">http:// </label>
+
       <input id="domain-input" value="google">
-      <select title="Top Level Domain">
-        <option>.de</option>
-        <option>.com</option>
-        <option>.net</option>
-      </select>
+
+      <div class="ui select control">
+        <select title="Top Level Domain">
+          <option>.de</option>
+          <option>.com</option>
+          <option>.net</option>
+        </select>
+      </div>
 
       <span class="focus-ring"></span>
 
@@ -149,7 +235,10 @@
     </div>
 
     <div class="ui input control">
-      <div><input type="checkbox"></div>
+      <div class="ui checkbox control">
+        <input type="checkbox">
+      </div>
+
       <input placeholder="Bla">
       <span class="focus-ring"></span>
     </div>
@@ -161,7 +250,6 @@
     <label class="ui radio control">
       <input name="radio-x" type="radio"> No
     </label>
-
 
 
   </div>

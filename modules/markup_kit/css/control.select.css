@@ -3,13 +3,13 @@
 
   & select
   {
-    border-radius : var(--border-radius);
+    border-radius : calc(var(--border-radius) - 1px) ;
     display       : inline-block;
-    width         : 100%;
+    /*width         : 100%;*/
     margin        : 0;
     padding       : .2rem 2.25rem .2rem .2rem;
     cursor        : pointer;
-    flex          : 1 1 auto;
+    /*flex          : 1 1 auto;*/
 
     &:focus:-moz-focusring
     {

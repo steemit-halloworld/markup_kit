@@ -89,288 +89,6 @@ button, input, select, textarea {
 button, input, optgroup, select, textarea {
   margin: 0; }
 
-.block, address, aside, article,
-footer,
-div, dl,
-main,
-nav,
-ol,
-p,
-section,
-ul {
-  margin-top: 0;
-  margin-bottom: 0; }
-
-.block + .block, address + .block, aside + .block, article + .block,
-footer + .block,
-div + .block, dl + .block,
-main + .block,
-nav + .block,
-ol + .block,
-p + .block,
-section + .block,
-ul + .block, .block + address, address + address, aside + address, article + address,
-footer + address,
-div + address, dl + address,
-main + address,
-nav + address,
-ol + address,
-p + address,
-section + address,
-ul + address, .block + aside, address + aside, aside + aside, article + aside,
-footer + aside,
-div + aside, dl + aside,
-main + aside,
-nav + aside,
-ol + aside,
-p + aside,
-section + aside,
-ul + aside, .block + article, address + article, aside + article, article + article,
-footer + article,
-div + article, dl + article,
-main + article,
-nav + article,
-ol + article,
-p + article,
-section + article,
-ul + article, .block +
-footer, address +
-footer, aside +
-footer, article +
-footer,
-footer +
-footer,
-div +
-footer, dl +
-footer,
-main +
-footer,
-nav +
-footer,
-ol +
-footer,
-p +
-footer,
-section +
-footer,
-ul +
-footer, .block +
-div, address +
-div, aside +
-div, article +
-div,
-footer +
-div,
-div +
-div, dl +
-div,
-main +
-div,
-nav +
-div,
-ol +
-div,
-p +
-div,
-section +
-div,
-ul +
-div, .block + dl, address + dl, aside + dl, article + dl,
-footer + dl,
-div + dl, dl + dl,
-main + dl,
-nav + dl,
-ol + dl,
-p + dl,
-section + dl,
-ul + dl, .block +
-main, address +
-main, aside +
-main, article +
-main,
-footer +
-main,
-div +
-main, dl +
-main,
-main +
-main,
-nav +
-main,
-ol +
-main,
-p +
-main,
-section +
-main,
-ul +
-main, .block +
-nav, address +
-nav, aside +
-nav, article +
-nav,
-footer +
-nav,
-div +
-nav, dl +
-nav,
-main +
-nav,
-nav +
-nav,
-ol +
-nav,
-p +
-nav,
-section +
-nav,
-ul +
-nav, .block +
-ol, address +
-ol, aside +
-ol, article +
-ol,
-footer +
-ol,
-div +
-ol, dl +
-ol,
-main +
-ol,
-nav +
-ol,
-ol +
-ol,
-p +
-ol,
-section +
-ol,
-ul +
-ol, .block +
-p, address +
-p, aside +
-p, article +
-p,
-footer +
-p,
-div +
-p, dl +
-p,
-main +
-p,
-nav +
-p,
-ol +
-p,
-p +
-p,
-section +
-p,
-ul +
-p, .block +
-section, address +
-section, aside +
-section, article +
-section,
-footer +
-section,
-div +
-section, dl +
-section,
-main +
-section,
-nav +
-section,
-ol +
-section,
-p +
-section,
-section +
-section,
-ul +
-section, .block +
-ul, address +
-ul, aside +
-ul, article +
-ul,
-footer +
-ul,
-div +
-ul, dl +
-ul,
-main +
-ul,
-nav +
-ul,
-ol +
-ul,
-p +
-ul,
-section +
-ul,
-ul +
-ul {
-  margin-top: 0.75em; }
-
-h1, h2, h3, header {
-  margin-top: 0.75em;
-  margin-bottom: 0.375em; }
-
-h4, h5, h6 {
-  margin-top: 0.375em;
-  margin-bottom: 0.375em; }
-
-h1 + .block, h1 + address, h1 + aside, h1 + article, h1 +
-footer, h1 +
-div, h1 + dl, h1 +
-main, h1 +
-nav, h1 +
-ol, h1 +
-p, h1 +
-section, h1 +
-ul, h2 + .block, h2 + address, h2 + aside, h2 + article, h2 +
-footer, h2 +
-div, h2 + dl, h2 +
-main, h2 +
-nav, h2 +
-ol, h2 +
-p, h2 +
-section, h2 +
-ul, h3 + .block, h3 + address, h3 + aside, h3 + article, h3 +
-footer, h3 +
-div, h3 + dl, h3 +
-main, h3 +
-nav, h3 +
-ol, h3 +
-p, h3 +
-section, h3 +
-ul, h4 + .block, h4 + address, h4 + aside, h4 + article, h4 +
-footer, h4 +
-div, h4 + dl, h4 +
-main, h4 +
-nav, h4 +
-ol, h4 +
-p, h4 +
-section, h4 +
-ul, h5 + .block, h5 + address, h5 + aside, h5 + article, h5 +
-footer, h5 +
-div, h5 + dl, h5 +
-main, h5 +
-nav, h5 +
-ol, h5 +
-p, h5 +
-section, h5 +
-ul, h6 + .block, h6 + address, h6 + aside, h6 + article, h6 +
-footer, h6 +
-div, h6 + dl, h6 +
-main, h6 +
-nav, h6 +
-ol, h6 +
-p, h6 +
-section, h6 +
-ul {
-  margin-top: 0; }
-
 /*doc
 
 # Normalisation
@@ -698,14 +416,6 @@ should never be tracked. For some larger text, depending on the typeface a negat
   box-shadow: 0 0 0 1px #F0506E !important;
   border-color: #F0506E !important; }
 
-/*doc
-
-# Form
-
-The Form module provides classes to customize the displays of HTML input controls for a more consistent rendering
-across browsers and devices.
-
-*/
 .ui.control {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -716,12 +426,7 @@ across browsers and devices.
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 16px;
-  margin-top: calc(1em + 8px);
-  margin-left: 2px;
-  margin-left: .125rem;
-  margin-right: 2px;
-  margin-right: .125rem;
+  margin: calc(1em + 8px) 0 0;
   position: relative;
   font-size: 1em;
   font-family: inherit;
@@ -733,142 +438,231 @@ across browsers and devices.
           justify-content: space-between;
   min-height: calc(1.5em + .2rem + .2rem); }
 
-.ui.control.has-no-label {
-  margin-top: auto; }
-  .ui.control.has-no-label > .label {
-    display: none; }
-
-.ui.control > *:not(.label) {
-  padding-left: 3.2px;
-  padding-left: .2rem;
-  padding-right: 3.2px;
-  padding-right: .2rem; }
-
-.ui.control > * {
-  text-align: left;
-  vertical-align: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  display: inline-block; }
-
-.ui.controlinput,
-.ui.control > input:not([type]),
-.ui.control > input[type='text'],
-.ui.control > input[type='number'],
-.ui.control > input[type='email'], .ui.controltextarea,
-.ui.control > textarea,
-.ui.control > select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: none;
-  outline: none;
-  margin: 0;
-  background: #fff;
-  padding-top: 3.2px;
-  padding-top: .2rem;
-  padding-bottom: 3.2px;
-  padding-bottom: .2rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto; }
-
-.ui.control > .label, .ui.control > input {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0; }
-
-.ui.control > .label {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  font-size: 1em;
-  line-height: 1em;
-  height: 1em;
-  /*position      : absolute;
-    top           : calc(-1em - 8px);
-    left          : 0;*/
-  display: block;
-  -webkit-box-ordinal-group: -999;
-      -ms-flex-order: -1000;
-          order: -1000;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-  margin-top: calc(-1em - 8px);
-  margin-bottom: 8px;
-  padding-left: 3.2px;
-  padding-left: .2rem; }
-
-.ui.control.--is-horizontal {
-  margin-left: 10em; }
-  .ui.control.--is-horizontal > .label {
-    margin-top: auto;
-    margin-bottom: auto;
+.ui.control {
+  /*& > *:not(.label):not(.focus-ring):not(.control-indicator)
+  {
+    padding-left  : .2rem;
+    padding-right : .2rem;
+    flex          : 0 1 calc(1.5 + .4rem);
+  }*/
+  /* control contains another control */ }
+  .ui.control.has-no-label {
+    margin-top: auto; }
+    .ui.control.has-no-label > .label {
+      display: none; }
+  .ui.control > * {
+    text-align: left;
+    vertical-align: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border-radius: 3px; }
+  .ui.control > *:not(:first-child):not(last-child) {
+    border-radius: 0; }
+  .ui.control input,
+  .ui.control > input:not([type]),
+  .ui.control > input[type='text'],
+  .ui.control > input[type='number'],
+  .ui.control > input[type='email'],
+  .ui.control textarea,
+  .ui.control > textarea,
+  .ui.control > select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border: none;
+    outline: none;
+    margin: 0;
+    background: #fff;
+    padding-top: 3.2px;
+    padding-top: .2rem;
+    padding-bottom: 3.2px;
+    padding-bottom: .2rem;
+    -webkit-box-flex: 1 !important;
+        -ms-flex: 1 1 auto !important;
+            flex: 1 1 auto !important;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch; }
+  .ui.control > .ui.control {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-    width: 10em;
-    margin-left: -10em; }
-
-.ui.control.is-start-aligned {
-  margin-top: auto;
-  margin-bottom: calc(1em + 16px); }
-  .ui.control.is-start-aligned > .label {
-    /*top           : auto;*/
-    margin-top: 8px;
-    margin-bottom: calc(-1em - 8px);
-    -webkit-box-ordinal-group: 1001;
-        -ms-flex-order: 1000;
-            order: 1000; }
-
-.ui.control.input, .ui.control.input > .focus-ring, .ui.control.select, .ui.control.select > .focus-ring {
-  border: 1px #D4D4D4 solid;
-  border-radius: 4px; }
-
-.ui.control.input > .focus-ring, .ui.control.select > .focus-ring {
-  position: absolute;
-  background: transparent !important;
-  top: -1px;
-  right: -1px;
-  left: -1px;
-  bottom: -1px;
-  cursor: text;
-  pointer-events: none;
-  box-sizing: content-box;
-  color: #444;
-  outline: 0; }
-
-.ui.control:focus, .ui.control > input:focus ~ .focus-ring, .ui.control > textarea:focus ~ .focus-ring, .ui.control select:focus ~ .focus-ring {
-  outline: 0;
-  border-color: rgb(48, 145, 243);
-  box-shadow: 0 0 0 1px rgb(48, 145, 243);
-  visibility: visible;
-  z-index: 1000; }
-
-.ui.control.input > select {
-  background: transparent; }
-
-.ui.input.control > *:not(input:not([type])):not(input[type='text']):not(input[type='email']):not(input[type='number']):not(.label) {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
-  white-space: nowrap; }
+            flex: 1 1 auto; }
+    .ui.control > .ui.control > * {
+      background: transparent; }
+  .ui.control > .label, .ui.control > input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0; }
+  .ui.control.radio, .ui.control.checkbox {
+    padding-left: 24px;
+    padding-left: 1.5rem; }
+    .ui.control.radio > .control-indicator, .ui.control.checkbox > .control-indicator {
+      position: absolute;
+      top: 4px;
+      top: .25rem;
+      left: 0;
+      display: block;
+      width: 16px;
+      width: 1rem;
+      height: 16px;
+      height: 1rem;
+      line-height: 16px;
+      line-height: 1rem;
+      font-size: 65%;
+      color: #eee;
+      text-align: center;
+      background-color: #eee;
+      background-size: 50% 50%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
+    .ui.control.radio > input:focus ~ .control-indicator, .ui.control.checkbox > input:focus ~ .control-indicator {
+      box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9; }
+    .ui.control.radio > input:checked ~ .control-indicator, .ui.control.checkbox > input:checked ~ .control-indicator {
+      color: #fff;
+      background-color: rgb(48, 145, 243); }
+    .ui.control.radio > input:active ~ .control-indicator, .ui.control.checkbox > input:active ~ .control-indicator {
+      color: #fff;
+      background-color: #84c6ff; }
+  .ui.control > .label {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    font-size: 1em;
+    line-height: 1.2;
+    height: 1.2em;
+    /*position      : absolute;
+    top           : calc(-1em - 8px);
+    left          : 0;*/
+    display: block;
+    -webkit-box-ordinal-group: -999;
+        -ms-flex-order: -1000;
+            order: -1000;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    margin-top: calc(-1.2em - 8px);
+    margin-bottom: 8px;
+    padding-left: 3.2px;
+    padding-left: .2rem; }
+  .ui.control.--is-horizontal {
+    margin-left: 10em;
+    margin-top: auto; }
+    .ui.control.--is-horizontal > .label {
+      margin-top: auto;
+      margin-bottom: auto;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto;
+      width: 10em;
+      margin-left: -10em; }
+  .ui.control.--is-start-aligned {
+    margin-top: auto;
+    margin-bottom: calc(1.2em + 16px); }
+    .ui.control.--is-start-aligned > .label {
+      /*top           : auto;*/
+      margin-top: 8px;
+      margin-bottom: calc(-1.2em - 8px);
+      -webkit-box-ordinal-group: 1001;
+          -ms-flex-order: 1000;
+              order: 1000; }
+  .ui.control.input, .ui.control.input > .focus-ring, .ui.control.select, .ui.control.select > .focus-ring {
+    border: 1px #D4D4D4 solid;
+    border-radius: 4px; }
+  .ui.control.input > .focus-ring, .ui.control.select > .focus-ring {
+    position: absolute;
+    background: transparent !important;
+    top: -1px;
+    right: -1px;
+    left: -1px;
+    bottom: -1px;
+    border-color: transparent;
+    cursor: text;
+    pointer-events: none;
+    box-sizing: content-box;
+    color: #444;
+    outline: 0; }
+  .ui.control:focus, .ui.control > input:focus ~ .focus-ring, .ui.control > textarea:focus ~ .focus-ring, .ui.control select:focus ~ .focus-ring {
+    outline: 0;
+    border-color: rgb(48, 145, 243);
+    box-shadow: 0 0 0 1px rgb(48, 145, 243);
+    visibility: visible;
+    z-index: 1000; }
+  .ui.control.input > select {
+    background: transparent; }
 
 .ui.input.control > input[type='number'] {
   text-align: right; }
 
+.ui.input.control.--has-float-label {
+  margin: 0;
+  vertical-align: baseline; }
+  .ui.input.control.--has-float-label > input::-webkit-input-placeholder,
+  .ui.input.control.--has-float-label > textarea::-webkit-input-placeholder {
+    opacity: 1;
+    transition: all .2s; }
+  .ui.input.control.--has-float-label > input:-ms-input-placeholder,
+  .ui.input.control.--has-float-label > textarea:-ms-input-placeholder {
+    opacity: 1;
+    transition: all .2s; }
+  .ui.input.control.--has-float-label > input::placeholder,
+  .ui.input.control.--has-float-label > textarea::placeholder {
+    opacity: 1;
+    transition: all .2s; }
+  .ui.input.control.--has-float-label > input,
+  .ui.input.control.--has-float-label > textarea {
+    padding: 1em .25em .2em; }
+  .ui.input.control.--has-float-label > input:placeholder-shown:not(:focus)::-webkit-input-placeholder,
+  .ui.input.control.--has-float-label > textarea:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+    opacity: 0; }
+  .ui.input.control.--has-float-label > input:placeholder-shown:not(:focus):-ms-input-placeholder,
+  .ui.input.control.--has-float-label > textarea:placeholder-shown:not(:focus):-ms-input-placeholder {
+    opacity: 0; }
+  .ui.input.control.--has-float-label > input:placeholder-shown:not(:focus)::placeholder,
+  .ui.input.control.--has-float-label > textarea:placeholder-shown:not(:focus)::placeholder {
+    opacity: 0; }
+  .ui.input.control.--has-float-label > .label {
+    position: absolute;
+    margin: 0;
+    /* reset default margin */
+    cursor: text;
+    font-size: 75%;
+    opacity: 1;
+    transition: all .2s;
+    top: 0;
+    left: .25em;
+    right: .25em;
+    padding: 0 1px;
+    z-index: 1001;
+    color: #D4D4D4; }
+  .ui.input.control.--has-float-label > input:focus ~ .label {
+    color: rgb(48, 145, 243); }
+  .ui.input.control.--has-float-label > input:placeholder-shown:not(:focus) ~ .label,
+  .ui.input.control.--has-float-label > textarea:placeholder-shown:not(:focus) ~ .label {
+    top: 35%; }
+
 .ui.control.select select {
-  border-radius: 4px;
+  border-radius: 3px;
   display: inline-block;
-  width: 100%;
+  /*width         : 100%;*/
   margin: 0;
   padding: 3.2px 36px 3.2px 3.2px;
   padding: .2rem 2.25rem .2rem .2rem;
-  cursor: pointer; }
+  cursor: pointer;
+  /*flex          : 1 1 auto;*/ }
   .ui.control.select select:focus:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 #000; }
@@ -892,142 +686,51 @@ across browsers and devices.
 
 .ui.control.radio {
   display: inline-block;
-  background: transparent; }
+  background: transparent;
+  margin-top: auto;
+  vertical-align: baseline; }
+  .ui.control.radio > .control-indicator {
+    border-radius: 50%; }
+  .ui.control.radio > input:checked ~ .control-indicator {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==); }
 
 .ui.control.checkbox {
   display: inline-block;
   background: transparent; }
+  .ui.control.checkbox .control-indicator {
+    border-radius: .25rem; }
+  .ui.control.checkbox > input:checked ~ .control-indicator {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=); }
 
-/*@import 'form.label';*/
-/*@import 'form.input';*/
-/*@import 'form.select';*/
-.fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-/*doc
-
-## Form Field
-
-A form field is an element containing a label element and at least one belonging form control element.
-By default the label will be positioned above the control.
-
-<div data-module="kit-example">
-  <label class="form-field">
-    User Name
-    <input>
-  </label>
-</div>
-
-### Inline Form Field
-
-A field can have its label next to the control instead of above it.
-
-<div data-module="kit-example">
-  <div class="form-field is-aligned">
-    <label>Name&#32;<input type="text" placeholder="First name"></label> <input type="text" placeholder="Last name">
-  </div>
-</div>
-
-### Alignment
-
-By default the label will be positioned at the start of the control. To change the alignment use the `is-align-start`
-modifier:
-
-<div data-module="kit-example">
-  <label class="form-field is-align-start">
-    User Name&#32;<input>
-  </label>
-</div>
-
-<div data-module="kit-example">
-  <label class="form-field is-aligned">
-    <label><input type="checkbox"> Yes</label> <label><input type="checkbox"> No</label>
-  </label>
-  <br>
-  <label class="form-field is-aligned">
-    <input type="checkbox"> Make my profile visible
-  </label>
-</div>
-
-*/
-.form-field {
-  border: none;
-  padding: 0;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  vertical-align: middle;
-  margin-top: 16px;
-  /* todo */
-  /* margin collapsing */ }
-  .form-field > .form-field:first-child,
-  .form-field > .form-field.is-inline {
-    margin-top: 0; }
-  .form-field.is-aligned > *:nth-last-child(1n):first-child:last-child {
-    margin-left: 0;
-    margin-right: 0; }
-  .form-field.is-aligned > *:nth-last-child(2n) {
-    margin-left: 0;
-    margin-right: .25em; }
-  .form-field.is-aligned > *:nth-last-child(2n+1) {
-    margin-left: .25em;
-    margin-right: 0; }
-  .form-field.is-aligned > *:nth-last-child(2n) + * {
-    margin-left: 25px;
-    margin-right: .25em; }
-  .form-field.is-aligned > *:nth-last-child(3n) {
-    margin-left: 0;
-    margin-right: .25em; }
-  .form-field.is-aligned > *:nth-last-child(3n+1) {
-    margin-left: .25em;
-    margin-right: .25em; }
-  .form-field.is-aligned > *:nth-last-child(3n) + * {
-    margin-left: .25em;
-    margin-right: .25em; }
-  .form-field.is-aligned > * {
-    margin-left: .25em;
-    margin-right: .25em; }
-  .form-field:not(.is-aligned) > * {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto; }
-  .form-field.is-aligned > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto; }
-  .form-field:not(.is-aligned) > *:not(label):nth-last-child(1):nth-of-type(1), .form-field:not(.is-aligned) > *:not(label):nth-last-child(1):nth-of-type(1) ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: 100%; }
-  .form-field:not(.is-aligned) > *:not(label):nth-last-child(2):nth-of-type(1), .form-field:not(.is-aligned) > *:not(label):nth-last-child(2):nth-of-type(1) ~ * {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    width: 50%; }
-
-.table {
+.ui.table {
   border-collapse: collapse;
   border-spacing: 0;
   max-width: 100%;
   width: 100%;
   empty-cells: show; }
 
-.th {
+.ui.small.table {
+  font-size: .9em; }
+
+.ui.table th {
   text-align: left;
   font-weight: 700;
   vertical-align: bottom; }
 
-.td {
+.ui.table td {
   vertical-align: top; }
+
+.ui.table th,
+.ui.table td {
+  padding: 8px 8px;
+  padding: .5rem .5rem;
+  border-bottom: 1px #D4D4D4 solid; }
+  .ui.table th:first-child,
+  .ui.table td:first-child {
+    padding-left: 0; }
+  .ui.table th:last-child,
+  .ui.table td:last-child {
+    padding-right: 0; }
 
 /*doc
 

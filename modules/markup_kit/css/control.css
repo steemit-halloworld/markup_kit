@@ -15,12 +15,6 @@
   min-height      : calc(1.5em + .2rem + .2rem);
 }
 
-.ui.control:before, .ui.control:after
-{
-  content : ' ';
-  display : table;
-}
-
 .ui.control
 {
 
@@ -34,12 +28,12 @@
     }
   }
 
-  & > *:not(.label)
+  /*& > *:not(.label):not(.focus-ring):not(.control-indicator)
   {
     padding-left  : .2rem;
     padding-right : .2rem;
     flex          : 0 1 calc(1.5 + .4rem);
-  }
+  }*/
 
   & > *
   {
@@ -48,14 +42,20 @@
     font-family    : inherit;
     font-size      : inherit;
     line-height    : inherit;
+    border-radius  : calc(var(--border-radius) - var(--border-width));
   }
 
-  &input,
+  & > *:not(:first-child):not(last-child)
+  {
+    border-radius : 0;
+  }
+
+  & input,
   & > input:not([type]),
   & > input[type='text'],
   & > input[type='number'],
   & > input[type='email'],
-  &textarea,
+  & textarea,
   & > textarea,
   & > select
   {
@@ -66,10 +66,11 @@
     background     : #fff;
     padding-top    : .2rem;
     padding-bottom : .2rem;
-    flex           : 1 1 auto;
+    flex           : 1 1 auto !important;
     align-self     : stretch;
   }
 
+  /* control contains another control */
   & > .ui.control
   {
     margin        : 0;
@@ -90,6 +91,49 @@
     flex : 1 1 0;
   }
 
+  &.radio,
+  &.checkbox
+  {
+
+    padding-left: 1.5rem;
+
+    & > .control-indicator
+    {
+      position        : absolute;
+      top             : .25rem;
+      left            : 0;
+      display         : block;
+      width           : 1rem;
+      height          : 1rem;
+      line-height     : 1rem;
+      font-size       : 65%;
+      color           : #eee;
+      text-align      : center;
+      background-color: #eee;
+      background-size: 50% 50%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      user-select     : none;
+    }
+
+    & > input:focus ~ .control-indicator
+    {
+      box-shadow : 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
+    }
+
+    & > input:checked ~ .control-indicator
+    {
+      color: #fff;
+      background-color: var(--color-focus);
+    }
+
+    & > input:active ~ .control-indicator
+    {
+      color: #fff;
+      background-color: #84c6ff;
+    }
+  }
+
   & > .label
   {
     text-overflow : ellipsis;
@@ -97,15 +141,15 @@
     overflow      : hidden;
     align-self    : flex-start;
     font-size     : 1em;
-    line-height   : 1em;
-    height        : 1em;
+    line-height   : 1.2;
+    height        : 1.2em;
     /*position      : absolute;
     top           : calc(-1em - 8px);
     left          : 0;*/
     display       : block;
     order         : -1000;
     flex          : 1 1 100%;
-    margin-top    : calc(-1em - 8px);
+    margin-top    : calc(-1.2em - 8px);
     margin-bottom : 8px;
     padding-left  : .2rem;
   }
@@ -125,16 +169,16 @@
     }
   }
 
-  &.is-start-aligned
+  &.--is-start-aligned
   {
     margin-top    : auto;
-    margin-bottom : calc(1em + 16px);
+    margin-bottom : calc(1.2em + 16px);
 
     & > .label
     {
       /*top           : auto;*/
       margin-top    : 8px;
-      margin-bottom : calc(-1em - 8px);
+      margin-bottom : calc(-1.2em - 8px);
       order         : 1000;
     }
   }
