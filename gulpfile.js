@@ -13,7 +13,10 @@ gulp.task('amalgamation', function ()
   ];
 
   return gulp.src('modules/markup_kit/css/include.css')
-  .pipe(sass())
+  .pipe(sass({
+    includePath: ["modules/markup_kit/css/"],
+    errorLogToConsole: true
+  }))
   .pipe(postcss(plugins))
   .pipe(rename('amalgamation.css'))
   .pipe(gulp.dest('dist/markup_kit/css'))

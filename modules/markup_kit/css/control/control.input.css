@@ -1,0 +1,120 @@
+:root
+{
+  --control-input-border-radius    : var(--border-radius);
+  --control-input-background-color : #fff;
+}
+
+.ui.input.control
+{
+  background : var(--control-input-background-color);
+}
+
+.ui.input.control
+{
+  border-radius : var(--control-input-border-radius);
+  border        : var(--border-width) var(--border-style) var(--border-color);
+
+  & > *
+  {
+    border-radius : calc(var(--control-input-border-radius) - var(--border-width));
+  }
+
+  & > input[type='number']
+  {
+    text-align : right;
+  }
+
+  &.--has-float-label
+  {
+    margin : 0;
+
+    & > input,
+    & > textarea
+    {
+      padding-bottom : .1rem;
+      padding-top    : .3rem;
+    }
+
+    & > .label
+    {
+      position       : absolute;
+      margin         : 0; /* reset default margin */
+      font-size      : 75%;
+      opacity        : 1;
+      cursor         : text;
+      top            : -.6em;
+      left           : 0;
+      max-width      : 100%;
+      padding        : 0 calc(.5em + var(--control-input-border-width) + var(--control-input-outline-width-active));
+      z-index        : calc(var(--zindex-glass-layer) + 1);
+      line-height    : 1;
+      height         : auto;
+      pointer-events : none;
+
+      &:after
+      {
+        content    : " ";
+        display    : block;
+        position   : absolute;
+        background : var(--control-input-background-color);
+        height     : var(--control-input-border-width);
+        left       : 0;
+        right      : 0;
+        top        : 50%;
+        z-index    : -1;
+        margin     : 0 .5em;
+      }
+    }
+
+    & > input:placeholder-shown:not(:focus)::placeholder,
+    & > textarea:placeholder-shown:not(:focus)::placeholder
+    {
+      opacity : 0;
+    }
+
+    &:focus-within > .label:after
+    {
+      box-shadow : 0 0 0 var(--control-input-outline-width-active) var(--control-input-background-color);
+      margin     : 0 calc(.5em + var(--control-input-border-width) + var(--control-input-outline-width-active));
+    }
+
+    & > input:placeholder-shown:not(:focus) ~ .label
+    {
+      font-size   : 100%;
+      top         : .2rem;
+      opacity     : .5;
+      line-height : inherit;
+    }
+  }
+
+  &:focus-within > .prepend
+  {
+    border-top-left-radius    : calc(var(--control-focus-ring-border-radius) - var(--control-input-border-width));
+    border-bottom-left-radius : calc(var(--control-focus-ring-border-radius) - var(--control-input-border-width));
+  }
+
+  &:focus-within > .append
+  {
+    border-radius              : 0;
+    border-top-right-radius    : calc(var(--control-focus-ring-border-radius) - var(--control-input-border-width));
+    border-bottom-right-radius : calc(var(--control-focus-ring-border-radius) - var(--control-input-border-width));
+  }
+
+  & > .prepend,
+  & > .ui.control.prepend
+  {
+    white-space               : nowrap;
+    border-right              : var(--control-input-border-width) solid var(--control-input-border-color);
+    border-top-left-radius    : calc(var(--control-input-border-radius) - var(--control-input-border-width));
+    border-bottom-left-radius : calc(var(--control-input-border-radius) - var(--control-input-border-width));
+  }
+
+  & > .append,
+  & > .ui.control.append
+  {
+    white-space               : nowrap;
+    border-left                : var(--control-input-border-width) solid var(--control-input-border-color) !important;
+    border-top-right-radius    : calc(var(--control-input-border-radius) - var(--control-input-border-width));
+    border-bottom-right-radius : calc(var(--control-input-border-radius) - var(--control-input-border-width));
+  }
+}

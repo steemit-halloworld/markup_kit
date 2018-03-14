@@ -1,15 +1,25 @@
+:root
+{
+  --control-select-border-radius    : var(--border-radius);
+  --control-select-background-color : #fff;
+}
+
 .ui.control.select
 {
+  border-radius : var(--control-select-border-radius);
+  border        : var(--border-width) var(--border-color) var(--border-style);
+  background    : var(--control-select-background-color);
 
-  & select
+  & > select
   {
-    border-radius : calc(var(--border-radius) - 1px) ;
+    border-radius : calc(var(--border-radius) - 1px);
     display       : inline-block;
-    /*width         : 100%;*/
-    margin        : 0;
-    padding       : .2rem 2.25rem .2rem .2rem;
+    min-width     : 1em;
+    max-width     : 100%;
+    width         : auto;
+    padding       : .2rem 2.25rem .2rem .35rem;
     cursor        : pointer;
-    /*flex          : 1 1 auto;*/
+    flex          : 1 1 1em;
 
     &:focus:-moz-focusring
     {

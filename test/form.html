@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Form Test</title>
-<link rel="stylesheet" href="../dist/markup_kit/css/amalgamation.css">
+<link rel="stylesheet" href="../dist/markup_kit/css/minification.css">
 <style type="text/css">
 
-  body
-  {
-    font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
-  }
+
 
   fieldset
   {
     position: relative;
     display: block;
     min-width: 450px;
+    padding: 1em;
   }
 
 
   ul li
   {
-    margin-bottom : .5em;
+    margin-bottom : 1em;
   }
 
   *[grid]
@@ -34,6 +32,7 @@
   {
     list-style-type: none;
     padding: 0;
+    margin: 0;
   }
 
 </style>
@@ -48,13 +47,13 @@
       <li>
         <label class="ui input control --has-float-label">
           <input type="text" placeholder="Type Your Username">
-          <label class="label">Username</label>
+          <div class="label">Username</div>
         </label>
 
       <li>
         <label class="ui input control --has-float-label">
           <input type="password" placeholder="••••••••">
-          <label class="label">Password</label>
+          <div class="label">Password</div>
         </label>
 
       <li>
@@ -71,14 +70,12 @@
       <li>
         <label class="ui input control --has-float-label">
           <input type="text" placeholder=" ">
-          <span class="focus-ring"></span>
-          <label class="label">First name</label>
+          <div class="label">First name</div>
         </label>
 
         <label class="ui input control --has-float-label">
           <input type="text" placeholder=" ">
-          <span class="focus-ring"></span>
-          <label class="label">Last name</label>
+          <div class="label">Last name</div>
         </label>
       <li>
     </ul>
@@ -87,8 +84,7 @@
       <li>
         <label class="ui input control --has-float-label">
           <input type="email" placeholder="mail@example.com">
-          <span class="focus-ring"></span>
-          <label class="label">E-Mail</label>
+          <div class="label">E-Mail</div>
         </label>
       </li>
     </ul>
@@ -96,8 +92,7 @@
     <ul>
       <li><label class="ui input control --has-float-label">
         <textarea placeholder=" " rows="7"></textarea>
-        <span class="focus-ring"></span>
-        <label class="label">Your Message</label>
+        <div class="label">Your Message</div>
       </label>
 
     </ul>
@@ -121,8 +116,7 @@
           <option>2018</option>
           <option>2019</option>
         </select>
-        <label class="label">Year</label>
-        <span class="focus-ring"></span>
+        <div class="label">Year</div>
       </label>
     </li>
 
@@ -131,6 +125,10 @@
         <input type="number">
         <span class="label">Number Field</span>
       </label>
+    </li>
+
+    <li>
+      Standlone Input Field <input class="ui input control" type="text">
     </li>
 
     <li>
@@ -160,8 +158,7 @@
     <li>
       <label class="ui input control" style="width: 200px;">
         <textarea></textarea>
-        <span class="focus-ring"></span>
-        <label class="label">Long Label Test To Test Cutting Label Text</label>
+        <div class="label">Long Label Test To Test Cutting Label Text</div>
       </label>
     </li>
 
@@ -176,29 +173,25 @@
     <li>
       <label class="ui input control">
         <input type="text" placeholder="field1">
-        <span class="focus-ring"></span>
-        <label class="label">Label is above the Input Field 'field1'</label>
+        <div class="label">Label is above the Input Field 'field1'</div>
       </label>
     </li>
 
     <li>
       <label class="ui input control --is-start-aligned">
         <input type="text" placeholder="field2">
-        <span class="focus-ring"></span>
-        <label class="label">Label is below The Input Field 'field2'</label>
+        <div class="label">Label is below The Input Field 'field2'</div>
       </label>
     </li>
 
     <li>
       <label class="ui input control --is-horizontal">
         <input type="text" placeholder="field3">
-        <span class="focus-ring"></span>
-        <label class="label">Inline Label for 'field3'</label>
+        <div class="label">Inline Label for 'field3'</div>
       </label>
       <label class="ui input control --has-float-label">
         <input type="text" placeholder="field4">
-        <span class="focus-ring"></span>
-        <label class="label">Label is floating inside Input Field 'field4'</label>
+        <div class="label">Label is floating inside Input Field 'field4'</div>
       </label>
     </li>
 
@@ -210,28 +203,25 @@
 <fieldset>
   <legend>Control Variations</legend>
   <div style="line-height: 1.5;">
-    <div class="ui input control">
-      <label class="label" for="domain-input">Domain</label>
+    <label class="ui input control">
+      <div class="label" for="domain-input">Domain</div>
 
-      <label for="domain-input">http:// </label>
+      <span class="prepend">http://</span>
 
       <input id="domain-input" value="google">
 
-      <div class="ui select control">
+
+      <div class="ui select control append">
         <select title="Top Level Domain">
           <option>.de</option>
           <option>.com</option>
           <option>.net</option>
         </select>
       </div>
-
-      <span class="focus-ring"></span>
-
-    </div>
+    </label>
 
     <div class="ui input control">
       <input title="input" type="text" placeholder="Hallo">
-      <span class="focus-ring"></span>
     </div>
 
     <div class="ui input control">
@@ -240,7 +230,6 @@
       </div>
 
       <input placeholder="Bla">
-      <span class="focus-ring"></span>
     </div>
 
     <label class="ui radio control">

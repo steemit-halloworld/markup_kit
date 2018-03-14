@@ -191,7 +191,7 @@
     function update_element (parent, new_node, old_node, index, dirty_nodes, ignore_fn)
     {
 
-      //console.log("update element " + new_node + " vs. " + old_node);
+      console.log("update element " + new_node + " vs. " + old_node);
 
       if (!old_node)
       {
@@ -204,7 +204,7 @@
       }
       else if (!new_node)
       {
-        kit.log("remove node: " + old_node.innerHTML);
+        //kit.log("remove node: " + old_node.innerHTML);
 
         dirty_nodes.push(parent.children[index]);
         return true;
@@ -230,18 +230,31 @@
         for (var i = 0, j=0; i < new_child_count || j < old_child_count; i++, j++)
         {
           var n_new_node = new_node.children[i];
+
           var n_old_node;
+
           j--;
           do
           {
             j++;
             n_old_node = old_node.children[j];
-          } while (ignore_fn && ignore_fn(n_old_node));
+
+            } while(ignore_fn && ignore_fn(n_old_node));
+
+          //var n_old_node;
+
+
+          /*j--;
+          do
+          {
+            j++;
+            n_old_node = old_node.children[j];
+          } while (ignore_fn && ignore_fn(n_old_node));*/
 
           /*console.log("NEW EL -  OLD EL");
           console.log(n_new_node);
           console.log(n_old_node);*/
-          const x = update_element(parent.children[index], n_new_node, n_old_node, j, dirty_nodes);
+          const x = update_element(parent.children[index], n_new_node, n_old_node, j, dirty_nodes, ignore_fn);
           result = result || x;
           //console.log("RESULT");
           //console.log(result);

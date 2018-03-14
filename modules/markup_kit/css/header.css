@@ -1,0 +1,9 @@
+.ui.header
+{
+  border: none;
+
+  &.--has-divider
+  {
+    border-bottom: var(--border-width) solid var(--border-color)
+  }
+}

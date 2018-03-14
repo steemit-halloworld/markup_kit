@@ -1,6 +1,3 @@
-@import 'core.settings';
-@import 'normalisation.form';
-
 /*doc
 
 # Normalisation
@@ -12,22 +9,22 @@ The normalisation module applies some basic resets to ensure elements are render
 */
 
 /*--------------------------------------------------------------------------------------------------------------------*/
-/* Elements of HTML                                                                                                              */
+/* Elements of HTML                                                                                                   */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /*region*/
 
 *, ::before, ::after
 {
   /* remove repeating backgrounds */
-  background-repeat: no-repeat;
+  background-repeat : no-repeat;
   /* add box sizing inheritance */
-  box-sizing: inherit;
+  box-sizing        : inherit;
 }
 
 ::before, ::after
 {
-  text-decoration: inherit;
-  vertical-align: inherit;
+  text-decoration : inherit;
+  vertical-align  : inherit;
 }
 
 /*doc
@@ -42,16 +39,13 @@ inherit the specified `box sizing`
 
 :root
 {
-  box-sizing: border-box;
-  cursor: default;
+  box-sizing               : border-box;
+  cursor                   : default;
   /* prevent font size adjustments after orientation changes in IE and iOS */
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust     : 100%;
+  -webkit-text-size-adjust : 100%;
+  line-height              : 1.15;
 }
+
 
 /*endregion*/
-
-body
-{
-  background-color: var(--color-bg-body);
-}

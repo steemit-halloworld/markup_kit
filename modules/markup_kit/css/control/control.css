@@ -1,0 +1,236 @@
+:root
+{
+  --control-input-border-color-active  : var(--color-focus);
+  --control-input-border-width         : var(--border-width);
+  --control-input-border-color         : var(--border-color);
+  --control-input-outline-color-active : var(--color-focus);
+  --control-focus-ring-border-radius   : inherit;
+  --control-input-outline-width-active : 1px;
+  --control-label-color                : var(--body-foreground-color);
+  --control-input-box-shadow-active    : 0px 0px 0px var(--control-input-outline-width-active) var(--control-input-outline-color-active);
+}
+
+.ui.control
+{
+  display         : inline-flex;
+  flex-wrap       : wrap;
+  vertical-align  : text-bottom;
+  align-items     : center;
+  margin          : calc(1em + 8px) 0 0;
+  position        : relative;
+  font-size       : 1em;
+  font-family     : inherit;
+  line-height     : 1.5em;
+  background      : #e8e8e8;
+  padding         : 0;
+  justify-content : space-between;
+  min-height      : calc(1.5em + .2rem + .2rem);
+  outline         : none;
+  appearance      : none;
+
+  &.--is-expanded
+  {
+    display: flex;
+  }
+
+  &.--has-no-label
+  {
+    margin-top : auto;
+
+    & > .label
+    {
+      display : none;
+    }
+  }
+
+  & > *:not(.control)
+  {
+    padding-left  : .35em;
+    padding-right : .35em;
+  }
+
+  & > *
+  {
+    text-align     : left;
+    vertical-align : inherit;
+    font-family    : inherit;
+    font-size      : inherit;
+    line-height    : inherit;
+    padding-top    : .2rem;
+    padding-bottom : .2rem;
+  }
+
+  & > *:not(:first-child):not(:last-child)
+  {
+    border-radius : 0;
+  }
+
+  & > input, & > textarea, & > select
+  {appearance : none;}
+
+  & > input:not([type='checkbox']):not([type='radio']),
+  & > textarea, & > select
+  {
+    border       : inherit;
+    outline      : none;
+    background   : transparent;
+    flex         : 1 1 auto;
+    align-self   : stretch;
+    margin       : calc(var(--control-input-border-width) * -1); /* negative repositioning border */
+    border-color : transparent;
+  }
+
+  /* control contains another control */
+  &:not(.group) > .ui.control
+  {
+    margin        : 0;
+    padding       : 0;
+    border        : none;
+    border-radius : 0;
+    align-self    : stretch;
+    flex          : 1 1 0;
+
+    & > *
+    {
+      background    : transparent;
+      border        : none;
+      border-radius : 0;
+    }
+  }
+
+  & > .label, & > input
+  {
+    flex : 1 1 0;
+  }
+
+  &.radio,
+  &.checkbox
+  {
+    padding-left : 1.5rem;
+
+    & > .control-indicator
+    {
+      position            : absolute;
+      top                 : .25rem;
+      left                : 0;
+      display             : block;
+      width               : 1rem;
+      height              : 1rem;
+      line-height         : 1rem;
+      font-size           : 65%;
+      color               : #eee;
+      text-align          : center;
+      background-color    : #eee;
+      background-size     : 50% 50%;
+      background-position : center center;
+      background-repeat   : no-repeat;
+      user-select         : none;
+    }
+
+    & > input:focus ~ .control-indicator
+    {
+      box-shadow : 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
+    }
+
+    & > input:checked ~ .control-indicator
+    {
+      color            : #fff;
+      background-color : var(--color-focus);
+    }
+
+    & > input:active ~ .control-indicator
+    {
+      color            : #fff;
+      background-color : #84c6ff;
+    }
+  }
+
+  & > .label
+  {
+    text-overflow : ellipsis;
+    white-space   : nowrap;
+    overflow      : hidden;
+    align-self    : flex-start;
+    font-size     : 1em;
+    line-height   : 1.2;
+    height        : 1.2em;
+    display       : block;
+    order         : -1000;
+    flex          : 1 1 100%;
+    margin-top    : calc(-1.2em - 8px);
+    margin-bottom : 8px;
+    padding-left  : .2rem;
+    color         : var(--control-label-color);
+  }
+
+  &.--is-horizontal
+  {
+    margin-left : 10em;
+    margin-top  : auto;
+
+    & > .label
+    {
+      margin-top    : auto;
+      margin-bottom : auto;
+      flex          : 1 1 auto;
+      max-width     : 10em;
+      margin-left   : -10em;
+    }
+  }
+
+  &.--is-start-aligned
+  {
+    margin-top    : auto;
+    margin-bottom : calc(1.2em + 16px);
+
+    & > .label
+    {
+      /*top           : auto;*/
+      margin-top    : 8px;
+      margin-bottom : calc(-1.2em - 8px);
+      order         : 1000;
+    }
+  }
+
+  &.input, &.select
+  {
+    &:focus-within
+    {
+      border-color  : var(--control-input-border-color-active);
+      border-radius : var(--control-focus-ring-border-radius);
+      box-shadow    : var(--control-input-box-shadow-active);
+      transition: all .2s;
+    }
+
+    &:focus-within > :focus
+    {
+      box-shadow   : none;
+      border       : inherit;
+      border-color : transparent;
+    }
+
+    &:focus-within .ui.control:focus-within,
+    &:focus-within .ui.control:focus-within > :focus
+    {
+      border     : none;
+      box-shadow : none;
+    }
+  }
+
+  &.input
+  {
+    & > select
+    {
+      background : transparent;
+    }
+  }
+
+}
+
+@import 'control.input';
+@import 'control.select';
+@import 'control.radio';
+@import 'control.checkbox';
+@import 'control.group';
+
+
