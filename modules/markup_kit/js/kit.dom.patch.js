@@ -110,27 +110,43 @@
       return false;
     }
 
+    function to_sorted_key_array (named_node_map)
+    {
+      var res = [];
+      for(var i=0; i < named_node_map.length; ++i)
+      {
+        res.push(named_node_map[i].nodeName);
+      }
+
+      res.sort();
+
+      return res;
+    }
+
     function update_attributes (target, new_attributes, old_attributes)
     {
+      var new_keys = to_sorted_key_array(new_attributes);
+      var old_keys = to_sorted_key_array(old_attributes);
+
       var result = false;
-      for (var i = 0; i < new_attributes.length || i < old_attributes.length; i++)
+      for (var i = 0; i < new_keys.length || i < old_keys.length; i++)
       {
-        var old_attr = old_attributes[i];
-        var new_attr = new_attributes[i];
-        var attr = new_attr || old_attr;
-        var name = attr.nodeName;
+        var name = new_keys[i] || old_keys[i];
+        var old_attr = old_attributes.getNamedItem(name);
+        var new_attr = new_attributes.getNamedItem(name);
+
         var old_val = old_attr ? old_attr.nodeValue : undefined;
         var new_val = new_attr ? new_attr.nodeValue : undefined;
 
         var x = update_attribute(target, name, new_val, old_val);
-        //console.log("ATTRS old");
-        //console.log(old_attr === undefined? "": old_attr.nodeName);
-        //console.log(old_attr === undefined? "": old_attr.nodeValue);
-        //console.log(" new ");
-        //console.log(new_attr === undefined? "": new_attr.nodeName);
-        //console.log(new_attr === undefined? "": new_attr.nodeValue);
-        //console.log("RESULT");
-        //console.log(x);
+        /*console.log("ATTRS old");
+        console.log(old_attr === undefined? "": old_attr.nodeName);
+        console.log(old_attr === undefined? "": old_attr.nodeValue);
+        console.log(" new ");
+        console.log(new_attr === undefined? "": new_attr.nodeName);
+        console.log(new_attr === undefined? "": new_attr.nodeValue);
+        console.log("RESULT");
+        console.log(x);*/
         result = result || x;
       }
 
