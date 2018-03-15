@@ -130,6 +130,7 @@
 
       if(kit.is_defined(target.disabled)) target.disabled = new_node.disabled;
       if(kit.is_defined(target.checked)) target.checked = new_node.checked;
+      if(kit.is_defined(target.selected)) target.checked = new_node.selected;
 
 
       var new_keys = to_sorted_key_array(new_attributes);
