@@ -123,8 +123,15 @@
       return res;
     }
 
-    function update_attributes (target, new_attributes, old_attributes)
+    function update_attributes (target, new_node, old_node)
     {
+      var new_attributes = new_node.attributes;
+      var old_attributes = old_node.attributes;
+
+      if(kit.is_defined(target.disabled)) target.disabled = new_node.disabled;
+      if(kit.is_defined(target.checked)) target.checked = new_node.checked;
+
+
       var new_keys = to_sorted_key_array(new_attributes);
       var old_keys = to_sorted_key_array(old_attributes);
 
@@ -238,7 +245,7 @@
       else if (new_node)
       {
 
-        var result = update_attributes(parent.children[index], new_node.attributes, old_node.attributes);
+        var result = update_attributes(parent.children[index], new_node, old_node);
 
         var new_child_count = new_node.children.length;
         var old_child_count = old_node.children.length;
