@@ -3,6 +3,13 @@
   display    : inline-block;
   background : transparent;
 
+  & > input
+  {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+
   & .control-indicator
   {
     border-radius : .25rem;
