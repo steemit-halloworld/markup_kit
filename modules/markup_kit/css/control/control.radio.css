@@ -5,6 +5,13 @@
   margin-top: auto;
   vertical-align: baseline;
 
+  & > input
+  {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+
   & > .control-indicator
   {
     border-radius: 50%;
