@@ -245,6 +245,7 @@
       else if (new_node)
       {
 
+
         var result = update_attributes(parent.children[index], new_node, old_node);
 
         var new_child_count = new_node.children.length;
@@ -262,7 +263,7 @@
             j++;
             n_old_node = old_node.children[j];
 
-            } while(ignore_fn && ignore_fn(n_old_node));
+          } while(ignore_fn && ignore_fn(n_old_node));
 
           //var n_old_node;
 
@@ -277,6 +278,9 @@
           /*console.log("NEW EL -  OLD EL");
           console.log(n_new_node);
           console.log(n_old_node);*/
+
+          if(n_new_node === undefined && n_old_node === undefined) continue;
+
           const x = update_element(parent.children[index], n_new_node, n_old_node, j, dirty_nodes, ignore_fn);
           result = result || x;
           //console.log("RESULT");
