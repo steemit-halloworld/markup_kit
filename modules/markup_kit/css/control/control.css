@@ -11,8 +11,13 @@
 }
 
 .ui.control
+{ display : inline-flex;}
+
+div.ui.control
+{ display : flex; }
+
+.ui.control
 {
-  display         : inline-flex;
   flex-wrap       : wrap;
   vertical-align  : text-bottom;
   align-items     : center;
@@ -30,7 +35,7 @@
 
   &.--is-expanded
   {
-    display: flex;
+    display : flex;
   }
 
   &.--has-no-label
@@ -199,7 +204,7 @@
       border-color  : var(--control-input-border-color-active);
       border-radius : var(--control-focus-ring-border-radius);
       box-shadow    : var(--control-input-box-shadow-active);
-      transition: all .2s;
+      transition    : all .2s;
     }
 
     &:focus-within > :focus
