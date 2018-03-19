@@ -6,7 +6,7 @@
   --control-input-outline-color-active : var(--color-focus);
   --control-focus-ring-border-radius   : inherit;
   --control-input-outline-width-active : 1px;
-  --control-label-color                : var(--body-foreground-color);
+  --control-label-color                : dimgrey;
   --control-input-box-shadow-active    : 0px 0px 0px var(--control-input-outline-width-active) var(--control-input-outline-color-active);
 }
 

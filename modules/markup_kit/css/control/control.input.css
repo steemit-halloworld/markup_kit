@@ -21,7 +21,6 @@
 
   & > input[type='number']
   {
-    text-align : right;
   }
 
   &.--has-float-label
@@ -39,16 +38,16 @@
     {
       position       : absolute;
       margin         : 0; /* reset default margin */
-      font-size      : 75%;
+      font-size      : 75.000%;
       opacity        : 1;
       cursor         : text;
-      top            : -.6em;
+      top            : calc(-1 * (.5em + .1em + var(--control-input-border-width)));
       left           : 0;
       max-width      : 100%;
-      padding        : 0 calc(.5em + var(--control-input-border-width) + var(--control-input-outline-width-active));
+      padding        : 0 calc(.1em + var(--control-input-border-width) + var(--control-input-outline-width-active));
       z-index        : calc(var(--zindex-glass-layer) + 1);
-      line-height    : 1;
-      height         : auto;
+      line-height    : 1.2em;
+      height         : 1.2em;
       pointer-events : none;
 
       &:after
@@ -62,7 +61,7 @@
         right      : 0;
         top        : 50%;
         z-index    : -1;
-        margin     : 0 .5em;
+        margin     : 0 .25em;
       }
     }
 
@@ -75,7 +74,7 @@
     &:focus-within > .label:after
     {
       box-shadow : 0 0 0 var(--control-input-outline-width-active) var(--control-input-background-color);
-      margin     : 0 calc(.5em + var(--control-input-border-width) + var(--control-input-outline-width-active));
+      margin     : 0 calc(.25em + var(--control-input-border-width) + var(--control-input-outline-width-active));
     }
 
     & > input:placeholder-shown:not(:focus) ~ .label
@@ -112,7 +111,7 @@
   & > .append,
   & > .ui.control.append
   {
-    white-space               : nowrap;
+    white-space                : nowrap;
     border-left                : var(--control-input-border-width) solid var(--control-input-border-color) !important;
     border-top-right-radius    : calc(var(--control-input-border-radius) - var(--control-input-border-width));
     border-bottom-right-radius : calc(var(--control-input-border-radius) - var(--control-input-border-width));
