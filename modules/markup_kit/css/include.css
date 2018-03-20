@@ -26,21 +26,15 @@ The framework won't do anything automatically except the Normalisation Module. T
 anything by simply adding
 
 */
-
 @import "global/reset";
 @import "./global/site";
-
 @import 'typography';
 @import 'header';
 @import 'theming';
-@import "./control/control"
-;
-
+@import "./control/control";
+@import "./utils/grid";
 @import 'table';
-
 @import 'nav';
-
 @import 'section';
-
 @import 'themes/osx';
 
