@@ -1,0 +1,29 @@
+:root
+{
+  --grid-cell-gutter : 20px;
+}
+
+.ui.grid
+{
+  display         : flex !important;
+  flex-wrap       : wrap;
+  flex-direction  : row;
+  justify-content : space-between;
+
+  & > *
+  {
+    display    : block;
+    box-sizing : border-box;
+    flex       : 1 0 0;
+    min-width  : 0;
+  }
+
+  /* default cell width based on child count */
+  /* @formatter:off */
+  & > *:nth-last-child(2):first-child { &, & ~ * {flex-basis: auto; max-width: calc((100% / 2) - var(--grid-cell-gutter) / 2);}}
+  & > *:nth-last-child(3):first-child { &, & ~ * {flex-basis: auto; max-width: calc((100% / 3) - var(--grid-cell-gutter) / 2);}}
+  & > *:nth-last-child(4):first-child { &, & ~ * {flex-basis: auto; max-width: calc((100% / 4) - var(--grid-cell-gutter) / 2);}}
+  & > *:nth-last-child(5):first-child { &, & ~ * {flex-basis: auto; max-width: calc((100% / 5) - var(--grid-cell-gutter) / 2);}}
+  & > *:nth-last-child(6):first-child { &, & ~ * {flex-basis: auto; max-width: calc((100% / 6) - var(--grid-cell-gutter) / 2);}}
+  /* @formatter:on */
+}
