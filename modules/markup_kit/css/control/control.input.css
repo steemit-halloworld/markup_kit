@@ -19,6 +19,11 @@
     border-radius : calc(var(--control-input-border-radius) - var(--border-width));
   }
 
+  & > input.--is-right
+  {
+    text-align : right;
+  }
+
   & > input[type='number']
   {
   }
