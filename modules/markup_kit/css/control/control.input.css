@@ -17,6 +17,7 @@
   & > *
   {
     border-radius : calc(var(--control-input-border-radius) - var(--border-width));
+    color         : inherit;
   }
 
   & > input.--is-right
@@ -111,14 +112,16 @@
     border-right              : var(--control-input-border-width) solid var(--control-input-border-color);
     border-top-left-radius    : calc(var(--control-input-border-radius) - var(--control-input-border-width));
     border-bottom-left-radius : calc(var(--control-input-border-radius) - var(--control-input-border-width));
+    border-color              : inherit;
   }
 
   & > .append,
   & > .ui.control.append
   {
     white-space                : nowrap;
-    border-left                : var(--control-input-border-width) solid var(--control-input-border-color) !important;
+    border-left                : var(--control-input-border-width) solid var(--control-input-border-color);
     border-top-right-radius    : calc(var(--control-input-border-radius) - var(--control-input-border-width));
     border-bottom-right-radius : calc(var(--control-input-border-radius) - var(--control-input-border-width));
+    border-color               : inherit;
   }
 }
