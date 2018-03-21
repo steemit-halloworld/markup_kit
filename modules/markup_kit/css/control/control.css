@@ -19,7 +19,7 @@ div.ui.control
 .ui.control
 {
   flex-wrap       : wrap;
-  vertical-align  : text-bottom;
+  vertical-align  : baseline;
   align-items     : center;
   margin          : calc(1em + 8px) 0 0;
   position        : relative;
@@ -178,10 +178,10 @@ div.ui.control
     {
       margin-top    : auto;
       margin-bottom : auto;
-      flex          : 1 1 auto;
+      flex          : 1 0 0;
       max-width     : 10em;
+      min-width     : 10em;
       margin-left   : -10em;
-      position      : absolute;
       top           : 0;
       bottom        : 0;
     }
@@ -233,7 +233,6 @@ div.ui.control
       background : transparent;
     }
   }
-
 }
 
 @import 'control.input';
@@ -241,5 +240,12 @@ div.ui.control
 @import 'control.radio';
 @import 'control.checkbox';
 @import 'control.group';
+
+.ui.control.--has-error
+{
+  border-color : rgb(185, 74, 77);
+  color        : rgb(185, 74, 77);
+}
+
 
 

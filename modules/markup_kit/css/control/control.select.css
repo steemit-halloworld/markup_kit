@@ -20,6 +20,7 @@
     padding       : .2rem 2.25rem .2rem .35rem;
     cursor        : pointer;
     flex          : 1 1 1em;
+    color         : inherit;
 
     &:focus:-moz-focusring
     {
