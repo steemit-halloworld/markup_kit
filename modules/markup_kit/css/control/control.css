@@ -1,3 +1,16 @@
+/*doc
+
+# Control
+
+Controls are visual elements that convey a specific action or intention in response to user interactions.
+The `ui control` is a container for:
+
+* `.label` - an optional short word or phrase that succinctly describes the control
+* `input`, `select`, `textarea` or `button` - the associated HTML form element
+* `.hint` - an optional brief phrase that describe the control in more detail
+
+*/
+
 :root
 {
   --control-input-border-color-active  : var(--color-focus);
