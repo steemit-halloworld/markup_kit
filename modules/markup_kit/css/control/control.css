@@ -54,7 +54,7 @@ div.ui.control
     opacity: 0.66;
   }
 
-  &..--is-disabled > input,
+  &.--is-disabled > input,
   &:not(.--is-disabled) > input[disabled]
   {
     pointer-events: none;
