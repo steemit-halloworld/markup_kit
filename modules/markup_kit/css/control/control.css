@@ -2,7 +2,10 @@
 
 # Control
 
-Controls are visual elements that convey a specific action or intention in response to user interactions.
+Controls are visual elements that convey a specific action or intention in response to user interactions. They are
+essential for collecting and handling user input and should follow styling and interaction guidelines for each
+platform, so that they are intuitive for users to interact with.
+
 The `ui control` is a container for:
 
 * `.label` - an optional short word or phrase that succinctly describes the control
@@ -45,6 +48,17 @@ div.ui.control
   min-height      : calc(1.5em + .2rem + .2rem);
   outline         : none;
   appearance      : none;
+
+  &.--is-disabled
+  {
+    opacity: 0.66;
+  }
+
+  &..--is-disabled > input,
+  &:not(.--is-disabled) > input[disabled]
+  {
+    pointer-events: none;
+  }
 
   &.--is-expanded
   {
