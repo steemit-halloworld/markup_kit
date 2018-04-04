@@ -57,7 +57,9 @@ div.ui.control
 
   &.--is-disabled > input,
   &.--is-disabled,
-  &:not(.--is-disabled) > input[disabled]
+  &:not(.--is-disabled) > input[disabled],
+  &:not(.--is-disabled) > select[disabled]
+
   {
     pointer-events: none;
   }
