@@ -14,6 +14,12 @@ $endif$
 $for(css)$
 <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$/>
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<style type="text/css">
+  body
+  {
+    background: #f0f0f2;
+  }
+</style>
 $endfor$
 $if(math)$
 $math$
@@ -22,23 +28,25 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
-<div>
-  <nav style="position: -webkit-sticky; top: 0;">
-    $if(toc)$
-    $toc$
-    $endif$
-  </nav>
+<div class="ui layout">
+  <header class="header col">
+    <nav style="position: -webkit-sticky; top: 0;">
+      $if(toc)$
+      $toc$
+      $endif$
+    </nav>
+  </header>
 
   <main>
-
-
-    $for(include-before)$
-    $include-before$
-    $endfor$
-    $body$
-    $for(include-after)$
-    $include-after$
-    $endfor$
+    <section class="ui section measure wide">
+      $for(include-before)$
+      $include-before$
+      $endfor$
+      $body$
+      $for(include-after)$
+      $include-after$
+      $endfor$
+    </section>
   </main>
 </div>
 

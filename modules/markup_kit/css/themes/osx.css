@@ -1,8 +1,11 @@
 :root
 {
+  --base-font-size                     : 14;
   --control-input-border-color-active  : hsl(211, 58%, 70%);
   --control-input-outline-color-active : hsl(210, 70%, 74%);
-  --control-input-outline-width-active: 2px;
+  --control-input-border-color         : #bfbfbf;
+  --control-select-border-color        : var(--control-input-border-color);
+  --control-input-outline-width-active : 2px;
   --control-input-border-radius        : 0;
   --control-focus-ring-border-radius   : 3px;
 }

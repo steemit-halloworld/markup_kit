@@ -2,12 +2,13 @@
 {
   --control-select-border-radius    : var(--border-radius);
   --control-select-background-color : #fff;
+  ----control-select-border-color   : var(--border-color);
 }
 
 .ui.control.select
 {
   border-radius : var(--control-select-border-radius);
-  border        : var(--border-width) var(--border-color) var(--border-style);
+  border        : var(--border-width) var(--control-select-border-color) var(--border-style);
   background    : var(--control-select-background-color);
 
   & > select

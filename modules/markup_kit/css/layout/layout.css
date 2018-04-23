@@ -1,0 +1,16 @@
+.ui.layout
+{
+  display         : flex;
+  width           : 100%;
+  flex-wrap       : wrap;
+  flex-direction  : row;
+  justify-content : space-between;
+
+  & > .header
+  {
+    display    : block;
+    box-sizing : border-box;
+    flex       : 1 0 0;
+    min-width  : 0;
+  }
+}

@@ -32,6 +32,7 @@ anything by simply adding
 @import 'header';
 @import 'theming';
 @import "./control/control";
+@import "./layout/layout";
 @import "./utils/grid";
 @import 'table';
 @import 'nav';

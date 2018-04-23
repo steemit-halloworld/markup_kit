@@ -16,6 +16,8 @@ The `ui control` is a container for:
 
 :root
 {
+  --control-margin-top                 : 5px;
+  --control-margin-bottom              : 5px;
   --control-input-border-color-active  : var(--color-focus);
   --control-input-border-width         : var(--border-width);
   --control-input-border-color         : var(--border-color);
@@ -36,32 +38,38 @@ div.ui.control
 {
   flex-wrap       : wrap;
   vertical-align  : baseline;
-  align-items     : center;
-  margin          : calc(1em + 8px) 0 0;
+  align-items     : baseline;
   position        : relative;
   font-size       : 1em;
   font-family     : inherit;
-  line-height     : 1.5em;
+  line-height     : 1.5;
   background      : #e8e8e8;
   padding         : 0;
   justify-content : space-between;
-  min-height      : calc(1.5em + .2rem + .2rem);
   outline         : none;
   appearance      : none;
 
-  &.--is-disabled
+  &:not(.group)
   {
-    opacity: 0.66;
+    margin : calc(1em + 4px + var(--control-margin-top)) 0 var(--control-margin-bottom);
   }
 
+  & + .ui.control:not(.group)
+  {
+    margin : calc(1em + 4px + 2 * var(--control-margin-top)) 0 var(--control-margin-bottom);
+  }
+
+  &.--is-disabled
+  {
+    opacity : 0.66;
+  }
 
   &.--is-disabled > input,
   &.--is-disabled,
   &:not(.--is-disabled) > input[disabled],
   &:not(.--is-disabled) > select[disabled]
-
   {
-    pointer-events: none;
+    pointer-events : none;
   }
 
   &.--is-expanded
@@ -71,12 +79,17 @@ div.ui.control
 
   &.--has-no-label
   {
-    margin-top : auto;
+    margin-top : var(--control-margin-top);
 
     & > .label
     {
       display : none;
     }
+  }
+
+  & + .ui.control.--has-no-label
+  {
+    margin-top : var(--control-margin-top);
   }
 
   & > *:not(.control)
@@ -92,6 +105,10 @@ div.ui.control
     font-family    : inherit;
     font-size      : inherit;
     line-height    : inherit;
+  }
+
+  &:not(.group) > *:not(.label)
+  {
     padding-top    : .2rem;
     padding-bottom : .2rem;
   }
@@ -105,6 +122,11 @@ div.ui.control
   {appearance : none;}
 
   & > input:not([type='checkbox']):not([type='radio']),
+  & textarea
+  {
+  }
+
+  & > input:not([type='checkbox']):not([type='radio']),
   & > textarea, & > select
   {
     border       : inherit;
@@ -112,18 +134,20 @@ div.ui.control
     background   : transparent;
     flex         : 1 1 auto;
     align-self   : stretch;
-    margin       : calc(var(--control-input-border-width) * -1); /* negative repositioning border */
     border-color : transparent;
+    margin       : calc((var(--control-input-border-width) + var(--control-input-inner-box-shadow-vlen) + var(--control-input-inner-box-spread-radius)) * -1); /* negative repositioning border and box-shadow */
+
   }
 
   /* control contains another control */
   &:not(.group) > .ui.control
   {
-    margin        : 0;
+    margin        : calc((var(--control-input-border-width) + var(--control-input-inner-box-shadow-vlen) + var(--control-input-inner-box-spread-radius)) * -1); /* negative repositioning border and box-shadow */
     border        : none;
     border-radius : 0;
     align-self    : stretch;
     flex          : 1 1 0;
+    background    : transparent;
     /*& > *
     {
       background    : transparent;
@@ -194,10 +218,15 @@ div.ui.control
     display       : block;
     order         : -1000;
     flex          : 1 1 100%;
-    margin-top    : calc(-1.2em - 8px);
-    margin-bottom : 8px;
+    margin-top    : calc(-1.2em - 4px);
+    margin-bottom : 4px;
     padding-left  : .2rem;
     color         : var(--control-label-color);
+  }
+
+  &:not(.--is-horizontal) > .label
+  {
+    position : absolute;
   }
 
   &.--is-horizontal
@@ -239,7 +268,7 @@ div.ui.control
       border-color  : var(--control-input-border-color-active);
       border-radius : var(--control-focus-ring-border-radius);
       box-shadow    : var(--control-input-box-shadow-active);
-      transition    : all .2s;
+      transition    : opacity .2s;
     }
 
     &:focus-within > :focus
