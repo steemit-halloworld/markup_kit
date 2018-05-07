@@ -39,15 +39,21 @@
         {
           new_val = watchers[i].watch_fn(self);
           old_val = watchers[i].last;
-          var eq = new_val === old_val;
+          var eq = (new_val === old_val);
 
           if (eq) dirty = false;
 
           if (!eq)
           {
-            old_val = old_val === init_val ? new_val : old_val;
+            var is_initial = old_val == init_val;
+
+            old_val = is_initial ? new_val : old_val;
             watchers[i].last = new_val;
-            watchers[i].listener_fn(new_val, old_val, self);
+            if(!is_initial)
+            {
+              watchers[i].listener_fn(new_val, old_val, self);
+            }
+
             dirty = true;
           }
         }
