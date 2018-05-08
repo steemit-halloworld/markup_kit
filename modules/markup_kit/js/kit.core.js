@@ -181,7 +181,7 @@ const kit = (function ()
 
   kit.is_defined = function (val)
   {
-    return typeof val !== 'undefined';
+    return val != null && typeof val !== 'undefined';
   };
 
   kit.log = function (string)
@@ -196,7 +196,7 @@ const kit = (function ()
 
   kit.register("unit", function (html_el) {
     return new kit.Unit_input(html_el);
-  })
+  });
 
   return (kit.global.kit = kit.global.kit || kit);
 
@@ -271,7 +271,7 @@ const kit = (function ()
   root.is_defined = function (val)
   {
     return val != null;
-  }
+  };
 
 
   root.request_animation_frame = root.requestAnimationFrame ||
