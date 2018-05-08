@@ -27,6 +27,11 @@
       watchers.push(watcher);
     };
 
+    this.reset = function ()
+    {
+      watchers = [];
+    };
+
     this.digest = function ()
     {
       var new_val, old_val, dirty;
