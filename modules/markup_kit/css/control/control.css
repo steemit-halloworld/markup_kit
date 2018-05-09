@@ -278,8 +278,8 @@ div.ui.control
       border-color : transparent;
     }
 
-    &:focus-within .ui.control:focus-within,
-    &:focus-within .ui.control:focus-within > :focus
+    &:focus-within .ui.control,
+    &:focus-within .ui.control > :focus
     {
       border     : none;
       box-shadow : none;

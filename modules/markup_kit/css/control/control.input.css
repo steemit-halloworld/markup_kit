@@ -7,6 +7,11 @@
   --control-input-inner-box-shadow-blur-radius : 0;
   --control-input-inner-box-spread-radius      : 0px;
   --control-input-inner-box-shadow-color       : #f7f7f7;
+  --control-input-outer-box-shadow-hlen        : 0;
+  --control-input-outer-box-shadow-vlen        : 2px;
+  --control-input-outer-box-shadow-blur-radius : 3px;
+  --control-input-outer-box-spread-radius      : 0px;
+  --control-input-outer-box-shadow-color       : #f7f7f7;
 }
 
 .ui.input.control
@@ -18,7 +23,7 @@
 {
   border-radius : var(--control-input-border-radius);
   border        : var(--border-width) var(--border-style) var(--control-input-border-color);
-  box-shadow    : inset var(--control-input-inner-box-shadow-hlen) var(--control-input-inner-box-shadow-vlen) var(--control-input-inner-box-shadow-blur-radius) var(--control-input-inner-box-spread-radius) var(--control-input-inner-box-shadow-color);
+  box-shadow    : var(--control-input-outer-box-shadow-hlen) var(--control-input-outer-box-shadow-vlen) var(--control-input-outer-box-shadow-blur-radius) var(--control-input-outer-box-spread-radius) var(--control-input-outer-box-shadow-color), inset var(--control-input-inner-box-shadow-hlen) var(--control-input-inner-box-shadow-vlen) var(--control-input-inner-box-shadow-blur-radius) var(--control-input-inner-box-spread-radius) var(--control-input-inner-box-shadow-color);
 
   & > *:not(.label)
   {
@@ -34,12 +39,12 @@
   & > input[type='number']::placeholder,
   & > input[type='text']::placeholder
   {
-    content: "x";
+    content : "x";
   }
 
   &.--has-float-label
   {
-    margin-top: calc((1.2em / 2) + .5rem);
+    margin-top : calc((1.2em / 2) + .5rem);
 
     & > input,
     & > textarea
@@ -141,5 +146,8 @@
     border-top-right-radius    : calc(var(--control-input-border-radius) - var(--control-input-border-width));
     border-bottom-right-radius : calc(var(--control-input-border-radius) - var(--control-input-border-width));
     align-self                 : stretch;
+    appearance                 : none;
+    outline                    : none;
+    background                 : none;
   }
 }
