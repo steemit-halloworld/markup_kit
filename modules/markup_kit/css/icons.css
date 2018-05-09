@@ -1,0 +1,23 @@
+@font-face
+{
+  font-family: 'ico';
+  src:url('/markup_kit/fonts/icons.eot');
+  src:url('/markup_kit/fonts/icons.eot?#iefix') format('embedded-opentype'),
+  url('/markup_kit/fonts/icons.svg#ico') format('svg'),
+  url('/markup_kit/fonts/icons.woff') format('woff'),
+  url('/markup_kit/fonts/icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon
+{
+  font-family: ico;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.search.icon:before
+{
+  content: "\f002";
+}
