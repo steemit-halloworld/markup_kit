@@ -44,3 +44,8 @@ blockquote
   margin-bottom : var(--leading);
   line-height   : var(--leading);
 }
+
+[hidden]
+{
+  display: none !important;
+}
