@@ -1,0 +1,41 @@
+:root
+{
+  --modal-background         : rgba(10, 10, 10, .86);
+  --modal-content-background : #fff;
+}
+
+.ui.modal
+{
+  position        : fixed;
+  top             : 0;
+  left            : 0;
+  right           : 0;
+  bottom          : 0;
+  justify-content : center;
+  display         : flex;
+  align-items     : center;
+  overflow        : hidden;
+}
+
+.ui.modal:before
+{
+  position   : absolute;
+  background : var(--modal-background);
+  top        : 0;
+  left       : 0;
+  right      : 0;
+  bottom     : 0;
+  content    : ' ';
+}
+
+.ui.modal > .content
+{
+  background    : var(--modal-content-background);
+  position      : relative;
+  max-height    : calc(100vh * 0.66);
+  width         : 640px;
+  margin        : 0 auto;
+  padding       : 1rem;
+  border-radius : 5px;
+  overflow      : auto;
+}
