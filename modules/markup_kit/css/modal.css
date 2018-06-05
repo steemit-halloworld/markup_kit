@@ -6,6 +6,7 @@
 
 .ui.modal
 {
+  z-index         : var(--zindex-modal-layer);
   position        : fixed;
   top             : 0;
   left            : 0;

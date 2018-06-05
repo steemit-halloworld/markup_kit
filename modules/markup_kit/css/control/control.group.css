@@ -18,3 +18,13 @@
   /* @formatter:on */
 }
 
+.ui.control.group > label
+{
+  width: calc(40em - var(--grid-cell-gutter)) !important;
+  max-width: calc(40em - var(--grid-cell-gutter)) !important;
+}
+
+.ui.control.group > label ~ .ui.control
+{
+  width: auto;
+}

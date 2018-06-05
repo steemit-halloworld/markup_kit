@@ -3,6 +3,11 @@
   display    : inline-block;
   background : transparent;
 
+  & > .label
+  {
+    position: relative;
+  }
+
   & > input
   {
     position: absolute;

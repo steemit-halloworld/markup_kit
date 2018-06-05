@@ -1,0 +1,98 @@
+:root
+{
+  --steps-vertical-padding       : 1em;
+  --steps-horizontal-padding     : 2em;
+  --steps-background             : white;
+  --steps-transition             : none;
+  --steps-border-radius          : 5px;
+  --steps-text-color             : inherit;
+  --steps-arrow-top-offset       : 50%;
+  --steps-arrow-right-offset     : 0%;
+  --steps-arrow-width            : 1.14285714em;
+  --steps-arrow-height           : 1.14285714em;
+  --steps-border-width           : 1px;
+  --steps-arrow-border-width     : 0 var(--steps-border-width) var(--steps-border-width) 0;
+  --steps-border-color           : rgba(34, 36, 38, .15);
+  --steps-border                 : var(--steps-border-width) solid var(--steps-border-color);
+  --steps-divider-border         : var(--steps-border);
+  --steps-step-border-radius     : none;
+  --steps-arrow-background-color : white;
+}
+
+.ui.steps
+{
+  display        : inline-flex;
+  flex-direction : row;
+  align-items    : stretch;
+  border-radius  : var(--steps-border-radius);
+  border         : var(--steps-border);
+}
+
+.ui.steps:first-child
+{
+  margin-top : 0;
+}
+
+.ui.steps:last-child
+{
+  margin-bottom : 0;
+}
+
+.ui.steps .step
+{
+  position       : relative;
+  display        : flex;
+  flex           : 1 0 auto;
+  flex-wrap      : wrap;
+  flex-direction : row;
+  vertical-align : middle;
+  align-items    : center;
+  padding        : var(--steps-vertical-padding) var(--steps-horizontal-padding);
+  background     : var(--steps-background);
+  color          : var(--steps-text-color);
+  border-radius  : var(--steps-step-border-radius);
+  border         : none;
+  border-right   : var(--steps-divider-border);
+  transition     : var(--steps-transition);
+}
+
+/* arrow */
+.ui.steps .step:after
+{
+  position         : absolute;
+  z-index          : 2;
+  content          : '';
+  top              : var(--steps-arrow-top-offset);
+  right            : var(--steps-arrow-right-offset);
+  width            : var(--steps-arrow-width);
+  height           : var(--steps-arrow-height);
+  background-color : var(--steps-arrow-background-color);
+  border           : medium none;
+  border-color     : var(--steps-border-color);
+  border-width     : var(--steps-arrow-border-width);
+  border-style     : solid;
+  transition       : var(--steps-transition);
+  transform        : translateY(-50%) translateX(50%) rotate(-45deg);
+}
+
+.ui.steps .step:last-child
+{
+  border-radius : 0em var(--steps-border-radius) var(--steps-border-radius) 0;
+  border-right  : none;
+  margin-right  : 0;
+}
+
+.ui.steps .step:last-child:after
+{
+  display : none;
+}
+
+.ui.steps .link.step,
+.ui.steps a.step
+{
+  cursor : pointer;
+}
+
+
+
+

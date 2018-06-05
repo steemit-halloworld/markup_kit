@@ -49,12 +49,12 @@ div.ui.control
   outline         : none;
   appearance      : none;
 
-  &:not(.group)
+  &:not(.group):not(.checkbox)
   {
     margin : calc(1em + 4px + var(--control-margin-top)) 0 var(--control-margin-bottom);
   }
 
-  & + .ui.control:not(.group)
+  & + .ui.control:not(.group):not(.checkbox)
   {
     margin : calc(1em + 4px + 2 * var(--control-margin-top)) 0 var(--control-margin-bottom);
   }
@@ -227,6 +227,8 @@ div.ui.control
   &:not(.--is-horizontal) > .label
   {
     position : absolute;
+    left: 0;
+    right: 0;
   }
 
   &.--is-horizontal
