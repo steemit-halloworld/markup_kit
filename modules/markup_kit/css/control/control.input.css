@@ -56,13 +56,15 @@
     & > .label
     {
       position       : absolute;
-      margin         : 0; /* reset default margin */
+      /* reset default margin */
       font-size      : 75.000%;
       opacity        : 1;
       cursor         : text;
-      top            : calc(-1 * (.5em + .1em + var(--control-input-border-width)));
+      margin         : calc(-1 * (.5em + .1em + var(--control-input-border-width))) 0 0;
       left           : 0;
       max-width      : 100%;
+      flex           : 1 1 auto;
+      width          : auto;
       padding        : 0 calc(.1em + var(--control-input-border-width) + var(--control-input-outline-width-active));
       z-index        : calc(var(--zindex-glass-layer) + 1);
       line-height    : 1.2em;

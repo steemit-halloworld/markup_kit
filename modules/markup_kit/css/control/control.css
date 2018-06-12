@@ -224,12 +224,12 @@ div.ui.control
     color         : var(--control-label-color);
   }
 
-  &:not(.--is-horizontal) > .label
+  /*&:not(.--is-horizontal) > .label
   {
     position : absolute;
     left: 0;
     right: 0;
-  }
+  }*/
 
   &.--is-horizontal
   {
