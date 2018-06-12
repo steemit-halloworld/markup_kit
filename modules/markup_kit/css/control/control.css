@@ -54,10 +54,10 @@ div.ui.control
     margin : calc(1em + 4px + var(--control-margin-top)) 0 var(--control-margin-bottom);
   }
 
-  & + .ui.control:not(.group):not(.checkbox)
+  /*& + .ui.control:not(.group):not(.checkbox)
   {
     margin : calc(1em + 4px + 2 * var(--control-margin-top)) 0 var(--control-margin-bottom);
-  }
+  }*/
 
   &.--is-disabled
   {
