@@ -75,7 +75,12 @@
 
       //console.log("SET ATTRIBUTE: " + text(target) + " - " +  text(name));
 
-      if (name === 'className')
+
+      if(name === 'value' && "input" === target.localName.toLowerCase())
+      {
+        target.value = value;
+      }
+      else if (name === 'className')
       {
         target.setAttribute('class', value);
       }
