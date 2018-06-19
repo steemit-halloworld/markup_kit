@@ -52,6 +52,11 @@ div.ui.control
   &:not(.group):not(.checkbox)
   {
     margin : calc(1em + 4px + var(--control-margin-top)) 0 var(--control-margin-bottom);
+
+    &.--is-horizontal
+    {
+      margin-left : 10em;
+    }
   }
 
   /*& + .ui.control:not(.group):not(.checkbox)
