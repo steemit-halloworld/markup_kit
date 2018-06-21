@@ -42,8 +42,8 @@
 
         for (var i in watchers)
         {
-          new_val = watchers[i].watch_fn(self);
           old_val = watchers[i].last;
+          new_val = watchers[i].watch_fn(old_val, self);
           var eq = (new_val === old_val);
 
           if (eq) dirty = false;
