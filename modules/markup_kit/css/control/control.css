@@ -60,16 +60,14 @@ div.ui.control
     {
       margin-top  : auto;
       margin-left : var(--control-horizontal-label-width);
-
     }
   }
 
   &:not(.group):not(.checkbox) > .control
   {
-    margin-top : 0 !important;
-    margin-bottom: 0 !important;
+    margin-top    : 0 !important;
+    margin-bottom : 0 !important;
   }
-
 
   &.--is-disabled
   {
@@ -229,12 +227,14 @@ div.ui.control
     margin-bottom : 4px;
     padding-left  : .2rem;
     color         : var(--control-label-color);
+    position      : absolute;
   }
 
   &.--is-horizontal
   {
     & > .label
     {
+      position : relative;
       margin-top    : auto;
       margin-bottom : auto;
       flex          : 1 0 0;
