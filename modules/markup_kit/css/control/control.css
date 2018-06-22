@@ -26,6 +26,7 @@ The `ui control` is a container for:
   --control-input-outline-width-active : 1px;
   --control-label-color                : dimgrey;
   --control-input-box-shadow-active    : 0px 0px 0px var(--control-input-outline-width-active) var(--control-input-outline-color-active);
+  --control-horizontal-label-width     : 10em;
 }
 
 .ui.control
@@ -48,21 +49,27 @@ div.ui.control
   justify-content : space-between;
   outline         : none;
   appearance      : none;
+  margin-bottom   : var(--control-margin-bottom);
+  max-width       : 100%;
 
-  &:not(.group):not(.checkbox)
+  &:not(.group):not(.checkbox):not(.--has-no-label):not(.--has-hidden-label):not(.--has-float-label)
   {
     margin : calc(1em + 4px + var(--control-margin-top)) 0 var(--control-margin-bottom);
 
     &.--is-horizontal
     {
-      margin-left : 10em;
+      margin-top  : auto;
+      margin-left : var(--control-horizontal-label-width);
+
     }
   }
 
-  /*& + .ui.control:not(.group):not(.checkbox)
+  &:not(.group):not(.checkbox) > .control
   {
-    margin : calc(1em + 4px + 2 * var(--control-margin-top)) 0 var(--control-margin-bottom);
-  }*/
+    margin-top : 0 !important;
+    margin-bottom: 0 !important;
+  }
+
 
   &.--is-disabled
   {
@@ -82,19 +89,14 @@ div.ui.control
     display : flex;
   }
 
-  &.--has-no-label
+  &.--has-no-label > .label
   {
-    margin-top : var(--control-margin-top);
-
-    & > .label
-    {
-      display : none;
-    }
+    display : none;
   }
 
-  & + .ui.control.--has-no-label
+  &.--has-hidden-label > .label
   {
-    margin-top : var(--control-margin-top);
+    visibility : hidden;
   }
 
   & > *:not(.control)
@@ -229,26 +231,16 @@ div.ui.control
     color         : var(--control-label-color);
   }
 
-  /*&:not(.--is-horizontal) > .label
-  {
-    position : absolute;
-    left: 0;
-    right: 0;
-  }*/
-
   &.--is-horizontal
   {
-    margin-left : 10em;
-    margin-top  : auto;
-
     & > .label
     {
       margin-top    : auto;
       margin-bottom : auto;
       flex          : 1 0 0;
-      max-width     : 10em;
-      min-width     : 10em;
-      margin-left   : -10em;
+      max-width     : var(--control-horizontal-label-width);
+      min-width     : var(--control-horizontal-label-width);
+      margin-left   : calc(-1 * var(--control-horizontal-label-width));
       top           : 0;
       bottom        : 0;
     }
@@ -307,6 +299,7 @@ div.ui.control
 @import 'control.radio';
 @import 'control.checkbox';
 @import 'control.group';
+@import 'control.radiogroup';
 
 .ui.control.--has-error
 {

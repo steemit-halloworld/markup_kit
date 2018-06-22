@@ -1,0 +1,29 @@
+:root
+{
+}
+
+.ui.control.radiogroup
+{
+  justify-content : start;
+  background      : transparent;
+
+  & > .ui.control.radio
+  {
+    padding-top    : 0;
+    padding-bottom : 0;
+    flex           : 0 0 0;
+    align-self     : baseline;
+    margin         : 0 calc(1rem / 4) !important;
+
+    &:first-of-type
+    {
+      margin-left : 0 !important;
+    }
+
+    &:last-of-type
+    {
+      margin-right : 0 !important;
+    }
+  }
+}
+

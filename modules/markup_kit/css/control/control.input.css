@@ -2,7 +2,7 @@
 {
   --control-input-border-radius                : var(--border-radius);
   --control-input-background-color             : #fff;
-  --control-input-inner-box-shadow-hlen        : 0;
+  --control-input-inner-box-shadow-hlen        : 1;
   --control-input-inner-box-shadow-vlen        : 0;
   --control-input-inner-box-shadow-blur-radius : 0;
   --control-input-inner-box-spread-radius      : 0px;
