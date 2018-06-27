@@ -25,6 +25,16 @@
   border        : var(--border-width) var(--border-style) var(--control-input-border-color);
   box-shadow    : var(--control-input-outer-box-shadow-hlen) var(--control-input-outer-box-shadow-vlen) var(--control-input-outer-box-shadow-blur-radius) var(--control-input-outer-box-spread-radius) var(--control-input-outer-box-shadow-color), inset var(--control-input-inner-box-shadow-hlen) var(--control-input-inner-box-shadow-vlen) var(--control-input-inner-box-shadow-blur-radius) var(--control-input-inner-box-spread-radius) var(--control-input-inner-box-shadow-color);
 
+  & > input[type=number]::-webkit-inner-spin-button,
+  & > input[type=number]::-webkit-outer-spin-button,
+  & > input[type=date]::-webkit-inner-spin-button,
+  & > input[type=date]::-webkit-outer-spin-button
+  {
+    -webkit-appearance : none;
+    margin             : 0;
+    -moz-appearance    : textfield;
+  }
+
   & > *:not(.label)
   {
     border-radius : calc(var(--control-input-border-radius) - var(--border-width));
