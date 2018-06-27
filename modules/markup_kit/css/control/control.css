@@ -134,14 +134,17 @@ div.ui.control
   & > input:not([type='checkbox']):not([type='radio']),
   & > textarea, & > select
   {
-    border       : inherit;
-    outline      : none;
-    background   : transparent;
-    flex         : 1 1 auto;
-    align-self   : stretch;
-    border-color : transparent;
-    margin       : calc((var(--control-input-border-width) + var(--control-input-inner-box-shadow-vlen) + var(--control-input-inner-box-spread-radius)) * -1); /* negative repositioning border and box-shadow */
-
+    border        : inherit;
+    outline       : none;
+    background    : transparent;
+    flex          : 1 1 auto;
+    align-self    : stretch;
+    border-color  : transparent;
+    /* negative repositioning border and box-shadow */
+    margin-top    : calc((var(--control-input-border-width) + var(--control-input-inner-box-shadow-vlen) + var(--control-input-inner-box-spread-radius)) * -1);
+    margin-left   : calc((var(--control-input-border-width) + var(--control-input-inner-box-shadow-vlen) + var(--control-input-inner-box-spread-radius)) * -1);
+    margin-right  : calc((var(--control-input-border-width) + var(--control-input-inner-box-shadow-vlen) + var(--control-input-inner-box-spread-radius)));
+    margin-bottom : calc((var(--control-input-border-width) + var(--control-input-inner-box-shadow-vlen) + var(--control-input-inner-box-spread-radius)) * -1);
   }
 
   /* control contains another control */
@@ -304,7 +307,7 @@ div.ui.control
 .ui.control.--has-error
 {
   border-color : rgb(185, 74, 77);
-  color        : rgb(185, 74, 77);
+  //color        : rgb(185, 74, 77);
 }
 
 
