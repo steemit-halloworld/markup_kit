@@ -137,7 +137,7 @@
     border-right              : var(--control-input-border-width) solid var(--control-input-border-color);
     border-top-left-radius    : calc(var(--control-input-border-radius) - var(--control-input-border-width));
     border-bottom-left-radius : calc(var(--control-input-border-radius) - var(--control-input-border-width));
-    border-color              : inherit;
+    border-color              : var(--control-input-border-color);
     align-self                : stretch;
   }
 
