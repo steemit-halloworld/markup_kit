@@ -51,6 +51,11 @@ div.ui.control
   appearance      : none;
   margin-bottom   : var(--control-margin-bottom);
   max-width       : 100%;
+  
+  &.--is-invisible
+  {
+    visibility : hidden;
+  }
 
   &:not(.group):not(.checkbox):not(.--has-no-label):not(.--has-hidden-label):not(.--has-float-label)
   {
