@@ -124,7 +124,7 @@ div.ui.control
   }
 
   & > input, & > textarea, & > select
-  {appearance : none;}
+  {appearance : none; max-width : 100%;}
 
   & > input:not([type='checkbox']):not([type='radio']),
   & textarea
@@ -234,7 +234,7 @@ div.ui.control
   {
     & > .label
     {
-      position : relative;
+      position      : relative;
       margin-top    : auto;
       margin-bottom : auto;
       flex          : 1 0 0;
