@@ -1,23 +1,18 @@
-(function ()
-{
+(function () {
   "use strict";
 
   var last_patch_time = 0;
 
   const scope = new kit.global.Scope();
 
-
-
-  kit.dom.patch_html = function(html_text, ignore_fn)
-  {
+  kit.dom.patch_html = function (html_text, ignore_fn) {
     var doc = document.implementation.createHTMLDocument("example");
     doc.documentElement.innerHTML = html_text;
 
     return kit.dom.patch(document.body, doc.body.firstElementChild, document.body.firstElementChild, 0, ignore_fn);
   };
 
-  kit.dom.patch = function (parent_el, new_el, old_el, old_el_position, ignore_fn)
-  {
+  kit.dom.patch = function (parent_el, new_el, old_el, old_el_position, ignore_fn) {
     var is_patched = patch_element(parent_el, new_el, old_el, old_el_position, ignore_fn);
     kit.log("is patched " + is_patched);
     if (is_patched)
@@ -43,6 +38,13 @@
       target.removeAttribute(name);
       target[name] = false;
     }
+
+    function set_string_attribute (target, name, value)
+    {
+      target.setAttribute(name, value);
+      if (kit.is_defined(target[name])) target[name] = value;
+    }
+
 
     function set_boolean_attribute (target, name, value)
     {
@@ -72,16 +74,7 @@
     function set_attribute (target, name, value)
     {
 
-      //console.log("SET ATTRIBUTE: " + text(target) + " - " +  text(name));
-
-      if(name === 'value')
-      {
-        if ("input" === target.localName.toLowerCase() && target.type == 'text')
-        {
-          target.value = value;
-        }
-      }
-      else if (name === 'className')
+      if (name === 'className')
       {
         target.setAttribute('class', value);
       }
@@ -91,7 +84,7 @@
       }
       else
       {
-        target.setAttribute(name, value);
+        set_string_attribute(target, name, value);
       }
     }
 
@@ -99,7 +92,7 @@
     {
       if (!kit.is_defined(new_val))
       {
-        kit.log("REMOVE ATTRIBUTE: " + text(target) + " - " +  name);
+        kit.log("REMOVE ATTRIBUTE: " + text(target) + " - " + name);
 
         remove_attribute(target, name, old_val);
         return true;
@@ -107,7 +100,7 @@
       else if (!kit.is_defined(old_val) || new_val != old_val)
       {
 
-        kit.log("SET ATTRIBUTE: " + text(target) + " - " +  name);
+        //kit.log("SET ATTRIBUTE: " + text(target) + " - " +  name);
 
         set_attribute(target, name, new_val);
         return true;
@@ -119,7 +112,7 @@
     function to_sorted_key_array (named_node_map)
     {
       var res = [];
-      for(var i=0; i < named_node_map.length; ++i)
+      for (var i = 0; i < named_node_map.length; ++i)
       {
         res.push(named_node_map[i].nodeName);
       }
@@ -134,9 +127,9 @@
       var new_attributes = new_node.attributes;
       var old_attributes = old_node.attributes;
 
-      if(kit.is_defined(target.disabled)) target.disabled = new_node.disabled;
-      if(kit.is_defined(target.checked)) target.checked = new_node.checked;
-      if(kit.is_defined(target.selected)) target.selected = new_node.selected;
+      if (kit.is_defined(target.disabled)) target.disabled = new_node.disabled;
+      if (kit.is_defined(target.checked)) target.checked = new_node.checked;
+      if (kit.is_defined(target.selected)) target.selected = new_node.selected;
 
 
       var new_keys = to_sorted_key_array(new_attributes);
@@ -186,7 +179,7 @@
 
     function text (node)
     {
-      if(typeof node === 'string') return node;
+      if (typeof node === 'string') return node;
 
       var child_count = node.childNodes === undefined ? 0 : node.childNodes.length;
       var text = "";
@@ -228,7 +221,6 @@
         kit.log("append node: " + new_node.innerHTML);
 
 
-
         parent.appendChild(new_node.cloneNode(true));
         return true;
       }
@@ -258,7 +250,7 @@
         var new_child_count = new_node.children.length;
         var old_child_count = old_node.children.length;
 
-        for (var i = 0, j=0; i < new_child_count || j < old_child_count; i++, j++)
+        for (var i = 0, j = 0; i < new_child_count || j < old_child_count; i++, j++)
         {
           var n_new_node = new_node.children[i];
 
@@ -270,7 +262,7 @@
             j++;
             n_old_node = old_node.children[j];
 
-          } while(ignore_fn && ignore_fn(n_old_node));
+          } while (ignore_fn && ignore_fn(n_old_node));
 
           //var n_old_node;
 
@@ -286,7 +278,7 @@
           console.log(n_new_node);
           console.log(n_old_node);*/
 
-          if(n_new_node === undefined && n_old_node === undefined) continue;
+          if (n_new_node === undefined && n_old_node === undefined) continue;
 
           const x = update_element(parent.children[index], n_new_node, n_old_node, j, dirty_nodes, ignore_fn);
           result = result || x;
@@ -299,16 +291,15 @@
 
       return false;
     }
+
 //endregion
   };
 
-  kit.dom.patch.on_patch = function(callback_fn)
-  {
+  kit.dom.patch.on_patch = function (callback_fn) {
     scope.watch(kit.dom.patch.last_patch_time, callback_fn);
   };
 
-  kit.dom.patch.last_patch_time = function ()
-  {
+  kit.dom.patch.last_patch_time = function () {
     return last_patch_time;
   }
 
@@ -317,14 +308,12 @@
 
 /** OLD API */
 
-(function ()
-{
+(function () {
   "use strict";
 
   var root = global_scope(self);
 
-  root.patch_dom = function (parent_element, new_element, old_element, old_element_position)
-  {
+  root.patch_dom = function (parent_element, new_element, old_element, old_element_position) {
     kit.dom.patch(parent_element, new_element, old_element, old_element_position);
   };
 }());
