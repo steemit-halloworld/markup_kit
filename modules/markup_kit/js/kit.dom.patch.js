@@ -41,14 +41,21 @@
 
     function set_string_attribute (target, name, value)
     {
-      target.setAttribute(name, value);
-      if (kit.is_defined(target[name])) target[name] = value;
+      var old_val = target.getAttribute(name);
+      if(old_val != value) target.setAttribute(name, value);
+
+      old_val = target[name];
+      if(!kit.is_defined(old_val) || old_val == value) return;
+
+      console.log("set real attribute " + name + " " + value);
+
+      target[name] = value;
     }
 
 
     function set_boolean_attribute (target, name, value)
     {
-      //console.log("SET BOOLEAN ATTRIBUTE: " + text(target) + " - " +  text(name));
+      console.log("SET BOOLEAN ATTRIBUTE: " + text(target) + " - " +  text(name));
       target.setAttribute(name, value);
       target[name] = (value == 'true');
     }
@@ -78,7 +85,7 @@
       {
         target.setAttribute('class', value);
       }
-      else if (typeof value === 'boolean')
+      else if (typeof value === 'boolean' || ['selected', 'checked', 'disabled'].indexOf(name)>=0)
       {
         set_boolean_attribute(target, name, value);
       }
@@ -92,17 +99,15 @@
     {
       if (!kit.is_defined(new_val))
       {
-        kit.log("REMOVE ATTRIBUTE: " + text(target) + " - " + name);
-
         remove_attribute(target, name, old_val);
         return true;
       }
-      /*else if (!kit.is_defined(old_val) || new_val != old_val)
+      else if (!kit.is_defined(old_val) || new_val != old_val)
       {
+        set_attribute(target, name, new_val);
         return true;
-      }*/
+      }
 
-      set_attribute(target, name, new_val);
       return true;
     }
 
@@ -138,6 +143,8 @@
         var name = new_keys[i] || old_keys[i];
         var old_attr = old_attributes.getNamedItem(name);
         var new_attr = new_attributes.getNamedItem(name);
+
+
 
         var old_val = old_attr ? old_attr.nodeValue : undefined;
         var new_val = new_attr ? new_attr.nodeValue : undefined;
