@@ -97,16 +97,13 @@
         remove_attribute(target, name, old_val);
         return true;
       }
-      else if (!kit.is_defined(old_val) || new_val != old_val)
+      /*else if (!kit.is_defined(old_val) || new_val != old_val)
       {
-
-        //kit.log("SET ATTRIBUTE: " + text(target) + " - " +  name);
-
-        set_attribute(target, name, new_val);
         return true;
-      }
+      }*/
 
-      return false;
+      set_attribute(target, name, new_val);
+      return true;
     }
 
     function to_sorted_key_array (named_node_map)
