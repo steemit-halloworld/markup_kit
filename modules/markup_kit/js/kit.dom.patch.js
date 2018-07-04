@@ -3,7 +3,7 @@
 
   var last_patch_time = 0;
 
-  const scope = new kit.global.Scope();
+  var scope = new kit.global.Scope();
 
   kit.dom.patch_html = function (html_text, ignore_fn) {
     var doc = document.implementation.createHTMLDocument("example");
@@ -14,13 +14,9 @@
 
   kit.dom.patch = function (parent_el, new_el, old_el, old_el_position, ignore_fn) {
     var is_patched = patch_element(parent_el, new_el, old_el, old_el_position, ignore_fn);
-    kit.log("is patched " + is_patched);
     if (is_patched)
     {
       last_patch_time = new Date().getMilliseconds();
-
-      kit.log("last patch time " + last_patch_time);
-
       scope.digest();
     }
 
@@ -47,28 +43,19 @@
       old_val = target[name];
       if(!kit.is_defined(old_val) || old_val == value) return;
 
-      console.log("set real attribute " + name + " " + value);
-
       target[name] = value;
     }
 
-
     function set_boolean_attribute (target, name, value)
     {
-      console.log("SET BOOLEAN ATTRIBUTE: " + text(target) + " - " +  text(name));
+      value = !value ? '' : value;
       target.setAttribute(name, value);
-      target[name] = (value == 'true');
+      target[name] = (['true', ''].indexOf(value)>-1);
     }
 
     function remove_attribute (target, name, value)
     {
-      //console.log("REMOVE ATTRIBUTE: " + text(target) + " - " +  text(name));
-
-      if (name === 'class')
-      {
-        target.removeAttribute('class');
-      }
-      else if (typeof value === 'boolean')
+      if (typeof value === 'boolean')
       {
         remove_boolean_attribute(target, name);
       }
@@ -80,12 +67,7 @@
 
     function set_attribute (target, name, value)
     {
-
-      if (name === 'className')
-      {
-        target.setAttribute('class', value);
-      }
-      else if (typeof value === 'boolean' || ['selected', 'checked', 'disabled'].indexOf(name)>=0)
+      if (typeof value === 'boolean' || ['selected', 'checked', 'disabled', 'hidden'].indexOf(name)>=0)
       {
         set_boolean_attribute(target, name, value);
       }
@@ -97,31 +79,33 @@
 
     function update_attribute (target, name, new_val, old_val)
     {
-      if (!kit.is_defined(new_val))
-      {
+      if (new_val == null)
+      { // undefined or null
         remove_attribute(target, name, old_val);
         return true;
       }
-      else if (!kit.is_defined(old_val) || new_val != old_val)
+      else if (old_val == null || new_val !== old_val)
       {
         set_attribute(target, name, new_val);
         return true;
       }
 
-      return true;
+      return false;
     }
 
-    function to_sorted_key_array (named_node_map)
+    function to_set (named_node_map, set)
     {
-      var res = [];
       for (var i = 0; i < named_node_map.length; ++i)
       {
-        res.push(named_node_map[i].nodeName);
+        set.add(named_node_map[i].nodeName);
       }
 
-      res.sort();
+      return set;
+    }
 
-      return res;
+    function attr_val (name, attr_node)
+    {
+      return attr_node ? attr_node.nodeValue : null;
     }
 
     function update_attributes (target, new_node, old_node)
@@ -129,37 +113,22 @@
       var new_attributes = new_node.attributes;
       var old_attributes = old_node.attributes;
 
-      if (kit.is_defined(target.disabled)) target.disabled = new_node.disabled;
-      if (kit.is_defined(target.checked)) target.checked = new_node.checked;
-      if (kit.is_defined(target.selected)) target.selected = new_node.selected;
-
-
-      var new_keys = to_sorted_key_array(new_attributes);
-      var old_keys = to_sorted_key_array(old_attributes);
+      var key_set = to_set(new_attributes, new Set());
+      key_set = to_set(old_attributes, key_set);
 
       var result = false;
-      for (var i = 0; i < new_keys.length || i < old_keys.length; i++)
+      key_set.forEach(function(name)
       {
-        var name = new_keys[i] || old_keys[i];
         var old_attr = old_attributes.getNamedItem(name);
         var new_attr = new_attributes.getNamedItem(name);
 
-
-
-        var old_val = old_attr ? old_attr.nodeValue : undefined;
-        var new_val = new_attr ? new_attr.nodeValue : undefined;
+        var old_val = attr_val(name, old_attr);
+        var new_val = attr_val(name, new_attr);
 
         var x = update_attribute(target, name, new_val, old_val);
-        /*console.log("ATTRS old");
-        console.log(old_attr === undefined? "": old_attr.nodeName);
-        console.log(old_attr === undefined? "": old_attr.nodeValue);
-        console.log(" new ");
-        console.log(new_attr === undefined? "": new_attr.nodeName);
-        console.log(new_attr === undefined? "": new_attr.nodeValue);
-        console.log("RESULT");
-        console.log(x);*/
+
         result = result || x;
-      }
+      });
 
       return result;
     }
@@ -173,11 +142,6 @@
 
     function has_node_changed (node1, node2)
     {
-      //console.log("compare " + node1.nodeName + " !== " + node2.nodeName + " || " + text(node1) + " !== " + text(node2))
-      //console.log(" ==> " + node1.nodeName !== node2.nodeName || text(node1) !== text(node2));
-      //console.log("compare " + node1.id + " !== " + node2.id);
-      //console.log(text(node1));
-      //console.log(text(node2));
       return node1.nodeName !== node2.nodeName || text(node1) !== text(node2);
     }
 
@@ -217,38 +181,23 @@
 
     function update_element (parent, new_node, old_node, index, dirty_nodes, ignore_fn)
     {
-
-      console.log("update element " + new_node + " vs. " + old_node);
-
       if (!old_node)
       {
-        kit.log("append node: " + new_node.innerHTML);
-
-
         parent.appendChild(new_node.cloneNode(true));
         return true;
       }
       else if (!new_node)
       {
-        //kit.log("remove node: " + old_node.innerHTML);
-
         dirty_nodes.push(parent.children[index]);
         return true;
-
-        //parent.removeChild(parent.children[index]);
       }
       else if (has_node_changed(new_node, old_node))
       {
-
-        kit.log("replace node: " + old_node.innerHTML + " vs. " + new_node.innerHTML);
-
         parent.replaceChild(new_node.cloneNode(true), parent.children[index]);
         return true;
       }
       else if (new_node)
       {
-
-
         var result = update_attributes(parent.children[index], new_node, old_node);
 
         var new_child_count = new_node.children.length;
@@ -268,26 +217,10 @@
 
           } while (ignore_fn && ignore_fn(n_old_node));
 
-          //var n_old_node;
-
-
-          /*j--;
-          do
-          {
-            j++;
-            n_old_node = old_node.children[j];
-          } while (ignore_fn && ignore_fn(n_old_node));*/
-
-          /*console.log("NEW EL -  OLD EL");
-          console.log(n_new_node);
-          console.log(n_old_node);*/
-
           if (n_new_node === undefined && n_old_node === undefined) continue;
 
-          const x = update_element(parent.children[index], n_new_node, n_old_node, j, dirty_nodes, ignore_fn);
+          var x = update_element(parent.children[index], n_new_node, n_old_node, j, dirty_nodes, ignore_fn);
           result = result || x;
-          //console.log("RESULT");
-          //console.log(result);
         }
 
         return result;
