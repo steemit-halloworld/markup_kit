@@ -54,7 +54,7 @@
 
             old_val = is_initial ? new_val : old_val;
             watchers[i].last = new_val;
-            if(!is_initial && ignore_initial)
+            if(!is_initial || ignore_initial)
             {
               watchers[i].listener_fn(new_val, old_val, self);
             }
