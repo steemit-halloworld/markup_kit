@@ -9,3 +9,8 @@
   --control-input-border-radius        : 0;
   --control-focus-ring-border-radius   : 3px;
 }
+
+html
+{
+  -webkit-font-smoothing : subpixel-antialiased;
+}
