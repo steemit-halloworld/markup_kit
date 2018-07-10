@@ -23,7 +23,7 @@ kit.dom = kit.native_dom = (function ()
     throw new Error('Your environment does not support loading documents');
   }
 
-  const obj = {
+  var obj = {
 
     load_html_dom: function (text)
     {
@@ -150,7 +150,7 @@ kit.dom = kit.native_dom = (function ()
 
     is_ready: function ()
     {
-      const dom = kit.global.document;
+      var dom = kit.global.document;
       return dom.readyState === 'complete' || dom.readyState !== 'loading' && !dom.documentElement.doScroll;
     },
 
