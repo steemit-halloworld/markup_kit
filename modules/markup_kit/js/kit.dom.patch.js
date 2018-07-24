@@ -9,15 +9,14 @@
 
   var ref_counter = -1;
   var prv = [];
-  var last_patch_time = 0;
-  var scope = new kit.global.Scope();
 
   kit.dom.Patch = function () {
     var id = (++ref_counter);
     prv[id] = {};
-
     prv[id].callbacks = [];
     prv[id].ignore_callbacks = [];
+    prv[id].scope = new kit.global.Scope();
+    prv[id].last_patch_time = (new Date).getTime();
 
     this.id = function () {return id;};
   };
@@ -161,7 +160,11 @@
 
   function has_node_changed (node1, node2)
   {
-    return node1.nodeName !== node2.nodeName || text(node1) !== text(node2);
+    var node_name_diff = node1.nodeName !== node2.nodeName;
+    var text_diff = text(node1) !== text(node2);
+    var id_diff = node1.id !== node2.id;
+
+    return node_name_diff || text_diff || id_diff;
   }
 
   function text (node)
@@ -182,16 +185,33 @@
   }
 
   proto.patch = function (parent_el, new_el, old_el, old_el_position, ignore_fn) {
+
+    if (ignore_fn != null) prv[this.id()].callbacks.push(ignore_fn);
+
     var is_patched = patch_element(this, parent_el, new_el, old_el, old_el_position);
+
+    if (ignore_fn != null) prv[this.id()].callbacks.pop();
+
     if (is_patched)
     {
-      last_patch_time = new Date().getMilliseconds();
-      scope.digest();
+      prv[this.id()].last_patch_time = (new Date).getTime();
+
+      prv[this.id()].scope.digest(true);
     }
 
-    prv[this.id()].callbacks.push(ignore_fn);
 
     return is_patched;
+  };
+
+  proto.last_patch_time = function () {
+
+    console.log(prv[this.id()].last_patch_time);
+
+    return prv[this.id()].last_patch_time;
+  };
+
+  proto.on_patch = function (callback_fn) {
+    prv[this.id()].scope.watch(this.last_patch_time.bind(this), callback_fn);
   };
 
   function patch_element (owner, parent_el, new_el, old_el, position)
@@ -292,21 +312,20 @@
     return kit.dom.patch(document.body, doc.body.firstElementChild, document.body.firstElementChild, 0, ignore_fn);
   };
 
+  var patcher = new kit.dom.Patch();
+
   kit.dom.patch = function (parent_el, new_el, old_el, old_el_position, ignore_fn) {
-    var patcher = new kit.dom.Patch();
     return patcher.patch(parent_el, new_el, old_el, old_el_position, ignore_fn);
   };
 
 
   kit.dom.patch.on_patch = function (callback_fn) {
-    scope.watch(kit.dom.patch.last_patch_time, callback_fn);
+    patcher.on_patch(callback_fn);
   };
 
   kit.dom.patch.last_patch_time = function () {
-    return last_patch_time;
+    return patcher.last_patch_time();
   }
-
-
 }());
 
 
