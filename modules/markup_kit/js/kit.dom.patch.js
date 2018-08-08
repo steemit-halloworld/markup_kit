@@ -54,6 +54,8 @@
     target[name] = false;
   }
 
+
+
   function set_string_attribute (target, name, value)
   {
     var old_val = target.getAttribute(name);
@@ -62,7 +64,32 @@
     old_val = target[name];
     if (!kit.is_defined(old_val) || old_val == value) return;
 
-    target[name] = value;
+    switch (name)
+    {
+      case 'onmouseup':
+      case 'onclick':
+      case 'ondblclick':
+      case 'onmousedown':
+      case 'onmousemove':
+      case 'onmouseout':
+      case 'onmouseover':
+      case 'onwheel':
+      case 'ondrag':
+      case 'ondragend':
+      case 'ondragenter':
+      case 'ondragleave':
+      case 'ondragover':
+      case 'ondragstart':
+      case 'ondrop':
+      case 'onscroll':
+      case 'onkeyup':
+      case 'onkeydown':
+      case 'onkeypress':
+        target[name] = new Function('event', value);
+        break;
+      default:
+        target[name] = value;
+    }
   }
 
   function set_boolean_attribute (target, name, value)
