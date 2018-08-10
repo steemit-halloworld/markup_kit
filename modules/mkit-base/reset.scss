@@ -1,0 +1,71 @@
+@mixin reset-base
+{
+  padding:    0;
+  margin:     0;
+  font:       inherit;
+  color:      inherit;
+  background: transparent;
+  border:     none;
+}
+
+
+@mixin reset-box-model
+{
+  box-sizing:      border-box;
+  background-clip: padding-box;
+}
+
+
+@mixin reset-input
+{
+  @include reset-base;
+  @include reset-box-model;
+  vertical-align: baseline;
+  outline:        none;
+}
+
+
+@mixin reset-cursor
+{
+  cursor:      default;
+  user-select: none;
+}
+
+
+@mixin inline-block
+{
+  position:       relative;
+  display:        inline-block;
+  vertical-align: baseline;
+}
+
+
+@mixin reset-component
+{
+  @include reset-base;
+  @include inline-block;
+}
+
+
+@mixin layout-inline-flex
+{
+  @include reset-box-model;
+  display:     inline-flex;
+  align-items: baseline;
+}
+
+
+@include exports('mkit-base/reset')
+{
+  %layout-inline-flex
+  {
+    @include layout-inline-flex;
+  }
+
+  %reset-box-model
+  {
+    @include reset-box-model;
+  }
+
+}
+
