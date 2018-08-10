@@ -1,0 +1,41 @@
+@include exports('mkit-base/variables')
+{
+  :root
+  {
+    --spacer:           8px;
+    --spacer-0:         0;
+    --spacer-1:         calc(round(var(--spacer) / 2));
+    --spacer-2:         calc(var(--spacer) * 2);
+    --spacer-3:         calc(var(--spacer) * 3);
+    --spacer-4:         calc(var(--spacer) * 4);
+    --spacer-5:         calc(var(--spacer) * 5);
+
+    /* border style */
+    --border-width:     1px;
+    --border-radius:    3px;
+    --border-style:     solid;
+    --border:           var(--border-width) var(--border-color) var(--border-style);
+
+    /* system color palette */
+    --gray-000:         #FAFBFC;
+    --gray-100:         #F6F8FA;
+    --gray-200:         #E1E4E8;
+    --gray-300:         #D1D5DA;
+    --gray-400:         #959DA5;
+    --gray-500:         #6A737D;
+    --gray-600:         #586069;
+    --gray-700:         #444D56;
+    --gray-800:         #2F363D;
+    --gray-900:         #24292E;
+
+    /* default background colors */
+    --bg-gray:          var(--gray-100);
+
+    /* border colors */
+    --border-gray:      var(--gray-200);
+    --border-gray-dark: var(--gray-300);
+    --border-color:     var(--border-gray);
+  }
+
+}
+

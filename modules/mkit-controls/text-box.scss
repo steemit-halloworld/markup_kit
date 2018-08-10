@@ -1,0 +1,13 @@
+@import 'mkit-controls/base';
+
+
+@include exports('mkit-controls/text-box')
+{
+  .ui.text-box
+  {
+    @extend %layout-inline-flex;
+  }
+}
+
+
+

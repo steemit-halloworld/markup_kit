@@ -1,0 +1,10 @@
+@import 'mkit-controls/base';
+
+
+@include exports('mkit-controls/combo-box')
+{
+  .ui.combo-box
+  {
+    @extend %layout-inline-flex;
+  }
+}

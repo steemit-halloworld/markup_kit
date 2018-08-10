@@ -1,0 +1,13 @@
+@include exports('mkit-base/ui')
+{
+  .ui
+  {
+    @extend %reset-box-model;
+    @include reset-component;
+  }
+
+  .ui > *
+  {
+    box-sizing: inherit;
+  }
+}

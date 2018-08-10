@@ -1,0 +1,323 @@
+@import 'base';
+
+
+@include exports('mkit-box/box')
+{
+
+  :root
+  {
+    --box-hpadding:                var(--spacer-3);
+    --box-vpadding:                var(--spacer-2);
+    --box-hmargin:                 var(--spacer-3);
+    --box-vmargin:                 var(--spacer-2);
+    --box-header-background-color: var(--bg-gray);
+    --box-padding:                 var(--box-vpadding) var(--box-hpadding);
+    --box-basic-border-radius:     var(--border-radius);
+    --box-basic-border-width:      var(--border-width);
+    --box-basic-border:            var(--box-basic-border-width) var(--border-gray-dark) var(--border-style);
+  }
+
+  %horizontal-divider
+  {
+    content:      '';
+    overflow:     hidden;
+    font-size:    0;
+    position:     absolute;
+    border-right: var(--box-basic-border);
+    top:          0;
+    bottom:       0;
+    right:        calc(-12px - var(--box-basic-border-width));
+    width:        0;
+  }
+
+  @mixin horizontal-divider-nth($n)
+  {
+    & > .box:nth-last-child(#{$n}n):first-child ~ .box:nth-child(#{$n}n):after
+    {
+      border-right: transparent;
+    }
+
+    & > .box:nth-last-child(#{$n}n):first-child ~ .box:not(:nth-child(#{$n}n)):after
+    {
+      @extend %horizontal-divider;
+    }
+
+    & > .box:nth-last-child(#{$n}n):first-child
+    {
+      &, & ~ .box
+      {
+        margin-right: 24px;
+      }
+
+      & ~ .box:nth-child(#{$n}n)
+      {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @mixin width-nth($n)
+  {
+    & > .box:nth-last-child(#{$n}n):first-child
+    {
+      &, & ~ .box
+      {
+        min-width: calc((100% / #{$n}) - ((var(--box-hmargin) * #{$n - 1}) / #{$n}));
+      }
+    }
+
+    &.basic > .box:not(.basic):nth-last-child(#{$n}n):first-child
+    {
+      &, & ~ .box:not(.basic)
+      {
+        min-width: calc((100% / #{$n}) - (((var(--box-hmargin) * #{$n - 1}) / #{$n})) + var(--box-hmargin));
+      }
+    }
+  }
+
+  .ui.box
+  {
+    @extend %layout-inline-flex;
+    min-width: auto;
+    width:     auto;
+
+    .ui.box
+    {
+      display: inline-flex;
+    }
+  }
+
+  div.ui.box
+  {
+    display: flex;
+  }
+
+  .ui.box
+  {
+    flex-direction:  column;
+    justify-content: center;
+
+    & > .header
+    {
+      margin-bottom: auto;
+    }
+
+    & > .footer
+    {
+      margin-top: auto;
+    }
+
+    &.horizontal
+    {
+      flex-direction:  row;
+      flex-wrap:       wrap;
+      justify-content: space-between;
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+    /* Margins                                                                                                        */
+    /*----------------------------------------------------------------------------------------------------------------*/
+    /*region*/
+
+    margin:          var(--box-vmargin) 0;
+
+    &
+    {
+      & > *
+      {
+        margin-top:    0;
+        margin-bottom: 0;
+      }
+
+      & > * + .box.basic
+      {
+        margin: calc(var(--box-vmargin) / 2) 0;
+      }
+
+      & > * + .box.basic + :last-of-type
+      {
+        margin-top: calc(-1 * var(--box-vmargin) / 2)
+      }
+
+      & .box:not(.basic) + .box.basic
+      {
+        margin-top: var(--box-vmargin);
+      }
+
+      & .box.basic + .box:not(.basic):not(:last-of-type)
+      {
+        margin-top: calc(var(--box-vmargin) / 2);
+      }
+
+    }
+
+    &.basic
+    {
+      & > .header,
+      & > .footer,
+      & > .box:not(.basic)
+      {
+        margin-left: calc(-1 * var(--box-hmargin));
+      }
+
+      & > .header
+      {
+        margin-top: calc(-1 * var(--box-vmargin));
+      }
+
+      & > .footer
+      {
+        margin-bottom: calc(-1 * var(--box-vmargin));
+      }
+    }
+
+    /*&.horizontal
+    {
+      & > .box:nth-last-child(3n):first-child
+      {
+        &, & ~ .box:nth-child(3n+1)
+        {
+          margin-left: calc(-1 * var(--box-hmargin));
+        }
+      }
+    }*/
+
+    /*endregion*/
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+    /* Nested Width                                                                                                   */
+    /*----------------------------------------------------------------------------------------------------------------*/
+    /*region*/
+
+    &:not(.horizontal)
+    {
+      & > .box
+      {
+        width: 100%;
+      }
+
+      &.basic > .header,
+      &.basic > .footer,
+      &.basic > .box:not(.basic)
+      {
+        width: calc(100% + 2 * var(--box-hmargin));
+      }
+    }
+
+    &.horizontal
+    {
+
+      & > *
+      {
+        flex: 0 0 auto;
+      }
+
+      @include width-nth(2);
+      @include width-nth(3);
+      @include width-nth(4);
+    }
+
+    /*endregion*/
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+    /* Padding                                                                                                        */
+    /*----------------------------------------------------------------------------------------------------------------*/
+    /*region*/
+
+    & > .box, & > .header, & > .footer
+    {
+      padding: var(--box-vpadding) 0;
+    }
+
+    /*&.ui.box .ui.box > .ui.box
+    {
+      padding: var(--box-vpadding) var(--box-hpadding);
+    }*/
+
+    &.basic
+    {
+      &,
+      & > .box,
+      & > .header,
+      & > .footer
+      {
+        padding: var(--box-vpadding) var(--box-hpadding);
+      }
+
+      &.horizontal > .box
+      {
+        padding: var(--box-vpadding) var(--box-hpadding);
+      }
+    }
+
+    /*endregion*/
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+    /* Basic Styling                                                                                                  */
+    /*----------------------------------------------------------------------------------------------------------------*/
+    /*region*/
+
+    /** border styling **/
+    &.basic
+    {
+      border-radius: var(--box-basic-border-radius);
+      border:        var(--box-basic-border);
+    }
+
+    &.basic > .header
+    {
+      background-color: var(--box-header-background-color);
+      border-bottom:    var(--box-basic-border);
+    }
+
+    &.basic > .footer
+    {
+      border-top: var(--box-basic-border);
+    }
+
+    /*endregion*/
+
+    /*------------------------------------------------------------------------------------------------------------------*/
+    /* Vertical Divider Styling                                                                                         */
+    /*------------------------------------------------------------------------------------------------------------------*/
+    /*region*/
+
+    &:not(.horizontal)
+    {
+      & > .box:not(:last-of-type)
+      {
+        border-bottom: var(--box-basic-border);
+
+        & + .footer
+        {
+          border-top: 0;
+        }
+      }
+
+      & > .basic.box + .box:not(:first-of-type):not(:last-of-type)
+      {
+        border-top: var(--box-basic-border);
+      }
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+    /* Horizontal Divider Styling                                                                                     */
+    /*----------------------------------------------------------------------------------------------------------------*/
+    /*region*/
+
+    &.horizontal
+    {
+      & > .box:not(:last-of-type):after
+      {
+        @extend %horizontal-divider;
+      }
+
+      @include horizontal-divider-nth(3);
+      @include horizontal-divider-nth(4);
+    }
+
+  }
+}
+
+
+/*endregion*/
