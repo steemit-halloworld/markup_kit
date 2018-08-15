@@ -1,0 +1,36 @@
+@import 'base';
+
+:root
+{
+  --label-badge-size : var(--size-small);
+}
+
+.ui.badge.label
+{
+  position : relative;
+
+  &[data-badge]:after
+  {
+    position        : absolute;
+    left            : calc(100% - (var(--label-badge-size) / 2));
+    top             : calc(0px - (var(--label-badge-size) / 2));
+    margin          : 0;
+    background      : var(--red);
+    color           : var(--red-invert);
+    background-clip : padding-box;
+    border-radius   : 1rem;
+    content         : attr(data-badge);
+    display         : inline-block;
+    min-height      : var(--label-badge-size);
+    min-width       : var(--label-badge-size);
+    font-size       : calc(var(--label-badge-size) * .75);
+    vertical-align  : middle;
+    user-select     : none;
+    text-align      : center;
+  }
+
+  &.bottom[data-badge]:after
+  {
+    top : calc(100% - (var(--label-badge-size) / 2))
+  }
+}
