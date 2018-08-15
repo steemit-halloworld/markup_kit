@@ -27,10 +27,12 @@
     vertical-align  : middle;
     user-select     : none;
     text-align      : center;
+    z-index         : 9000;
+    cursor          : inherit;
   }
 
   &.bottom[data-badge]:after
   {
-    top : calc(100% - (var(--label-badge-size) / 2))
+    top : 50%;
   }
 }
