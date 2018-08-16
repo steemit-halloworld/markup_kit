@@ -1,0 +1,962 @@
+@charset "UTF-8";
+/*md
+
+# Getting Started
+
+markup-kit.css is a modern, lightweight and responsive CSS framework for faster developing web interfaces.
+
+## Installation
+
+TODO
+
+## Browser Support
+
+markup-kit.css uses [Autoprefixer](https://github.com/postcss/autoprefixer) to make most styles compatible with
+earlier browsers. markup-kit.css is designed for modern browsers. The following browsers are recommended:
+
+* Chrome 35+
+* Firefox 31+
+* Safari 7+
+* IE 10+
+* Edge
+* Opera
+
+## Applying Styles
+
+The framework won't do anything automatically except the Normalisation Module. The following HTML code won't change
+anything by simply adding
+
+*/
+/*doc
+
+# Normalisation
+
+All of the modules are build on top of the normalisation module. It's the foundation layer.
+
+The normalisation module applies some basic resets to ensure elements are rendered consistently across all browsers.
+
+*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* Elements of HTML                                                                                                   */
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*region*/
+*, ::before, ::after {
+  /* remove repeating backgrounds */
+  background-repeat: no-repeat;
+  /* add box sizing inheritance */
+  box-sizing: inherit; }
+
+::before, ::after {
+  text-decoration: inherit;
+  vertical-align: inherit; }
+
+/*doc
+
+## Box Sizing
+
+To ensure `padding` does not affect the computed width of an element the `box-sizing` is switched from `content-box` to
+`border-box`. On rare occasion `box-sizing`can be overridden. All nested elements including `::before` and `::after`
+inherit the specified `box sizing`
+
+*/
+:root {
+  box-sizing: border-box;
+  cursor: default;
+  /* prevent font size adjustments after orientation changes in IE and iOS */
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.15; }
+
+/*endregion*/
+
+@font-face {
+  font-family: 'ico';
+  src: url("/markup_kit/fonts/icons.eot");
+  src: url("/markup_kit/fonts/icons.eot?#iefix") format("embedded-opentype"), url("/markup_kit/fonts/icons.svg#ico") format("svg"), url("/markup_kit/fonts/icons.woff") format("woff"), url("/markup_kit/fonts/icons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, -apple-system, BlinkMacSystemFont, “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, sans-serif;
+  font-size: 87.5%;
+  -webkit-font-smoothing: antialiased; }
+
+p {
+  line-height: 21px;
+  line-height: 1.5rem;
+  margin-top: 21px;
+  margin-top: 1.5rem;
+  margin-bottom: 21px;
+  margin-bottom: 1.5rem; }
+
+ul, ol {
+  margin-top: 21px;
+  margin-top: 1.5rem;
+  margin-bottom: 21px;
+  margin-bottom: 1.5rem; }
+  ul li, ol li {
+    line-height: 21px;
+    line-height: 1.5rem; }
+  ul ul,
+  ul ol, ol ul,
+  ol ol {
+    margin-top: 0;
+    margin-bottom: 0; }
+
+blockquote {
+  margin-top: 21px;
+  margin-top: 1.5rem;
+  margin-bottom: 21px;
+  margin-bottom: 1.5rem;
+  line-height: 21px;
+  line-height: 1.5rem; }
+
+/*doc
+
+# Typography
+
+Typography is one of the most important and most visible things on a web page. Even slightly imperfection ruin otherwise
+a perfect visual design.
+
+*/
+/* globals.css | MIT License | github.com/tschroeter/markup_kit */
+:root {
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Family                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Size                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Weight                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Line Height                                                                                                      */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Golden Ratio                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Spacing                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Border                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /* base colors */
+  /*--color-focus: #1C86F2;*/
+  /* text colors */
+  /* state colors */
+  /* background */
+  /** Grayscale **/
+  /*endregion*/ }
+/* 4 columns */
+/* 8 columns */
+.body {
+  font-size: 16px; }
+
+.type-scale-1 {
+  font-size: 42px;
+  font-size: 3rem; }
+
+.type-scale-2 {
+  font-size: 31.5px;
+  font-size: 2.25rem; }
+
+.type-scale-3 {
+  font-size: 21px;
+  font-size: 1.5rem; }
+
+.type-scale-4 {
+  font-size: 17.5px;
+  font-size: 1.25rem; }
+
+.type-scale-5 {
+  font-size: 14px;
+  font-size: 1rem; }
+
+.type-scale-6 {
+  font-size: 12.25px;
+  font-size: .875rem; }
+
+.type-scale-7 {
+  font-size: 10.5px;
+  font-size: .75rem; }
+
+/*doc
+
+## Measure
+
+Measure refers to the length of a line of text.
+
+<quote>
+"Anything from 45 to 75 characters is widely regarded as a satisfactory length of line for a single-column page...the
+66-character line (counting both letters and spaces) is widely regarded as ideal. For multiple-column work, a better
+average is 40-50 characters."
+
+  <span>Robert Bringhurst - <i>The Elements of Typographic Style</i></span>
+</quote>
+
+The following classes are used for setting measure:
+
+| Class            | Description                                                          |
+| ---------------- | -------------------------------------------------------------------- |
+| 'measure'        | line lengths ~66 characters                                          |
+| 'narrow measure' | line lengths ~45 characters                                          |
+| 'measure wide'   | line lengths ~80 characters                                          |
+
+*/
+.measure {
+  width: 30em; }
+
+.wide.measure {
+  width: 34em; }
+
+.narrow.measure {
+  width: 20em; }
+
+/* globals.css | MIT License | github.com/tschroeter/markup_kit */
+:root {
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Family                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Size                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Font Weight                                                                                                         */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Line Height                                                                                                      */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Golden Ratio                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Spacing                                                                                                          */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Border                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Colors                                                                                                           */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /* base colors */
+  /*--color-focus: #1C86F2;*/
+  /* text colors */
+  /* state colors */
+  /* background */
+  /** Grayscale **/
+  /*endregion*/ }
+/* 4 columns */
+/* 8 columns */
+.body {
+  line-height: 1.5; }
+
+/*doc
+
+## Tracking
+
+In typography letter-spacing is commonly known as tracking. Tracking is the consistent white-space between letters in
+a piece of text. For example text that is set to uppercase should be tracked to improve readability but lowercase text
+should never be tracked. For some larger text, depending on the typeface a negative tracking might be desirable.
+
+*/
+.tracked {
+  letter-spacing: .1em; }
+
+.tight.tracked {
+  letter-spacing: -.05em; }
+
+.wide.tracked {
+  letter-spacing: .25em; }
+
+.body {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
+
+.small {
+  font-size: 14px;
+  line-height: -0.5px; }
+
+.smaller {
+  font-size: 12px;
+  line-height: -2.5px; }
+
+.ui.header {
+  border: none; }
+  .ui.header.--has-divider {
+    border-bottom: 1px solid #D4D4D4; }
+
+.muted {
+  background: #f5f5f5 !important; }
+
+.primary:not(.basic), .success:not(.basic), .warning:not(.basic), .error:not(.basic), .focused:not(.basic), .dark:not(.basic) {
+  color: white !important; }
+
+.white {
+  background-color: white; }
+
+.primary, * .primary {
+  background-color: #1C86F2 !important;
+  border-color: #1C86F2 !important; }
+  .primary.basic, * .primary.basic {
+    background-color: transparent;
+    color: #1C86F2; }
+
+.success {
+  background-color: #32D296;
+  border-color: #32D296; }
+  .success.basic {
+    background-color: transparent;
+    color: #32D296; }
+
+.warning {
+  background-color: #FAA05A;
+  border-color: #FAA05A; }
+  .warning.basic {
+    background-color: transparent;
+    color: #FAA05A; }
+
+.error, .error > .focus {
+  background-color: #F0506E;
+  border-color: #F0506E; }
+
+.error.basic {
+  background-color: transparent;
+  color: #F0506E; }
+
+.dark {
+  background-color: #32373D;
+  border-color: #32373D; }
+  .dark.basic {
+    background-color: transparent;
+    color: #32373D; }
+
+.light {
+  background-color: #D4D4D4;
+  border-color: #D4D4D4; }
+  .light.basic {
+    background-color: transparent;
+    color: #777;
+    border-color: #777; }
+
+.focused {
+  background-color: rgb(48, 145, 243);
+  border-color: rgb(48, 145, 243); }
+  .focused.basic {
+    background-color: transparent;
+    color: rgb(48, 145, 243); }
+
+.error.input > .primary.input,
+.error.input > .primary.select {
+  background-color: #F0506E !important;
+  border-color: #F0506E !important; }
+
+.input.error:focus, .input.error:focus ~ .focus,
+.input.error .input:focus ~ .focus,
+.input.error .select:focus ~ .focus {
+  box-shadow: 0 0 0 1px #F0506E !important;
+  border-color: #F0506E !important; }
+
+/*doc
+
+# Control
+
+Controls are visual elements that convey a specific action or intention in response to user interactions. They are
+essential for collecting and handling user input and should follow styling and interaction guidelines for each
+platform, so that they are intuitive for users to interact with.
+
+The `ui control` is a container for:
+
+* `.label` - an optional short word or phrase that succinctly describes the control
+* `input`, `select`, `textarea` or `button` - the associated HTML form element
+* `.hint` - an optional brief phrase that describe the control in more detail
+
+*/
+
+.ui.control {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+
+div.ui.control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.ui.control {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  vertical-align: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  position: relative;
+  font-size: 1em;
+  font-family: inherit;
+  line-height: 1.5;
+  background: #e8e8e8;
+  padding: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* control contains another control */ }
+  .ui.control:not(.group) {
+    margin: calc(1em + 4px + 5px) 0 5px; }
+  .ui.control + .ui.control:not(.group) {
+    margin: calc(1em + 4px + 2 * 5px) 0 5px; }
+  .ui.control.--is-disabled {
+    opacity: 0.66; }
+  .ui.control.--is-disabled > input, .ui.control.--is-disabled,
+  .ui.control:not(.--is-disabled) > input[disabled],
+  .ui.control:not(.--is-disabled) > select[disabled] {
+    pointer-events: none; }
+  .ui.control.--is-expanded {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .ui.control.--has-no-label {
+    margin-top: 5px; }
+    .ui.control.--has-no-label > .label {
+      display: none; }
+  .ui.control + .ui.control.--has-no-label {
+    margin-top: 5px; }
+  .ui.control > *:not(.control) {
+    padding-left: .35em;
+    padding-right: .35em; }
+  .ui.control > * {
+    text-align: left;
+    vertical-align: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit; }
+  .ui.control:not(.group) > *:not(.label) {
+    padding-top: 2.8px;
+    padding-top: .2rem;
+    padding-bottom: 2.8px;
+    padding-bottom: .2rem; }
+  .ui.control > *:not(:first-child):not(:last-child) {
+    border-radius: 0; }
+  .ui.control > input, .ui.control > textarea, .ui.control > select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none; }
+  .ui.control > input:not([type='checkbox']):not([type='radio']),
+  .ui.control > textarea, .ui.control > select {
+    border: inherit;
+    outline: none;
+    background: transparent;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    border-color: transparent;
+    margin: -1px;
+    /* negative repositioning border and box-shadow */ }
+  .ui.control:not(.group) > .ui.control {
+    margin: -1px;
+    /* negative repositioning border and box-shadow */
+    border: none;
+    border-radius: 0;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0;
+    background: transparent;
+    /*& > *
+    {
+      background    : transparent;
+      border        : none;
+      border-radius : 0;
+    }*/ }
+  .ui.control > .label, .ui.control > input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0; }
+  .ui.control.radio, .ui.control.checkbox {
+    padding-left: 21px;
+    padding-left: 1.5rem;
+    display: inline-block; }
+    .ui.control.radio > .control-indicator, .ui.control.checkbox > .control-indicator {
+      position: absolute;
+      padding: 0;
+      margin: 0;
+      top: 3.5px;
+      top: .25rem;
+      left: 0;
+      display: block;
+      width: 14px;
+      width: 1rem;
+      height: 14px;
+      height: 1rem;
+      line-height: 14px;
+      line-height: 1rem;
+      font-size: 65%;
+      color: #eee;
+      text-align: center;
+      background-color: #eee;
+      background-size: 50% 50%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
+    .ui.control.radio > input:focus ~ .control-indicator, .ui.control.checkbox > input:focus ~ .control-indicator {
+      box-shadow: 0 0 0 .075rem #fff, 0 0 0 .1rem #0074d9; }
+    .ui.control.radio > input:checked ~ .control-indicator, .ui.control.checkbox > input:checked ~ .control-indicator {
+      color: #fff;
+      background-color: rgb(48, 145, 243); }
+    .ui.control.radio > input:active ~ .control-indicator, .ui.control.checkbox > input:active ~ .control-indicator {
+      color: #fff;
+      background-color: #84c6ff; }
+  .ui.control > .label {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    font-size: 1em;
+    line-height: 1.2;
+    display: block;
+    -webkit-box-ordinal-group: -999;
+        -ms-flex-order: -1000;
+            order: -1000;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    margin-top: calc(-1.2em - 4px);
+    margin-bottom: 4px;
+    padding-left: 2.8px;
+    padding-left: .2rem;
+    color: dimgrey; }
+  .ui.control:not(.--is-horizontal) > .label {
+    position: absolute; }
+  .ui.control.--is-horizontal {
+    margin-left: 10em;
+    margin-top: auto; }
+    .ui.control.--is-horizontal > .label {
+      margin-top: auto;
+      margin-bottom: auto;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 0px;
+              flex: 1 0 0;
+      max-width: 10em;
+      min-width: 10em;
+      margin-left: -10em;
+      top: 0;
+      bottom: 0; }
+  .ui.control.--is-start-aligned {
+    margin-top: auto;
+    margin-bottom: calc(1.2em + 16px); }
+    .ui.control.--is-start-aligned > .label {
+      /*top           : auto;*/
+      margin-top: 8px;
+      margin-bottom: calc(-1.2em - 8px);
+      -webkit-box-ordinal-group: 1001;
+          -ms-flex-order: 1000;
+              order: 1000; }
+  .ui.control.input:focus-within, .ui.control.select:focus-within {
+    border-color: #86b1df;
+    border-radius: 3px;
+    box-shadow: 0px 0px 0px 2px #8ebdeb;
+    transition: opacity .2s; }
+  .ui.control.input:focus-within > :focus, .ui.control.select:focus-within > :focus {
+    box-shadow: none;
+    border: inherit;
+    border-color: transparent; }
+  .ui.control.input:focus-within .ui.control:focus-within,
+  .ui.control.input:focus-within .ui.control:focus-within > :focus, .ui.control.select:focus-within .ui.control:focus-within,
+  .ui.control.select:focus-within .ui.control:focus-within > :focus {
+    border: none;
+    box-shadow: none; }
+  .ui.control.input > select {
+    background: transparent; }
+
+.ui.input.control {
+  background: #fff; }
+
+.ui.input.control {
+  border-radius: 0;
+  border: 1px solid #bfbfbf;
+  box-shadow: inset 0 0 0 0px #f7f7f7; }
+  .ui.input.control > *:not(.label) {
+    border-radius: -1px;
+    color: inherit; }
+  .ui.input.control > input.--is-right {
+    text-align: right; }
+  .ui.input.control > input[type='number']::-webkit-input-placeholder,
+  .ui.input.control > input[type='text']::-webkit-input-placeholder {
+    content: "x"; }
+  .ui.input.control > input[type='number']:-ms-input-placeholder,
+  .ui.input.control > input[type='text']:-ms-input-placeholder {
+    content: "x"; }
+  .ui.input.control > input[type='number']::placeholder,
+  .ui.input.control > input[type='text']::placeholder {
+    content: "x"; }
+  .ui.input.control.--has-float-label {
+    margin-top: calc(0.6em + .5rem); }
+    .ui.input.control.--has-float-label > input,
+    .ui.input.control.--has-float-label > textarea {
+      padding-bottom: 2.8px;
+      padding-bottom: .2rem;
+      padding-top: 2.8px;
+      padding-top: .2rem; }
+    .ui.input.control.--has-float-label > .label {
+      position: absolute;
+      margin: 0;
+      /* reset default margin */
+      font-size: 75.000%;
+      opacity: 1;
+      cursor: text;
+      top: calc(-1 * (.5em + .1em + 1px));
+      left: 0;
+      max-width: 100%;
+      padding: 0 calc(.1em + 1px + 2px);
+      z-index: 1001;
+      line-height: 1.2em;
+      height: 1.2em;
+      pointer-events: none; }
+      .ui.input.control.--has-float-label > .label:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        background: #fff;
+        height: 1px;
+        left: 0;
+        right: 0;
+        top: 50%;
+        z-index: -1;
+        margin: 0 .25em; }
+    .ui.input.control.--has-float-label > input:placeholder-shown:not(:focus)::-webkit-input-placeholder,
+    .ui.input.control.--has-float-label > textarea:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+      opacity: 0; }
+    .ui.input.control.--has-float-label > input:placeholder-shown:not(:focus):-ms-input-placeholder,
+    .ui.input.control.--has-float-label > textarea:placeholder-shown:not(:focus):-ms-input-placeholder {
+      opacity: 0; }
+    .ui.input.control.--has-float-label > input:placeholder-shown:not(:focus)::placeholder,
+    .ui.input.control.--has-float-label > textarea:placeholder-shown:not(:focus)::placeholder {
+      opacity: 0; }
+    .ui.input.control.--has-float-label:focus-within > .label:after {
+      box-shadow: 0 0 0 2px #fff;
+      margin: 0 calc(.25em + 1px + 2px); }
+    .ui.input.control.--has-float-label > input:placeholder-shown:not(:focus) ~ .label {
+      font-size: 100%;
+      top: 2.8px;
+      top: .2rem;
+      opacity: .5;
+      line-height: inherit; }
+  .ui.input.control:focus-within > .prepend {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px; }
+  .ui.input.control:focus-within > .append {
+    border-radius: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px; }
+  .ui.input.control > .prepend,
+  .ui.input.control > .ui.control.prepend {
+    white-space: nowrap;
+    border-right: 1px solid #bfbfbf;
+    border-top-left-radius: -1px;
+    border-bottom-left-radius: -1px;
+    border-color: inherit;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch; }
+  .ui.input.control > .append,
+  .ui.input.control > .ui.control.append {
+    white-space: nowrap;
+    /* height calculation should be the same as input */
+    margin: -1px;
+    /* negative repositioning border and box-shadow */
+    border: inherit;
+    border-color: transparent;
+    border-left: 1px solid #bfbfbf;
+    border-top-right-radius: -1px;
+    border-bottom-right-radius: -1px;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch; }
+
+.ui.control.select {
+  border-radius: 4px;
+  border: 1px #bfbfbf solid;
+  background: #fff; }
+  .ui.control.select > select {
+    border-radius: 3px;
+    display: inline-block;
+    min-width: 1em;
+    max-width: 100%;
+    width: auto;
+    padding: 2.8px 31.5px 2.8px 4.899px;
+    padding: .2rem 2.25rem .2rem .35rem;
+    cursor: pointer;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 1em;
+            flex: 1 1 1em;
+    color: inherit; }
+    .ui.control.select > select:focus:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000; }
+    .ui.control.select > select::-ms-expand {
+      display: none; }
+  .ui.control.select:after {
+    position: absolute;
+    top: 50%;
+    right: .5em;
+    display: inline-block;
+    content: "";
+    width: 0;
+    height: 0;
+    margin-top: -.15em;
+    pointer-events: none;
+    border-top: .35em solid;
+    border-right: .35em solid transparent;
+    border-bottom: .35em solid transparent;
+    border-left: .35em solid transparent; }
+
+.ui.control.radio {
+  display: inline-block;
+  background: transparent;
+  vertical-align: baseline; }
+  .ui.control.radio, .ui.control.radio + .ui.control.radio {
+    margin-top: 5px;
+    margin-bottom: 5px; }
+  .ui.control.radio > input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1; }
+  .ui.control.radio > .control-indicator {
+    border-radius: 50%; }
+  .ui.control.radio > input:checked ~ .control-indicator {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==); }
+
+.ui.control.checkbox {
+  display: inline-block;
+  background: transparent; }
+  .ui.control.checkbox > input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1; }
+  .ui.control.checkbox .control-indicator {
+    border-radius: .25rem; }
+  .ui.control.checkbox > input:checked ~ .control-indicator {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=); }
+
+.ui.control.group {
+  background-color: transparent;
+  margin-top: auto;
+  /* default cell width based on child count */
+  /* @formatter:off */
+  /* @formatter:on */ }
+  .ui.control.group > *:nth-last-child(2):first-child, .ui.control.group > *:nth-last-child(2):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(50% - 20px / 2); }
+  .ui.control.group > *:nth-last-child(3):first-child, .ui.control.group > *:nth-last-child(3):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(33.33333% - 20px / 2); }
+  .ui.control.group > *:nth-last-child(4):first-child, .ui.control.group > *:nth-last-child(4):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(25% - 20px / 2); }
+  .ui.control.group > *:nth-last-child(5):first-child, .ui.control.group > *:nth-last-child(5):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(20% - 20px / 2); }
+  .ui.control.group > *:nth-last-child(6):first-child, .ui.control.group > *:nth-last-child(6):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: calc(16.66667% - 20px / 2); }
+
+.ui.control.--has-error {
+  border-color: #b94a4d;
+  color: #b94a4d; }
+
+.ui.layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .ui.layout > .header {
+    display: block;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0;
+    min-width: 0; }
+
+.ui.grid {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* default cell width based on child count */
+  /* @formatter:off */
+  /* @formatter:on */ }
+  .ui.grid > * {
+    display: block;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0;
+    min-width: 0; }
+  .ui.grid > *:nth-last-child(2):first-child, .ui.grid > *:nth-last-child(2):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    max-width: calc(50% - 20px / 2); }
+  .ui.grid > *:nth-last-child(3):first-child, .ui.grid > *:nth-last-child(3):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    max-width: calc(33.33333% - 20px / 2); }
+  .ui.grid > *:nth-last-child(4):first-child, .ui.grid > *:nth-last-child(4):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    max-width: calc(25% - 20px / 2); }
+  .ui.grid > *:nth-last-child(5):first-child, .ui.grid > *:nth-last-child(5):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    max-width: calc(20% - 20px / 2); }
+  .ui.grid > *:nth-last-child(6):first-child, .ui.grid > *:nth-last-child(6):first-child ~ * {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    max-width: calc(16.66667% - 20px / 2); }
+
+.ui.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+  empty-cells: show; }
+
+.ui.small.table {
+  font-size: .9em; }
+
+.ui.table th {
+  text-align: left;
+  font-weight: 700;
+  vertical-align: bottom; }
+
+.ui.table td {
+  vertical-align: top; }
+
+.ui.table th,
+.ui.table td {
+  padding: 7px 7px;
+  padding: .5rem .5rem;
+  border-bottom: 1px #D4D4D4 solid; }
+  .ui.table th:first-child,
+  .ui.table td:first-child {
+    padding-left: 0; }
+  .ui.table th:last-child,
+  .ui.table td:last-child {
+    padding-right: 0; }
+
+/*doc
+
+# Navigation
+
+  <div data-module="kit-example">
+    <ul class="nav">
+      <li class="item">Home</li>
+      <li class="item">About</li>
+      <li class="item">News</li>
+      <li class="item">Help</li>
+    </ul>
+  </div>
+
+*/
+.nav {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  padding: 7px;
+  padding: .5rem;
+  border: 1px solid #D4D4D4;
+  border-radius: 4px;
+  margin: 0px;
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .nav .item {
+    position: relative;
+    display: block; }
+
+ul.nav {
+  list-style-type: none; }
+
+.section {
+  /* Sizing */
+  padding: 21px;
+  padding: 1.5rem;
+  background: #FFF;
+  /* Theming */
+  box-shadow: #dfdfe0 1px 2px 1px 0px, #f2f2f2 -1px -1px 0px 0px; }
