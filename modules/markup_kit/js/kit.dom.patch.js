@@ -160,13 +160,13 @@
     var old_attributes = old_node.attributes;
 
     var result = false;
-    var old_text = text(old_node);
+    /*var old_text = text(old_node);
     var new_text = text(new_node);
     if(target && old_text !== new_text)
     {
       target.innerHTML = new_text;
       result = true;
-    }
+    }*/
 
     var key_set = to_set(new_attributes, new Set());
     key_set = to_set(old_attributes, key_set);
@@ -197,10 +197,10 @@
   function has_node_changed (node1, node2)
   {
     var node_name_diff = node1.nodeName !== node2.nodeName;
-    //var text_diff = text(node1) !== text(node2);
+    var text_diff = text(node1) !== text(node2);
     var id_diff = node1.id !== node2.id;
 
-    return node_name_diff /*|| text_diff*/ || id_diff;
+    return node_name_diff || text_diff || id_diff;
   }
 
   function text (node)
