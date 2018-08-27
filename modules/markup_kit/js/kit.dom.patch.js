@@ -14,6 +14,7 @@
     var id = (++ref_counter);
     prv[id] = {};
     prv[id].callbacks = [];
+    prv[id].attr_callbacks = [];
     prv[id].ignore_callbacks = [];
     prv[id].scope = new kit.global.Scope();
     prv[id].last_patch_time = (new Date).getTime();
@@ -33,6 +34,15 @@
 
   proto.callback = function (callback) {
     prv[this.id()].callbacks.push(callback);
+  };
+
+  proto.attr_callback = function (callback) {
+    prv[this.id()].attr_callbacks.push(callback);
+  };
+
+  proto.remove_callback = function (callback)
+  {
+
   };
 
   proto.ignore = function (callback) {
@@ -241,8 +251,6 @@
 
   proto.last_patch_time = function () {
 
-    console.log(prv[this.id()].last_patch_time);
-
     return prv[this.id()].last_patch_time;
   };
 
@@ -284,6 +292,16 @@
     return true;
   }
 
+  function on_update_attributes (owner, parent, new_node, old_node)
+  {
+    var len = prv[owner.id()].attr_callbacks.length;
+    for (var i = 0; i < len; i++)
+    {
+      if (!prv[owner.id()].attr_callbacks[i](owner, parent, old_node, new_node)) return false;
+    }
+    return true;
+  }
+
   function update_element (owner, parent, new_node, old_node, index, dirty_nodes)
   {
     if (!old_node)
@@ -303,7 +321,11 @@
     }
     else if (new_node)
     {
-      var result = update_attributes(parent.children[index], new_node, old_node);
+      var result = false;
+      if (on_update_attributes(owner, parent.children[index], new_node, old_node))
+      {
+        result = update_attributes(parent.children[index], new_node, old_node);
+      }
 
       var new_child_count = new_node.children.length;
       var old_child_count = old_node.children.length;
