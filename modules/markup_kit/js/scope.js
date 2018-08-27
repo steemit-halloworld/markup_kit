@@ -16,12 +16,11 @@
     this.watch = function (watch_fn, listener_fn)
     {
 
-
       var watcher =
       {
         watch_fn: watch_fn,
         listener_fn: listener_fn || function () {},
-        last: init_val
+        last: watch_fn()
       };
 
       watchers.push(watcher);
@@ -50,14 +49,16 @@
 
           if (!eq)
           {
-            var is_initial = old_val == init_val;
+            //var is_initial = old_val == init_val;
 
-            old_val = is_initial ? new_val : old_val;
+            //old_val = is_initial ? new_val : old_val;
             watchers[i].last = new_val;
-            if(!is_initial || ignore_initial)
+            watchers[i].listener_fn(new_val, old_val, self);
+
+            /*if(!is_initial || ignore_initial)
             {
               watchers[i].listener_fn(new_val, old_val, self);
-            }
+            }*/
 
             dirty = true;
           }
