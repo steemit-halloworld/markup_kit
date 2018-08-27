@@ -62,7 +62,7 @@
     {
       &, & ~ .box
       {
-        min-width: calc((100% / #{$n}) - ((var(--box-hmargin) * #{$n - 1}) / #{$n}));
+        width: calc((100% / #{$n}) - ((var(--box-hmargin) * #{$n - 1}) / #{$n}));
       }
     }
 
@@ -70,7 +70,7 @@
     {
       &, & ~ .box:not(.basic)
       {
-        min-width: calc((100% / #{$n}) - (((var(--box-hmargin) * #{$n - 1}) / #{$n})) + var(--box-hmargin));
+        width: calc((100% / #{$n}) - (((var(--box-hmargin) * #{$n - 1}) / #{$n})) + var(--box-hmargin));
       }
     }
   }
