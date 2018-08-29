@@ -45,6 +45,11 @@
 
   };
 
+  proto.reset_callbacks = function (callback)
+  {
+    prv[this.id()].callbacks = [];
+  }
+
   proto.ignore = function (callback) {
     prv[this.id()].ignore_callbacks.push(callback);
   };
