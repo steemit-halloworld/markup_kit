@@ -1,117 +1,116 @@
 @import 'base';
 
+@mixin horizontal-divider-nth($n)
+{
+  & > .box:nth-last-child(#{$n}n):first-child ~ .box:nth-child(#{$n}n):after
+  {
+    border-right : transparent;
+  }
+
+  & > .box:nth-last-child(#{$n}n):first-child ~ .box:not(:nth-child(#{$n}n)):after
+  {
+    @extend %horizontal-divider;
+  }
+
+  & > .box:nth-last-child(#{$n}n):first-child
+  {
+    &, & ~ .box
+    {
+      margin-right : 24px;
+    }
+
+    & ~ .box:nth-child(#{$n}n)
+    {
+      margin-right : 0;
+    }
+  }
+}
+
+@mixin width-nth($n)
+{
+  & > .box:nth-last-child(#{$n}n):first-child
+  {
+    &, & ~ .box
+    {
+      width : calc((100% / #{$n}) - ((var(--box-hmargin) * #{$n - 1}) / #{$n}));
+    }
+  }
+
+  &.basic > .box:not(.basic):nth-last-child(#{$n}n):first-child
+  {
+    &, & ~ .box:not(.basic)
+    {
+      width : calc((100% / #{$n}) - (((var(--box-hmargin) * #{$n - 1}) / #{$n})) + var(--box-hmargin));
+    }
+  }
+}
 
 @include exports('mkit-box/box')
 {
 
   :root
   {
-    --box-hpadding:                var(--spacer-3);
-    --box-vpadding:                var(--spacer-2);
-    --box-hmargin:                 var(--spacer-3);
-    --box-vmargin:                 var(--spacer-2);
-    --box-header-background-color: var(--bg-gray);
-    --box-padding:                 var(--box-vpadding) var(--box-hpadding);
-    --box-basic-border-radius:     var(--border-radius);
-    --box-basic-border-width:      var(--border-width);
-    --box-basic-border:            var(--box-basic-border-width) var(--border-gray-dark) var(--border-style);
+    --box-hpadding                : var(--spacer-3);
+    --box-vpadding                : var(--spacer-2);
+    --box-hmargin                 : var(--spacer-3);
+    --box-vmargin                 : var(--spacer-2);
+    --box-header-background-color : var(--bg-gray);
+    --box-padding                 : var(--box-vpadding) var(--box-hpadding);
+    --box-basic-border-radius     : var(--border-radius);
+    --box-basic-border-width      : var(--border-width);
+    --box-basic-border            : var(--box-basic-border-width) var(--border-gray-dark) var(--border-style);
   }
 
   %horizontal-divider
   {
-    content:      '';
-    overflow:     hidden;
-    font-size:    0;
-    position:     absolute;
-    border-right: var(--box-basic-border);
-    top:          0;
-    bottom:       0;
-    right:        calc(-12px - var(--box-basic-border-width));
-    width:        0;
-  }
-
-  @mixin horizontal-divider-nth($n)
-  {
-    & > .box:nth-last-child(#{$n}n):first-child ~ .box:nth-child(#{$n}n):after
-    {
-      border-right: transparent;
-    }
-
-    & > .box:nth-last-child(#{$n}n):first-child ~ .box:not(:nth-child(#{$n}n)):after
-    {
-      @extend %horizontal-divider;
-    }
-
-    & > .box:nth-last-child(#{$n}n):first-child
-    {
-      &, & ~ .box
-      {
-        margin-right: 24px;
-      }
-
-      & ~ .box:nth-child(#{$n}n)
-      {
-        margin-right: 0;
-      }
-    }
-  }
-
-  @mixin width-nth($n)
-  {
-    & > .box:nth-last-child(#{$n}n):first-child
-    {
-      &, & ~ .box
-      {
-        width: calc((100% / #{$n}) - ((var(--box-hmargin) * #{$n - 1}) / #{$n}));
-      }
-    }
-
-    &.basic > .box:not(.basic):nth-last-child(#{$n}n):first-child
-    {
-      &, & ~ .box:not(.basic)
-      {
-        width: calc((100% / #{$n}) - (((var(--box-hmargin) * #{$n - 1}) / #{$n})) + var(--box-hmargin));
-      }
-    }
+    content      : '';
+    overflow     : hidden;
+    font-size    : 0;
+    position     : absolute;
+    border-right : var(--box-basic-border);
+    top          : 0;
+    bottom       : 0;
+    right        : calc(-12px - var(--box-basic-border-width));
+    width        : 0;
   }
 
   .ui.box
   {
     @extend %layout-inline-flex;
-    min-width: auto;
-    width:     auto;
+    min-width : auto;
+    width     : auto;
 
     .ui.box
     {
-      display: inline-flex;
+      display : inline-flex;
     }
   }
 
   div.ui.box
   {
-    display: flex;
+    display : flex;
   }
 
   .ui.box
   {
-    flex-direction:  column;
-    justify-content: center;
+    flex-direction  : column;
+    justify-content : center;
 
     & > .header
     {
-      margin-bottom: auto;
+      margin-bottom : auto;
     }
 
     & > .footer
     {
-      margin-top: auto;
+      margin-top : auto;
     }
 
     &.horizontal
     {
-      flex-direction:  row;
-      flex-wrap:       wrap;
-      justify-content: space-between;
+      flex-direction  : row;
+      flex-wrap       : wrap;
+      justify-content : space-between;
     }
 
     /*----------------------------------------------------------------------------------------------------------------*/
@@ -119,34 +118,34 @@
     /*----------------------------------------------------------------------------------------------------------------*/
     /*region*/
 
-    margin:          var(--box-vmargin) 0;
+    margin          : var(--box-vmargin) 0;
 
     &
     {
       & > *
       {
-        margin-top:    0;
-        margin-bottom: 0;
+        margin-top    : 0;
+        margin-bottom : 0;
       }
 
       & > * + .box.basic
       {
-        margin: calc(var(--box-vmargin) / 2) 0;
+        margin : calc(var(--box-vmargin) / 2) 0;
       }
 
       & > * + .box.basic + :last-of-type
       {
-        margin-top: calc(-1 * var(--box-vmargin) / 2)
+        margin-top : calc(-1 * var(--box-vmargin) / 2)
       }
 
       & .box:not(.basic) + .box.basic
       {
-        margin-top: var(--box-vmargin);
+        margin-top : var(--box-vmargin);
       }
 
       & .box.basic + .box:not(.basic):not(:last-of-type)
       {
-        margin-top: calc(var(--box-vmargin) / 2);
+        margin-top : calc(var(--box-vmargin) / 2);
       }
 
     }
@@ -157,17 +156,17 @@
       & > .footer,
       & > .box:not(.basic)
       {
-        margin-left: calc(-1 * var(--box-hmargin));
+        margin-left : calc(-1 * var(--box-hmargin));
       }
 
       & > .header
       {
-        margin-top: calc(-1 * var(--box-vmargin));
+        margin-top : calc(-1 * var(--box-vmargin));
       }
 
       & > .footer
       {
-        margin-bottom: calc(-1 * var(--box-vmargin));
+        margin-bottom : calc(-1 * var(--box-vmargin));
       }
     }
 
@@ -193,14 +192,14 @@
     {
       & > .box
       {
-        width: 100%;
+        width : 100%;
       }
 
       &.basic > .header,
       &.basic > .footer,
       &.basic > .box:not(.basic)
       {
-        width: calc(100% + 2 * var(--box-hmargin));
+        width : calc(100% + 2 * var(--box-hmargin));
       }
     }
 
@@ -209,7 +208,7 @@
 
       & > *
       {
-        flex: 0 0 auto;
+        flex : 0 0 auto;
       }
 
       @include width-nth(2);
@@ -226,7 +225,7 @@
 
     & > .box, & > .header, & > .footer
     {
-      padding: var(--box-vpadding) 0;
+      padding : var(--box-vpadding) 0;
     }
 
     /*&.ui.box .ui.box > .ui.box
@@ -241,12 +240,12 @@
       & > .header,
       & > .footer
       {
-        padding: var(--box-vpadding) var(--box-hpadding);
+        padding : var(--box-vpadding) var(--box-hpadding);
       }
 
       &.horizontal > .box
       {
-        padding: var(--box-vpadding) var(--box-hpadding);
+        padding : var(--box-vpadding) var(--box-hpadding);
       }
     }
 
@@ -260,19 +259,19 @@
     /** border styling **/
     &.basic
     {
-      border-radius: var(--box-basic-border-radius);
-      border:        var(--box-basic-border);
+      border-radius : var(--box-basic-border-radius);
+      border        : var(--box-basic-border);
     }
 
     &.basic > .header
     {
-      background-color: var(--box-header-background-color);
-      border-bottom:    var(--box-basic-border);
+      background-color : var(--box-header-background-color);
+      border-bottom    : var(--box-basic-border);
     }
 
     &.basic > .footer
     {
-      border-top: var(--box-basic-border);
+      border-top : var(--box-basic-border);
     }
 
     /*endregion*/
@@ -286,17 +285,17 @@
     {
       & > .box:not(:last-of-type)
       {
-        border-bottom: var(--box-basic-border);
+        border-bottom : var(--box-basic-border);
 
         & + .footer
         {
-          border-top: 0;
+          border-top : 0;
         }
       }
 
       & > .basic.box + .box:not(:first-of-type):not(:last-of-type)
       {
-        border-top: var(--box-basic-border);
+        border-top : var(--box-basic-border);
       }
     }
 
@@ -318,6 +317,5 @@
 
   }
 }
-
 
 /*endregion*/
