@@ -27,6 +27,10 @@ The normalisation module applies some basic resets to ensure elements are render
   vertical-align  : inherit;
 }
 
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'],d [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+  width: auto;
+}
+
 /*doc
 
 ## Box Sizing

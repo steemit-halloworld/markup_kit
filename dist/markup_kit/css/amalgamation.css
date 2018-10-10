@@ -50,6 +50,9 @@ The normalisation module applies some basic resets to ensure elements are render
   text-decoration: inherit;
   vertical-align: inherit; }
 
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], d [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+  width: auto; }
+
 /*doc
 
 ## Box Sizing
@@ -68,13 +71,6 @@ inherit the specified `box sizing`
   line-height: 1.15; }
 
 /*endregion*/
-
-@font-face {
-  font-family: 'ico';
-  src: url("/markup_kit/fonts/icons.eot");
-  src: url("/markup_kit/fonts/icons.eot?#iefix") format("embedded-opentype"), url("/markup_kit/fonts/icons.svg#ico") format("svg"), url("/markup_kit/fonts/icons.woff") format("woff"), url("/markup_kit/fonts/icons.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
 
 html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, -apple-system, BlinkMacSystemFont, “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, sans-serif;
@@ -110,6 +106,9 @@ blockquote {
   margin-bottom: 1.5rem;
   line-height: 21px;
   line-height: 1.5rem; }
+
+[hidden] {
+  display: none !important; }
 
 /*doc
 
@@ -400,6 +399,120 @@ should never be tracked. For some larger text, depending on the typeface a negat
   box-shadow: 0 0 0 1px #F0506E !important;
   border-color: #F0506E !important; }
 
+.ui.modal {
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden; }
+
+.ui.modal:before {
+  position: absolute;
+  background: rgba(10, 10, 10, .86);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: ' '; }
+
+.ui.modal > .content {
+  background: #fff;
+  position: relative;
+  max-height: 66vh;
+  width: 640px;
+  margin: 0 auto;
+  padding: 14px;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow: auto; }
+
+.ui.steps {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  border-radius: 5px;
+  border: 1px solid rgba(34, 36, 38, .15); }
+
+.ui.steps:first-child {
+  margin-top: 0; }
+
+.ui.steps:last-child {
+  margin-bottom: 0; }
+
+.ui.steps .step {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  vertical-align: middle;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em 2em;
+  background: white;
+  color: inherit;
+  border-radius: none;
+  border: none;
+  border-right: 1px solid rgba(34, 36, 38, .15);
+  transition: none; }
+
+/* arrow */
+.ui.steps .step:after {
+  position: absolute;
+  z-index: 2;
+  content: '';
+  top: 50%;
+  right: 0%;
+  width: 1.14285714em;
+  height: 1.14285714em;
+  background-color: white;
+  border: medium none;
+  border-color: rgba(34, 36, 38, .15);
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  transition: none;
+  -webkit-transform: translateY(-50%) translateX(50%) rotate(-45deg);
+          transform: translateY(-50%) translateX(50%) rotate(-45deg); }
+
+.ui.steps .step:last-child {
+  border-radius: 0em 5px 5px 0;
+  border-right: none;
+  margin-right: 0; }
+
+.ui.steps .step:last-child:after {
+  display: none; }
+
+.ui.steps .link.step,
+.ui.steps a.step {
+  cursor: pointer; }
+
 /*doc
 
 # Control
@@ -446,11 +559,19 @@ div.ui.control {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  margin-bottom: 5px;
+  max-width: 100%;
   /* control contains another control */ }
-  .ui.control:not(.group) {
+  .ui.control.--is-invisible {
+    visibility: hidden; }
+  .ui.control:not(.group):not(.checkbox):not(.--has-no-label):not(.--has-hidden-label):not(.--has-float-label) {
     margin: calc(1em + 4px + 5px) 0 5px; }
-  .ui.control + .ui.control:not(.group) {
-    margin: calc(1em + 4px + 2 * 5px) 0 5px; }
+    .ui.control:not(.group):not(.checkbox):not(.--has-no-label):not(.--has-hidden-label):not(.--has-float-label).--is-horizontal {
+      margin-top: auto;
+      margin-left: 10em; }
+  .ui.control:not(.group):not(.checkbox) > .control {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important; }
   .ui.control.--is-disabled {
     opacity: 0.66; }
   .ui.control.--is-disabled > input, .ui.control.--is-disabled,
@@ -461,12 +582,10 @@ div.ui.control {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-  .ui.control.--has-no-label {
-    margin-top: 5px; }
-    .ui.control.--has-no-label > .label {
-      display: none; }
-  .ui.control + .ui.control.--has-no-label {
-    margin-top: 5px; }
+  .ui.control.--has-no-label > .label {
+    display: none; }
+  .ui.control.--has-hidden-label > .label {
+    visibility: hidden; }
   .ui.control > *:not(.control) {
     padding-left: .35em;
     padding-right: .35em; }
@@ -486,7 +605,8 @@ div.ui.control {
   .ui.control > input, .ui.control > textarea, .ui.control > select {
     -webkit-appearance: none;
        -moz-appearance: none;
-            appearance: none; }
+            appearance: none;
+    max-width: 100%; }
   .ui.control > input:not([type='checkbox']):not([type='radio']),
   .ui.control > textarea, .ui.control > select {
     border: inherit;
@@ -499,8 +619,11 @@ div.ui.control {
         -ms-grid-row-align: stretch;
         align-self: stretch;
     border-color: transparent;
-    margin: -1px;
-    /* negative repositioning border and box-shadow */ }
+    /* negative repositioning border and box-shadow */
+    margin-top: -1px;
+    margin-left: -1px;
+    margin-right: 1px;
+    margin-bottom: -1px; }
   .ui.control:not(.group) > .ui.control {
     margin: -1px;
     /* negative repositioning border and box-shadow */
@@ -579,23 +702,20 @@ div.ui.control {
     margin-bottom: 4px;
     padding-left: 2.8px;
     padding-left: .2rem;
-    color: dimgrey; }
-  .ui.control:not(.--is-horizontal) > .label {
+    color: dimgrey;
     position: absolute; }
-  .ui.control.--is-horizontal {
-    margin-left: 10em;
-    margin-top: auto; }
-    .ui.control.--is-horizontal > .label {
-      margin-top: auto;
-      margin-bottom: auto;
-      -webkit-box-flex: 1;
-          -ms-flex: 1 0 0px;
-              flex: 1 0 0;
-      max-width: 10em;
-      min-width: 10em;
-      margin-left: -10em;
-      top: 0;
-      bottom: 0; }
+  .ui.control.--is-horizontal > .label {
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0;
+    max-width: 10em;
+    min-width: 10em;
+    margin-left: -10em;
+    top: 0;
+    bottom: 0; }
   .ui.control.--is-start-aligned {
     margin-top: auto;
     margin-bottom: calc(1.2em + 16px); }
@@ -615,9 +735,9 @@ div.ui.control {
     box-shadow: none;
     border: inherit;
     border-color: transparent; }
-  .ui.control.input:focus-within .ui.control:focus-within,
-  .ui.control.input:focus-within .ui.control:focus-within > :focus, .ui.control.select:focus-within .ui.control:focus-within,
-  .ui.control.select:focus-within .ui.control:focus-within > :focus {
+  .ui.control.input:focus-within .ui.control,
+  .ui.control.input:focus-within .ui.control > :focus, .ui.control.select:focus-within .ui.control,
+  .ui.control.select:focus-within .ui.control > :focus {
     border: none;
     box-shadow: none; }
   .ui.control.input > select {
@@ -629,7 +749,14 @@ div.ui.control {
 .ui.input.control {
   border-radius: 0;
   border: 1px solid #bfbfbf;
-  box-shadow: inset 0 0 0 0px #f7f7f7; }
+  box-shadow: 0 2px 3px 0px #f7f7f7, inset 1 0 0 0px #f7f7f7; }
+  .ui.input.control > input[type=number]::-webkit-inner-spin-button,
+  .ui.input.control > input[type=number]::-webkit-outer-spin-button,
+  .ui.input.control > input[type=date]::-webkit-inner-spin-button,
+  .ui.input.control > input[type=date]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield; }
   .ui.input.control > *:not(.label) {
     border-radius: -1px;
     color: inherit; }
@@ -654,14 +781,17 @@ div.ui.control {
       padding-top: .2rem; }
     .ui.input.control.--has-float-label > .label {
       position: absolute;
-      margin: 0;
       /* reset default margin */
       font-size: 75.000%;
       opacity: 1;
       cursor: text;
-      top: calc(-1 * (.5em + .1em + 1px));
+      margin: calc(-1 * (.5em + .1em + 1px)) 0 0;
       left: 0;
       max-width: 100%;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto;
+      width: auto;
       padding: 0 calc(.1em + 1px + 2px);
       z-index: 1001;
       line-height: 1.2em;
@@ -709,7 +839,7 @@ div.ui.control {
     border-right: 1px solid #bfbfbf;
     border-top-left-radius: -1px;
     border-bottom-left-radius: -1px;
-    border-color: inherit;
+    border-color: #bfbfbf;
     -ms-flex-item-align: stretch;
         -ms-grid-row-align: stretch;
         align-self: stretch; }
@@ -726,7 +856,13 @@ div.ui.control {
     border-bottom-right-radius: -1px;
     -ms-flex-item-align: stretch;
         -ms-grid-row-align: stretch;
-        align-self: stretch; }
+        align-self: stretch;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    outline: none;
+    background: none;
+    line-height: 1.875em; }
 
 .ui.control.select {
   border-radius: 4px;
@@ -784,6 +920,8 @@ div.ui.control {
 .ui.control.checkbox {
   display: inline-block;
   background: transparent; }
+  .ui.control.checkbox > .label {
+    position: relative; }
   .ui.control.checkbox > input {
     position: absolute;
     opacity: 0;
@@ -820,9 +958,35 @@ div.ui.control {
         flex-basis: auto;
     width: calc(16.66667% - 20px / 2); }
 
+.ui.control.group > label {
+  width: calc(40em - 20px) !important;
+  max-width: calc(40em - 20px) !important; }
+
+.ui.control.group > label ~ .ui.control {
+  width: auto; }
+
+.ui.control.radiogroup {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  background: transparent; }
+  .ui.control.radiogroup > .ui.control.radio {
+    padding-top: 0;
+    padding-bottom: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 0px;
+            flex: 0 0 0;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+    margin: 0 3.5px !important;
+    margin: 0 0.25rem !important; }
+    .ui.control.radiogroup > .ui.control.radio:first-of-type {
+      margin-left: 0 !important; }
+    .ui.control.radiogroup > .ui.control.radio:last-of-type {
+      margin-right: 0 !important; }
+
 .ui.control.--has-error {
-  border-color: #b94a4d;
-  color: #b94a4d; }
+  border-color: #db4334; }
 
 .ui.layout {
   display: -webkit-box;
@@ -960,3 +1124,21 @@ ul.nav {
   background: #FFF;
   /* Theming */
   box-shadow: #dfdfe0 1px 2px 1px 0px, #f2f2f2 -1px -1px 0px 0px; }
+
+html {
+  -webkit-font-smoothing: subpixel-antialiased; }
+
+@font-face {
+  font-family: 'ico';
+  src: url("/markup_kit/fonts/icons.eot");
+  src: url("/markup_kit/fonts/icons.eot?#iefix") format("embedded-opentype"), url("/markup_kit/fonts/icons.svg#ico") format("svg"), url("/markup_kit/fonts/icons.woff") format("woff"), url("/markup_kit/fonts/icons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.icon {
+  font-family: ico;
+  font-style: normal;
+  font-weight: normal; }
+
+.search.icon:before {
+  content: "\f002"; }
