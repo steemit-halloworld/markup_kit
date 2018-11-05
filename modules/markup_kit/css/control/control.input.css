@@ -2,15 +2,15 @@
 {
   --control-input-border-radius                : var(--border-radius);
   --control-input-background-color             : #fff;
-  --control-input-inner-box-shadow-hlen        : 1;
+  --control-input-inner-box-shadow-hlen        : 1px;
   --control-input-inner-box-shadow-vlen        : 0;
   --control-input-inner-box-shadow-blur-radius : 0;
-  --control-input-inner-box-spread-radius      : 0px;
+  --control-input-inner-box-spread-radius      : 0;
   --control-input-inner-box-shadow-color       : #f7f7f7;
   --control-input-outer-box-shadow-hlen        : 0;
   --control-input-outer-box-shadow-vlen        : 2px;
   --control-input-outer-box-shadow-blur-radius : 3px;
-  --control-input-outer-box-spread-radius      : 0px;
+  --control-input-outer-box-spread-radius      : 0;
   --control-input-outer-box-shadow-color       : #f7f7f7;
 }
 
@@ -86,7 +86,7 @@
         display    : block;
         position   : absolute;
         background : var(--control-input-background-color);
-        height     : var(--control-input-border-width);
+        height     : calc(var(--control-input-border-width) * 2);
         left       : 0;
         right      : 0;
         top        : 50%;
