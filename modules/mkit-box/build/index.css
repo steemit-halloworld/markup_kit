@@ -1,5 +1,10 @@
 :root
 {
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Golden Ratio                                                                                                     */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
   /* border style */
   /* system color palette */
   /* default background colors */
@@ -101,7 +106,7 @@ div.ui.box
   margin: 16px 0;
 }
 
-.ui.box > *:not(.header):not(.footer)
+.ui.box > *
 {
   margin-top: 0;
   margin-bottom: 0;
@@ -109,20 +114,20 @@ div.ui.box
 
 .ui.box > .header
 {
-  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .ui.box > .footer
 {
-  margin-bottom: auto;
+  margin-top: auto;
 }
 
-.ui.box > * + .box.basic
+.ui.box:not(.horizontal) > * + .box.basic
 {
   margin: 8px 0;
 }
 
-.ui.box > * + .box.basic + :last-of-type
+.ui.box:not(.horizontal) > * + .box.basic + :last-of-type:not(.footer)
 {
   margin-top: -8px;
 }

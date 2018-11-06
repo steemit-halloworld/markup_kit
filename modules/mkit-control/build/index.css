@@ -17,6 +17,11 @@ platform, so that they are intuitive for users to interact with.
 
 :root
 {
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /* Golden Ratio                                                                                                     */
+  /*------------------------------------------------------------------------------------------------------------------*/
+  /*region*/
+  /*endregion*/
   /* border style */
   /* system color palette */
   /* default background colors */
@@ -53,8 +58,8 @@ body .ui > *
   vertical-align: baseline;
   position: relative;
   font-size: 1em;
-  font-family: inherit;
   line-height: 1.5;
+  font-family: inherit;
   background: #e8e8e8;
   padding: 0;
   -webkit-box-pack: justify;
@@ -67,6 +72,15 @@ body .ui > *
   max-width: 100%;
 }
 
+.ui.control > *:not(.control),
+input.ui.control
+{
+  padding-left: .35em;
+  padding-right: .35em;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
 .ui.control:not(input)
 {
   display: -webkit-inline-box;
@@ -76,12 +90,33 @@ body .ui > *
   flex-wrap: wrap;
 }
 
+.ui.control > input,
+.ui.control > textarea,
+.ui.control > select
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.ui.input.control:focus-within
+{
+  border-color: rgb(48, 145, 243);
+  border-radius: inherit;
+  box-shadow: 0px 0px 0px 1px rgb(48, 145, 243);
+  transition: opacity .2s;
+}
+
 .ui.input.control
 {
   background: #fff;
   border-radius: 3px;
   border: 1px solid #e1e4e8;
   box-shadow: 0 2px 3px 0 #f7f7f7, inset 1px 0 0 0 #f7f7f7;
+  padding-top: 3.2px;
+  padding-top: .2rem;
+  padding-bottom: 3.2px;
+  padding-bottom: .2rem;
 }
 
 .ui.input > input

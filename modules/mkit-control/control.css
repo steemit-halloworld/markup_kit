@@ -4,8 +4,8 @@
   vertical-align  : baseline;
   position        : relative;
   font-size       : 1em;
-  font-family     : inherit;
   line-height     : 1.5;
+  font-family     : inherit;
   background      : #e8e8e8;
   padding         : 0;
   justify-content : space-between;
@@ -14,8 +14,35 @@
   max-width       : 100%;
 }
 
+.ui.control > *:not(.control),
+input.ui.control
+{
+  padding-left  : .35em;
+  padding-right : .35em;
+  font-size       : 1em;
+  line-height     : 1.5;
+}
+
+
+
 .ui.control:not(input)
 {
   display:        inline-flex;
   flex-wrap       : wrap;
 }
+
+.ui.control > input,
+.ui.control > textarea,
+.ui.control > select
+{
+  appearance: none;
+}
+
+.ui.input.control:focus-within
+{
+  border-color  : var(--control-input-border-color-active);
+  border-radius : var(--control-focus-ring-border-radius);
+  box-shadow    : var(--control-input-box-shadow-active);
+  transition    : opacity .2s;
+}
+

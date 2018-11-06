@@ -12,28 +12,6 @@ var postcss_processors = [
   cssnext()
 ];
 
-
-
-/*gulp.task('mkit-box', function () {
-  var plugins = [
-    cssnext()
-  ];
-
-  return gulp.src('modules/mkit-box/index.scss')
-  .pipe(sass({
-    includePaths: ["modules"],
-    errorLogToConsole: true
-  }))
-  .pipe(postcss(plugins))
-  .pipe(cssbeautify({
-    indent: '  ',
-    openbrace: 'separate-line',
-    autosemicolon: true
-  }))
-  .pipe(rename('index.css'))
-  .pipe(gulp.dest('modules/mkit-box/css'))
-});*/
-
 function mkit_base ()
 {
   return gulp.src('modules/mkit-base/index.css')
@@ -49,7 +27,6 @@ function mkit_base ()
 
 function mkit_box ()
 {
-
   return gulp.src('modules/mkit-box/index.css')
   .pipe(postcss(postcss_processors))
   .pipe(cssbeautify({
@@ -63,7 +40,6 @@ function mkit_box ()
 
 function mkit_control ()
 {
-
   return gulp.src('modules/mkit-control/index.css')
   .pipe(postcss(postcss_processors))
   .pipe(cssbeautify({
