@@ -1,0 +1,27 @@
+:root
+{
+  --control-input-border-radius                : var(--border-radius);
+  --control-input-background-color             : #fff;
+  --control-input-inner-box-shadow-hlen        : 1px;
+  --control-input-inner-box-shadow-vlen        : 0;
+  --control-input-inner-box-shadow-blur-radius : 0;
+  --control-input-inner-box-spread-radius      : 0;
+  --control-input-inner-box-shadow-color       : #f7f7f7;
+  --control-input-outer-box-shadow-hlen        : 0;
+  --control-input-outer-box-shadow-vlen        : 2px;
+  --control-input-outer-box-shadow-blur-radius : 3px;
+  --control-input-outer-box-spread-radius      : 0;
+  --control-input-outer-box-shadow-color       : #f7f7f7;
+  --control-input-border-color-active          : var(--color-focus);
+  --control-input-border-width                 : var(--border-width);
+  --control-input-border-color                 : var(--border-color);
+  --control-input-outline-color-active         : var(--color-focus);
+  --control-margin-top                 : 5px;
+  --control-margin-bottom              : 5px;
+  --control-input-outline-color-active : var(--color-focus);
+  --control-focus-ring-border-radius   : inherit;
+  --control-input-outline-width-active : 1px;
+  --control-label-color                : dimgrey;
+  --control-input-box-shadow-active    : 0px 0px 0px var(--control-input-outline-width-active) var(--control-input-outline-color-active);
+  --control-horizontal-label-width     : 10em;
+}

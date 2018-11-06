@@ -1,0 +1,121 @@
+/*md
+
+# Control Elements
+
+(UI) controls are visual elements on a computer screen that helps humans to interact with the underlying software.
+
+
+TODO
+
+
+Controls are visual elements that convey a specific action or intention in response to user interactions. They are
+essential for collecting and handling user input and should follow styling and interaction guidelines for each
+platform, so that they are intuitive for users to interact with.
+
+
+ */
+
+:root
+{
+  /* border style */
+  /* system color palette */
+  /* default background colors */
+  /* border colors */;
+}
+
+body .ui,
+body .ui > *
+{
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  font-size: 100%;
+  border: 0;
+  text-align: left;
+  text-decoration: none;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  outline: none;
+  z-index: 1;
+}
+
+body .ui > *
+{
+  display: none;
+}
+
+.ui.control
+{
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+  font-size: 1em;
+  font-family: inherit;
+  line-height: 1.5;
+  background: #e8e8e8;
+  padding: 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  max-width: 100%;
+}
+
+.ui.control:not(input)
+{
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.ui.input.control
+{
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #e1e4e8;
+  box-shadow: 0 2px 3px 0 #f7f7f7, inset 1px 0 0 0 #f7f7f7;
+}
+
+.ui.input > input
+{
+  display: inline-block;
+}
+
+.ui.field
+{
+  margin: calc(1em + 4px + 5px) 0 5px;
+}
+
+.ui.field > .label
+{
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  font-size: 1em;
+  line-height: 1.2;
+  //height: 1.2em;
+  display: block;
+  -webkit-box-ordinal-group: -999;
+  -ms-flex-order: -1000;
+  order: -1000;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  margin-top: calc(-1.2em - 4px);
+  margin-bottom: 4px;
+  padding-left: 3.2px;
+  padding-left: .2rem;
+  color: dimgrey;
+  position: absolute;
+}

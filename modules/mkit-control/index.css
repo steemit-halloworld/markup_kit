@@ -13,9 +13,11 @@ essential for collecting and handling user input and should follow styling and i
 platform, so that they are intuitive for users to interact with.
 
 
-
  */
 
-@import "mkit-base/index";
-@import 'text-box';
-@import 'combo-box';
+@import "../mkit-base/index.css";
+@import "variables.css";
+@import "control.css";
+@import "input.css";
+
+@import "field.css";

@@ -326,7 +326,17 @@ should never be tracked. For some larger text, depending on the typeface a negat
 .ui.header {
   border: none; }
   .ui.header.--has-divider {
-    border-bottom: 1px solid #D4D4D4; }
+    position: relative; }
+    .ui.header.--has-divider:after {
+      display: inline;
+      content: "";
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      background-color: currentColor;
+      opacity: .2; }
 
 .muted {
   background: #f5f5f5 !important; }
@@ -586,6 +596,8 @@ div.ui.control {
     display: none; }
   .ui.control.--has-hidden-label > .label {
     visibility: hidden; }
+  .ui.control.--has-hidden-label.--is-horizontal > .label {
+    position: absolute; }
   .ui.control > *:not(.control) {
     padding-left: .35em;
     padding-right: .35em; }
@@ -609,6 +621,7 @@ div.ui.control {
     max-width: 100%; }
   .ui.control > input:not([type='checkbox']):not([type='radio']),
   .ui.control > textarea, .ui.control > select {
+    height: auto;
     border: inherit;
     outline: none;
     background: transparent;
@@ -711,8 +724,8 @@ div.ui.control {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 0px;
             flex: 1 0 0;
-    max-width: 10em;
     min-width: 10em;
+    max-width: 10em;
     margin-left: -10em;
     top: 0;
     bottom: 0; }
@@ -749,7 +762,7 @@ div.ui.control {
 .ui.input.control {
   border-radius: 0;
   border: 1px solid #bfbfbf;
-  box-shadow: 0 2px 3px 0px #f7f7f7, inset 1 0 0 0px #f7f7f7; }
+  box-shadow: 0 2px 3px 0 #f7f7f7, inset 1px 0 0 0 #f7f7f7; }
   .ui.input.control > input[type=number]::-webkit-inner-spin-button,
   .ui.input.control > input[type=number]::-webkit-outer-spin-button,
   .ui.input.control > input[type=date]::-webkit-inner-spin-button,
@@ -782,7 +795,7 @@ div.ui.control {
     .ui.input.control.--has-float-label > .label {
       position: absolute;
       /* reset default margin */
-      font-size: 75.000%;
+      font-size: 75%;
       opacity: 1;
       cursor: text;
       margin: calc(-1 * (.5em + .1em + 1px)) 0 0;
@@ -794,20 +807,19 @@ div.ui.control {
       width: auto;
       padding: 0 calc(.1em + 1px + 2px);
       z-index: 1001;
-      line-height: 1.2em;
-      height: 1.2em;
+      height: 1.3em;
       pointer-events: none; }
       .ui.input.control.--has-float-label > .label:after {
         content: " ";
         display: block;
         position: absolute;
         background: #fff;
-        height: 1px;
+        height: 2px;
         left: 0;
         right: 0;
         top: 50%;
         z-index: -1;
-        margin: 0 .25em; }
+        margin: -1px .25em 0; }
     .ui.input.control.--has-float-label > input:placeholder-shown:not(:focus)::-webkit-input-placeholder,
     .ui.input.control.--has-float-label > textarea:placeholder-shown:not(:focus)::-webkit-input-placeholder {
       opacity: 0; }

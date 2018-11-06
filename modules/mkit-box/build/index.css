@@ -1,0 +1,232 @@
+:root
+{
+  /* border style */
+  /* system color palette */
+  /* default background colors */
+  /* border colors */;
+}
+
+body .ui,
+body .ui > *
+{
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  font-size: 100%;
+  border: 0;
+  text-align: left;
+  text-decoration: none;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  outline: none;
+  z-index: 1;
+}
+
+body .ui > *
+{
+  display: none;
+}
+
+.ui.box
+{
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-width: auto;
+  width: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ui.box.horizontal
+{
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+div.ui.box
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ui.box > *
+{
+  display: block;
+}
+/*----------------------------------------------------------------------------------------------------------------*/
+/* Padding                                                                                                        */
+/*----------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.ui.box > .box, .ui.box > .header, .ui.box > .footer
+{
+  padding: 16px 0;
+}
+
+.ui.box.basic,
+.ui.box.basic > .box,
+.ui.box.basic > .header,
+.ui.box.basic > .footer
+{
+  padding: 16px 24px;
+}
+
+.ui.box.horizontal > .box
+{
+  padding: 16px 24px;
+}
+/*endregion*/
+/*----------------------------------------------------------------------------------------------------------------*/
+/* Margins                                                                                                        */
+/*----------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.ui.box
+{
+  margin: 16px 0;
+}
+
+.ui.box > *:not(.header):not(.footer)
+{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.ui.box > .header
+{
+  margin-top: auto;
+}
+
+.ui.box > .footer
+{
+  margin-bottom: auto;
+}
+
+.ui.box > * + .box.basic
+{
+  margin: 8px 0;
+}
+
+.ui.box > * + .box.basic + :last-of-type
+{
+  margin-top: -8px;
+}
+
+.ui.box .box:not(.basic) + .box.basic
+{
+  margin-top: 16px;
+}
+
+.ui.box .box.basic + .box:not(.basic):not(:last-of-type)
+{
+  margin-top: 8px;
+}
+
+.ui.box.basic > .header,
+.ui.box.basic > .footer,
+.ui.box.basic > .box:not(.basic)
+{
+  margin-left: -24px;
+}
+
+.ui.box > .header
+{
+  margin-top: -16px;
+}
+
+.ui.box > .footer
+{
+  margin-bottom: -16px;
+}
+/*endregion*/
+/*----------------------------------------------------------------------------------------------------------------*/
+/* Nested Width                                                                                                   */
+/*----------------------------------------------------------------------------------------------------------------*/
+/*region*/
+.ui.box:not(.horizontal) > .box
+{
+  width: 100%;
+}
+
+.ui.box.basic > .header,
+.ui.box.basic > .footer,
+.ui.box.basic > .box:not(.basic)
+{
+  width: calc(100% + 2 * 24px);
+}
+
+.ui.box.horizontal > *
+{
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.ui.box.horizontal > .box:nth-last-child(2n):first-child,
+.ui.box.horizontal > .box:nth-last-child(2n):first-child ~ .box
+{
+  width: calc(50% - 12px);
+}
+
+.ui.horizontal.basic > .box:not(.basic):nth-last-child(2n):first-child,
+.ui.horizontal.basic > .box:not(.basic):nth-last-child(2n):first-child ~ .box:not(.basic)
+{
+  width: calc(50% - 12px + 24px);
+}
+
+.ui.box.horizontal > .box:nth-last-child(3n):first-child,
+.ui.box.horizontal > .box:nth-last-child(3n):first-child ~ .box
+{
+  width: calc(33.33333% - 16px);
+}
+
+.ui.horizontal.basic > .box:not(.basic):nth-last-child(4n):first-child,
+.ui.horizontal.basic > .box:not(.basic):nth-last-child(4n):first-child ~ .box:not(.basic)
+{
+  width: calc(25% - 18px + 24px);
+}
+
+.ui.horizontal.basic > .box:not(.basic):nth-last-child(4n):first-child,
+.ui.horizontal.basic > .box:not(.basic):nth-last-child(4n):first-child ~ .box:not(.basic)
+{
+  width: calc(25% - 18px + 24px);
+}
+/*endregion*/
+/*----------------------------------------------------------------------------------------------------------------*/
+/* Basic Styling                                                                                                  */
+/*----------------------------------------------------------------------------------------------------------------*/
+/*region*/
+/** border styling **/
+.ui.box.basic
+{
+  border-radius: 3px;
+  border: 1px #d1d5da solid;
+}
+
+.ui.basic > .header
+{
+  background-color: #f6f8fa;
+  border-bottom: 1px #d1d5da solid;
+}
+
+.ui.basic > .footer
+{
+  border-top: 1px #d1d5da solid;
+}
+/*endregion*/
+

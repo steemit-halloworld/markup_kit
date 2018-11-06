@@ -1,0 +1,12 @@
+:root
+{
+  --box-hpadding                : var(--spacer-3);
+  --box-vpadding                : var(--spacer-2);
+  --box-hmargin                 : var(--spacer-3);
+  --box-vmargin                 : var(--spacer-2);
+  --box-header-background-color : var(--bg-gray);
+  --box-padding                 : var(--box-vpadding) var(--box-hpadding);
+  --box-basic-border-radius     : var(--border-radius);
+  --box-basic-border-width      : var(--border-width);
+  --box-basic-border            : var(--box-basic-border-width) var(--border-gray-dark) var(--border-style);
+}
