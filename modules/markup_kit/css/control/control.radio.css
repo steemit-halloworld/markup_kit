@@ -6,10 +6,13 @@
 
   &, & + .ui.control.radio
   {
-    margin-top     : var(--control-margin-top);
-    margin-bottom  : var(--control-margin-bottom);
+    margin-top     : var(--control-margin-top) !important;
+    margin-bottom  : var(--control-margin-bottom) !important;
   }
 
+  & + .ui.control.radio {
+    margin-left: 1em !important;
+  }
 
   & > input
   {

@@ -39,3 +39,9 @@
     padding-right : 0;
   }
 }
+
+.ui.table tr:last-child th,
+.ui.table tr:last-child td
+{
+  border-bottom: none;
+}

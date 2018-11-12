@@ -89,7 +89,11 @@ div.ui.control
 
   &.--is-expanded
   {
-    display : flex;
+    width: 100%;
+
+    &.--is-horizontal {
+      width: calc(100% - var(--control-horizontal-label-width));
+    }
   }
 
   &.--has-no-label > .label

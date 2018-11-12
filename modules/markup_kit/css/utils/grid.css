@@ -12,10 +12,9 @@
 
   & > *
   {
-    display    : block;
-    box-sizing : border-box;
-    flex       : 1 0 0;
-    min-width  : 0;
+    box-sizing     : border-box;
+    flex           : 1 0 0;
+    min-width      : 0;
   }
 
   /* default cell width based on child count */
