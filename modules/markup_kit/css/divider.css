@@ -1,0 +1,7 @@
+.ui.divider
+{
+  margin: 0 0 1.33em;
+  opacity: .2;
+  border: none;
+  border-top: 1px solid currentColor;
+}

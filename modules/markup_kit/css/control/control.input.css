@@ -41,7 +41,7 @@
     color         : inherit;
   }
 
-  & > input.--is-right
+  & > input.--text-right
   {
     text-align : right;
   }
