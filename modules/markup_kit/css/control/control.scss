@@ -91,7 +91,7 @@ div.ui.control
   {
     width: 100%;
 
-    &.--is-horizontal {
+    &.--is-horizontal:not(.--has-hidden-label) {
       width: calc(100% - var(--control-horizontal-label-width));
     }
   }
