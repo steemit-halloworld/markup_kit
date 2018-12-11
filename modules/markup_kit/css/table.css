@@ -29,15 +29,18 @@
 {
   padding: var(--table-cell-vertical-padding) var(--table-cell-horizontal-padding);
   border-bottom : var(--border-width) var(--border-color) var(--border-style);
+}
 
-  &:first-child
-  {
-    padding-left : 0;
-  }
-  &:last-child
-  {
-    padding-right : 0;
-  }
+.ui.table th:first-child,
+.ui.table td:first-child
+{
+  padding-left : 0;
+}
+
+.ui.table th:last-child,
+.ui.table td:last-child
+{
+  padding-right : 0;
 }
 
 .ui.table tr:last-child th,
