@@ -48,7 +48,7 @@ inherit the specified `box sizing`
   /* prevent font size adjustments after orientation changes in IE and iOS */
   -ms-text-size-adjust     : 100%;
   -webkit-text-size-adjust : 100%;
-  line-height              : 1.15;
+  /*line-height              : 1.15;*/
 }
 
 /*endregion*/
