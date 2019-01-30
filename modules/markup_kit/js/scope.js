@@ -45,6 +45,8 @@
           new_val = watchers[i].watch_fn(old_val, self);
           var eq = (new_val === old_val);
 
+          //console.log(new_val + " vs. " + old_val);
+
           if (eq) dirty = false;
 
           if (!eq)
