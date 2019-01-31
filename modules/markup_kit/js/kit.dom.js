@@ -101,7 +101,7 @@ kit.dom = kit.native_dom = (function ()
       if (node === null || tag_name === '') return;
       parent = node.parentNode;
       tag_name = tag_name.toUpperCase();
-      while (parent.tagName !== "HTML")
+      while (parent != null && parent.tagName !== "HTML")
       {
         if (parent.tagName === tag_name) return parent;
         parent = parent.parentNode;
