@@ -3,25 +3,38 @@
   display         : inline-flex;
   min-width       : auto;
   width           : auto;
+
+  vertical-align  : baseline;
+  justify-content : space-between;
+
+  flex-direction  : row;
+  flex-wrap       : wrap;
+}
+
+.ui.stacked.box,
+.ui.hero.box
+{
   flex-direction  : column;
   justify-content : center;
 }
 
-.ui.box.horizontal
+/*.ui.box.horizontal
 {
   flex-direction  : row;
   flex-wrap       : wrap;
   justify-content : space-between;
-}
+}*/
 
-div.ui.box
+div.ui.box,
+header.ui.box,
+section.ui.box
 {
   display : flex;
 }
 
 .ui.box > *
 {
-  display: block;
+  display: flex;
 }
 
 /*----------------------------------------------------------------------------------------------------------------*/
@@ -35,6 +48,7 @@ div.ui.box
 }
 
 .ui.box.basic,
+.ui.box.hero,
 .ui.box.basic > .box,
 .ui.box.basic > .header,
 .ui.box.basic > .footer
@@ -42,7 +56,17 @@ div.ui.box
   padding : var(--box-vpadding) var(--box-hpadding);
 }
 
-.ui.box.horizontal > .box
+.ui.box.hero.medium
+{
+  padding : var(--box-vpadding-medium) var(--box-hpadding);
+}
+
+.ui.box.hero.large
+{
+  padding : var(--box-vpadding-large) var(--box-hpadding);
+}
+
+.ui.box:not(.stacked) > .box
 {
   padding : var(--box-vpadding) var(--box-hpadding);
 }
@@ -75,17 +99,17 @@ div.ui.box
   margin-top: auto;
 }
 
-.ui.box:not(.horizontal) > * + .box.basic
+.ui.box.stacked > * + .box.basic
 {
   margin : calc(var(--box-vmargin) / 2) 0;
 }
 
-.ui.box:not(.horizontal) > * + .box.basic + :last-of-type:not(.footer)
+.ui.box.stacked > * + .box.basic + :last-of-type:not(.footer)
 {
   margin-top : calc(-1 * var(--box-vmargin) / 2)
 }
 
-.ui.box .box:not(.basic) + .box.basic
+.ui.box.stacked .box:not(.basic) + .box.basic
 {
   margin-top : var(--box-vmargin);
 }
@@ -119,10 +143,10 @@ div.ui.box
 /*----------------------------------------------------------------------------------------------------------------*/
 /*region*/
 
-.ui.box:not(.horizontal) > .box
+/*.ui.box:not(.horizontal) > .box
 {
   width : 100%;
-}
+}*/
 
 .ui.box.basic > .header,
 .ui.box.basic > .footer,
@@ -131,37 +155,42 @@ div.ui.box
   width : calc(100% + 2 * var(--box-hmargin));
 }
 
-.ui.box.horizontal > *
+.ui.box:not(.stacked) > *
 {
   flex : 0 0 auto;
 }
 
-.ui.box.horizontal > .box:nth-last-child(2n):first-child,
-.ui.box.horizontal > .box:nth-last-child(2n):first-child ~ .box
+.ui.box:not(.stacked) > *:first-child:last-child
+{
+  width: 100%;
+}
+
+.ui.box:not(.stacked):not(span) > .box:nth-last-child(2n):first-child,
+.ui.box:not(.stacked):not(span) > .box:nth-last-child(2n):first-child ~ .box
 {
   width : calc((100% / 2) - ((var(--box-hmargin) * 1 / 2)));
 }
 
-.ui.horizontal.basic > .box:not(.basic):nth-last-child(2n):first-child,
-.ui.horizontal.basic > .box:not(.basic):nth-last-child(2n):first-child ~ .box:not(.basic)
+.ui.box:not(.stacked).basic:not(span) > .box:not(.basic):nth-last-child(2n):first-child,
+.ui.box:not(.stacked).basic:not(span) > .box:not(.basic):nth-last-child(2n):first-child ~ .box:not(.basic)
 {
   width : calc((100% / 2) - (((var(--box-hmargin) * 1) / 2)) + var(--box-hmargin));
 }
 
-.ui.box.horizontal > .box:nth-last-child(3n):first-child,
-.ui.box.horizontal > .box:nth-last-child(3n):first-child ~ .box
+.ui.box:not(.stacked):not(span) > .box:nth-last-child(3n):first-child,
+.ui.box:not(.stacked):not(span) > .box:nth-last-child(3n):first-child ~ .box
 {
   width : calc((100% / 3) - ((var(--box-hmargin) * 2 / 3)));
 }
 
-.ui.horizontal.basic > .box:not(.basic):nth-last-child(4n):first-child,
-.ui.horizontal.basic > .box:not(.basic):nth-last-child(4n):first-child ~ .box:not(.basic)
+.ui.box:not(.stacked):not(span).basic > .box:not(.basic):nth-last-child(4n):first-child,
+.ui.box:not(.stacked):not(span).basic > .box:not(.basic):nth-last-child(4n):first-child ~ .box:not(.basic)
 {
   width : calc((100% / 4) - (((var(--box-hmargin) * 3) / 4)) + var(--box-hmargin));
 }
 
-.ui.horizontal.basic > .box:not(.basic):nth-last-child(4n):first-child,
-.ui.horizontal.basic > .box:not(.basic):nth-last-child(4n):first-child ~ .box:not(.basic)
+.ui.box:not(.stacked):not(span).basic > .box:not(.basic):nth-last-child(4n):first-child,
+.ui.box:not(.stacked):not(span).basic > .box:not(.basic):nth-last-child(4n):first-child ~ .box:not(.basic)
 {
   width : calc((100% / 4) - (((var(--box-hmargin) * 3) / 4)) + var(--box-hmargin));
 }

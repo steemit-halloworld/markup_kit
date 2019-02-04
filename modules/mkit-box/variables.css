@@ -2,6 +2,8 @@
 {
   --box-hpadding                : var(--spacer-3);
   --box-vpadding                : var(--spacer-2);
+  --box-vpadding-medium         : var(--spacer-11);
+  --box-vpadding-large          : var(--spacer-12);
   --box-hmargin                 : var(--spacer-3);
   --box-vmargin                 : var(--spacer-2);
   --box-header-background-color : var(--bg-gray);

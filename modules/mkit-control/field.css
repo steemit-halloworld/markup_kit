@@ -21,4 +21,6 @@
   padding-left  : .2rem;
   color         : var(--control-label-color);
   position      : absolute;
+  left: 0;
+  right: 0;
 }

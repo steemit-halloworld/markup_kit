@@ -51,6 +51,20 @@ function mkit_control ()
   .pipe(gulp.dest('modules/mkit-control/build'))
 }
 
+function mkit ()
+{
+  return gulp.src('modules/mkit/index.css')
+  .pipe(postcss(postcss_processors))
+  .pipe(cssbeautify({
+    indent: '  ',
+    openbrace: 'separate-line',
+    autosemicolon: true
+  }))
+  .pipe(rename('index.css'))
+  .pipe(gulp.dest('modules/mkit/build'))
+}
+
+
 
 
 gulp.task('amalgamation', function () {
@@ -76,7 +90,7 @@ gulp.task('minification', function () {
   .pipe(gulp.dest('dist/markup_kit/css'))
 });
 
-var mkit_build = gulp.series(mkit_base, mkit_control, mkit_box);
+var mkit_build = gulp.series(mkit, mkit_base, mkit_control, mkit_box);
 
 gulp.task('mkit', mkit_build);
 

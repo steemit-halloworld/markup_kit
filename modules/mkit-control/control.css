@@ -1,4 +1,4 @@
-.ui.control
+/*.ui.control
 {
   display         : inline-block;
   vertical-align  : baseline;
@@ -12,33 +12,28 @@
   outline         : none;
   appearance      : none;
   max-width       : 100%;
-}
+}*/
 
-.ui.control > *:not(.control),
-input.ui.control
+/*.ui.control > *:not(.control),
+input.ui.input
 {
   padding-left  : .35em;
   padding-right : .35em;
   font-size       : 1em;
   line-height     : 1.5;
-}
+}*/
 
 
 
-.ui.control:not(input)
+
+/*.ui.control:not(input)
 {
   display:        inline-flex;
   flex-wrap       : wrap;
-}
+}*/
 
-.ui.control > input,
-.ui.control > textarea,
-.ui.control > select
-{
-  appearance: none;
-}
-
-.ui.input.control:focus-within
+.ui.select:focus-within,
+.ui.input:focus-within
 {
   border-color  : var(--control-input-border-color-active);
   border-radius : var(--control-focus-ring-border-radius);

@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Form Test</title>
-<link rel="stylesheet" href="../dist/markup_kit/css/minification.css">
+<link rel="stylesheet" href="../modules/mkit-control/build/index.css">
 <style type="text/css">
 
 
@@ -45,19 +45,19 @@
 
     <ul>
       <li>
-        <label class="ui input control --has-float-label">
+        <label class="ui input box field">
           <input type="text" placeholder="Type Your Username">
           <div class="label">Username</div>
         </label>
 
       <li>
-        <label class="ui input control --has-float-label">
+        <label class="ui input box field">
           <input type="password" placeholder="••••••••">
           <div class="label">Password</div>
         </label>
 
       <li>
-        <button class="ui control button">Login</button>
+        <button class="ui button">Login</button>
 
     </ul>
 
@@ -68,12 +68,12 @@
 
     <ul grid>
       <li>
-        <label class="ui input control --has-float-label">
+        <label class="ui input box field">
           <input type="text" placeholder=" ">
           <div class="label">First name</div>
         </label>
 
-        <label class="ui input control --has-float-label">
+        <label class="ui input box field">
           <input type="text" placeholder=" ">
           <div class="label">Last name</div>
         </label>
@@ -82,7 +82,7 @@
 
     <ul>
       <li>
-        <label class="ui input control --has-float-label">
+        <label class="ui input box field">
           <input type="email" placeholder="mail@example.com">
           <div class="label">E-Mail</div>
         </label>
@@ -90,7 +90,7 @@
     </ul>
 
     <ul>
-      <li><label class="ui input control --has-float-label">
+      <li><label class="ui input box field">
         <textarea placeholder=" " rows="7"></textarea>
         <div class="label">Your Message</div>
       </label>
@@ -110,7 +110,7 @@
 
 
     <li>
-      <label class="ui select control">
+      <label class="ui select box field">
         <select>
           <option>2017</option>
           <option>2018</option>
@@ -121,18 +121,18 @@
     </li>
 
     <li>
-      <label class="ui input control">
+      <label class="ui input box field">
         <input type="number">
         <span class="label">Number Field</span>
       </label>
     </li>
 
     <li>
-      Standlone Input Field <input class="ui input control" type="text">
+      Standlone Input Field <input class="ui input box" type="text">
     </li>
 
     <li>
-      <label class="ui checkbox control">
+      <label class="ui checkbox box">
         <input type="checkbox">
         <span class="control-indicator"></span>
         Check this custom checkbox
@@ -140,13 +140,13 @@
     </li>
 
     <li>
-      <label class="ui radio control">
+      <label class="ui radio box">
         <input type="radio" name="radio-x">
         <span class="control-indicator"></span>
         Toggle this custom radio
       </label>
 
-      <label class="ui radio control">
+      <label class="ui radio box">
         <input type="radio" name="radio-x">
         <span class="control-indicator"></span>
         Or toggle this other cutom radio
@@ -156,7 +156,7 @@
 
 
     <li>
-      <label class="ui input control" style="width: 200px;">
+      <label class="ui input box field" style="width: 200px;">
         <textarea></textarea>
         <div class="label">Long Label Test To Test Cutting Label Text</div>
       </label>
@@ -171,25 +171,25 @@
 
   <ul>
     <li>
-      <label class="ui input control">
+      <label class="ui input field box">
         <input type="text" placeholder="field1">
         <div class="label">Label is above the Input Field 'field1'</div>
       </label>
     </li>
 
     <li>
-      <label class="ui input control --is-start-aligned">
+      <label class="ui input field box --is-start-aligned">
         <input type="text" placeholder="field2">
         <div class="label">Label is below The Input Field 'field2'</div>
       </label>
     </li>
 
     <li>
-      <label class="ui input control --is-horizontal">
+      <label class="ui input field box --is-horizontal">
         <input type="text" placeholder="field3">
         <div class="label">Inline Label for 'field3'</div>
       </label>
-      <label class="ui input control --has-float-label">
+      <label class="ui input box --has-float-label">
         <input type="text" placeholder="field4">
         <div class="label">Label is floating inside Input Field 'field4'</div>
       </label>
@@ -203,7 +203,7 @@
 <fieldset>
   <legend>Control Variations</legend>
   <div style="line-height: 1.5;">
-    <label class="ui input control">
+    <label class="ui input field box">
       <div class="label" for="domain-input">Domain</div>
 
       <span class="prepend">http://</span>
@@ -211,32 +211,32 @@
       <input id="domain-input" value="google">
 
 
-      <div class="ui select control append">
+      <div class="ui select append">
         <select title="Top Level Domain">
-          <option>.de</option>
-          <option>.com</option>
-          <option>.net</option>
+          <option>.de
+          <option>.com
+          <option>.net
         </select>
       </div>
     </label>
 
-    <div class="ui input control">
+    <div class="ui input box">
       <input title="input" type="text" placeholder="Hallo">
     </div>
 
-    <div class="ui input control">
-      <div class="ui checkbox control">
+    <div class="ui input box">
+      <div class="ui checkbox box">
         <input type="checkbox">
       </div>
 
       <input placeholder="Bla">
     </div>
 
-    <label class="ui radio control">
+    <label class="ui radio box">
       <input name="radio-x" type="radio"> Yes
     </label>
 
-    <label class="ui radio control">
+    <label class="ui radio box">
       <input name="radio-x" type="radio"> No
     </label>
 

@@ -10,7 +10,7 @@
     ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 </div>
 
-<div class="ui basic box">
+<div class="ui basic stacked box">
   <div class="header">
     Header
   </div>
@@ -39,24 +39,24 @@
 
 <h3>Nested Box</h3>
 
-<div class="ui basic box">
+<div class="ui basic stacked box">
   <div class="ui box header">Header</div>
 
-  <div class="ui basic horizontal box">
+  <div class="ui stacked basic box">
     <div class="ui box">Top</div>
     <div class="ui box">Middle</div>
     <div class="ui box">Bottom</div>
   </div>
 
 
-  <div class="ui basic horizontal box">
-    <div class="ui box">Top</div>
-    <div class="ui box">Middle</div>
-    <div class="ui box">Bottom</div>
+  <div class="ui basic box">
+    <div class="ui box">Left</div>
+    <div class="ui box">Center</div>
+    <div class="ui box">Right</div>
   </div>
 
 
-  <div class="ui box">Middle</div>
+  <div class="ui basic box">Middle</div>
 
 
   <div class="ui horizontal box">
@@ -112,7 +112,7 @@
   }
 </style>
 
-<div id="grid" class="ui box">
+<div id="grid" class="ui stacked box">
 
   <div class="ui horizontal box">
     <div class="ui box test cell">1-2</div>
@@ -135,11 +135,11 @@
 
 <h3>Alignment Test</h3>
 
-<div class="ui basic box" style="height: 200px;">
+<div class="ui basic stacked box" style="height: 200px;">
   <div>Centered</div>
 </div>
 
-<div class="ui basic box" style="height: 200px;">
+<div class="ui basic stacked box" style="height: 200px;">
   <div class="header">Top</div>
   <div>Centered</div>
   <div class="footer">Bottom</div>
@@ -147,16 +147,23 @@
 
 <h3>Inline Test</h3>
 
-<span class="ui basic box" style="height: 200px;">
-  <div class="header">Top</div>
-  <div>Centered</div>
-  <div class="footer">Bottom</div>
+<span class="ui basic stacked box" style="height: 200px;">
+  <span class="header">Top</span>
+  <span>Centered</span>
+  <span class="footer">Bottom</span>
 </span>
 
 <span class="ui basic box">
-  <div class="ui basic horizontal box">
-    <div class="ui basic box"><p>Left</p></div>
-    <div class="ui basic box"><p>Middle</p></div>
-    <div class="ui basic box"><p>Right</p></div>
-  </div>
+  <span class="ui basic box"><p>Left</p></span>
+  <span class="ui basic box"><p>Middle</p></span>
+  <span class="ui basic box"><p>Right</p></span>
 </span>
+
+<span class="ui basic box">
+  <span class="ui basic box">
+    <span class="ui basic box"><p>Left</p></span>
+    <span class="ui basic box"><p>Middle</p></span>
+    <span class="ui basic box"><p>Right</p></span>
+  </span>
+</span>
+

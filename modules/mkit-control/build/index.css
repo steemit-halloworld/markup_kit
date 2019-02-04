@@ -11,8 +11,6 @@ TODO
 Controls are visual elements that convey a specific action or intention in response to user interactions. They are
 essential for collecting and handling user input and should follow styling and interaction guidelines for each
 platform, so that they are intuitive for users to interact with.
-
-
  */
 
 :root
@@ -29,7 +27,6 @@ platform, so that they are intuitive for users to interact with.
 }
 
 body .ui,
-body .ui > *
 {
   padding: 0;
   margin: 0;
@@ -49,57 +46,296 @@ body .ui > *
 
 body .ui > *
 {
-  display: none;
+  box-sizing: border-box;
 }
 
-.ui.control
-{
-  display: inline-block;
-  vertical-align: baseline;
-  position: relative;
-  font-size: 1em;
-  line-height: 1.5;
-  font-family: inherit;
-  background: #e8e8e8;
-  padding: 0;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  max-width: 100%;
-}
-
-.ui.control > *:not(.control),
-input.ui.control
-{
-  padding-left: .35em;
-  padding-right: .35em;
-  font-size: 1em;
-  line-height: 1.5;
-}
-
-.ui.control:not(input)
+.ui.box
 {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  min-width: auto;
+  width: auto;
+  vertical-align: baseline;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.ui.control > input,
-.ui.control > textarea,
-.ui.control > select
+.ui.stacked.box,
+.ui.hero.box
 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.ui.input.control:focus-within
+/*.ui.box.horizontal
+{
+  flex-direction  : row;
+  flex-wrap       : wrap;
+  justify-content : space-between;
+}*/
+
+div.ui.box,
+header.ui.box,
+section.ui.box
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ui.box > *
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/* Padding                                                                                                        */
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/*region*/
+
+.ui.box > .box, .ui.box > .header, .ui.box > .footer
+{
+  padding: 16px 0;
+}
+
+.ui.box.basic,
+.ui.box.hero,
+.ui.box.basic > .box,
+.ui.box.basic > .header,
+.ui.box.basic > .footer
+{
+  padding: 16px 24px;
+}
+
+.ui.box.hero.medium
+{
+  padding: 128px 24px;
+}
+
+.ui.box.hero.large
+{
+  padding: 256px 24px;
+}
+
+.ui.box:not(.stacked) > .box
+{
+  padding: 16px 24px;
+}
+
+/*endregion*/
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/* Margins                                                                                                        */
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/*region*/
+
+.ui.box
+{
+  margin: 16px 0;
+}
+
+.ui.box > *
+{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.ui.box > .header
+{
+  margin-bottom: auto;
+}
+
+.ui.box > .footer
+{
+  margin-top: auto;
+}
+
+.ui.box.stacked > * + .box.basic
+{
+  margin: 8px 0;
+}
+
+.ui.box.stacked > * + .box.basic + :last-of-type:not(.footer)
+{
+  margin-top: -8px;
+}
+
+.ui.box.stacked .box:not(.basic) + .box.basic
+{
+  margin-top: 16px;
+}
+
+.ui.box .box.basic + .box:not(.basic):not(:last-of-type)
+{
+  margin-top: 8px;
+}
+
+.ui.box.basic > .header,
+.ui.box.basic > .footer,
+.ui.box.basic > .box:not(.basic)
+{
+  margin-left: -24px;
+}
+
+.ui.box > .header
+{
+  margin-top: -16px;
+}
+
+.ui.box > .footer
+{
+  margin-bottom: -16px;
+}
+
+/*endregion*/
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/* Nested Width                                                                                                   */
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/*region*/
+
+/*.ui.box:not(.horizontal) > .box
+{
+  width : 100%;
+}*/
+
+.ui.box.basic > .header,
+.ui.box.basic > .footer,
+.ui.box.basic > .box:not(.basic)
+{
+  width: calc(100% + 2 * 24px);
+}
+
+.ui.box:not(.stacked) > *
+{
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.ui.box:not(.stacked) > *:first-child:last-child
+{
+  width: 100%;
+}
+
+.ui.box:not(.stacked):not(span) > .box:nth-last-child(2n):first-child,
+.ui.box:not(.stacked):not(span) > .box:nth-last-child(2n):first-child ~ .box
+{
+  width: calc(50% - 12px);
+}
+
+.ui.box:not(.stacked).basic:not(span) > .box:not(.basic):nth-last-child(2n):first-child,
+.ui.box:not(.stacked).basic:not(span) > .box:not(.basic):nth-last-child(2n):first-child ~ .box:not(.basic)
+{
+  width: calc(50% - 12px + 24px);
+}
+
+.ui.box:not(.stacked):not(span) > .box:nth-last-child(3n):first-child,
+.ui.box:not(.stacked):not(span) > .box:nth-last-child(3n):first-child ~ .box
+{
+  width: calc(33.33333% - 16px);
+}
+
+.ui.box:not(.stacked):not(span).basic > .box:not(.basic):nth-last-child(4n):first-child,
+.ui.box:not(.stacked):not(span).basic > .box:not(.basic):nth-last-child(4n):first-child ~ .box:not(.basic)
+{
+  width: calc(25% - 18px + 24px);
+}
+
+.ui.box:not(.stacked):not(span).basic > .box:not(.basic):nth-last-child(4n):first-child,
+.ui.box:not(.stacked):not(span).basic > .box:not(.basic):nth-last-child(4n):first-child ~ .box:not(.basic)
+{
+  width: calc(25% - 18px + 24px);
+}
+
+/*endregion*/
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/* Basic Styling                                                                                                  */
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+/*region*/
+
+/** border styling **/
+
+.ui.box.basic
+{
+  border-radius: 3px;
+  border: 1px #d1d5da solid;
+}
+
+.ui.basic > .header
+{
+  background-color: #f6f8fa;
+  border-bottom: 1px #d1d5da solid;
+}
+
+.ui.basic > .footer
+{
+  border-top: 1px #d1d5da solid;
+}
+
+/*endregion*/
+
+/*.ui.control
+{
+  display         : inline-block;
+  vertical-align  : baseline;
+  position        : relative;
+  font-size       : 1em;
+  line-height     : 1.5;
+  font-family     : inherit;
+  background      : #e8e8e8;
+  padding         : 0;
+  justify-content : space-between;
+  outline         : none;
+  appearance      : none;
+  max-width       : 100%;
+}*/
+
+/*.ui.control > *:not(.control),
+input.ui.input
+{
+  padding-left  : .35em;
+  padding-right : .35em;
+  font-size       : 1em;
+  line-height     : 1.5;
+}*/
+
+/*.ui.control:not(input)
+{
+  display:        inline-flex;
+  flex-wrap       : wrap;
+}*/
+
+.ui.select:focus-within,
+.ui.input:focus-within
 {
   border-color: rgb(48, 145, 243);
   border-radius: inherit;
@@ -107,21 +343,149 @@ input.ui.control
   transition: opacity .2s;
 }
 
-.ui.input.control
+.ui.input
 {
+  position: relative;
   background: #fff;
-  border-radius: 3px;
-  border: 1px solid #e1e4e8;
-  box-shadow: 0 2px 3px 0 #f7f7f7, inset 1px 0 0 0 #f7f7f7;
   padding-top: 3.2px;
   padding-top: .2rem;
   padding-bottom: 3.2px;
   padding-bottom: .2rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  padding-left: .35em;
+  padding-right: .35em;
+  line-height: 1.5;
+}
+
+.ui.input > input,
+.ui.input > textarea
+{
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  appeareance: none;
+}
+
+.ui.input > .ui.select,
+.ui.input > input,
+.ui.input > textarea,
+.ui.select > select
+{
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+.ui.input > .ui.select > select
+{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.ui.input > *:not(input)
+{
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.ui.input:not(:focus-within)
+{
+  border-color: #e1e4e8;
+  box-shadow: 0 2px 3px 0 #f7f7f7, inset 1px 0 0 0 #f7f7f7;
 }
 
 .ui.input > input
 {
   display: inline-block;
+}
+
+.ui.select
+{
+  position: relative;
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+  background: #fff;
+  padding-left: .35em;
+  padding-right: .35em;
+  font-size: 1em;
+  line-height: 1.5;
+  vertical-align: baseline;
+}
+
+.ui.select:not(:focus-within)
+{
+  border-color: #e1e4e8;
+  box-shadow: 0 2px 3px 0 #f7f7f7, inset 1px 0 0 0 #f7f7f7;
+}
+
+/* drop-down arrow */
+
+.ui.select:after
+{
+  position: absolute;
+  top: 50%;
+  right: .5em;
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  margin-top: -.15em;
+  pointer-events: none;
+  border-top: .35em solid;
+  border-right: .35em solid transparent;
+  border-bottom: .35em solid transparent;
+  border-left: .35em solid transparent;
+}
+
+select.ui.select,
+.ui.select > select
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.ui.select > select
+{
+  display: block;
+  border-radius: 2px;
+  display: inline-block;
+  min-width: 1em;
+  max-width: 100%;
+  width: auto;
+  padding: 3.2px 36px 3.2px 5.6px;
+  padding: .2rem 2.25rem .2rem .35rem;
+  cursor: pointer;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 1em;
+  flex: 1 1 1em;
+  color: inherit;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.ui.select > *:not(select)
+{
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.ui.select.control > select:focus:-moz-focusring
+{
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+.ui.select.control > select::-ms-expand
+{
+  display: none;
 }
 
 .ui.field
@@ -153,4 +517,6 @@ input.ui.control
   padding-left: .2rem;
   color: dimgrey;
   position: absolute;
+  left: 0;
+  right: 0;
 }

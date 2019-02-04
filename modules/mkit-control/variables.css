@@ -24,5 +24,7 @@
   --control-label-color                        : dimgrey;
   --control-input-box-shadow-active            : 0px 0px 0px var(--control-input-outline-width-active) var(--control-input-outline-color-active);
   --control-horizontal-label-width             : 10em;
-
+  --control-select-border-radius               : var(--border-radius);
+  --control-select-background-color            : #fff;
+  --control-select-border-color                : var(--border-color);
 }
