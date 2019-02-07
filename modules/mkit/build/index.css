@@ -285,3 +285,229 @@ section.ui.box:not(.nav) > *
   border-top: 1px #d1d5da solid;
 }
 /*endregion*/
+/*md
+
+# Control Elements
+
+(UI) controls are visual elements on a computer screen that helps humans to interact with the underlying software.
+
+
+TODO
+
+
+Controls are visual elements that convey a specific action or intention in response to user interactions. They are
+essential for collecting and handling user input and should follow styling and interaction guidelines for each
+platform, so that they are intuitive for users to interact with.
+ */
+/*.ui.control
+{
+  display         : inline-block;
+  vertical-align  : baseline;
+  position        : relative;
+  font-size       : 1em;
+  line-height     : 1.5;
+  font-family     : inherit;
+  background      : #e8e8e8;
+  padding         : 0;
+  justify-content : space-between;
+  outline         : none;
+  appearance      : none;
+  max-width       : 100%;
+}*/
+/*.ui.control > *:not(.control),
+input.ui.input
+{
+  padding-left  : .35em;
+  padding-right : .35em;
+  font-size       : 1em;
+  line-height     : 1.5;
+}*/
+/*.ui.control:not(input)
+{
+  display:        inline-flex;
+  flex-wrap       : wrap;
+}*/
+.ui.select:focus-within,
+.ui.input:focus-within
+{
+  border-color: rgb(48, 145, 243);
+  border-radius: inherit;
+  box-shadow: 0px 0px 0px 1px rgb(48, 145, 243);
+  transition: opacity .2s;
+}
+
+.ui.input
+{
+  position: relative;
+  background: #fff;
+  padding-top: 3.2px;
+  padding-top: .2rem;
+  padding-bottom: 3.2px;
+  padding-bottom: .2rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  padding-left: .35em;
+  padding-right: .35em;
+  line-height: 1.5;
+}
+
+.ui.input > input,
+.ui.input > textarea
+{
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  appeareance: none;
+}
+
+.ui.input > .ui.select,
+.ui.input > input,
+.ui.input > textarea,
+.ui.select > select
+{
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+.ui.input > .ui.select > select
+{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.ui.input > *:not(input)
+{
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.ui.input:not(:focus-within)
+{
+  border-color: #e1e4e8;
+  box-shadow: 0 2px 3px 0 #f7f7f7, inset 1px 0 0 0 #f7f7f7;
+}
+
+.ui.input > input
+{
+  display: inline-block;
+}
+
+.ui.select
+{
+  position: relative;
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+  background: #fff;
+  padding-left: .35em;
+  padding-right: .35em;
+  font-size: 1em;
+  line-height: 1.5;
+  vertical-align: baseline;
+}
+
+.ui.select:not(:focus-within)
+{
+  border-color: #e1e4e8;
+  box-shadow: 0 2px 3px 0 #f7f7f7, inset 1px 0 0 0 #f7f7f7;
+}
+/* drop-down arrow */
+.ui.select:after
+{
+  position: absolute;
+  top: 50%;
+  right: .5em;
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  margin-top: -.15em;
+  pointer-events: none;
+  border-top: .35em solid;
+  border-right: .35em solid transparent;
+  border-bottom: .35em solid transparent;
+  border-left: .35em solid transparent;
+}
+
+select.ui.select,
+.ui.select > select
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.ui.select > select
+{
+  display: block;
+  border-radius: 2px;
+  display: inline-block;
+  min-width: 1em;
+  max-width: 100%;
+  width: auto;
+  padding: 3.2px 36px 3.2px 5.6px;
+  padding: .2rem 2.25rem .2rem .35rem;
+  cursor: pointer;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 1em;
+  flex: 1 1 1em;
+  color: inherit;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.ui.select > *:not(select)
+{
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.ui.select.control > select:focus:-moz-focusring
+{
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+.ui.select.control > select::-ms-expand
+{
+  display: none;
+}
+
+.ui.field
+{
+  margin: calc(1em + 4px + 5px) 0 5px;
+}
+
+.ui.field > .label
+{
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  font-size: 1em;
+  line-height: 1.2;
+  //height: 1.2em;
+  display: block;
+  -webkit-box-ordinal-group: -999;
+  -ms-flex-order: -1000;
+  order: -1000;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  margin-top: calc(-1.2em - 4px);
+  margin-bottom: 4px;
+  padding-left: 3.2px;
+  padding-left: .2rem;
+  color: dimgrey;
+  position: absolute;
+  left: 0;
+  right: 0;
+}

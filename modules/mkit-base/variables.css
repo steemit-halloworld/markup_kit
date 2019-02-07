@@ -2,11 +2,11 @@
 {
   --spacer           : 8px;
   --spacer-0         : 0;
-  --spacer-1         : calc(round(var(--spacer) / 2));
-  --spacer-2         : calc(var(--spacer) * 2);
-  --spacer-3         : calc(var(--spacer) * 3);
-  --spacer-4         : calc(var(--spacer) * 4);
-  --spacer-5         : calc(var(--spacer) * 5);
+  --spacer-1         : calc(var(--spacer) / 2);        /* (4px) */
+  --spacer-2         : calc(var(--spacer) * 2);        /* (16px) */
+  --spacer-3         : calc(var(--spacer) * 3);        /* (24px) */
+  --spacer-4         : calc(var(--spacer) * 4);        /* (32px) */
+  --spacer-5         : calc(var(--spacer) * 5);        /* (40px) */
 
   --spacer-6         : calc(var(--spacer) * 6);
   --spacer-7         : calc(var(--spacer) * 8);
@@ -100,7 +100,13 @@
   --color-primary-active: var(--color-primary-4);
   --color-focus: var(--color-primary-hover);
 
+  --color-black: rgb(27,31,35);
+  --color-black-fade-15: rgba(27,31,35, 0.15);
+  --color-black-fade-30: rgba(27,31,35, 0.30);
+  --color-black-fade-70: rgba(27,31,35, 0.70);
+  --color-black-fade-85: rgba(27,31,35, 0.85);
 
-
+  --box-shadow: 0 1px 1px rgba(27,31,35, 0.1);
+  --box-shadow-medium: 0 1px 5px var(--color-black-fade-15);
 
 }

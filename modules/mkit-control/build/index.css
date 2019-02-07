@@ -15,6 +15,7 @@ platform, so that they are intuitive for users to interact with.
 
 :root
 {
+        /* (4px) */        /* (16px) */        /* (24px) */        /* (32px) */        /* (40px) */
   /*------------------------------------------------------------------------------------------------------------------*/
   /* Golden Ratio                                                                                                     */
   /*------------------------------------------------------------------------------------------------------------------*/
@@ -26,7 +27,7 @@ platform, so that they are intuitive for users to interact with.
   /* border colors */;
 }
 
-body .ui,
+body .ui
 {
   padding: 0;
   margin: 0;
@@ -42,11 +43,12 @@ body .ui,
   background-clip: padding-box;
   outline: none;
   z-index: 1;
+  box-sizing: border-box;
 }
 
-body .ui > *
+body .ui *
 {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 .ui.box
@@ -88,6 +90,7 @@ body .ui > *
 }*/
 
 div.ui.box,
+nav.ui.box,
 header.ui.box,
 section.ui.box
 {
@@ -96,12 +99,13 @@ section.ui.box
   display: flex;
 }
 
-.ui.box > *
+/*div.ui.box > *,
+nav.ui.box  > *,
+header.ui.box  > *,
+section.ui.box  > *
 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
+  width: 100%;
+}*/
 
 /*----------------------------------------------------------------------------------------------------------------*/
 
@@ -152,13 +156,30 @@ section.ui.box
 
 .ui.box
 {
-  margin: 16px 0;
+  margin: 8px 0;
 }
 
 .ui.box > *
 {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 12px;
+}
+
+.ui.box > *:first-child
+{
+  margin-left: 0;
+}
+
+.ui.box > *:last-child
+{
+  margin-right: 0;
+}
+
+div.ui.box:not(.nav) > *,
+header.ui.box:not(.nav) > *,
+section.ui.box:not(.nav) > *
+{
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .ui.box > .header
@@ -198,6 +219,12 @@ section.ui.box
   margin-left: -24px;
 }
 
+.ui.box.basic > .header,
+.ui.box.basic > .footer
+{
+  margin-right: -24px;
+}
+
 .ui.box > .header
 {
   margin-top: -16px;
@@ -233,8 +260,8 @@ section.ui.box
 .ui.box:not(.stacked) > *
 {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
 }
 
 .ui.box:not(.stacked) > *:first-child:last-child

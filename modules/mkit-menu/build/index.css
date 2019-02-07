@@ -285,3 +285,77 @@ section.ui.box:not(.nav) > *
   border-top: 1px #d1d5da solid;
 }
 /*endregion*/
+.ui.menu.box
+{
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  line-height: 1;
+  border: 1px solid #d1d5da;
+  box-shadow: 0 1px 1px rgba(27, 31, 35, .1);
+}
+
+.ui.menu.box .ui.menu.box
+{
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.ui.menu.box > .menu.item ~ .ui.menu.box
+{
+  margin-right: auto;
+}
+
+.ui.menu.box > .menu.item ~ .box:not(.basic)
+{
+  width: auto;
+}
+
+.ui.menu.box > .brand,
+.ui.menu.box > .end,
+.ui.menu.box > .start
+{
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 16px 24px;
+}
+
+.ui.menu.box > .end
+{
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.ui.menu .menu.item
+{
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1;
+  padding: 16px 24px;
+}
+
+.ui.menu a.menu.item:hover
+{
+  background: rgba(27, 31, 35, .15);
+  color: rgb(27, 31, 35);
+}
+
+.ui.menu .menu.item i
+{
+  display: block;
+  margin: 0 auto;
+  font-size: 24px;
+  font-size: 1.5rem;
+}

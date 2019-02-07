@@ -1,0 +1,26 @@
+.ui.menu .menu.item
+{
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  flex: 0 0 auto;
+  user-select: none;
+  font-size: var(--menu-item-label-font-size);
+  line-height: 1;
+  padding : var(--box-vpadding) var(--box-hpadding);
+}
+
+.ui.menu a.menu.item:hover
+{
+  background: var(--menu-item-hover-background);
+  color: var(--menu-item-hover-color);
+}
+
+.ui.menu .menu.item i
+{
+  display: block;
+  margin: 0 auto;
+  font-size: var(--menu-item-icon-size);
+}
+
+

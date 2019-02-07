@@ -1,5 +1,6 @@
 :root
 {
+        /* (4px) */        /* (16px) */        /* (24px) */        /* (32px) */        /* (40px) */
   /*------------------------------------------------------------------------------------------------------------------*/
   /* Golden Ratio                                                                                                     */
   /*------------------------------------------------------------------------------------------------------------------*/
@@ -11,7 +12,7 @@
   /* border colors */;
 }
 
-body .ui,
+body .ui
 {
   padding: 0;
   margin: 0;
@@ -27,9 +28,10 @@ body .ui,
   background-clip: padding-box;
   outline: none;
   z-index: 1;
+  box-sizing: border-box;
 }
 
-body .ui > *
+body .ui *
 {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }

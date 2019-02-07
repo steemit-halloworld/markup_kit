@@ -1,0 +1,15 @@
+:root
+{
+  --menu-border-width: 1px;
+  --menu-border-color: var(--border-gray-dark);
+  --menu-border: var(--menu-border-width) solid var(--menu-border-color);
+  --menu-box-shadow: var(--box-shadow);
+
+
+  --menu-item-label-font-size: 0.875rem;
+  --menu-item-icon-size: 1.5rem;
+  --menu-item-hover-background: var(--color-black-fade-15);
+  --menu-item-hover-color: var(--color-black);
+  --menu-item-vpadding: var(--box-vpadding);
+  --menu-item-hpadding: var(--box-hpadding);
+}

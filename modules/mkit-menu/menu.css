@@ -1,0 +1,41 @@
+.ui.menu.box
+{
+  flex-wrap: nowrap;
+  line-height: 1;
+  border: var(--menu-border);
+  box-shadow: var(--menu-box-shadow);
+}
+
+.ui.menu.box .ui.menu.box
+{
+  padding: 0;
+  margin:  0;
+  border: none;
+  box-shadow: none;
+}
+
+.ui.menu.box > .menu.item ~ .ui.menu.box
+{
+  margin-right: auto;
+}
+
+.ui.menu.box > .menu.item ~ .box:not(.basic)
+{
+  width: auto;
+}
+
+.ui.menu.box > .brand,
+.ui.menu.box > .end,
+.ui.menu.box > .start
+{
+  flex: 0 0 auto;
+  padding : var(--box-vpadding) var(--box-hpadding);
+}
+
+.ui.menu.box > .end
+{
+  margin-left: auto;
+  margin-right: 0;
+}
+
+
