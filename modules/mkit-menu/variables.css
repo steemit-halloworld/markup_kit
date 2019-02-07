@@ -13,3 +13,9 @@
   --menu-item-vpadding: var(--box-vpadding);
   --menu-item-hpadding: var(--box-hpadding);
 }
+
+.ios
+{
+  --menu-item-label-font-size: 10px;
+  --menu-item-icon-size: 25px;
+}

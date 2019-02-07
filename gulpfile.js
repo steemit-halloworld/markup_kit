@@ -3,13 +3,18 @@ var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var postcss = require('gulp-postcss');
 var postcss_import = require("postcss-import");
-var cssnext = require('postcss-cssnext');
 var minify = require('gulp-clean-css');
 var cssbeautify = require('gulp-cssbeautify');
+var postcssPresetEnv = require('postcss-preset-env');
 
 var postcss_processors = [
   postcss_import(),
-  cssnext()
+  postcssPresetEnv({
+    stage: 2,
+    features: {
+      'custom-media-queries': true
+    }
+  })
 ];
 
 function mkit_base ()

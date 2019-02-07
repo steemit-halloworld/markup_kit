@@ -1,15 +1,106 @@
 :root
 {
-        /* (4px) */        /* (16px) */        /* (24px) */        /* (32px) */        /* (40px) */
+  --spacer: 8px;
+  --spacer-0: 0;
+  --spacer-1: calc(var(--spacer) / 2);
+        /* (4px) */
+  --spacer-2: calc(var(--spacer) * 2);
+        /* (16px) */
+  --spacer-3: calc(var(--spacer) * 3);
+        /* (24px) */
+  --spacer-4: calc(var(--spacer) * 4);
+        /* (32px) */
+  --spacer-5: calc(var(--spacer) * 5);
+        /* (40px) */
+  --spacer-6: calc(var(--spacer) * 6);
+  --spacer-7: calc(var(--spacer) * 8);
+  --spacer-8: calc(var(--spacer) * 10);
+  --spacer-9: calc(var(--spacer) * 12);
+  --spacer-10: calc(var(--spacer) * 14);
+  --spacer-11: calc(var(--spacer) * 16);
+  --spacer-12: calc(var(--spacer) * 32);
+  --size-1: 3rem;
+  --size-2: 2.5rem;
+  --size-3: 2rem;
+  --size-4: 1.5rem;
+  --size-5: 1.25rem;
+  --size-6: 1rem;
+  --size-7: 0.75rem;
+  --size-small: var(--size-7);
+  --size-normal: var(--size-6);
+  --size-medium: var(--size-5);
+  --size-large: var(--size-4);
   /*------------------------------------------------------------------------------------------------------------------*/
   /* Golden Ratio                                                                                                     */
   /*------------------------------------------------------------------------------------------------------------------*/
   /*region*/
+  --scale-factor-golden: 1.618;
+  --golden-ratio-9: calc(100% / var(--scale-factor-golden));
+  --golden-ratio-8: calc(100% - var(--golden-ratio-9));
+  --golden-ratio-7: calc(var(--golden-ratio-8) / var(--scale-factor-golden));
+  --golden-ratio-6: calc(var(--golden-ratio-8) - var(--golden-ratio-7));
+  --golden-ratio-5: calc(var(--golden-ratio-6) / var(--scale-factor-golden));
+  --golden-ratio-4: calc(var(--golden-ratio-6) - var(--golden-ratio-5));
+  --golden-ratio-3: calc(var(--golden-ratio-4) / var(--scale-factor-golden));
+  --golden-ratio-2: calc(var(--golden-ratio-4) - var(--golden-ratio-3));
+  --golden-ratio-1: calc(var(--golden-ratio-2) / var(--scale-factor-golden));
+  --golden-ratio-0: calc(var(--golden-ratio-2) - var(--golden-ratio-1));
   /*endregion*/
   /* border style */
+  --border-width: 1px;
+  --border-radius: 3px;
+  --border-style: solid;
+  --border: var(--border-width) var(--border-color) var(--border-style);
   /* system color palette */
+  --gray-000: #fafbfc;
+  --gray-100: #f6f8fa;
+  --gray-200: #e1e4e8;
+  --gray-300: #d1d5da;
+  --gray-400: #959da5;
+  --gray-500: #6a737d;
+  --gray-600: #586069;
+  --gray-700: #444d56;
+  --gray-800: #2f363d;
+  --gray-900: #24292e;
+  --red-000: #ffeef0;
+  --red-100: #ffdce0;
+  --red-200: #fdaeb7;
+  --red-300: #f97583;
+  --red-400: #ea4a5a;
+  --red-500: #d73a49;
+  --red-600: #cb2431;
+  --red-700: #b31d28;
+  --red-800: #9e1c23;
+  --red-900: #86181d;
+  --red: var(--red-500);
+  --red-invert: #fff;
   /* default background colors */
-  /* border colors */;
+  --bg-gray: var(--gray-100);
+  /* border colors */
+  --border-gray: var(--gray-200);
+  --border-gray-dark: var(--gray-300);
+  --border-color: var(--border-gray);
+  --danger-color: var(--red-color);
+  --color-primary: #1C86F2;
+  --color-primary-9: color(var(--color-primary) tint(var(--golden-ratio-8)));
+  --color-primary-8: color(var(--color-primary) tint(var(--golden-ratio-7)));
+  --color-primary-7: color(var(--color-primary) tint(var(--golden-ratio-6)));
+  --color-primary-6: color(var(--color-primary) tint(var(--golden-ratio-5)));
+  --color-primary-5: var(--color-primary);
+  --color-primary-4: color(var(--color-primary) tint(var(--golden-ratio-5)));
+  --color-primary-3: color(var(--color-primary) tint(var(--golden-ratio-6)));
+  --color-primary-2: color(var(--color-primary) tint(var(--golden-ratio-7)));
+  --color-primary-1: color(var(--color-primary) tint(var(--golden-ratio-8)));
+  --color-primary-hover: var(--color-primary-6);
+  --color-primary-active: var(--color-primary-4);
+  --color-focus: var(--color-primary-hover);
+  --color-black: rgb(27,31,35);
+  --color-black-fade-15: rgba(27,31,35, 0.15);
+  --color-black-fade-30: rgba(27,31,35, 0.30);
+  --color-black-fade-70: rgba(27,31,35, 0.70);
+  --color-black-fade-85: rgba(27,31,35, 0.85);
+  --box-shadow: 0 1px 1px rgba(27,31,35, 0.1);
+  --box-shadow-medium: 0 1px 5px var(--color-black-fade-15);
 }
 
 body .ui

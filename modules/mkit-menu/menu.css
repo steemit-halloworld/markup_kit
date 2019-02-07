@@ -2,8 +2,13 @@
 {
   flex-wrap: nowrap;
   line-height: 1;
+}
+
+.ui.basic.menu.box
+{
   border: var(--menu-border);
   box-shadow: var(--menu-box-shadow);
+  padding: 0;
 }
 
 .ui.menu.box .ui.menu.box
@@ -37,5 +42,3 @@
   margin-left: auto;
   margin-right: 0;
 }
-
-

@@ -1,0 +1,40 @@
+@custom-media --small-handset-only                 ((min-width: 0) and (max-width: 359px) and (orientation: portrait));
+@custom-media --small-handset                      ((max-width: 359px) and (orientation: portrait));
+@custom-media --small-handset-landscape-only       ((min-width: 480px) and (max-width: 599px) and (orientation: landscape));
+@custom-media --small-handset-landscape            ((max-width: 599px) and (orientation: landscape));
+
+@custom-media --medium-handset-only                ((min-width: 360px) and (max-width: 399px) and (orientation: portrait));
+@custom-media --medium-handset                     ((max-width: 399px) and (orientation: portrait));
+@custom-media --medium-handset-landscape-only      ((min-width: 600px) and (max-width: 719px) and (orientation: landscape));
+@custom-media --medium-handset-landscape           ((max-width: 719px) and (orientation: landscape));
+
+@custom-media --large-handset-only                 ((min-width: 400px) and (max-width: 479px) and (orientation: portrait));
+@custom-media --large-handset                      ((max-width: 479px) and (orientation: portrait));
+@custom-media --large-handset-landscape-only       ((min-width: 720px) and (max-width: 839px) and (orientation: landscape));
+@custom-media --large-handset-landscape            ((max-width: 839px) and (orientation: landscape));
+
+@custom-media --xlarge-handset-only                ((min-width: 480px) and (max-width: 599px) and (orientation: portrait));
+@custom-media --xlarge-handset                     ((max-width: 599px) and (orientation: portrait));
+@custom-media --xlarge-handset-landscape-only      ((min-width: 840px) and (max-width: 959px) and (orientation: landscape));
+@custom-media --xlarge-handset-landscape           ((max-width: 959px) and (orientation: landscape));
+
+@custom-media --small-tablet-only                  ((min-width: 600px) and (max-width: 719px) and (orientation: portrait));
+@custom-media --small-tablet                       ((max-width: 719px) and (orientation: portrait));
+@custom-media --small-tablet-landscape-only        ((min-width: 960px) and (max-width: 1023px) and (orientation: landscape));
+@custom-media --small-tablet-landscape             ((max-width: 1023px) and (orientation: landscape));
+
+@custom-media --medium-tablet-only                  ((min-width: 720px) and (max-width: 839px) and (orientation: portrait));
+@custom-media --medium-tablet                       ((max-width: 839px) and (orientation: portrait));
+@custom-media --medium-tablet-landscape-only        ((min-width: 1024px) and (max-width: 1279px) and (orientation: landscape));
+@custom-media --medium-tablet-landscape             ((max-width: 1279px) and (orientation: landscape));
+
+@custom-media --large-tablet-only                  ((min-width: 840px) and (max-width: 959px) and (orientation: portrait));
+@custom-media --large-tablet                       ((max-width: 959px) and (orientation: portrait));
+@custom-media --large-tablet-landscape-only        ((min-width: 1280px) and (max-width: 1439px) and (orientation: landscape));
+@custom-media --large-tablet-landscape             ((max-width: 1439px) and (orientation: landscape));
+
+@custom-media --generic-handset                    ((max-width: 320px));
+@custom-media --generic-tablet                     ((max-width: 768px));
+@custom-media --generic-monitor                    ((max-width: 992px));
+@custom-media --generic-large-monitor              ((max-width: 1200px));
+@custom-media --generic-widescreen                 ((min-width: 1201px));
