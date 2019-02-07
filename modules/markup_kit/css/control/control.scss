@@ -89,7 +89,11 @@ div.ui.control
 
   &.--is-expanded
   {
-    display : flex;
+    width: 100%;
+
+    &.--is-horizontal:not(.--has-hidden-label) {
+      width: calc(100% - var(--control-horizontal-label-width));
+    }
   }
 
   &.--has-no-label > .label
@@ -148,6 +152,7 @@ div.ui.control
     outline       : none;
     background    : transparent;
     flex          : 1 1 auto;
+    width         : auto;
     align-self    : stretch;
     border-color  : transparent;
     /* negative repositioning border and box-shadow */
@@ -189,8 +194,8 @@ div.ui.control
     {
       position            : absolute;
       padding             : 0;
-      margin              : 0;
-      top                 : .25rem;
+      margin              : -.5rem 0 0 0;
+      top                 : 50%;
       left                : 0;
       display             : block;
       width               : 1rem;

@@ -1,6 +1,6 @@
 :root
 {
-  --base-font-size                     : 14;
+  /*--base-font-size                     : 14;*/
   --control-input-border-color-active  : hsl(211, 58%, 70%);
   --control-input-outline-color-active : hsl(210, 70%, 74%);
   --control-input-border-color         : #bfbfbf;

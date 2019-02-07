@@ -5,12 +5,12 @@
   flex-wrap       : wrap;
   flex-direction  : row;
   justify-content : space-between;
+}
 
-  & > .header
-  {
-    display    : block;
-    box-sizing : border-box;
-    flex       : 1 0 0;
-    min-width  : 0;
-  }
+.ui.layout > .header
+{
+  display    : block;
+  box-sizing : border-box;
+  flex       : 1 0 0;
+  min-width  : 0;
 }

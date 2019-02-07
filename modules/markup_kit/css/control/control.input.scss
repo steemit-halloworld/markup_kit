@@ -41,7 +41,7 @@
     color         : inherit;
   }
 
-  & > input.--is-right
+  & > input.--text-right
   {
     text-align : right;
   }
@@ -160,6 +160,5 @@
     appearance                 : none;
     outline                    : none;
     background                 : none;
-    line-height                :1.875em;
   }
 }

@@ -13,12 +13,10 @@ should never be tracked. For some larger text, depending on the typeface a negat
   letter-spacing: .1em;
 }
 
-
 .tight.tracked
 {
   letter-spacing: -.05em;
 }
-
 
 .wide.tracked
 {

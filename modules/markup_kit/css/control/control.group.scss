@@ -1,0 +1,72 @@
+:root
+{
+  --grid-cell-gutter : 5px;
+}
+
+.ui.control.group
+{
+  background: none;
+  /* default cell width based on child count */
+  /* @formatter:off */
+  & > *:nth-last-child(2):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 2) - var(--grid-cell-gutter) / 2 );}}
+  & > *:nth-last-child(3):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 3) - var(--grid-cell-gutter) / 2);}}
+  & > *:nth-last-child(4):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 4) - var(--grid-cell-gutter) / 2);}}
+  & > *:nth-last-child(5):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 5) - var(--grid-cell-gutter) / 2);}}
+  & > *:nth-last-child(6):first-child { &, & ~ * {flex-basis: auto; width: calc((100% / 6) - var(--grid-cell-gutter) / 2);}}
+  /* @formatter:on */
+
+}
+
+.ui.control.group > .ui.control:not(.group):not(.checkbox):not(.--has-no-label):not(.--has-hidden-label):not(.--has-float-label):last-child {
+  margin-bottom: 0;
+}
+
+.ui.control.group > label
+{
+  /*width: calc(40em - var(--grid-cell-gutter)) !important;
+  max-width: calc(40em - var(--grid-cell-gutter)) !important;*/
+  width: 100%;
+}
+
+/*.ui.control.group > label ~ .ui.control
+{
+  width: auto;
+}*/
+
+fieldset.ui.control:not(.group):not(.checkbox):not(.--has-no-label):not(.--has-hidden-label):not(.--has-float-label) {
+  margin: 0;
+}
+
+fieldset.ui.control {
+  background: transparent;
+
+  & legend {
+    text-overflow : ellipsis;
+    white-space   : nowrap;
+    overflow      : hidden;
+    align-self    : flex-start;
+    font-size     : 1em;
+    line-height   : 1.2;
+    display       : block;
+    order         : -1000;
+    flex          : 1 1 100%;
+    margin-top    : calc(-1.2em - 4px);
+    margin-bottom : 4px;
+    padding-left  : .2rem;
+    color         : var(--control-label-color);
+  }
+
+  &:not(.group) > legend:not(.label) {
+    padding-top: calc(var(--control-margin-top) + 1px);
+  }
+
+  &:not(.group) > *:not(.label) {
+    padding-bottom: 0;
+
+    &:not(legend) {
+      padding-top: 0;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}

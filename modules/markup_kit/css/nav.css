@@ -22,12 +22,11 @@
   margin         : var(--nav--margin);
   display        : block;
   flex-direction : column;
-
-  & .item
-  {
-    position : relative;
-    display  : block;
-  }
+}
+.nav .item
+{
+  position : relative;
+  display  : block;
 }
 
 ul.nav

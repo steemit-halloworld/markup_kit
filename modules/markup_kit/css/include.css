@@ -30,6 +30,7 @@ anything by simply adding
 @import "./global/site";
 @import 'typography';
 @import 'header';
+@import 'divider';
 @import 'theming';
 @import 'modal';
 @import 'steps';
